@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><style>body{margin:0;font-size:16px} #btn{width:200px;height:80px;background:#4C8DF6;color:#FFF}</style></head>
+<body>
+<div id="btn">click</div>
+<script>
+window.__clicks = 0;
+window.__loaded = 0;
+window.__timer = 0;
+document.getElementById('btn').addEventListener('click', function () {
+    window.__clicks += 1;
+});
+window.addEventListener('load', function () {
+    window.__loaded = 1;
+});
+setTimeout(function () {
+    window.__timer = 1;
+}, 100);
+</script>
+</body>
+</html>

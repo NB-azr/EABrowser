@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-size: 16px; }
+  .cols {
+    column-count: 2;
+    column-gap: 20px;
+    width: 600px;
+    background-color: #FAFAFA;
+  }
+  .cols p { margin: 0; }
+  .right { width: 600px; column-count: 3; column-gap: 10px; }
+  .right p { margin: 0; }
+</style>
+</head>
+<body>
+  <div class="cols">
+    <p>一段很长的正文，用来验证单栏放不下时会自动拆到下一栏继续排，而不是压在最底一栏里重叠。
+       这是第二句，继续堆叠更多文字，让段落高度明显超过两栏均分后的高度，栏高平衡算法应当把这段文字
+       均分成左右两栏，左边一栏先排满，剩下的行接着从右栏顶部继续。</p>
+  </div>
+  <div class="right">
+    <p>三栏文字测试，内容长度大约需要四到五栏才能排完，用于观察栏高是否按行数均分。</p>
+  </div>
+</body>
+</html>

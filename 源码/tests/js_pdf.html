@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>pdf.js 渲染测试</title></head>
+<body>
+<div id="log"></div>
+<script src="fixtures/pdf.min.js"></script>
+<script src="fixtures/pdf.worker.min.js"></script>
+<script>
+window.__R = "pending";
+window.__LOG = [];
+function log(s) { window.__LOG.push(String(s)); var d = document.getElementById("log"); if (d) d.textContent = window.__LOG.join("\n"); }
+function px(ctx, x, y) {
+    var d = ctx.getImageData(x, y, 1, 1).data;
+    return d[0] + "," + d[1] + "," + d[2] + "," + d[3];
+}
+function baseDir() {
+    var h = String(location.href || "");
+    h = h.replace(/\\/g, "/");
+    return h.substring(0, h.lastIndexOf("/") + 1);
+}
+(function () {
+    try {
+        log("pdfjs=" + (typeof pdfjsLib) + " pdfjsWorker=" + (typeof pdfjsWorker));
+        if (typeof pdfjsLib === "undefined") { window.__R = "NO_PDFJS"; return; }
+        pdfjsLib.GlobalWorkerOptions.workerSrc = baseDir() + "fixtures/pdf.worker.min.js";
+        var url = "ea://file?path=" + encodeURIComponent(baseDir() + "fixtures/sample3.pdf");
+        log("fetch url=" + url);
+        fetch(url).then(function (res) {
+            log("status=" + res.status + " ok=" + res.ok);
+            return res.arrayBuffer();
+        }).then(function (ab) {
+            log("bytes=" + ab.byteLength + " ctor=" + ab.constructor.name);
+            return pdfjsLib.getDocument({ data: ab }).promise;
+        }).then(function (doc) {
+            log("pages=" + doc.numPages);
+            var results = [];
+            var chain = Promise.resolve();
+            var samples = [
+                [[100, 210], "red"], [[280, 210], "blue"], [[100, 200], "red2"],
+                [[150, 180], "green"], [[150, 160], "yellow"],
+                [[100, 220], "magenta"], [[170, 170], "white"]
+            ];
+            for (var i = 1; i <= doc.numPages; i++) {
+                (function (idx) {
+                    chain = chain.then(function () {
+                        return doc.getPage(idx).then(function (page) {
+                            var vp = page.getViewport({ scale: 1 });
+                            var canvas = document.createElement("canvas");
+                            canvas.width = Math.ceil(vp.width);
+                            canvas.height = Math.ceil(vp.height);
+                            var ctx = canvas.getContext("2d");
+                            ctx.fillStyle = "#ffffff";
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                            document.body.appendChild(canvas);
+                            return page.render({ canvasContext: ctx, viewport: vp }).promise.then(function () {
+                                var s = "page" + idx + " size=" + canvas.width + "x" + canvas.height;
+                                for (var k = 0; k < samples.length; k++) {
+                                    var p = samples[k];
+                                    s += " " + p[1] + "@" + p[0][0] + "," + p[0][1] + "=[" + px(ctx, p[0][0], p[0][1]) + "]";
+                                }
+                                results.push(s);
+                                log(s);
+                            });
+                        });
+                    });
+                })(i);
+            }
+            return chain.then(function () {
+                window.__R = window.__LOG.join(" | ");
+                log("DONE");
+            });
+        }).catch(function (e) {
+            window.__R = "ERR " + (e && e.message ? e.message : e) + " @" + (e && e.stack ? String(e.stack).substr(0, 300) : "");
+            log(window.__R);
+        });
+        window.__R = "started";
+    } catch (e) {
+        window.__R = "SYNC_ERR " + (e && e.message ? e.message : e);
+    }
+})();
+</script>
+</body></html>

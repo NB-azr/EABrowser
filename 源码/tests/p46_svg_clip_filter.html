@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; background: #fff; }
+svg { display: block; }
+</style></head>
+<body>
+<svg width="300" height="220">
+  <defs>
+    <filter id="f-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3 5"/>
+    </filter>
+    <filter id="f-sat">
+      <feColorMatrix type="saturate" values="0.4"/>
+    </filter>
+    <filter id="f-mix">
+      <feOffset dx="4" dy="6"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode/>
+      </feMerge>
+    </filter>
+    <clipPath id="cp-rect"><rect x="10" y="10" width="80" height="40"/></clipPath>
+    <clipPath id="cp-circle"><circle cx="100" cy="100" r="40"/></clipPath>
+  </defs>
+
+  <rect x="20" y="20" width="120" height="60" fill="#cc3333" filter="url(#f-blur)"/>
+  <circle cx="80" cy="150" r="30" fill="#33cc33" filter="url(#f-sat)"/>
+  <rect x="150" y="20" width="100" height="50" fill="#3333cc" clip-path="url(#cp-rect)"/>
+  <circle cx="100" cy="100" r="50" fill="#cc33cc" clip-path="url(#cp-circle)"/>
+  <g filter="url(#f-mix)">
+    <rect x="160" y="110" width="60" height="40" fill="#cccc33"/>
+  </g>
+</svg>
+</body></html>

@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<script>
+(function(){
+  function t(l,v){ console.log('[T] '+l+'='+v); }
+  t('crypto', typeof crypto);
+  try { t('crypto.subtle', typeof crypto.subtle); } catch(e){ t('crypto.subtle.err', e); }
+  try { crypto.subtle = {digest:function(){}}; t('after.set.subtle', typeof crypto.subtle); } catch(e){ t('set.subtle.err', e); }
+  try { t('extensible', Object.isExtensible(crypto)); } catch(e){}
+  t('CryptoKey', typeof CryptoKey);
+  try { globalThis.CryptoKey = function(){}; t('after.CryptoKey', typeof CryptoKey); } catch(e){ t('ck.err', e); }
+  try { t('hasIndices.in', ('hasIndices' in RegExp.prototype)); } catch(e){ t('hi.in.err', e); }
+  try { t('hasIndices.typeof', typeof RegExp.prototype.hasIndices); } catch(e){ t('hi.type.err', e); }
+  try { Object.defineProperty(RegExp.prototype,'hasIndices',{configurable:true,get:function(){return false;}}); t('after.hi', typeof RegExp.prototype.hasIndices); } catch(e){ t('hi.set.err', e); }
+})();
+</script></body></html>

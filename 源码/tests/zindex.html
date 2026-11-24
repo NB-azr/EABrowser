@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; }
+  #stage { position: relative; width: 300px; height: 200px; background: #ffffff; }
+  .layer { position: absolute; width: 120px; height: 100px; }
+  #z3 { left: 60px; top: 40px; z-index: 3; background: #2ecc71; }
+  #z1 { left: 10px; top: 10px; z-index: 1; background: #e74c3c; }
+  #z2 { left: 35px; top: 25px; z-index: 2; background: #3498db; }
+  #zn { left: 90px; top: 70px; z-index: -1; background: #f1c40f; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="layer" id="z3"></div>
+  <div class="layer" id="z1"></div>
+  <div class="layer" id="z2"></div>
+  <div class="layer" id="zn"></div>
+</div>
+</body>
+</html>

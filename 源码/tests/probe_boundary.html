@@ -1,0 +1,104 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  #root { --c: #123; }
+  .a:has(.b) { color: rgb(1,2,3); }
+  .c:is(.a, .z) { color: rgb(4,5,6); }
+  .d:where(#host) { color: rgb(7,8,9); }
+  li:nth-child(2 of .item) { color: rgb(10,11,12); }
+  #markli::marker { color: rgb(13,14,15); }
+  #ph::placeholder { color: rgb(19,20,21); }
+  #sup { color: rgb(99,99,99); }
+  @supports (display: grid) { #sup { color: rgb(25,26,27); } }
+  @layer base { #lay { color: rgb(28,29,30); } }
+  .container { container-type: inline-size; width: 300px; }
+  @container (min-width: 100px) { #cont { color: rgb(31,32,33); } }
+  #ar { aspect-ratio: 16 / 9; width: 100px; }
+  #ins { position: absolute; inset: 0; }
+  #cl { width: clamp(10px, 20vw, 100px); }
+  #cm { color: color-mix(in srgb, red 50%, blue); }
+  #acc { accent-color: rgb(40,41,42); }
+  #sticky { position: sticky; top: 0; }
+  #bd { backdrop-filter: blur(2px); }
+  #mask { mask-image: linear-gradient(red, blue); }
+  #cnt { counter-reset: n; }
+  #cnt::before { content: counter(n); }
+</style>
+</head><body>
+<div id="host" class="d"></div>
+<div id="haselem" class="a"><i class="b"></i></div>
+<div id="iselem" class="c a"></div>
+<ul id="ul"><li class="item">1</li><li class="item">2</li><li class="item">3</li></ul>
+<div id="markwrap"><ul><li id="markli">m</li></ul></div>
+<input id="ph" placeholder="p">
+<div id="sup"></div>
+<div id="lay"></div>
+<div class="container"><div id="cont"></div></div>
+<div id="ar"></div><div id="ins"></div><div id="cl"></div>
+<div id="cm"></div><div id="acc"></div><div id="sticky"></div>
+<div id="bd"></div><div id="mask"></div><div id="cnt"></div>
+<dialog id="dlg">d</dialog>
+<script>
+(function(){
+  function cs(id, pseudo){ try { var e=document.getElementById(id); var s=getComputedStyle(e, pseudo||null); return s? (s.color||'none') : 'null'; } catch(e){ return 'throw:'+e.name; } }
+  function rect(id){ try { var r=document.getElementById(id).getBoundingClientRect(); return r.width+'x'+r.height; } catch(e){ return 'throw'; } }
+  function t(n){ return typeof n; }
+  function has(o,n){ return (n in o) ? t(o[n]) : 'absent'; }
+
+  console.log('[CSS] has=' + cs('haselem') + ' is=' + cs('iselem') + ' where=' + cs('host') +
+    ' nthOf=' + (function(){ try { var li=document.querySelectorAll('#ul li.item')[1]; return getComputedStyle(li).color; } catch(e){ return 'throw:'+e.name; } })());
+  console.log('[CSS] marker=' + cs('markli','::marker') + ' placeholder=' + cs('ph','::placeholder') +
+    ' supports=grid:' + cs('sup'));
+  console.log('[CSS] layer=' + cs('lay') + ' container=' + cs('cont') + ' colorMix=' + cs('cm'));
+  console.log('[CSS] aspectRatio=' + rect('ar') + ' inset=' + rect('ins') + ' clampW=' + rect('cl') +
+    ' accent=' + cs('acc') + ' sticky=' + getComputedStyle(document.getElementById('sticky')).position);
+  console.log('[CSS] mask=' + getComputedStyle(document.getElementById('mask')).maskImage +
+    ' counterContent=' + (function(){ try { return getComputedStyle(document.getElementById('cnt'),'::before').content; } catch(e){ return 'throw'; } })());
+  console.log('[CSS] supports:has=' + CSS.supports('selector(:has(a))') +
+    ' supports:marker=' + CSS.supports('selector(::marker)') +
+    ' supports:cm=' + CSS.supports('color','color-mix(in srgb, red, blue)'));
+
+  function ctor(name){ return (typeof window[name] !== 'undefined') ? window[name] : null; }
+  function proto(name){ var c = ctor(name); return c ? c.prototype : null; }
+  function hasP(name, m){ var p = proto(name); return p ? has(p, m) : 'no-ctor'; }
+  var dlg = document.getElementById('dlg');
+  var nav = navigator;
+  try {
+  var JS = {
+    startViewTransition: t(document.startViewTransition),
+    checkVisibility: hasP('Element','checkVisibility'),
+    showModal: hasP('HTMLDialogElement','showModal'),
+    dialogOpen: has(dlg,'showModal'),
+    inert: ('inert' in dlg),
+    withResolvers: t(Promise.withResolvers),
+    groupBy: t(Object.groupBy) + '/' + t(Map.groupBy),
+    setUnion: hasP('Set','union'),
+    setIntersect: hasP('Set','intersection'),
+    toSorted: hasP('Array','toSorted'),
+    with: hasP('Array','with'),
+    isWellFormed: hasP('String','isWellFormed'),
+    abortTimeout: typeof AbortSignal.timeout,
+    abortAny: typeof AbortSignal.any,
+    reportError: typeof reportError,
+    permissions: t(nav.permissions),
+    locks: t(nav.locks),
+    userActivation: t(nav.userActivation),
+    visualViewport: typeof visualViewport,
+    visibilityState: t(document.visibilityState),
+    scrollRestoration: t(history.scrollRestoration),
+    elementsFromPoint: has(document,'elementsFromPoint'),
+    scrollIntoView: hasP('Element','scrollIntoView'),
+    canParse: typeof URL.canParse,
+    URLPattern: typeof URLPattern,
+    segmenter: has(Intl,'Segmenter'),
+    fromAsync: hasP('Array','fromAsync'),
+    iteratorHelpers: hasP('Iterator','map'),
+    float16: typeof Float16Array,
+    structuredCloneTransfer: t(structuredClone),
+    idle: t(requestIdleCallback),
+    getSetCookie: hasP('Headers','getSetCookie'),
+    showPicker: hasP('HTMLInputElement','showPicker')
+  };
+  console.log('[JS] ' + JSON.stringify(JS));
+  } catch (e) { console.log('[JS] ERR ' + (e && e.name) + ': ' + (e && e.message)); }
+})();
+</script></body></html>

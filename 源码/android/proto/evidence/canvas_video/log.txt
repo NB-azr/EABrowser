@@ -1,0 +1,102 @@
+﻿--------- beginning of /dev/log/main
+
+--------- beginning of /dev/log/system
+
+I/EACanvasVideo( 8684): canvas video activity scale=1.0 skip=true autoscroll=true
+
+I/EACanvasVideo( 8684): video overlay pause
+
+I/EACanvasVideo( 8684): page built videoPage=true css=360x592 cmds=35 contentCssH=1776
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,1560,720x216) scrollCss=0 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceCreated #1 size=480x270
+
+I/EACanvasVideo( 8684): video overlay resume (thread start)
+
+I/EACanvasVideo( 8684): video surfaceChanged #1 480x270
+
+I/EACanvasVideo( 8684): video surfaceChanged #2 720x216
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,1200,720x576) scrollCss=120 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #3 720x576
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,840,720x936) scrollCss=240 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #4 720x936
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,480,720x1296) scrollCss=360 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #5 720x1296
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,120,720x1560) scrollCss=480 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #6 720x1560
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x1320) scrollCss=600 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #7 720x1320
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x960) scrollCss=720 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #8 720x960
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x600) scrollCss=840 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #9 720x600
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x240) scrollCss=960 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #10 720x240
+
+I/EACanvasVideo( 8684): video surfaceDestroyed #1
+
+I/EACanvasVideo( 8684): video overlay pause
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,1560,720x216) scrollCss=0 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceCreated #2 size=720x240
+
+I/EACanvasVideo( 8684): video overlay resume (thread start)
+
+I/EACanvasVideo( 8684): video surfaceChanged #11 720x240
+
+I/EACanvasVideo( 8684): video surfaceChanged #12 720x216
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,1200,720x576) scrollCss=120 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #13 720x576
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,840,720x936) scrollCss=240 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #14 720x936
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,480,720x1296) scrollCss=360 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #15 720x1296
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,120,720x1560) scrollCss=480 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #16 720x1560
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x1320) scrollCss=600 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #17 720x1320
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x960) scrollCss=720 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #18 720x960
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x600) scrollCss=840 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #19 720x600
+
+I/EACanvasVideo( 8684): canvas hole screen=(180,0,720x240) scrollCss=960 scale=1.0
+
+I/EACanvasVideo( 8684): video surfaceChanged #20 720x240
+
+I/EACanvasVideo( 8684): video surfaceDestroyed #2
+
+I/EACanvasVideo( 8684): video overlay pause
+

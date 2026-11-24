@@ -1,0 +1,14 @@
+<!doctype html><html><body><script>
+var div=document.createElement("div");
+div.setAttribute("onclick","t");
+var e1=div.attributes["onclick"];
+var e2=div.attributes.getNamedItem("onclick");
+var out="attrLen="+div.attributes.length
+ +" byName="+(typeof e1)
+ +" getNamedItem="+(e2?"obj":"null")
+ +" byIndex="+(div.attributes[0]?(div.attributes[0].name||"noname"):"null")
+ +" expando="+(e1?typeof e1.expando:"UNDEF")
+ +" hasAttr="+div.hasAttribute("onclick")
+ +" attrKeys="+(function(){var k=[],a=div.attributes;for(var i=0;i<a.length;i++){k.push(a[i].name)}return k.join(",")})();
+throw new Error(out);
+</script></body></html>

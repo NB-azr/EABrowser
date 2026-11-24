@@ -1,0 +1,58 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<canvas id="cv" width="200" height="120"></canvas>
+<script>
+var cv = document.getElementById('cv');
+var gl = cv.getContext('webgl');
+console.log('W1 context=' + (gl !== null && typeof gl === 'object') + ' bufW=' + (gl ? gl.drawingBufferWidth : -1) +
+            ' version=' + (gl ? gl.getParameter(gl.VERSION) : '?'));
+var vs = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vs, 'attribute vec2 a_position; uniform vec4 u_color; void main(){ gl_Position = vec4(a_position, 0.0, 1.0); }');
+gl.compileShader(vs);
+var fs = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fs, 'precision mediump float; uniform vec4 u_color; void main(){ gl_FragColor = u_color; }');
+gl.compileShader(fs);
+var prog = gl.createProgram();
+gl.attachShader(prog, vs);
+gl.attachShader(prog, fs);
+gl.linkProgram(prog);
+gl.useProgram(prog);
+console.log('W2 compile=' + gl.getShaderParameter(vs, gl.COMPILE_STATUS) + '/' + gl.getShaderParameter(fs, gl.COMPILE_STATUS) +
+            ' link=' + gl.getProgramParameter(prog, gl.LINK_STATUS));
+var loc = gl.getAttribLocation(prog, 'a_position');
+var ucol = gl.getUniformLocation(prog, 'u_color');
+console.log('W3 attribLoc=' + loc + ' uniformLoc=' + (ucol !== null));
+var buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-0.5, -0.5, 0.5, -0.5, 0.0, 0.5]), gl.STATIC_DRAW);
+gl.enableVertexAttribArray(loc);
+gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+gl.viewport(0, 0, 200, 120);
+gl.clearColor(0, 0, 0.5, 1);
+gl.clear(gl.COLOR_BUFFER_BIT);
+gl.uniform4f(ucol, 1, 0, 0, 1);
+gl.drawArrays(gl.TRIANGLES, 0, 3);
+var pixels = new Uint8Array(200 * 120 * 4);
+gl.readPixels(0, 0, 200, 120, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+var nonEmpty = 0, red = 0, blue = 0;
+for (var i = 0; i != pixels.length; i += 4) {
+  if (pixels[i] || pixels[i+1] || pixels[i+2] || pixels[i+3]) nonEmpty++;
+  if (pixels[i] > 200 && pixels[i+1] < 40) red++;
+  if (pixels[i+2] > 100 && pixels[i] < 40) blue++;
+}
+console.log('W4 pixelsNonEmpty=' + nonEmpty + ' red=' + red + ' blue=' + blue);
+var idx = ((120 - 1 - 60) * 200 + 100) * 4;
+console.log('W5 center=' + pixels[idx] + ',' + pixels[idx+1] + ',' + pixels[idx+2] + ',' + pixels[idx+3]);
+var tex = gl.createTexture();
+gl.bindTexture(gl.TEXTURE_2D, tex);
+gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 2, 2, 0, gl.RGBA, gl.UNSIGNED_BYTE,
+  new Uint8Array([255,0,0,255, 0,255,0,255, 0,0,255,255, 255,255,255,255]));
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+console.log('W6 texError=' + gl.getError() + ' texOk=' + (tex !== null));
+gl.clearColor(0, 0, 0, 1);
+gl.clear(gl.COLOR_BUFFER_BIT);
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 3);
+gl.readPixels(0, 0, 200, 120, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+var nonEmpty2 = 0;
+for (var j = 0; j != pixels.length; j += 4) if (pixels[j+3]) nonEmpty2++;
+console.log('W7 stripDraw=' + nonEmpty2 + ' err=' + gl.getError());
+</script></body></html>

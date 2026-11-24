@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html, body { margin: 0; height: 100%; }
+body { background: #2b6cb0; }
+#bg { position: absolute; left: 0; top: 0; width: 600px; height: 400px; background: linear-gradient(90deg, #F05A28, #4C8DF6); }
+#glass {
+  position: absolute; left: 80px; top: 80px; width: 300px; height: 180px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+#sharp { position: absolute; left: 80px; top: 300px; width: 300px; height: 120px; background: #FFFFFF; }
+#blurred { position: absolute; left: 420px; top: 300px; width: 300px; height: 120px; background: #FFFFFF; filter: blur(6px); }
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<div id="glass"></div>
+<div id="sharp"></div>
+<div id="blurred"></div>
+</body>
+</html>

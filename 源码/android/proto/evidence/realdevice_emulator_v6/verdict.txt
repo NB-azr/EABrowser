@@ -1,0 +1,20 @@
+阈值判定：GL_avg <= Canvas_avg*0.80 且 submitP95 <= 8ms 且 fps >= 60 且 outliers=0（2 轮中位数）
+数据来源：<OutDir>\summary.csv（每档逐帧原始值见 frames.csv）
+cjk-long-1200-char cmds=1200  GL/Canvas=483%  GL=31.71ms p95=35.97ms fps= 31.7  -> 保持 Canvas（未过：ratio=483%>80%; submitP95=35.97ms>8ms; fps=31.7<60）
+cjk-long-1200-full cmds=1200  GL/Canvas=312%  GL=27.10ms p95=28.71ms fps= 37.0  -> 保持 Canvas（未过：ratio=312%>80%; submitP95=28.71ms>8ms; fps=37.0<60）
+cjk-long-1200-lru cmds=1200  GL/Canvas=167%  GL=11.10ms p95= 9.32ms fps= 91.2  -> 保持 Canvas（未过：ratio=167%>80%; submitP95=9.32ms>8ms）
+cjk-long-600-char cmds= 600  GL/Canvas=391%  GL=33.52ms p95=38.74ms fps= 30.3  -> 保持 Canvas（未过：ratio=391%>80%; submitP95=38.74ms>8ms; fps=30.3<60）
+cjk-long-600-full cmds= 600  GL/Canvas=374%  GL=33.02ms p95=37.79ms fps= 30.3  -> 保持 Canvas（未过：ratio=374%>80%; submitP95=37.79ms>8ms; fps=30.3<60）
+cjk-long-600-lru cmds= 600  GL/Canvas=157%  GL=14.30ms p95=23.48ms fps= 76.1  -> 保持 Canvas（未过：ratio=157%>80%; submitP95=23.48ms>8ms; outliers=2）
+cjk-mix-300    cmds= 300  GL/Canvas= 83%  GL= 3.91ms p95= 3.63ms fps=257.2  -> 保持 Canvas（未过：ratio=83%>80%）
+cjk-mix-600    cmds= 600  GL/Canvas= 59%  GL= 3.61ms p95= 3.09ms fps=278.0  -> 可以上调
+cjk-text-300   cmds= 300  GL/Canvas=263%  GL= 9.65ms p95=12.64ms fps=105.3  -> 保持 Canvas（未过：ratio=263%>80%; submitP95=12.64ms>8ms; outliers=1）
+cjk-text-600   cmds= 600  GL/Canvas=267%  GL= 9.83ms p95= 9.44ms fps=104.8  -> 保持 Canvas（未过：ratio=267%>80%; submitP95=9.44ms>8ms）
+cjk-uniq-300   cmds= 300  GL/Canvas=194%  GL= 9.37ms p95= 8.39ms fps=106.7  -> 保持 Canvas（未过：ratio=194%>80%; submitP95=8.39ms>8ms）
+cjk-uniq-600   cmds= 600  GL/Canvas=191%  GL=13.03ms p95=14.79ms fps= 80.1  -> 保持 Canvas（未过：ratio=191%>80%; submitP95=14.79ms>8ms）
+shapes-1200    cmds=1200  GL/Canvas= 46%  GL= 4.50ms p95= 4.31ms fps=222.2  -> 可以上调
+shapes-300     cmds= 300  GL/Canvas= 29%  GL= 2.52ms p95= 1.38ms fps=396.8  -> 可以上调
+shapes-600     cmds= 600  GL/Canvas= 31%  GL= 3.20ms p95= 2.57ms fps=316.6  -> 可以上调
+
+上调建议：若 cjk-text 在 600 档仍满足四条判据，可把文字层阈值从 300 上调到 600；
+          shapes 单独看 1200 档（顶点增长 ≈ 线性，draws=1 不随指令数增长）。

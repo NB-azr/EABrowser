@@ -1,0 +1,11 @@
+# EAProto benchmark — 环境 B：Intel UHD 730（模拟器 ANGLE/gfxstream 翻译层）
+# 设备：API19 x86 模拟器 EAProto19，1080x1776，300 dpi
+# 采集：2026-11-08
+epoch=1
+bench 1080x1776 frames=20（含 glFinish）
+  cmds= 100 img= 8  Canvas avg= 30.20 p50= 19.60 p95= 73.42 max= 83.47 fps= 33.1   GLES2 avg= 47.99 p50= 30.10 p95=120.56 max=139.22 fps= 20.8   ratio=1.59x
+  cmds= 300 img=25  Canvas avg= 40.30 p50= 30.09 p95= 89.80 max= 93.27 fps= 24.8   GLES2 avg=157.79 p50= 62.65 p95=709.58 max=935.73 fps=  6.3   ratio=3.92x
+  cmds= 600 img=50  Canvas avg= 21.32 p50= 18.28 p95= 28.88 max= 64.38 fps= 46.9   GLES2 avg=221.12 p50=166.67 p95=375.70 max=1054.33 fps=  4.5   ratio=10.37x
+  cmds=1200 img=100  Canvas avg= 25.50 p50= 23.89 p95= 44.48 max= 45.40 fps= 39.2   GLES2 avg=206.10 p50=202.31 p95=264.47 max=358.88 fps=  4.9   ratio=8.08x
+  跨进程帧路径: upload=18.60ms present=4.47ms (7.3MB/帧)
+JSON {"width":1080,"height":1776,"frames":20,"cases":[{"cmds":100,"images":8,"canvas":{"avg":30.20,"p50":19.60,"p95":73.42,"max":83.47},"gles2":{"avg":47.99,"p50":30.10,"p95":120.56,"max":139.22}},{"cmds":300,"images":25,"canvas":{"avg":40.30,"p50":30.09,"p95":89.80,"max":93.27},"gles2":{"avg":157.79,"p50":62.65,"p95":709.58,"max":935.73}},{"cmds":600,"images":50,"canvas":{"avg":21.32,"p50":18.28,"p95":28.88,"max":64.38},"gles2":{"avg":221.12,"p50":166.67,"p95":375.70,"max":1054.33}},{"cmds":1200,"images":100,"canvas":{"avg":25.50,"p50":23.89,"p95":44.48,"max":45.40},"gles2":{"avg":206.10,"p50":202.31,"p95":264.47,"max":358.88}}],"uploadMs":18.60,"presentMs":4.47}

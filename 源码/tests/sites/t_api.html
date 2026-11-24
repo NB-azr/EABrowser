@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API 能力普查</title>
+<style>
+body{margin:0;padding:10px;font-family:monospace;font-size:15px;line-height:1.5}
+.row{padding:1px 0;border-bottom:1px solid #f0f0f0}
+.ok{color:#0a0}
+.no{color:#c00}
+#sum{font-size:16px;padding:6px 0;font-weight:bold}
+</style></head>
+<body>
+<div id="sum">probing…</div>
+<div id="list"></div>
+<script>
+var checks = [
+ ['pageYOffset', function(){ return typeof window.pageYOffset === 'number'; }],
+ ['scrollY', function(){ return typeof window.scrollY === 'number'; }],
+ ['html.scrollTop', function(){ return typeof document.documentElement.scrollTop === 'number'; }],
+ ['body.scrollTop', function(){ return typeof document.body.scrollTop === 'number'; }],
+ ['scrollingElement', function(){ return !!document.scrollingElement; }],
+ ['readyState', function(){ return document.readyState; }],
+ ['hidden/visState', function(){ return typeof document.hidden === 'boolean' && document.visibilityState; }],
+ ['rAF', function(){ return typeof requestAnimationFrame === 'function'; }],
+ ['setTimeout.delay', function(){ return typeof setTimeout === 'function'; }],
+ ['IntersectionObserver', function(){ return typeof IntersectionObserver === 'function'; }],
+ ['MutationObserver', function(){ return typeof MutationObserver === 'function'; }],
+ ['ResizeObserver', function(){ return typeof ResizeObserver === 'function'; }],
+ ['AbortController', function(){ return typeof AbortController === 'function'; }],
+ ['fetch', function(){ return typeof fetch === 'function'; }],
+ ['URL', function(){ return typeof URL === 'function' && typeof URLSearchParams === 'function'; }],
+ ['createObjectURL', function(){ return !!(window.URL && URL.createObjectURL); }],
+ ['Blob/FileReader', function(){ return typeof Blob === 'function' && typeof FileReader === 'function'; }],
+ ['TextDecoder', function(){ return typeof TextDecoder === 'function'; }],
+ ['localStorage', function(){ try{localStorage.setItem('a','1');localStorage.removeItem('a');return true}catch(e){return false} }],
+ ['sessionStorage', function(){ try{sessionStorage.setItem('a','1');sessionStorage.removeItem('a');return true}catch(e){return false} }],
+ ['pushState', function(){ return !!(history && history.pushState); }],
+ ['matchMedia', function(){ return typeof window.matchMedia === 'function'; }],
+ ['getComputedStyle', function(){ return typeof getComputedStyle === 'function'; }],
+ ['closest', function(){ return !!Element.prototype.closest; }],
+ ['matches', function(){ return !!Element.prototype.matches; }],
+ ['classList', function(){ return !!document.createElement('div').classList; }],
+ ['dataset', function(){ return !!document.createElement('div').dataset; }],
+ ['nodeList.forEach', function(){ return !!document.querySelectorAll && !!NodeList.prototype.forEach; }],
+ ['CustomEvent', function(){ return typeof CustomEvent === 'function'; }],
+ ['append/prepend', function(){ var d=document.createElement('div'); return !!d.append && !!d.prepend; }],
+ ['replaceChildren', function(){ var d=document.createElement('div'); return !!d.replaceChildren; }],
+ ['scrollTo', function(){ return typeof window.scrollTo === 'function' && typeof window.scrollBy === 'function'; }],
+ ['scrollIntoView', function(){ return !!Element.prototype.scrollIntoView; }],
+ ['getBoundingClientRect', function(){ return !!Element.prototype.getBoundingClientRect; }],
+ ['animate(WAAPI)', function(){ return !!Element.prototype.animate; }],
+ ['CSS.supports', function(){ return typeof CSS !== 'undefined' && typeof CSS.supports === 'function'; }],
+ ['setProperty', function(){ var d=document.createElement('div'); return !!d.style.setProperty && (d.style.setProperty('--x','1px'), d.style.getPropertyValue('--x')==='1px'); }],
+ ['Object.entries', function(){ return typeof Object.entries === 'function'; }],
+ ['Array.includes', function(){ return typeof [].includes === 'function'; }],
+ ['Array.flat', function(){ return typeof [].flat === 'function'; }],
+ ['String.replaceAll', function(){ return typeof ''.replaceAll === 'function'; }],
+ ['Promise.allSettled', function(){ return typeof Promise.allSettled === 'function'; }],
+ ['queueMicrotask', function(){ return typeof queueMicrotask === 'function'; }],
+ ['structuredClone', function(){ return typeof structuredClone === 'function'; }],
+ ['sendBeacon', function(){ return !!(navigator && navigator.sendBeacon); }],
+ ['performance.now', function(){ return !!(window.performance && performance.now); }],
+ ['crypto.randomUUID', function(){ return !!(window.crypto && crypto.randomUUID); }],
+ ['onunhandledrejection', function(){ return 'onunhandledrejection' in window; }],
+ ['document.fonts', function(){ return !!document.fonts; }],
+ ['innerW/H', function(){ return window.innerWidth + 'x' + window.innerHeight; }],
+ ['dpr', function(){ return window.devicePixelRatio; }],
+ ['userAgent', function(){ return navigator.userAgent.slice(0,18); }],
+ ['canvas 2d', function(){ var c=document.createElement('canvas'); return !!(c.getContext && c.getContext('2d')); }]
+];
+var good = 0, bad = 0, html = '';
+for (var i = 0; i < checks.length; i++) {
+  var name = checks[i][0], val, ok = false;
+  try { val = checks[i][1](); ok = true; } catch (e) { val = 'ERR:' + (e && e.message); }
+  var isBad = (val === false || val === undefined || val === null || (typeof val === 'string' && val.indexOf('ERR') === 0));
+  if (isBad) { bad++; } else { good++; }
+  html += '<div class="row">' + (isBad ? '<span class="no">NO </span>' : '<span class="ok">OK </span>') + name + ' = ' + String(val) + '</div>';
+}
+document.getElementById('list').innerHTML = html;
+document.getElementById('sum').innerHTML = 'OK ' + good + ' / BAD ' + bad + '  (共 ' + checks.length + ')  y=' + Math.round(window.pageYOffset || 0);
+</script>
+</body></html>

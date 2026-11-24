@@ -1,0 +1,35 @@
+{
+  "slug": "baidu-search",
+  "entry": "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+  "captured_at": "2026-11-08 20:42:48",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "百度搜索结果页（关键词 浏览器）",
+  "failed": [
+    {
+      "url": "https://www.baidu.com/f",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://www.baidu.com/window.location.href",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/e,c",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "OK",
+  "final_url": "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+  "http_charset": "utf-8",
+  "entry_bytes": 1201524,
+  "entry_content_type": "text/html;charset=utf-8",
+  "html_bytes": 1200296,
+  "assets": 123,
+  "asset_bytes": 5411066,
+  "image_sizes": 108,
+  "elapsed_s": 9.83,
+  "items": 123
+}

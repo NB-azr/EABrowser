@@ -1,0 +1,311 @@
+{
+  "slug": "bilibili-video",
+  "entry": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+  "captured_at": "2026-11-08 20:43:02",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "哔哩哔哩视频页",
+  "items": [
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/long/font/regular.css",
+      "bytes": 38752,
+      "content_type": "text/css",
+      "sha1": "8d2b02a239b8b11f"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/long/font/medium.css",
+      "bytes": 38644,
+      "content_type": "text/css",
+      "sha1": "fc3242dbf307618e"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/map.css",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/map.css",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/map.css",
+      "bytes": 2529,
+      "content_type": "text/css",
+      "sha1": "1b5183602516c9e7"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light_u.css",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light_u.css",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light_u.css",
+      "bytes": 6794,
+      "content_type": "text/css",
+      "sha1": "a8adfbc28bb020f7"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light.css",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light.css",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light.css",
+      "bytes": 6936,
+      "content_type": "text/css",
+      "sha1": "4db2f0a2552538b7"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/video/css/video.0.8c3699a3aaf218112dadb300b3127b36bdacfe5c.css",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/video/css/video.0.8c3699a3aaf218112dadb300b3127b36bdacfe5c.css",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/video/css/video.0.8c3699a3aaf218112dadb300b3127b36bdacfe5c.css",
+      "bytes": 574327,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "1a48c2499738baf6"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "bytes": 40766,
+      "content_type": "image/png",
+      "sha1": "d3157085c38b6812"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/not_fang.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/not_fang.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/not_fang.png",
+      "bytes": 6291,
+      "content_type": "image/png",
+      "sha1": "6c0168e6593df45d"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/aiSummaryHoverBg.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/aiSummaryHoverBg.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/aiSummaryHoverBg.png",
+      "bytes": 2757,
+      "content_type": "image/png",
+      "sha1": "f28fdef4dd30e58d"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/note_checkbox_checked.svg",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/note_checkbox_checked.svg",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/note_checkbox_checked.svg",
+      "bytes": 1685,
+      "content_type": "image/svg+xml",
+      "sha1": "b45679cbeeb5777f"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/entry_bg.png",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/entry_bg.png",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/video/asserts/entry_bg.png",
+      "bytes": 18985,
+      "content_type": "image/png",
+      "sha1": "10b425824f6598c4"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/22-coin.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/22-coin.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/22-coin.png",
+      "bytes": 10858,
+      "content_type": "image/png",
+      "sha1": "484398e349960111"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/33-coin.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/33-coin.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/33-coin.png",
+      "bytes": 14246,
+      "content_type": "image/png",
+      "sha1": "feefb1d60e761a78"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/checkbox_selected.svg",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/checkbox_selected.svg",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/checkbox_selected.svg",
+      "bytes": 1116,
+      "content_type": "image/svg+xml",
+      "sha1": "83b239b31096dcc4"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/checked.svg",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/checked.svg",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/video/asserts/checked.svg",
+      "bytes": 2524,
+      "content_type": "image/svg+xml",
+      "sha1": "c99b6565b88ad081"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/big-vip.svg",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/big-vip.svg",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/big-vip.svg",
+      "bytes": 2108,
+      "content_type": "image/svg+xml",
+      "sha1": "1891a384023c88f7"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/business.svg",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/business.svg",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/business.svg",
+      "bytes": 1250,
+      "content_type": "image/svg+xml",
+      "sha1": "7b6549b3dc5afd4c"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/personal.svg",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/personal.svg",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/personal.svg",
+      "bytes": 1250,
+      "content_type": "image/svg+xml",
+      "sha1": "dbe42b02b647f9a2"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/small-vip.svg",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/small-vip.svg",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/small-vip.svg",
+      "bytes": 1523,
+      "content_type": "image/svg+xml",
+      "sha1": "7e6785c7056a7325"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label.gif",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label.gif",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label.gif",
+      "bytes": 189883,
+      "content_type": "image/gif",
+      "sha1": "a544219ddf997004"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label-oversea.gif",
+      "final_url": "https://i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label-oversea.gif",
+      "local": "assets/i0.hdslb.com/bfs/seed/jinkela/short/user-avatar/nft-label-oversea.gif",
+      "bytes": 142984,
+      "content_type": "image/gif",
+      "sha1": "4530b1e8d517e5bf"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/icons.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/icons.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/long/images/icons.png",
+      "bytes": 86470,
+      "content_type": "image/png",
+      "sha1": "e3a305abbd342f1e"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/playlist-video/asserts/playing.gif",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/playlist-video/asserts/playing.gif",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/playlist-video/asserts/playing.gif",
+      "bytes": 33012,
+      "content_type": "image/gif",
+      "sha1": "977e7a189b498f5b"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/activity-plat/static/20231207/a5480f18ac08c1e30876e3fde84db784/BpqU7bMM1F.png",
+      "final_url": "https://i0.hdslb.com/bfs/activity-plat/static/20231207/a5480f18ac08c1e30876e3fde84db784/BpqU7bMM1F.png",
+      "local": "assets/i0.hdslb.com/bfs/activity-plat/static/20231207/a5480f18ac08c1e30876e3fde84db784/BpqU7bMM1F.png",
+      "bytes": 683,
+      "content_type": "image/png",
+      "sha1": "21208a1792565ee5"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/chargeplus-bg.png",
+      "final_url": "https://i0.hdslb.com/bfs/static/jinkela/video/asserts/chargeplus-bg.png",
+      "local": "assets/i0.hdslb.com/bfs/static/jinkela/video/asserts/chargeplus-bg.png",
+      "bytes": 27645,
+      "content_type": "image/png",
+      "sha1": "a2efbd2416f1934b"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/iconfont.5899803.svg",
+      "final_url": "https://s1.hdslb.com/bfs/static/jinkela/video/asserts/iconfont.5899803.svg",
+      "local": "assets/s1.hdslb.com/bfs/static/jinkela/video/asserts/iconfont.5899803.svg",
+      "bytes": 67416,
+      "content_type": "image/svg+xml",
+      "sha1": "4db58aaa0a161830"
+    },
+    {
+      "url": "https://i0.hdslb.com/bfs/activity-plat/static/20200715/1b596cf9a3ab4ee28909062b003caf8f/CsJxkgnv3.png",
+      "final_url": "https://i0.hdslb.com/bfs/activity-plat/static/20200715/1b596cf9a3ab4ee28909062b003caf8f/CsJxkgnv3.png",
+      "local": "assets/i0.hdslb.com/bfs/activity-plat/static/20200715/1b596cf9a3ab4ee28909062b003caf8f/CsJxkgnv3.png",
+      "bytes": 1073,
+      "content_type": "image/png",
+      "sha1": "81cfef804ecb5786"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/log/report/log-reporter.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/log/report/log-reporter.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/log/report/log-reporter.js",
+      "bytes": 133973,
+      "content_type": "application/javascript",
+      "sha1": "16f59ba4bcad7203"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/b-mirror/biliMirror.umd.mini.js",
+      "bytes": 114708,
+      "content_type": "application/javascript",
+      "sha1": "021673bb246f26a7"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/cmpt.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/cmpt.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/cmpt.js",
+      "bytes": 8933,
+      "content_type": "application/javascript",
+      "sha1": "2e376ceb0bf6bdc3"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js",
+      "bytes": 21444,
+      "content_type": "application/javascript",
+      "sha1": "21f392d15ea7a68c"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js",
+      "final_url": "https://s1.hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js",
+      "local": "assets/s1.hdslb.com/bfs/cm/cm-sdk/static/js/bili-collect.js",
+      "bytes": 39731,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "8123cba58e07ddf6"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/risk-captcha-sdk/CaptchaLoader.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/risk-captcha-sdk/CaptchaLoader.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/risk-captcha-sdk/CaptchaLoader.js",
+      "bytes": 6824,
+      "content_type": "application/javascript; charset=utf-8",
+      "sha1": "8ce4ed71c6bb1aea"
+    },
+    {
+      "url": "https://www.bilibili.com/gentleman/polyfill.js?features=globalThis",
+      "final_url": "https://www.bilibili.com/gentleman/polyfill.js?features=globalThis",
+      "local": "assets/www.bilibili.com/gentleman/polyfill__5a200dbb.js",
+      "bytes": 616,
+      "content_type": "text/plain; charset=utf-8",
+      "sha1": "e61c9c1295d92c58"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/fehub/loki/unpkg/svgaplayerweb/svga.min.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/fehub/loki/unpkg/svgaplayerweb/svga.min.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/fehub/loki/unpkg/svgaplayerweb/svga.min.js",
+      "bytes": 125460,
+      "content_type": "application/javascript; charset=utf-8",
+      "sha1": "2334cee8c22eb237"
+    },
+    {
+      "url": "https://s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js",
+      "final_url": "https://s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js",
+      "local": "assets/s1.hdslb.com/bfs/seed/jinkela/short/user-fingerprint/bili-user-fingerprint.min.js",
+      "bytes": 40191,
+      "content_type": "application/javascript",
+      "sha1": "9c8f139e05deded5"
+    }
+  ],
+  "failed": [],
+  "status": "OK",
+  "final_url": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+  "http_charset": "utf-8",
+  "entry_bytes": 172677,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 172895,
+  "assets": 36,
+  "asset_bytes": 1814387,
+  "image_sizes": 20,
+  "elapsed_s": 4.02
+}

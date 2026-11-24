@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; background: #fff; }
+.f { width: 100px; height: 60px; margin: 10px; background: #3366cc; }
+#blur { filter: blur(4px); }
+#bright { filter: brightness(1.5); }
+#contrast { filter: contrast(0.8); }
+#sat { filter: saturate(2); }
+#gray { filter: grayscale(0.5); }
+#sepia { filter: sepia(0.6); }
+#inv { filter: invert(0.4); }
+#chain { filter: brightness(1.2) contrast(1.1) saturate(1.5); }
+#ds { filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.5)); }
+#ds2 { filter: drop-shadow(2px 2px 3px red); }
+.panel { position: relative; width: 200px; height: 100px; margin: 10px;
+         background: rgba(255, 255, 255, 0.6); border-radius: 12px; }
+#bd { backdrop-filter: blur(6px) brightness(1.2) saturate(1.4); }
+#bd2 { backdrop-filter: drop-shadow(2px 3px 4px #112233); border-radius: 20px 6px; }
+</style></head>
+<body>
+<div class="f" id="blur"></div>
+<div class="f" id="bright"></div>
+<div class="f" id="contrast"></div>
+<div class="f" id="sat"></div>
+<div class="f" id="gray"></div>
+<div class="f" id="sepia"></div>
+<div class="f" id="inv"></div>
+<div class="f" id="chain"></div>
+<div class="f" id="ds"></div>
+<div class="f" id="ds2"></div>
+<div class="panel" id="bd"></div>
+<div class="panel" id="bd2"></div>
+</body></html>

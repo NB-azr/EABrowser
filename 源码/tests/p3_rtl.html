@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RTL 排版细节</title>
+<style>
+  body { margin: 0; padding: 10px; font-size: 16px; }
+  ul, ol { margin: 0 0 10px 0; padding-left: 24px; }
+  li { height: 22px; margin: 0; }
+</style>
+</head>
+<body>
+  <!-- dir 属性（不是 CSS direction）：列表符号应到右侧、文本右对齐 -->
+  <ul id="u1" dir="rtl">
+    <li id="li1">项目一</li>
+    <li id="li2">项目二</li>
+  </ul>
+  <ol id="o1" dir="rtl">
+    <li id="oli1">第一项</li>
+    <li id="oli2">第二项</li>
+  </ol>
+  <!-- CSS direction:rtl 同效果 -->
+  <ul id="u2" style="direction:rtl">
+    <li id="li3">CSS 方向</li>
+  </ul>
+  <!-- RTL 下 details 箭头应在右侧 -->
+  <details id="d1" dir="rtl">
+    <summary id="s1">更多</summary>
+    <p id="p1" style="height:30px;margin:0">内容</p>
+  </details>
+  <!-- dir=ltr 覆盖父级 RTL -->
+  <div id="outer" dir="rtl">
+    <div id="inner" dir="ltr" style="height:22px">左对齐文本</div>
+  </div>
+</body>
+</html>

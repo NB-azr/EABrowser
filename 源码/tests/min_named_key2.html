@@ -1,0 +1,7 @@
+<!doctype html><html><body><script>
+function mk(i){ var o={}; o.name="a"+i; o.localName="a"+i; o.nodeName="a"+i; o.value="v"+i; o.nodeValue="v"+i; o.specified=true; return o; }
+var a = [];
+for(var i=0;i<20;i++){ a[i]=mk(i); a["a"+i]=mk(i); }
+a.length = 20;
+throw new Error("RESULT len=" + a.length + " a5=" + (a["a5"] ? a["a5"].value : "undef"));
+</script></body></html>

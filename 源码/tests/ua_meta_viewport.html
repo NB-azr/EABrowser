@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 页面自己声明 980 布局宽，并禁止缩放；--force-zoom 应能压过它 -->
+<meta name="viewport" content="width=980, initial-scale=0.408, user-scalable=no, maximum-scale=1">
+<title>meta viewport 与强制缩放</title>
+<style>
+  body { margin: 0; background: #111827; }
+  .half { width: 50%; height: 40px; background: #f59e0b; }
+</style>
+</head>
+<body>
+  <!-- 手机 UA: layout=980 -> 50% = 490px，pageScale=400/980≈0.408 -->
+  <div id="half" class="half"></div>
+</body>
+</html>

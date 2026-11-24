@@ -1,0 +1,8 @@
+<!doctype html><html><body><script>
+var a = [];
+a[0] = {name:"x"};
+a["x"] = {name:"x"};
+a.length = 1;
+var o = {r: typeof a["x"]};
+throw new Error("RESULT " + JSON.stringify(o));
+</script></body></html>

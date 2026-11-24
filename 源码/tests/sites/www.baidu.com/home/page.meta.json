@@ -1,0 +1,47 @@
+{
+  "slug": "baidu-home",
+  "entry": "https://www.baidu.com/",
+  "captured_at": "2026-11-08 20:42:41",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "百度首页",
+  "failed": [
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/bdbri_icons.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/url",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/skin_dark-48fa9dbf5c.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/skin_dark_ie-8647a11021.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/load_ext_spis-5e9f273bb5.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/load_spis-64604bbf24.png",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "OK",
+  "final_url": "https://www.baidu.com/",
+  "http_charset": "utf-8",
+  "entry_bytes": 731686,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 731736,
+  "assets": 113,
+  "asset_bytes": 4453059,
+  "image_sizes": 92,
+  "elapsed_s": 6.85,
+  "items": 113
+}

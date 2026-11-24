@@ -1,0 +1,952 @@
+{
+  "slug": "baidu-home",
+  "entry": "https://www.baidu.com/",
+  "captured_at": "2026-11-08 20:42:41",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "百度首页",
+  "items": [
+    {
+      "url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "final_url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "local": "assets/pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "bytes": 26009,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "1363ca9b484c6c66"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/css/ubase_sync-d600f57804.css?v=md5",
+      "final_url": "https://pss.bdstatic.com/static/superman/css/ubase_sync-d600f57804.css?v=md5",
+      "local": "assets/pss.bdstatic.com/static/superman/css/ubase_sync-d600f57804__ed8bb5ca.css",
+      "bytes": 407,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "46e251bd98f509f6"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newfanyi-da0cea8f7e.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newfanyi-da0cea8f7e.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newfanyi-da0cea8f7e.png",
+      "bytes": 4560,
+      "content_type": "image/png",
+      "sha1": "ab8a7fd7f3919077"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/superman/wenku_1788235315000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/superman/wenku_1788235315000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/superman/wenku_1788235315000.png",
+      "bytes": 7603,
+      "content_type": "image/png",
+      "sha1": "1c82b4b6e46dab81"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newbaike-889054f349.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newbaike-889054f349.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newbaike-889054f349.png",
+      "bytes": 2315,
+      "content_type": "image/png",
+      "sha1": "41a99a134fa7f41e"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newzhidao-da1cf444b0.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newzhidao-da1cf444b0.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newzhidao-da1cf444b0.png",
+      "bytes": 2315,
+      "content_type": "image/png",
+      "sha1": "6a4d2cd500990ac0"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newjiankang-f03b804b4b.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newjiankang-f03b804b4b.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newjiankang-f03b804b4b.png",
+      "bytes": 2746,
+      "content_type": "image/png",
+      "sha1": "dd0380c72a85e732"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/yingxiaoicon-612169cc36.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/yingxiaoicon-612169cc36.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/yingxiaoicon-612169cc36.png",
+      "bytes": 3378,
+      "content_type": "image/png",
+      "sha1": "45abc6df0b931554"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newzhibo-a6a0831ecd.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newzhibo-a6a0831ecd.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newzhibo-a6a0831ecd.png",
+      "bytes": 4085,
+      "content_type": "image/png",
+      "sha1": "fba2c5e03c08835a"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newyinyue-03ecd1e9b9.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newyinyue-03ecd1e9b9.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newyinyue-03ecd1e9b9.png",
+      "bytes": 2263,
+      "content_type": "image/png",
+      "sha1": "1bab5582f607e31a"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/topnav/newxueshuicon-a5314d5c83.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/topnav/newxueshuicon-a5314d5c83.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/topnav/newxueshuicon-a5314d5c83.png",
+      "bytes": 2651,
+      "content_type": "image/png",
+      "sha1": "f1f43c03231ec310"
+    },
+    {
+      "url": "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
+      "final_url": "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
+      "local": "assets/www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
+      "bytes": 15444,
+      "content_type": "image/png",
+      "sha1": "15e45b5ecb7c7f4f"
+    },
+    {
+      "url": "https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png",
+      "final_url": "https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png",
+      "local": "assets/www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png",
+      "bytes": 24774,
+      "content_type": "image/png",
+      "sha1": "85eb806f298d3e7e"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/result.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/result.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/result.png",
+      "bytes": 6617,
+      "content_type": "image/png",
+      "sha1": "159d18c3ae696819"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "bytes": 12802,
+      "content_type": "image/png",
+      "sha1": "bace9f44f9a2609b"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "bytes": 7707,
+      "content_type": "image/png",
+      "sha1": "3260f2b87c0079a5"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/wenxinlogo_1770695621000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/wenxinlogo_1770695621000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/wenxinlogo_1770695621000.png",
+      "bytes": 7047,
+      "content_type": "image/png",
+      "sha1": "2c09a5f2a7f1eac9"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/hot_search_x3_1747880381000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/hot_search_x3_1747880381000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/hot_search_x3_1747880381000.png",
+      "bytes": 6314,
+      "content_type": "image/png",
+      "sha1": "553f5f71657bde4e"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "bytes": 16800,
+      "content_type": "image/png",
+      "sha1": "b24ea3adbd3193d9"
+    },
+    {
+      "url": "https://www.baidu.com/img/sug_bd.png?v=09816787.png",
+      "final_url": "https://www.baidu.com/img/sug_bd.png?v=09816787.png",
+      "local": "assets/www.baidu.com/img/sug_bd__d264a001.png",
+      "bytes": 431,
+      "content_type": "image/png",
+      "sha1": "d03b2bfad4ac8c82"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "bytes": 19672,
+      "content_type": "image/png",
+      "sha1": "1ca597445e432837"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "bytes": 14038,
+      "content_type": "image/png",
+      "sha1": "1a097c0016e01b2d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "bytes": 3117,
+      "content_type": "image/gif",
+      "sha1": "6a3bdf00154b04a6"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "bytes": 851,
+      "content_type": "image/svg+xml",
+      "sha1": "32f1c43a8458741b"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "bytes": 833,
+      "content_type": "image/svg+xml",
+      "sha1": "5ed343f70bce8340"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "bytes": 2591,
+      "content_type": "image/svg+xml",
+      "sha1": "4b35c025e108d715"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "bytes": 2572,
+      "content_type": "image/svg+xml",
+      "sha1": "1222b2272504f39c"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/spis7-d578e7ff4b.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/spis7-d578e7ff4b.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/spis7-d578e7ff4b.png",
+      "bytes": 5970,
+      "content_type": "image/png",
+      "sha1": "eaa49d0052022b1e"
+    },
+    {
+      "url": "https://www.baidu.com/img/sug_bd.png",
+      "final_url": "https://www.baidu.com/img/sug_bd.png",
+      "local": "assets/www.baidu.com/img/sug_bd.png",
+      "bytes": 431,
+      "content_type": "image/png",
+      "sha1": "d03b2bfad4ac8c82"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/font/iconfont-74fcdd51ab.svg",
+      "final_url": "https://pss.bdstatic.com/static/superman/font/iconfont-74fcdd51ab.svg",
+      "local": "assets/pss.bdstatic.com/static/superman/font/iconfont-74fcdd51ab.svg",
+      "bytes": 146524,
+      "content_type": "image/svg+xml",
+      "sha1": "cf55a3e4608d103a"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/icons-441e82fb11.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/icons-441e82fb11.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/icons-441e82fb11.png",
+      "bytes": 17545,
+      "content_type": "image/png",
+      "sha1": "4ecce8a8ce5dfda7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/icons-d5b04cc545.gif",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/icons-d5b04cc545.gif",
+      "local": "assets/pss.bdstatic.com/static/superman/img/icons-d5b04cc545.gif",
+      "bytes": 22829,
+      "content_type": "image/gif",
+      "sha1": "d17323f53a6450a7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/sugbg-1762fe7cb1.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/sugbg-1762fe7cb1.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/sugbg-1762fe7cb1.png",
+      "bytes": 7101,
+      "content_type": "image/png",
+      "sha1": "5a2ec7c074d0b265"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/sugbg-90fc9cf8c8.gif",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/sugbg-90fc9cf8c8.gif",
+      "local": "assets/pss.bdstatic.com/static/superman/img/sugbg-90fc9cf8c8.gif",
+      "bytes": 2133,
+      "content_type": "image/gif",
+      "sha1": "5ca3af599b3920bf"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/yingxiao-b585c1ec7d.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/yingxiao-b585c1ec7d.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/yingxiao-b585c1ec7d.png",
+      "bytes": 9626,
+      "content_type": "image/png",
+      "sha1": "17118ea23747495a"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/zhidao-cbf2affcac.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/zhidao-cbf2affcac.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/zhidao-cbf2affcac.png",
+      "bytes": 3466,
+      "content_type": "image/png",
+      "sha1": "edcdc289885eaef9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/qqjt-9809ca806e.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/qqjt-9809ca806e.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/qqjt-9809ca806e.png",
+      "bytes": 8362,
+      "content_type": "image/png",
+      "sha1": "27f3dfebf0c50285"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/image-55b5909a30.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/image-55b5909a30.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/image-55b5909a30.png",
+      "bytes": 2520,
+      "content_type": "image/png",
+      "sha1": "2fff251bce07aee6"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/wenku-aaf198d89f.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/wenku-aaf198d89f.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/wenku-aaf198d89f.png",
+      "bytes": 6275,
+      "content_type": "image/png",
+      "sha1": "e07993076deca836"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/fengyunbang-1986a40079.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/logos/fengyunbang-1986a40079.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/logos/fengyunbang-1986a40079.png",
+      "bytes": 1614,
+      "content_type": "image/png",
+      "sha1": "9d27ba039e081214"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/nicon-10750f3f7d.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/nicon-10750f3f7d.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/nicon-10750f3f7d.png",
+      "bytes": 2430,
+      "content_type": "image/png",
+      "sha1": "5964b840eb025d95"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/nicon-2x-6258e1cf13.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/nicon-2x-6258e1cf13.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/nicon-2x-6258e1cf13.png",
+      "bytes": 5264,
+      "content_type": "image/png",
+      "sha1": "493a511972daf1cd"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f189_45",
+      "final_url": "https://gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f189_45",
+      "local": "assets/gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=a__b948bcc9ef",
+      "bytes": 1625,
+      "content_type": "image/png",
+      "sha1": "3f00bb1e786e503c"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/voice-e255e654cb.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/voice-e255e654cb.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/voice-e255e654cb.png",
+      "bytes": 1748,
+      "content_type": "image/png",
+      "sha1": "38dcd95e4678ca12"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/camera-4683ae6561.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/camera-4683ae6561.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/camera-4683ae6561.png",
+      "bytes": 1669,
+      "content_type": "image/png",
+      "sha1": "cad0b77d243a272b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/clear-48eb6e3446.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/clear-48eb6e3446.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/clear-48eb6e3446.png",
+      "bytes": 625,
+      "content_type": "image/png",
+      "sha1": "f81da669a3edc704"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/voicedark-df27dd3f94.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/voicedark-df27dd3f94.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/voicedark-df27dd3f94.png",
+      "bytes": 3275,
+      "content_type": "image/png",
+      "sha1": "6d4ffa9a761e519d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/searchbox/cameradark-ff227fa386.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/searchbox/cameradark-ff227fa386.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/searchbox/cameradark-ff227fa386.png",
+      "bytes": 3057,
+      "content_type": "image/png",
+      "sha1": "b8a14a09e345166e"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/downArrow_1765100518000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/downArrow_1765100518000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/downArrow_1765100518000.svg",
+      "bytes": 617,
+      "content_type": "image/svg+xml",
+      "sha1": "f7cf4dfeafe2cf46"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=3220710717,862447296&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_192",
+      "final_url": "https://gips2.baidu.com/it/u=3220710717,862447296&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_192",
+      "local": "assets/gips2.baidu.com/it/u=3220710717,862447296&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_192",
+      "bytes": 3654,
+      "content_type": "image/png",
+      "sha1": "d17c70e1eca2e10d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-left-a7b272965a.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-left-a7b272965a.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/guide_new/arrow-left-a7b272965a.png",
+      "bytes": 569,
+      "content_type": "image/png",
+      "sha1": "490be87cfc8f6fc9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-top-d81f5f8843.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-top-d81f5f8843.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/guide_new/arrow-top-d81f5f8843.png",
+      "bytes": 525,
+      "content_type": "image/png",
+      "sha1": "ca07eb69d1fbd967"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-right-69f7969669.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/guide_new/arrow-right-69f7969669.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/guide_new/arrow-right-69f7969669.png",
+      "bytes": 549,
+      "content_type": "image/png",
+      "sha1": "343dc695e515eb2a"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/hot_search_grey_1747826297000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/hot_search_grey_1747826297000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/hot_search_grey_1747826297000.png",
+      "bytes": 5488,
+      "content_type": "image/png",
+      "sha1": "5a2e0855188c6af3"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/hot_search/pop_tri@1x-f4a02fac82.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/hot_search/pop_tri@1x-f4a02fac82.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/hot_search/pop_tri@1x-f4a02fac82.png",
+      "bytes": 231,
+      "content_type": "image/png",
+      "sha1": "6aa820a7979274ad"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/hot_search/pop_tri-a656a7d535.png",
+      "final_url": "https://pss.bdstatic.com/static/superman/img/hot_search/pop_tri-a656a7d535.png",
+      "local": "assets/pss.bdstatic.com/static/superman/img/hot_search/pop_tri-a656a7d535.png",
+      "bytes": 322,
+      "content_type": "image/png",
+      "sha1": "9814d19e25913065"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "bytes": 17545,
+      "content_type": "image/png",
+      "sha1": "4ecce8a8ce5dfda7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "bytes": 22829,
+      "content_type": "image/gif",
+      "sha1": "d17323f53a6450a7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "bytes": 7101,
+      "content_type": "image/png",
+      "sha1": "5a2ec7c074d0b265"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "bytes": 2133,
+      "content_type": "image/gif",
+      "sha1": "5ca3af599b3920bf"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/tools-3.png",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/tools-3.png",
+      "local": "assets/www.baidu.com/aladdin/img/tools/tools-3.png",
+      "bytes": 11446,
+      "content_type": "image/png",
+      "sha1": "ea7e1243386690e5"
+    },
+    {
+      "url": "https://www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "final_url": "https://www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "local": "assets/www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "bytes": 534,
+      "content_type": "image/gif",
+      "sha1": "7810590ff95e50d1"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "bytes": 1116,
+      "content_type": "image/png",
+      "sha1": "9807d2143a5064e9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "bytes": 1113,
+      "content_type": "image/png",
+      "sha1": "2500b87b77486944"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "bytes": 1807,
+      "content_type": "image/gif",
+      "sha1": "d4fba8def190eeb9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "bytes": 2447,
+      "content_type": "image/png",
+      "sha1": "177313ee8a716b0b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "bytes": 392,
+      "content_type": "image/png",
+      "sha1": "39d216d7bd313101"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "bytes": 2430,
+      "content_type": "image/png",
+      "sha1": "5964b840eb025d95"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "bytes": 5264,
+      "content_type": "image/png",
+      "sha1": "493a511972daf1cd"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "bytes": 1588,
+      "content_type": "image/svg+xml",
+      "sha1": "3113e2a58294c73e"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "bytes": 1434,
+      "content_type": "image/svg+xml",
+      "sha1": "8b28e83d58e68a87"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "bytes": 6222,
+      "content_type": "image/svg+xml",
+      "sha1": "993f53d792191f4b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "bytes": 1748,
+      "content_type": "image/png",
+      "sha1": "38dcd95e4678ca12"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "bytes": 1669,
+      "content_type": "image/png",
+      "sha1": "cad0b77d243a272b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "bytes": 625,
+      "content_type": "image/png",
+      "sha1": "f81da669a3edc704"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/loading.gif",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/loading.gif",
+      "local": "assets/www.baidu.com/aladdin/img/tools/loading.gif",
+      "bytes": 4504,
+      "content_type": "image/gif",
+      "sha1": "218275d5498caf04"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/tools-5.png",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/tools-5.png",
+      "local": "assets/www.baidu.com/aladdin/img/tools/tools-5.png",
+      "bytes": 10874,
+      "content_type": "image/png",
+      "sha1": "6529ecbe75482c71"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "bytes": 644,
+      "content_type": "image/png",
+      "sha1": "8ddadf7aea1b4273"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "bytes": 3220,
+      "content_type": "image/png",
+      "sha1": "ad4d24f732505c5d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "bytes": 158875,
+      "content_type": "image/png",
+      "sha1": "b99effe63f009045"
+    },
+    {
+      "url": "https://m.baidu.com/se/static/font/cicon.svg?t=1793762254454",
+      "final_url": "https://m.baidu.com/se/static/font/cicon.svg?t=1793762254454",
+      "local": "assets/m.baidu.com/se/static/font/cicon__5dff589f.svg",
+      "bytes": 143850,
+      "content_type": "image/svg+xml",
+      "sha1": "5def7bea606b2a37"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "bytes": 154511,
+      "content_type": "image/svg+xml",
+      "sha1": "9a937f01a3aac1c3"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "bytes": 426981,
+      "content_type": "image/svg+xml",
+      "sha1": "3e65fb7d10a68043"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "bytes": 891168,
+      "content_type": "image/svg+xml",
+      "sha1": "58f2bf5e064b6978"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "bytes": 12081,
+      "content_type": "image/svg+xml",
+      "sha1": "62f1d741128244de"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "final_url": "https://gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "local": "assets/gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "bytes": 1121,
+      "content_type": "image/png",
+      "sha1": "c709948be15e1027"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "bytes": 689,
+      "content_type": "image/svg+xml",
+      "sha1": "6eaf8f941cd1d5c1"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "bytes": 516,
+      "content_type": "image/png",
+      "sha1": "7b392ea6624ced03"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "bytes": 547,
+      "content_type": "image/png",
+      "sha1": "6f87254ce5f0c2cf"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f384_384",
+      "final_url": "https://gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f384_384",
+      "local": "assets/gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=aut__2336267637",
+      "bytes": 83826,
+      "content_type": "image/png",
+      "sha1": "fb4855c5e230c4a9"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "bytes": 1734,
+      "content_type": "image/png",
+      "sha1": "caa3b0cbc069e0e0"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "bytes": 1584,
+      "content_type": "image/png",
+      "sha1": "f47995e299081c0b"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "bytes": 893,
+      "content_type": "image/svg+xml",
+      "sha1": "21787d0c4cc86cd3"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "bytes": 11954,
+      "content_type": "image/png",
+      "sha1": "58a62f161d4dd6bb"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "bytes": 4106,
+      "content_type": "image/png",
+      "sha1": "0e3df64ead93d9ab"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "bytes": 10038,
+      "content_type": "image/svg+xml",
+      "sha1": "7ceac1f5bc143960"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "bytes": 4296,
+      "content_type": "image/png",
+      "sha1": "77e31d57f67e8144"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "bytes": 4170,
+      "content_type": "image/png",
+      "sha1": "2501a24547d34420"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "bytes": 531,
+      "content_type": "image/png",
+      "sha1": "d252232ffbc4c45f"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "bytes": 535,
+      "content_type": "image/png",
+      "sha1": "b93e58ff82d4ddf7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "local": "assets/pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "bytes": 569456,
+      "content_type": "image/svg+xml",
+      "sha1": "178e88a3f868fcca"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/lib/jquery-1-edb203c114.10.2.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/lib/jquery-1-edb203c114.10.2.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/lib/jquery-1-edb203c114.10.2.js",
+      "bytes": 143929,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "525bf4344984e7ab"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/lib/esl-7410c1d5ab.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/lib/esl-7410c1d5ab.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/lib/esl-7410c1d5ab.js",
+      "bytes": 22160,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "afe07b5647cc93bf"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "bytes": 74476,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "997d0214da5c397e"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "bytes": 41984,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "29f1c62b0b8b4dd8"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/instant_search_newi_ac41303.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/instant_search_newi_ac41303.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/instant_search_newi_ac41303.js",
+      "bytes": 12196,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "92b86a8e3b0a2cea"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "bytes": 827423,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "021adb02f7867e3b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/polyfill-ie8-30f98ab294.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/polyfill-ie8-30f98ab294.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/polyfill-ie8-30f98ab294.js",
+      "bytes": 1996,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "8a09346807cdffb4"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/sbase-d1a62b47b0.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/sbase-d1a62b47b0.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/sbase-d1a62b47b0.js",
+      "bytes": 66636,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "6a0fca241e2c1086"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/s_super_index-895c0c52f8.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/s_super_index-895c0c52f8.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/s_super_index-895c0c52f8.js",
+      "bytes": 1121,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "0195048c06d901f0"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/min_super-e11419c661.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/min_super-e11419c661.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/min_super-e11419c661.js",
+      "bytes": 68013,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "4680e5d7f6e30426"
+    },
+    {
+      "url": "https://pss.bdstatic.com/static/superman/js/components/hotsearch-2e7b839d0b.js",
+      "final_url": "https://pss.bdstatic.com/static/superman/js/components/hotsearch-2e7b839d0b.js",
+      "local": "assets/pss.bdstatic.com/static/superman/js/components/hotsearch-2e7b839d0b.js",
+      "bytes": 16969,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "b2f79c2e3e5ee98a"
+    },
+    {
+      "url": "https://hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "final_url": "https://hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "local": "assets/hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "bytes": 118023,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "45a468aa0eaeec4d"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://pss.bdstatic.com/static/superman/img/logos/bdbri_icons.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/url",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/skin_dark-48fa9dbf5c.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/skin_dark_ie-8647a11021.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/load_ext_spis-5e9f273bb5.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/img/load_spis-64604bbf24.png",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "OK",
+  "final_url": "https://www.baidu.com/",
+  "http_charset": "utf-8",
+  "entry_bytes": 731686,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 731736,
+  "assets": 113,
+  "asset_bytes": 4453059,
+  "image_sizes": 92,
+  "elapsed_s": 6.85
+}

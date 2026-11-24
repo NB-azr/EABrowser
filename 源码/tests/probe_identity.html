@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<canvas id="cv" width="20" height="20"></canvas>
+<script>
+(function(){
+  function brandsStr(b){
+    if (!b || typeof b.length !== 'number') return 'none';
+    var out = [];
+    for (var i=0;i<b.length;i++) out.push(b[i].brand + '/' + b[i].version);
+    return out.join(',');
+  }
+  function probe(label){
+    var n = navigator, uad = n.userAgentData || {};
+    console.log('[ID] tier=' + label +
+      ' | UA=' + n.userAgent +
+      ' | APP=' + n.appVersion +
+      ' | PF=' + n.platform +
+      ' | uad.platform=' + uad.platform +
+      ' | uad.mobile=' + uad.mobile +
+      ' | brands=' + brandsStr(uad.brands));
+  }
+  console.log('[ID] chrome=' + (typeof window.chrome) +
+    ' app=' + (window.chrome && typeof window.chrome.app) +
+    ' runtime=' + (window.chrome && typeof window.chrome.runtime) +
+    ' csi=' + (window.chrome && typeof window.chrome.csi) +
+    ' loadTimes=' + (window.chrome && typeof window.chrome.loadTimes));
+  console.log('[ID] vendor=' + navigator.vendor + ' appName=' + navigator.appName);
+
+  for (var t=0;t<3;t++){
+    var got = __eaIdentitySetTier(t);
+    probe(t + '/' + got);
+    var gaps = __eaIdentityGaps();
+    console.log('[ID] gaps(tier ' + t + ')=' + JSON.stringify(gaps));
+  }
+
+  /* 同一档位里特性探测互相一致，且与 UA 声明的版本不矛盾 */
+  __eaIdentitySetTier(2);
+  var gl = document.getElementById('cv').getContext('webgl');
+  var feats = {
+    hasOwn: typeof Object.hasOwn,
+    at: typeof Array.prototype.at,
+    structuredClone: typeof structuredClone,
+    WebAssembly: typeof WebAssembly,
+    ResizeObserver: typeof ResizeObserver,
+    WebGL: gl ? 'context' : 'null',
+    glInstance: gl ? (gl instanceof WebGLRenderingContext) : false
+  };
+  console.log('[ID] feats(tier2)=' + JSON.stringify(feats));
+
+  if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+    navigator.userAgentData.getHighEntropyValues(['uaFullVersion','platformVersion','model']).then(function(h){
+      console.log('[ID] highEntropy tier2=' + JSON.stringify(h));
+    });
+  }
+
+  /* 切回均衡档，验证运行时立即生效 */
+  __eaIdentitySetTier(1);
+  console.log('[ID] back-to-1 UA=' + navigator.userAgent);
+
+  /* 设备形态（桌面）与档位组合 */
+  __eaIdentitySetDevice(0);
+  __eaIdentitySetTier(2);
+  console.log('[ID] desktop UA=' + navigator.userAgent +
+    ' | PF=' + navigator.platform +
+    ' | uad=' + navigator.userAgentData.platform + '/' + navigator.userAgentData.mobile);
+  __eaIdentitySetDevice(1);
+  __eaIdentitySetTier(1);
+})();
+</script></body></html>

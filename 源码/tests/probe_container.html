@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+#wrap{container-type:inline-size;width:320px;border:1px solid #000}
+#child{color:rgb(0,0,0)}
+@container (min-width:300px){#child{color:rgb(0,128,0)}}
+@container (min-width:400px){#child{color:rgb(255,0,0)}}
+#named{container-type:inline-size;container-name:panel;width:200px}
+@container panel (min-width:180px){#inner{color:rgb(0,0,255)}}
+@container (width < 250px){#small{color:rgb(128,0,128)}}
+</style></head><body>
+<div id="wrap"><div id="child"><span id="small">x</span></div></div>
+<div id="named"><p id="inner">y</p></div>
+<script>
+console.log('[M5] child color='+getComputedStyle(document.getElementById('child')).color);
+console.log('[M5] small color='+getComputedStyle(document.getElementById('small')).color);
+console.log('[M5] inner color='+getComputedStyle(document.getElementById('inner')).color);
+console.log('[M5] supports container='+CSS.supports('width','1px')+' query='+CSS.supports('(min-width:1px)'));
+/* 子节点继承刷新：改容器宽度后重新读取 */
+var w=document.getElementById('wrap');
+w.style.width='420px';
+console.log('[M5] after resize child color='+getComputedStyle(document.getElementById('child')).color);
+</script></body></html>

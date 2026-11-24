@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><body>
+<!-- 1. 畸形嵌套：交叉闭合 -->
+<b><i>交叉</b></i>
+<!-- 2. 大量未闭合 -->
+<div><span><em><strong><u><s>全未闭合
+<!-- 3. 空标签/空属性 -->
+<div class="" id= ></div><p a b c= d></p>
+<!-- 4. 属性无值/混合引号/未闭合引号 -->
+<input value="未闭合引号类型 disabled>
+<a href='单引号' title=无引号 data-x="双" data-y='单'>link</a>
+<!-- 5. 特殊字符 -->
+<p>&lt;script&gt;alert(1)&lt;/script&gt; &amp;amp; &unknown; &#0; &#xFFFFFF; &#xD800;</p>
+<!-- 6. 空结束标签/孤立结束标签 -->
+</div></p></span>
+<div></div></div></div>
+<!-- 7. 深层嵌套 50 层 -->
+<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>deep</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+<!-- 8. script 内包含结束标签字符串 -->
+<script>var x = "</scr" + "ipt>"; var y = 1 < 2;</script>
+<!-- 9. 注释未闭合 -->
+<!-- 未闭合注释一直到文件尾
+<!-- 10. 裸小于号/大于号 -->
+<p>a < b > c <3 </p>
+<!-- 11. 重复属性 -->
+<div id="a" id="b" class="c" class="d">dup</div>
+<!-- 12. 大写与混合 -->
+<TABLE><TR><TD>cell</TD></TR></TABLE>
+<!-- 13. 空白与换行属性 -->
+<div
+  class="multi"
+  id="m"
+>ws</div>
+<!-- 14. 实体边界 -->
+<p>&#x41;&#65;&amp;&#x4F60;&#20320;&notreal;&#;</p>
+<!-- 15. 超长属性值 -->
+<div data-long="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">long</div>
+</body></html>

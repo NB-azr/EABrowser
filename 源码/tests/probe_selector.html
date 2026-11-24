@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>selector</title></head>
+<body>
+<div class="list">
+  <div class="item">A</div>
+  <div class="item">B</div>
+  <div class="item" id="uniq">C</div>
+  <div class="item"><span class="deep">D</span></div>
+</div>
+<script>
+(function(){
+  var items=document.querySelectorAll('.item');
+  var target=items[1];
+  var sel=__eaStableSelector(target);
+  var hits=document.querySelectorAll(sel);
+  var ok=(sel.length>0)&&(hits.length===1)&&(hits[0]===target);
+  console.log('[SEL] target=B sel='+sel+' hits='+hits.length+' same='+(hits[0]===target)+' ok='+ok+' nthOfType='+(sel.indexOf('nth-of-type')>=0));
+  var uniq=document.getElementById('uniq');
+  var usel=__eaStableSelector(uniq);
+  console.log('[SEL] uniq sel='+usel+' hits='+document.querySelectorAll(usel).length+' isId='+(usel.charAt(0)==='#'));
+  var deep=document.querySelector('.deep');
+  var dsel=__eaStableSelector(deep);
+  var dhits=document.querySelectorAll(dsel);
+  console.log('[SEL] deep sel='+dsel+' hits='+dhits.length+' same='+(dhits[0]===deep));
+  var csel=__eaStableSelector(deep,{compact:true});
+  console.log('[SEL] compact sel='+csel+' hits='+document.querySelectorAll(csel).length);
+  var det=document.createElement('div');
+  var dtsel=__eaStableSelector(det);
+  console.log('[SEL] detached empty='+(dtsel===''));
+})();
+</script>
+</body></html>

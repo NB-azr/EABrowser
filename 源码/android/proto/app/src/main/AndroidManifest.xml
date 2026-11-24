@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="EA 架构原型"
+        android:theme="@android:style/Theme.Holo.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Canvas 路径视频开洞 demo：NativeView.onDraw 式逐条绘制 + SurfaceView 叠层 -->
+        <activity
+            android:name=".VideoCanvasActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 渲染子进程：崩溃不会带走主进程 -->
+        <service
+            android:name=".RenderService"
+            android:exported="false"
+            android:process=":render" />
+
+        <!-- 隔离进程探针：独立 UID、无存储权限，只能靠 Binder 收 fd -->
+        <service
+            android:name=".IsoProbeService"
+            android:exported="false"
+            android:isolatedProcess="true" />
+    </application>
+</manifest>

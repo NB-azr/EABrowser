@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>writing-mode 竖排</title>
+<style>
+  body { margin: 0; padding: 10px; }
+  #vert {
+    writing-mode: vertical-rl;
+    height: 120px;
+    width: 300px;
+    font-size: 16px;
+    color: #111111;
+  }
+  #vert2 {
+    writing-mode: vertical-lr;
+    height: 120px;
+    width: 300px;
+    font-size: 16px;
+    color: #7c3aed;
+  }
+</style>
+</head>
+<body>
+<!-- 竖排：每列约 6 个字，rl 第一列在最右，lr 第一列在最左 -->
+<div id="vert">春眠不觉晓处处闻啼鸟夜来风雨声花落知多少</div>
+<div id="vert2">白日依山尽黄河入海流欲穷千里目更上一层楼</div>
+</body>
+</html>

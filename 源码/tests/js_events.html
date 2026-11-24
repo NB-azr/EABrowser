@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>事件 / DOM / BOM 测试</title>
+<style>#outer{width:300px;height:100px;background:#eee}</style></head>
+<body>
+<div id="outer"><div id="mid"><button id="btn" onclick="window.__INLINE=(window.__INLINE||0)+1">b</button></div></div>
+<div id="out"></div>
+<script>
+window.__R = "pending";
+var P = [];
+function ok(name, cond) { P.push((cond ? "PASS " : "FAIL ") + name); }
+function eq(name, a, b) { ok(name + "(" + a + " vs " + b + ")", String(a) === String(b)); }
+window.__INLINE = 0;
+
+/* ---------- 1. 捕获/目标/冒泡顺序 ---------- */
+try {
+    var outer = document.getElementById("outer");
+    var mid = document.getElementById("mid");
+    var btn = document.getElementById("btn");
+    var order = [];
+    outer.addEventListener("click", function () { order.push("outer-c"); }, true);
+    outer.addEventListener("click", function () { order.push("outer-b"); });
+    mid.addEventListener("click", function () { order.push("mid-c"); }, true);
+    mid.addEventListener("click", function () { order.push("mid-b"); });
+    btn.addEventListener("click", function (e) {
+        order.push("btn");
+        ok("target-id", e.target.getAttribute("id") === "btn");
+        ok("phase-at-target", e.eventPhase === 2);
+    });
+    var ev = new Event("click", { bubbles: true });
+    var ret = btn.dispatchEvent(ev);
+    eq("order", order.join(","), "outer-c,mid-c,btn,mid-b,outer-b");
+    ok("dispatch-return-true", ret === true);
+
+    /* 2. stopPropagation */
+    order = [];
+    var stopFn = function (e) { order.push("mid-stop"); e.stopPropagation(); };
+    mid.addEventListener("click", stopFn);
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    eq("stopPropagation", order.join(","), "outer-c,mid-c,btn,mid-b,mid-stop");
+    mid.removeEventListener("click", stopFn);
+
+    /* 3. stopImmediatePropagation */
+    order = [];
+    var firstFn = function (e) { order.push("first"); e.stopImmediatePropagation(); };
+    var secondFn = function () { order.push("second"); };
+    btn.addEventListener("click", firstFn);
+    btn.addEventListener("click", secondFn);
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    ok("stopImmediate", order.indexOf("second") < 0 && order.indexOf("first") >= 0);
+    btn.removeEventListener("click", firstFn);
+    btn.removeEventListener("click", secondFn);
+
+    /* 4. preventDefault */
+    var pd = function (e) { e.preventDefault(); };
+    btn.addEventListener("click", pd);
+    var e2 = new Event("click", { bubbles: true, cancelable: true });
+    var r2 = btn.dispatchEvent(e2);
+    ok("preventDefault-return-false", r2 === false);
+    ok("defaultPrevented", e2.defaultPrevented === true);
+    btn.removeEventListener("click", pd);
+
+    /* 5. once / removeEventListener */
+    var onceCount = 0;
+    btn.addEventListener("click", function () { onceCount++; }, { once: true });
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    eq("once-count", onceCount, 1);
+    var rc = 0, rf = function () { rc++; };
+    btn.addEventListener("click", rf);
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    btn.removeEventListener("click", rf);
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    eq("removeEventListener", rc, 1);
+
+    /* 6. onclick 属性 + 行内 onclick */
+    var propCount = 0;
+    btn.onclick = function () { propCount++; };
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    eq("onclick-property", propCount, 1);
+    btn.onclick = null;
+    var inlineBase = window.__INLINE;
+    btn.dispatchEvent(new Event("click", { bubbles: true }));
+    eq("inline-onclick-attr", window.__INLINE - inlineBase, 1);
+
+    /* 7. focus / blur / activeElement */
+    var focusLog = [];
+    btn.addEventListener("focus", function () { focusLog.push("focus"); });
+    btn.addEventListener("blur", function () { focusLog.push("blur"); });
+    mid.addEventListener("focusin", function () { focusLog.push("focusin"); });
+    mid.addEventListener("focusout", function () { focusLog.push("focusout"); });
+    btn.focus();
+    ok("activeElement", document.activeElement.getAttribute("id") === "btn");
+    btn.blur();
+    eq("focus-flow", focusLog.join(","), "focus,blur");
+    ok("activeElement-body", document.activeElement.getAttribute("id") !== "btn");
+} catch (e) { P.push("FAIL events-exception " + (e && e.message)); }
+
+/* ---------- 8. classList ---------- */
+try {
+    var d = document.getElementById("outer");
+    d.className = "a b c";
+    d.classList.remove("b");
+    eq("classList.remove", d.className, "a c");
+    eq("classList.toggle-add", d.classList.toggle("d"), true);
+    eq("classList.toggle-remove", d.classList.toggle("d"), false);
+    eq("classList.replace", d.classList.replace("a", "z"), true);
+    eq("classList.value", d.className, "z c");
+    eq("classList.length", d.classList.length, 2);
+} catch (e) { P.push("FAIL classList " + (e && e.message)); }
+
+/* ---------- 9. 插入 / 遍历 / attributes ---------- */
+try {
+    var box = document.createElement("div");
+    box.id = "box";
+    document.body.appendChild(box);
+    var c1 = document.createElement("span"); c1.id = "c1"; c1.setAttribute("data-x", "1");
+    var c2 = document.createElement("span"); c2.id = "c2";
+    box.appendChild(c1);
+    c1.after(c2);
+    eq("after", box.children.length, 2);
+    eq("nextElementSibling", c1.nextElementSibling.getAttribute("id"), "c2");
+    eq("previousElementSibling", c2.previousElementSibling.getAttribute("id"), "c1");
+    eq("childElementCount", box.childElementCount, 2);
+    var c3 = document.createElement("span"); c3.id = "c3";
+    c2.replaceWith(c3);
+    eq("replaceWith", box.lastElementChild.getAttribute("id"), "c3");
+    var c4 = document.createElement("span"); c4.id = "c4";
+    box.replaceChild(c4, c1);
+    eq("replaceChild", box.firstElementChild.getAttribute("id"), "c4");
+    c4.before('<b id="c5">x</b>');
+    eq("before-string", box.firstElementChild.getAttribute("id"), "c5");
+    eq("attributes-length", c4.attributes.length, 1);
+    eq("attributes-getNamedItem", c4.attributes.getNamedItem("id").value, "c4");
+    var found = box.getElementsByTagName("span");
+    eq("elements-by-tag", found.length, 2);
+    var byClass = box.getElementsByClassName("none");
+    eq("elements-by-class", byClass.length, 0);
+} catch (e) { P.push("FAIL dom-insert " + (e && e.message)); }
+
+/* ---------- 10. style API ---------- */
+try {
+    var s = document.getElementById("outer");
+    s.style.setProperty("color", "red");
+    eq("setProperty", s.style.getPropertyValue("color"), "red");
+    s.style.removeProperty("color");
+    eq("removeProperty", s.style.getPropertyValue("color"), "");
+} catch (e) { P.push("FAIL style " + (e && e.message)); }
+
+/* ---------- 11. BOM / 内置 ---------- */
+try {
+    eq("btoa", btoa("Aa"), "QWE=");
+    eq("atob", atob("QWE="), "Aa");
+    var enc = new TextEncoder().encode("中");
+    eq("TextEncoder-len", enc.length, 3);
+    eq("TextDecoder", new TextDecoder().decode(enc), "中");
+    var ctrl = new AbortController();
+    var aborted = false;
+    ctrl.signal.addEventListener("abort", function () { aborted = true; });
+    ctrl.abort();
+    ok("AbortController", aborted && ctrl.signal.aborted === true);
+    var qm = false;
+    queueMicrotask(function () { qm = true; });
+    var cloned = structuredClone({ a: 1, b: [2, 3], d: new Date(0) });
+    ok("structuredClone", cloned.a === 1 && cloned.b[1] === 3 && cloned.d.getTime() === 0);
+    eq("Array.at", [1, 2, 3].at(-1), 3);
+    ok("Object.hasOwn", Object.hasOwn({ x: 1 }, "x") === true);
+    ok("String.replaceAll", "a-b-a".replaceAll("a", "z") === "z-b-z");
+    var settled = null;
+    Promise.allSettled([Promise.resolve(1), Promise.reject(2)]).then(function (r) { settled = r.length; });
+    ok("matchMedia", matchMedia("(min-width: 100px)").matches === true);
+    ok("crypto", typeof crypto.getRandomValues === "function");
+    eq("devicePixelRatio", devicePixelRatio, 1);
+} catch (e) { P.push("FAIL bom " + (e && e.message)); }
+
+/* ---------- 12. canvas 像素接口 ---------- */
+try {
+    var cv = document.createElement("canvas");
+    cv.width = 100; cv.height = 100;
+    document.body.appendChild(cv);
+    var cx = cv.getContext("2d");
+    cx.fillStyle = "#ff0000";
+    cx.fillRect(0, 0, 50, 50);
+    var d1 = cx.getImageData(10, 10, 1, 1).data;
+    eq("fillRect-pixel", d1[0] + "," + d1[1] + "," + d1[2] + "," + d1[3], "255,0,0,255");
+
+    var id = cx.createImageData(2, 2);
+    id.data[0] = 0; id.data[1] = 255; id.data[2] = 0; id.data[3] = 255;
+    cx.putImageData(id, 60, 60);
+    var d2 = cx.getImageData(60, 60, 1, 1).data;
+    eq("putImageData-pixel", d2[1], 255);
+
+    /* drawImage：canvas → canvas */
+    var cv2 = document.createElement("canvas");
+    cv2.width = 50; cv2.height = 50;
+    var cx2 = cv2.getContext("2d");
+    cx2.drawImage(cv, 0, 0, 50, 50, 0, 0, 50, 50);
+    var d3 = cx2.getImageData(10, 10, 1, 1).data;
+    eq("drawImage-pixel", d3[0] + "," + d3[3], "255,255");
+
+    /* 变换 + 路径填充 */
+    var cv3 = document.createElement("canvas");
+    cv3.width = 80; cv3.height = 80;
+    var cx3 = cv3.getContext("2d");
+    cx3.save();
+    cx3.translate(40, 40);
+    cx3.scale(0.5, 0.5);
+    cx3.fillStyle = "rgb(0,0,255)";
+    cx3.beginPath();
+    cx3.rect(-80, -80, 160, 160);
+    cx3.fill();
+    cx3.restore();
+    var d4 = cx3.getImageData(40, 40, 1, 1).data;
+    eq("transform-fill", d4[2], 255);
+
+    /* clip */
+    var cv4 = document.createElement("canvas");
+    cv4.width = 60; cv4.height = 60;
+    var cx4 = cv4.getContext("2d");
+    cx4.beginPath();
+    cx4.rect(0, 0, 30, 60);
+    cx4.clip();
+    cx4.fillStyle = "#00ff00";
+    cx4.fillRect(0, 0, 60, 60);
+    eq("clip-inside", cx4.getImageData(10, 10, 1, 1).data[1], 255);
+    eq("clip-outside", cx4.getImageData(50, 10, 1, 1).data[3], 0);
+
+    /* globalAlpha / composite */
+    var cv5 = document.createElement("canvas");
+    cv5.width = 40; cv5.height = 40;
+    var cx5 = cv5.getContext("2d");
+    cx5.fillStyle = "#ff0000";
+    cx5.fillRect(0, 0, 40, 40);
+    cx5.globalAlpha = 0.5;
+    cx5.fillStyle = "#000000";
+    cx5.fillRect(0, 0, 40, 40);
+    var d5 = cx5.getImageData(5, 5, 1, 1).data;
+    ok("globalAlpha", d5[0] > 120 && d5[0] < 140);
+    var cv6 = document.createElement("canvas");
+    cv6.width = 20; cv6.height = 20;
+    var cx6 = cv6.getContext("2d");
+    cx6.fillStyle = "#ff0000"; cx6.fillRect(0, 0, 20, 20);
+    cx6.globalCompositeOperation = "destination-out";
+    cx6.fillRect(0, 0, 10, 20);
+    eq("composite-dest-out", cx6.getImageData(2, 2, 1, 1).data[3], 0);
+    eq("composite-keep", cx6.getImageData(15, 2, 1, 1).data[0], 255);
+} catch (e) { P.push("FAIL canvas " + (e && e.message)); }
+
+window.__R = P.join("\n");
+var o = document.getElementById("out"); if (o) o.textContent = window.__R;
+</script>
+</body></html>

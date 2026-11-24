@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定位自检</title>
+<style>
+  body { margin:0; padding:12px; font-family:sans-serif; background:#f5f5f5; }
+  h1 { font-size:18px; margin:0 0 8px; }
+  .btn { display:block; box-sizing:border-box; width:100%; margin:8px 0; padding:12px; font-size:16px;
+         background:#2f6fed; color:#fff; border:0; border-radius:10px; }
+  .btn.gray { background:#8a8a8a; }
+  #log { margin-top:10px; padding:10px; background:#fff; border-radius:10px;
+         font-size:13px; line-height:20px; white-space:pre-wrap; }
+</style>
+</head>
+<body>
+<h1>定位自检</h1>
+<button class="btn" onclick="one()">getCurrentPosition</button>
+<button class="btn gray" onclick="watchIt()">watchPosition 3 次</button>
+<button class="btn gray" onclick="highOne()">高精度首次定位（计时）</button>
+<button class="btn gray" onclick="fsOn()">进入全屏</button>
+<button class="btn gray" onclick="fsOff()">退出全屏</button>
+<button class="btn gray" onclick="queryIt()">permissions.query</button>
+<div id="log">等待操作…</div>
+<script>
+function log(s) {
+  var d = document.getElementById('log');
+  d.textContent = d.textContent + '\n' + s;
+}
+function fmt(p) {
+  if (!p || !p.coords) return 'no coords';
+  return 'lat=' + p.coords.latitude.toFixed(6) + ' lon=' + p.coords.longitude.toFixed(6) +
+         ' acc=' + p.coords.accuracy + ' ts=' + p.timestamp;
+}
+function one() {
+  log('[req] getCurrentPosition');
+  navigator.geolocation.getCurrentPosition(function (p) {
+    log('[ok] ' + fmt(p));
+  }, function (e) {
+    log('[err] code=' + e.code + ' ' + e.message);
+  }, { timeout: 8000, enableHighAccuracy: true });
+  log('[done] 调用返回（宿主桥是同步的）');
+}
+var wid = 0;
+function watchIt() {
+  var n = 0;
+  if (wid) navigator.geolocation.clearWatch(wid);
+  wid = navigator.geolocation.watchPosition(function (p) {
+    n++;
+    log('[watch' + n + '] ' + fmt(p));
+    if (n >= 3) { navigator.geolocation.clearWatch(wid); wid = 0; log('[watch] cleared'); }
+  }, function (e) {
+    log('[watch err] code=' + e.code + ' ' + e.message);
+  }, { timeout: 6000 });
+  log('[watch] id=' + wid);
+}
+function fsOn() {
+  log('[fs] request…');
+  document.documentElement.requestFullscreen().then(function () {
+    log('[fs ok] element=' + (document.fullscreenElement ? 'yes' : 'no'));
+  }, function (e) { log('[fs err] ' + e.name + ' ' + e.message); });
+}
+function fsOff() {
+  document.exitFullscreen().then(function () { log('[fs exit] element=' + (document.fullscreenElement ? 'yes' : 'no')); });
+}
+function highOne() {
+  var t0 = Date.now();
+  log('[req] high accuracy');
+  navigator.geolocation.getCurrentPosition(function (p) {
+    log('[high ok] ' + fmt(p) + ' ms=' + (Date.now() - t0));
+  }, function (e) {
+    log('[high err] code=' + e.code + ' ' + e.message + ' ms=' + (Date.now() - t0));
+  }, { timeout: 15000, enableHighAccuracy: true });
+}
+document.addEventListener('fullscreenchange', function () {
+  log('[fschange] element=' + (document.fullscreenElement ? 'yes' : 'no'));
+});
+function queryIt() {
+  navigator.permissions.query({ name: 'geolocation' }).then(function (s) {
+    log('[perm] geolocation=' + s.state);
+  });
+  navigator.permissions.query({ name: 'camera' }).then(function (s) {
+    log('[perm] camera=' + s.state);
+  });
+}
+log('navigator.geolocation=' + (typeof navigator.geolocation));
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>animations</title>
+<style>html,body{margin:0}#box{width:100px;height:100px;background:#f00;opacity:0}#box2{width:100px;height:50px;background:#00f}</style>
+<div id="box"></div>
+<div id="box2"></div>
+<script>
+window.__log = [];
+var box = document.getElementById("box");
+var box2 = document.getElementById("box2");
+window.__log.push("api=" + (typeof box.animate) + "/" + (typeof box.getAnimations));
+
+var a = box.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, fill: "forwards" });
+window.__log.push("count0=" + box.getAnimations().length);
+a.finished.then(function (x) {
+  window.__log.push("finished=" + (x === a) + "/" + a.playState);
+}, function (e) { window.__log.push("finRej=" + e.name); });
+
+var b = box2.animate({
+  opacity: [0, 0.5, 1],
+  transform: ["translateX(0px)", "translateX(50px)", "translateX(100px)"]
+}, { duration: 100, easing: "linear" });
+window.__log.push("frames=" + b._frames.length + ":" + b._frames.map(function (f) { return f.offset.toFixed(2); }).join(","));
+b.pause();
+window.__log.push("pause=" + b.playState + "@" + b.currentTime);
+b.currentTime = 50;
+window.__log.push("seek=" + b.currentTime + " op=" + (box2.style.opacity || "-") + " tr=" + (box2.style.transform || "-"));
+
+var c = box2.animate([{ opacity: 1 }, { opacity: 0 }], 200);
+c.cancel();
+c.finished.catch(function (e) { window.__log.push("cancelRej=" + e.name); });
+window.__log.push("cancelState=" + c.playState + " op=" + (box2.style.opacity || "-"));
+
+setTimeout(function () {
+  window.__log.push("afterA=" + a.playState + " op=" + (box.style.opacity || "-") + " anims=" + box.getAnimations().length);
+  window.__log.push("doc=" + document.getAnimations().length + " tl=" + (typeof document.timeline.currentTime));
+  window.__seen = true;
+}, 350);
+</script>

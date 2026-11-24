@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>userActivation</title>
+<style>body{font:14px sans-serif}</style>
+<button id="b">tap</button>
+<script>
+function snap(tag){
+  var ua = navigator.userActivation;
+  return tag + "=" + JSON.stringify({ isActive: !!ua.isActive, hasBeenActive: !!ua.hasBeenActive });
+}
+window.__log = [];
+window.__log.push(snap("before"));
+document.getElementById("b").addEventListener("click", function(){
+  window.__log.push(snap("during"));
+  setTimeout(function(){ window.__log.push(snap("later")); }, 0);
+});
+</script>

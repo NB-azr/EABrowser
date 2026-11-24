@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: sans-serif; font-size: 14px; line-height: 20px; }
+  .wrap { width: 360px; border: 1px solid #999; margin-bottom: 12px; padding: 4px; }
+  .fl { float: left; width: 120px; height: 60px; background: #cde; }
+  .fr { float: right; width: 120px; height: 60px; background: #edc; }
+  .clearfix { clear: both; background: #8f8; height: 20px; }
+  .hiddenbox { visibility: hidden; background: #f88; padding: 4px; }
+  .hiddenbox .revive { visibility: visible; background: #ff8; }
+</style>
+</head>
+<body>
+  <div id="left" class="wrap">
+    <div class="fl">fl</div>
+    文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+  </div>
+  <div id="right" class="wrap">
+    <div class="fr">fr</div>
+    文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+  </div>
+  <div id="clearwrap" class="wrap">
+    <div class="fl" style="height:100px">tall</div>
+    <div class="clearfix" id="clr">clear:both 之后</div>
+  </div>
+  <div id="vis" class="hiddenbox">
+    这一块 visibility:hidden
+    <span class="revive">子元素 visible 仍可见</span>
+  </div>
+</body></html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>modern apis</title>
+<script>
+window.__R={};
+var R=window.__R;
+R.hasLocks = !!navigator.locks;
+R.hasVV = !!navigator.visualViewport;
+R.hasFromAsync = typeof Array.fromAsync==='function';
+R.hasVT = typeof document.startViewTransition==='function';
+R.hasDirPicker = typeof showDirectoryPicker==='function';
+try{
+  R.vvW = navigator.visualViewport.width;
+  R.vvH = navigator.visualViewport.height;
+  R.vvScale = navigator.visualViewport.scale;
+  navigator.visualViewport.addEventListener('resize', function(){
+    R.vvEvents = (R.vvEvents||0)+1;
+    R.vvH2 = navigator.visualViewport.height;
+  });
+}catch(e){ R.vvErr=e.message; }
+
+try{
+  navigator.locks.request('demo', function(lock){
+    R.lockHeld = lock && lock.name + '/' + lock.mode;
+    return new Promise(function(res){ setTimeout(function(){ R.lockBodyDone=1; res(); }, 0); });
+  }).then(function(){ R.lockAfter=1; });
+  navigator.locks.request('demo', {ifAvailable:true}, function(lock){
+    R.ifAvail = lock ? 'got' : 'null';
+    return null;
+  }).then(function(v){ R.ifAvailRes = (v===null?'null':'lock'); });
+  navigator.locks.query().then(function(q){ R.qHeld=q.held.length; R.qPend=q.pending.length; });
+}catch(e){ R.lockErr=e.message; }
+
+try{
+  Array.fromAsync([1,2,3]).then(function(a){ R.fa1=a.join(','); });
+  var it={i:0};
+  it[Symbol.asyncIterator]=function(){ return this; };
+  it.next=function(){ return Promise.resolve({done:this.i>=3, value:this.i++}); };
+  Array.fromAsync(it).then(function(a){ R.fa2=a.join(','); });
+  Array.fromAsync('abc', function(x){ return x.toUpperCase(); }).then(function(a){ R.fa3=a.join(''); });
+}catch(e){ R.faErr=e.message; }
+
+try{
+  document.startViewTransition(function(){ R.vtUpdate=1; }).finished.then(function(){ R.vtFin=1; });
+}catch(e){ R.vtErr=e.message; }
+
+try{
+  showDirectoryPicker().then(function(dh){
+    R.dhKind=dh.kind; R.dhName=dh.name;
+    R.dhInst=(dh instanceof FileSystemDirectoryHandle);
+    var names=[], it2=dh.keys();
+    (function step(){
+      return it2.next().then(function(r){
+        if(r.done){ names.sort(); R.dhKeys=names.length; R.dhFirst=names[0]; return null; }
+        names.push(r.value); return step();
+      });
+    })();
+    return dh.getFileHandle('probe_segmenter.html').then(function(fh){
+      R.fhKind=fh.kind; R.fhName=fh.name;
+      R.fhInst=(fh instanceof FileSystemFileHandle);
+    });
+  }).then(function(){ R.dirDone=1; }, function(e){ R.dirErr=e.name+':'+e.message; });
+}catch(e){ R.dirErr='sync:'+e.message; }
+</script>

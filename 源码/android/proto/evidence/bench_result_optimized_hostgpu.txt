@@ -1,0 +1,23 @@
+EA 架构原型 · 优化轮基准（环境 B：Intel UHD 730 经模拟器 GL 翻译层）
+设备 emulator-5556 / API 19 x86，1080x1776，20 帧/档，WARMUP=3
+采集时间 2026-11-08；来源 /data/data/com.ea.proto/files/bench_result.txt
+
+epoch=1
+
+bench 1080x1776 frames=20
+
+  cmds= 100 img=  8 | Canvas avg=  4.46 p95=  7.15 max=  7.68 | GL-sync avg=  4.23 p95=  5.38 max=  7.76 | GL-async avg=  2.63 fps=380.6 submitP95= 2.04
+  cmds= 300 img= 25 | Canvas avg=  6.64 p95=  8.77 max= 11.63 | GL-sync avg=  7.88 p95=  9.53 max= 13.31 | GL-async avg=  5.90 fps=169.4 submitP95= 5.67
+  cmds= 600 img= 50 | Canvas avg=  7.31 p95= 10.78 max= 10.92 | GL-sync avg=  9.90 p95= 13.34 max= 18.26 | GL-async avg=  8.56 fps=116.8 submitP95=10.21
+  cmds=1200 img=100 | Canvas avg= 10.25 p95= 13.48 max= 14.09 | GL-sync avg= 15.76 p95= 22.17 max= 26.65 | GL-async avg= 17.79 fps= 56.2 submitP95=22.26
+
+  上传: 整帧 7.3MB=5.53ms  脏带 1080x400=0.97ms
+
+JSON {"width":1080,"height":1776,"frames":20,"cases":[{"cmds":100,"images":8,"canvas":{"avg":4.46,"p95":7.15,"max":7.68},"gles2Sync":{"avg":4.23,"p95":5.38,"max":7.76},"gles2Async":{"avg":2.63,"fps":380.6,"submitP95":2.04}},{"cmds":300,"images":25,"canvas":{"avg":6.64,"p95":8.77,"max":11.63},"gles2Sync":{"avg":7.88,"p95":9.53,"max":13.31},"gles2Async":{"avg":5.90,"fps":169.4,"submitP95":5.67}},{"cmds":600,"images":50,"canvas":{"avg":7.31,"p95":10.78,"max":10.92},"gles2Sync":{"avg":9.90,"p95":13.34,"max":18.26},"gles2Async":{"avg":8.56,"fps":116.8,"submitP95":10.21}},{"cmds":1200,"images":100,"canvas":{"avg":10.25,"p95":13.48,"max":14.09},"gles2Sync":{"avg":15.76,"p95":22.17,"max":26.65},"gles2Async":{"avg":17.79,"fps":56.2,"submitP95":22.26}}],"uploadFullMs":5.53,"uploadDirtyMs":0.97,"dirtyH":400}
+
+  跨进程 整帧vs脏带: {"fullAvg":10.21,"fullDraw":6.63,"fullPublish":3.58,"dirtyAvg":4.30,"dirtyDraw":0.62,"dirtyPublish":3.68,"bandH":400,"width":1080,"height":1776}
+
+说明
+- GL 优化：去每帧 glFinish（sync/async 两档）、Uber shader 单 draw call、图片 1024² 图集、ASCII 字形图集、脏带 glTexSubImage2D。
+- GL-async 的 avg = 整轮 20 帧总时间 / 20，轮末一次 glFinish；不含 vsync 等待。
+- 结论：100~300 条 GL 胜；600 条以上 Canvas 胜（async 档 600 条比 sync 更差，说明瓶颈是 GPU/翻译层吞吐而非提交开销）。

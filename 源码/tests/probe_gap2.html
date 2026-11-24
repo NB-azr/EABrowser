@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<script>
+(function(){
+  console.log('[G2] hasIndices=' + typeof RegExp.prototype.hasIndices);
+  try {
+    var req = indexedDB.open('db1', 2);
+    req.onupgradeneeded = function(e){
+      var db = e.target.result;
+      if (!db.objectStoreNames.contains('kv')) {
+        var st = db.createObjectStore('kv', { keyPath: 'id' });
+        st.createIndex('byName', 'name', { unique: false });
+      }
+      console.log('[G2] upgrade old=' + e.oldVersion + ' new=' + e.newVersion);
+    };
+    req.onsuccess = function(e){
+      var db = e.target.result;
+      console.log('[G2] db.open name=' + db.name + ' ver=' + db.version + ' stores=' + db.objectStoreNames.contains('kv'));
+      var tx = db.transaction(['kv'], 'readwrite');
+      var st = tx.objectStore('kv');
+      var kp = st.keyPath;
+      st.put({ id: 1, name: 'alpha', n: 42 });
+      st.add({ id: 2, name: 'beta', n: 7 });
+      var g = st.get(1);
+      g.onsuccess = function(){
+        console.log('[G2] idb.get=' + (g.result ? (g.result.name + '/' + g.result.n + '/kp=' + kp) : 'null'));
+        var ga = st.getAll();
+        ga.onsuccess = function(){
+          console.log('[G2] idb.getAll len=' + ga.result.length + ' keys=' + st.getAllKeys().result.length);
+          var c = st.count();
+          c.onsuccess = function(){ console.log('[G2] idb.count=' + c.result); };
+        };
+      };
+    };
+    req.onerror = function(){ console.log('[G2] idb ERROR'); };
+  } catch (e) { console.log('[G2] idb EXC ' + e); }
+
+  try {
+    caches.open('v1').then(function(c){
+      return c.put('/x.js', { status: 200, body: 'hello' }).then(function(){
+        return c.match('/x.js');
+      }).then(function(r){
+        return c.keys();
+      }).then(function(ks){
+        console.log('[G2] cache keys=' + ks.length + ' url=' + ks[0].url + ' has=' + caches.has('v1'));
+        return c.delete('/x.js');
+      }).then(function(ok){
+        console.log('[G2] cache delete=' + ok);
+      });
+    });
+  } catch (e) { console.log('[G2] caches EXC ' + e); }
+
+  try {
+    navigator.serviceWorker.register('/sw.js').then(function(reg){
+      console.log('[G2] sw scope=' + reg.scope + ' state=' + reg.active.state);
+      return navigator.serviceWorker.ready;
+    }).then(function(reg){
+      console.log('[G2] sw ready=' + (reg ? 'yes' : 'no'));
+      return navigator.serviceWorker.getRegistrations();
+    }).then(function(rl){
+      console.log('[G2] sw regs=' + rl.length);
+    });
+  } catch (e) { console.log('[G2] sw EXC ' + e); }
+})();
+</script></body></html>

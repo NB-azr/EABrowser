@@ -1,0 +1,258 @@
+diff --git a/app/src/main/java/com/ea/browser/NativeView.kt b/app/src/main/java/com/ea/browser/NativeView.kt
+--- a/app/src/main/java/com/ea/browser/NativeView.kt
++++ b/app/src/main/java/com/ea/browser/NativeView.kt
+@@ -40,6 +40,16 @@
+     private val rect = RectF()
+ 
+     var onLinkClick: ((String) -> Unit)? = null
++
++    /** EA_DRAW_VIDEO 的洞：屏幕坐标（View 坐标系 px）；null 表示当前不在视口内 */
++    var onVideoHole: ((RectF?) -> Unit)? = null
++    private val videoHole = RectF()
++    private var lastHoleKey = ""
++
++    companion object {
++        /** 与引擎 ea_draw_type 对齐：6 = EA_DRAW_VIDEO（不参与 Canvas 绘制） */
++        const val TYPE_VIDEO = 6
++    }
+ 
+     /** 深度遍历查找包含 target 的最近 <a> 祖先，找不到返回 0 */
+     private fun findLinkAncestor(p: HtmlParser, target: Long): Long {
+@@ -181,6 +191,7 @@
+         canvas.translate(0f, -scrollYPos)
+ 
+         var ti = 0
++        var sawVideo = false
+         for (i in 0 until cmdCount) {
+             val b = i * 30
+             val type = cmds[b].toInt()
+@@ -188,6 +199,21 @@
+             val y = cmds[b + 2]
+             val w = cmds[b + 3]
+             val h = cmds[b + 4]
++            if (type == TYPE_VIDEO) {
++                // 跳过绘制，把这块留给上层 SurfaceView；只上报屏幕矩形
++                val left = x.coerceAtLeast(0f)
++                val top = (y - scrollYPos).coerceAtLeast(0f)
++                val right = (x + w).coerceAtMost(width.toFloat())
++                val bottom = (y + h - scrollYPos).coerceAtMost(height.toFloat())
++                sawVideo = true
++                if (right - left >= 1f && bottom - top >= 1f) {
++                    videoHole.set(left, top, right, bottom)
++                    emitHole(true)
++                } else {
++                    emitHole(false)
++                }
++                continue
++            }
+             val a = cmds[b + 5].toInt()
+             val r = cmds[b + 6].toInt()
+             val g = cmds[b + 7].toInt()
+@@ -251,6 +277,17 @@
+         }
+ 
+         canvas.restore()
++        if (!sawVideo) emitHole(false)
++    }
++
++    /** 只在洞的整数像素值变化时回调，避免滚动时反复 requestLayout */
++    private fun emitHole(has: Boolean) {
++        val key = if (!has) "none"
++        else "${videoHole.left.toInt()},${videoHole.top.toInt()}," +
++                "${videoHole.right.toInt()},${videoHole.bottom.toInt()}"
++        if (key == lastHoleKey) return
++        lastHoleKey = key
++        onVideoHole?.invoke(if (has) RectF(videoHole) else null)
+     }
+ 
+ 
+
+diff --git a/app/src/main/java/com/ea/browser/NativeRenderActivity.kt b/app/src/main/java/com/ea/browser/NativeRenderActivity.kt
+--- a/app/src/main/java/com/ea/browser/NativeRenderActivity.kt
++++ b/app/src/main/java/com/ea/browser/NativeRenderActivity.kt
+@@ -1,6 +1,8 @@
+ package com.ea.browser
+ 
+ import android.os.Bundle
++import android.view.ViewGroup
++import android.widget.FrameLayout
+ import android.widget.Toast
+ import androidx.appcompat.app.AppCompatActivity
+ 
+@@ -10,11 +12,23 @@
+  */
+ class NativeRenderActivity : AppCompatActivity() {
+ 
++    private var videoHost: VideoSurfaceHost? = null
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+ 
++        val root = FrameLayout(this)
+         val view = NativeView(this)
+-        setContentView(view)
++        root.addView(view, FrameLayout.LayoutParams(
++            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
++
++        // 视频图层：盖在 NativeView 的洞上；NativeView 负责跳过 EA_DRAW_VIDEO
++        val host = VideoSurfaceHost(this)
++        videoHost = host
++        root.addView(host, FrameLayout.LayoutParams(1, 1))
++        view.onVideoHole = { r -> host.place(r) }
++
++        setContentView(root)
+ 
+         view.onLinkClick = { href ->
+             Toast.makeText(this, "点击链接: $href", Toast.LENGTH_SHORT).show()
+@@ -27,4 +41,14 @@
+         }
+         view.loadHtml(html)
+     }
++
++    override fun onResume() {
++        super.onResume()
++        videoHost?.resumePlayback()
++    }
++
++    override fun onPause() {
++        videoHost?.pausePlayback()
++        super.onPause()
++    }
+ }
+\ No newline at end of file
+
+diff --git a/app/src/main/java/com/ea/browser/VideoSurfaceHost.kt b/app/src/main/java/com/ea/browser/VideoSurfaceHost.kt
+new file mode 100644
+--- /dev/null
++++ b/app/src/main/java/com/ea/browser/VideoSurfaceHost.kt
+@@ -0,0 +1,130 @@
++package com.ea.browser
++
++import android.content.Context
++import android.graphics.Canvas
++import android.graphics.Paint
++import android.graphics.RectF
++import android.view.SurfaceHolder
++import android.view.SurfaceView
++import android.view.View
++import android.widget.FrameLayout
++
++/**
++ * 视频图层宿主：SurfaceView 叠在 NativeView 之上，占据 NativeView 跳过绘制的那块洞。
++ * - setZOrderMediaOverlay(true)：surface 盖在页面视图之上，不被 Canvas 位图覆盖
++ * - 跟随滚动：place() 只改 layoutParams，不重建 surface
++ * - 离屏/切后台：隐藏 + 停线程（surface 可能被销毁，回到前台自动重建）
++ *
++ * 占位实现用条纹动画；接真实视频时把 run() 里的绘制换成 MediaPlayer.setSurface(holder.surface)。
++ */
++class VideoSurfaceHost(context: Context) : SurfaceView(context), SurfaceHolder.Callback, Runnable {
++
++    private var thread: Thread? = null
++    private var active = false        // Activity 在前台
++    private var hasHole = false       // 洞在视口内
++    private var surfaceReady = false
++    private val rect = RectF()
++    private val paint = Paint()
++
++    init {
++        setZOrderMediaOverlay(true)
++        holder.addCallback(this)
++        visibility = View.INVISIBLE
++    }
++
++    /** r = NativeView 上报的屏幕坐标洞；null 表示滚出视口，隐藏并暂停 */
++    fun place(r: RectF?) {
++        post {
++            if (r == null) {
++                visibility = View.INVISIBLE
++                hasHole = false
++                return@post
++            }
++            rect.set(r)
++            if (rect.width() < 1f || rect.height() < 1f) {
++                visibility = View.INVISIBLE
++                hasHole = false
++                return@post
++            }
++            val lp = layoutParams as? FrameLayout.LayoutParams ?: return@post
++            lp.leftMargin = rect.left.toInt()
++            lp.topMargin = rect.top.toInt()
++            lp.width = rect.width().toInt()
++            lp.height = rect.height().toInt()
++            layoutParams = lp
++            visibility = View.VISIBLE
++            hasHole = true
++            ensureThread()
++        }
++    }
++
++    fun resumePlayback() {
++        active = true
++        if (hasHole) ensureThread()
++    }
++
++    fun pausePlayback() {
++        active = false
++    }
++
++    private fun ensureThread() {
++        if (!active || !hasHole || !surfaceReady) return
++        if (thread == null) {
++            thread = Thread(this, "video-layer").also { it.start() }
++        }
++    }
++
++    override fun surfaceCreated(holder: SurfaceHolder) {
++        surfaceReady = true
++        ensureThread()
++    }
++
++    override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
++        // 尺寸变化（滚动裁剪）不重建 surface，这里只需保证线程在跑
++        ensureThread()
++    }
++
++    override fun surfaceDestroyed(holder: SurfaceHolder) {
++        surfaceReady = false
++        thread = null
++    }
++
++    override fun run() {
++        val t0 = android.os.SystemClock.uptimeMillis()
++        var frame = 0
++        while (active && hasHole && surfaceReady) {
++            val h = holder
++            var cv: Canvas? = null
++            try {
++                cv = h.lockCanvas()
++                if (cv != null) {
++                    val w = cv.width
++                    val hh = cv.height
++                    val el = android.os.SystemClock.uptimeMillis() - t0
++                    val off = ((el / 5) % 96).toInt()
++                    cv.drawColor(0xFF071426.toInt())
++                    paint.color = 0xFF22D3EE.toInt()
++                    var y = -96
++                    while (y < hh + 96) {
++                        cv.drawRect(0f, (y + off).toFloat(), w.toFloat(),
++                            (y + off + 48).toFloat(), paint)
++                        y += 96
++                    }
++                    paint.color = 0xFFFFFFFF.toInt()
++                    paint.textSize = 28f
++                    cv.drawText("VIDEO " + frame + "  " + el + "ms", 16f, 40f, paint)
++                    frame++
++                }
++            } catch (_: Throwable) {
++            } finally {
++                if (cv != null) {
++                    try { h.unlockCanvasAndPost(cv) } catch (_: Throwable) { }
++                }
++            }
++            try { Thread.sleep(40) } catch (_: Throwable) { }
++        }
++        thread = null
++        // 暂停/恢复与 surface 重建的交错窗口：条件再次成立时重新拉起
++        if (active && hasHole && surfaceReady) ensureThread()
++    }
++}

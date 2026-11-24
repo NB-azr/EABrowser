@@ -1,0 +1,71 @@
+{
+ "src": "E:\\eabuild\\dev_page.html",
+ "ok": 57,
+ "fail": [
+  [
+   "https://ms.bdstatic.com",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/tab_news.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://www.baidu.com/static/css/tabs/news/waterfall.css?__inline",
+   "HTTP Error 404: Not Found"
+  ],
+  [
+   "https://m.baidu.com/se/static/pmd/pmd/share/images/wxtips.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/se'"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/tab_news.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/se/static/img/iphone/tab_loading__bg_logo.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/se'"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/icon_police.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/clear.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sugtel.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/sug_logo.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/sug_del.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug_at.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-his.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-his-active.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-at.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-at-active.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\lite\\\\assets\\\\m.baidu.com/static'"
+  ]
+ ],
+ "refs": 36
+}

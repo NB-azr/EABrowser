@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iframe basic</title>
+<style>
+  body { margin: 0; font-family: sans-serif; background: #ffffff; }
+  iframe { margin: 4px 0; }
+</style>
+</head>
+<body>
+  <iframe id="f1" srcdoc="<!doctype html><html><head><style>body{margin:0;background:#e8f5e9;font-size:14px}.box{background:#66bb6a;color:#ffffff;padding:6px}</style></head><body><div class='box'>inline iframe ok</div><p>srcdoc content line</p></body></html>"></iframe>
+  <iframe id="f2" src="https://example.com/page.html"></iframe>
+  <iframe id="f3"></iframe>
+</body>
+</html>

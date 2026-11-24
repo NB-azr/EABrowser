@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>flex 溢出与挤压复现</title>
+<style>
+body{margin:0;padding:0;font:16px/1.4 sans-serif}
+.wrap{width:375px;margin:0 0 20px 0;background:#eee}
+.row{display:flex;background:#ddd}
+.box{height:40px;background:#9cf;border:1px solid #369;box-sizing:border-box}
+.fixed200{width:200px;flex:0 0 200px}
+.grow1{flex:1 1 0;min-width:0}
+.long{white-space:nowrap}
+.pad20{padding:0 20px;box-sizing:border-box}
+.nest{display:flex}
+.nest-in{display:flex;flex:1 1 auto}
+</style></head>
+<body>
+
+<!-- 1. 三个 200px 项挤在 375 里：应各自收缩到 ~125，父仍是 375 -->
+<div class="wrap"><div id="c1" class="row">
+  <div id="a1" class="box fixed200">A1</div>
+  <div id="a2" class="box fixed200">A2</div>
+  <div id="a3" class="box fixed200">A3</div>
+</div></div>
+
+<!-- 2. 不可断长串（min-content 很大）+ 一个固定项：长项溢出，父仍 375 -->
+<div class="wrap"><div id="c2" class="row">
+  <div id="b1" class="box long">WWWWWWWWWWWWWWWWWWWWWWWWWWWW</div>
+  <div id="b2" class="box fixed200">B2</div>
+</div></div>
+
+<!-- 3. 左右结构：右边图标固定 40，左边 flex:1 长文本要收缩而不是把父撑宽 -->
+<div class="wrap"><div id="c3" class="row">
+  <div id="d1" class="box grow1 long">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+  <div id="d2" class="box" style="width:40px;flex:0 0 40px">IC</div>
+</div></div>
+
+<!-- 4. flex:1 + 左右各 20 padding（border-box）：不应超出父 -->
+<div class="wrap"><div id="c4" class="row">
+  <div id="e1" class="box grow1 pad20">E1</div>
+  <div id="e2" class="box grow1 pad20">E2</div>
+</div></div>
+
+<!-- 5. 嵌套 flex：内层 flex 的长内容不应把外层项撑宽 -->
+<div class="wrap"><div id="c5" class="row">
+  <div id="f1" class="nest" style="flex:0 0 120px">
+    <div id="f2" class="nest-in"><span class="box long" style="height:20px">XXXXXXXXXXXX</span></div>
+  </div>
+  <div id="f3" class="box grow1">F3</div>
+</div></div>
+
+<!-- 6. 横向滚动条带（nowrap 多项）：容器内溢出，不该把页面撑宽 -->
+<div class="wrap"><div id="c6" class="row" style="overflow:hidden">
+  <div id="g1" class="box" style="width:150px;flex:0 0 150px">G1</div>
+  <div id="g2" class="box" style="width:150px;flex:0 0 150px">G2</div>
+  <div id="g3" class="box" style="width:150px;flex:0 0 150px">G3</div>
+  <div id="g4" class="box" style="width:150px;flex:0 0 150px">G4</div>
+</div></div>
+
+</body></html>

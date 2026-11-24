@@ -1,0 +1,99 @@
+{
+ "entry": "https://www.baidu.com/",
+ "ok": 63,
+ "fail": [
+  [
+   "https://ms.bdstatic.com",
+   "HTTP Error 403: Forbidden"
+  ],
+  [
+   "https://t10.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=2190905973%2C311991844?w=312&amp;h=208&amp;s=28706085041339D6064D3D85030070C0",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t12.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=35383877%2C311735837?w=312&amp;h=208&amp;s=B51A357612AA54BC9488A0C50300F0BB",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t11.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=2106208592%2C311735837?w=312&amp;h=208&amp;s=B335708409590A5901DB3415030060C8",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t12.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=2963229227%2C311735835?w=312&amp;h=208&amp;s=FCDFA444A641015D2F049CA803006093",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t12.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=98200383%2C312083861?w=312&amp;h=208&amp;s=B9AECD1016B03D9E8CBF98870300B0C9",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t11.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=4195980507%2C312054127?w=312&amp;h=208&amp;s=A73A50840A7286CC44A6EA91030040AB",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t10.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=1894669044%2C311920866?w=312&amp;h=208&amp;s=FA9325C51372619C9280107903009032",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://t11.baidu.com/it/app=106&amp;f=JPEG&amp;fm=30&amp;fmt=auto&amp;q=85&amp;size=f218_146&amp;u=550730774%2C311546318?w=312&amp;h=208&amp;s=B78847A65A306286DB9C04FC03001038",
+   "HTTP Error 400: Bad Request"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/tab_news.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/se/static/pmd/pmd/share/images/wxtips.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/se'"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/tab_news.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/se/static/img/iphone/tab_loading__bg_logo.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/se'"
+  ],
+  [
+   "https://m.baidu.com/static/index/plus/public/icon_police.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/clear.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sugtel.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/sug_logo.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/search/sug_del.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug_at.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-his.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-his-active.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-at.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ],
+  [
+   "https://m.baidu.com/static/index/sug-oper-at-active.png",
+   "[WinError 3] 系统找不到指定的路径。: 'E:\\\\浏览器\\\\tests\\\\sites\\\\www.baidu.com\\\\mobile\\\\assets\\\\m.baidu.com/static'"
+  ]
+ ],
+ "refs": 49
+}

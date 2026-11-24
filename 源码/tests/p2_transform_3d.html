@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; }
+#rx { width: 100px; height: 60px; margin: 10px; background: #ff6666; transform: rotateX(60deg); }
+#ry { width: 100px; height: 60px; margin: 10px; background: #66ff66; transform: rotateY(45deg); }
+#pz { width: 100px; height: 60px; margin: 10px; background: #6666ff; perspective: 200px; transform: translateZ(100px); }
+#m3 { width: 100px; height: 60px; margin: 10px; background: #ffcc00; transform: matrix3d(1,0,0,0, 0,1,0,0, 0,0,1,0, 20,10,0,1); }
+#r3 { width: 100px; height: 60px; margin: 10px; background: #00ccff; transform: rotate3d(0,0,1,45deg); }
+</style></head>
+<body>
+<div id="rx"></div><div id="ry"></div><div id="pz"></div><div id="m3"></div><div id="r3"></div>
+</body></html>

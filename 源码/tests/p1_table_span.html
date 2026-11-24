@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; font-size: 12px; }
+table { border-collapse: collapse; width: 400px; }
+td, th { border: 1px solid #999999; padding: 4px; }
+#t1 { background: #f0f8ff; }
+#span2 { background: #ffe0e0; }
+</style></head>
+<body>
+<table id="t1">
+  <colgroup><col width="120"><col><col></colgroup>
+  <tr><th>Head A</th><th>Head B</th><th>Head C</th></tr>
+  <tr><td colspan="2" id="span2">span two columns</td><td>c3</td></tr>
+  <tr><td rowspan="2">row span 2</td><td>r2c2</td><td rowspan="2">r2c3 tall</td></tr>
+  <tr><td>r3c2</td></tr>
+  <tr><td>last1</td><td>last2</td><td>last3</td></tr>
+</table>
+<table id="t2">
+  <tr><td width="200">wide 200</td><td>auto</td></tr>
+</table>
+</body></html>

@@ -1,0 +1,14 @@
+阈值判定：GL_avg <= Canvas_avg*0.80 且 submitP95 <= 8ms 且 fps >= 60 且 outliers=0（3 轮中位数）
+数据来源：<OutDir>\summary.csv（每档逐帧原始值见 frames.csv）
+cjk-mix-300    cmds= 300  GL/Canvas= 38%  GL= 2.02ms p95= 1.46ms fps=594.0  -> 可以上调
+cjk-mix-600    cmds= 600  GL/Canvas= 37%  GL= 1.84ms p95= 0.91ms fps=590.1  -> 可以上调
+cjk-text-300   cmds= 300  GL/Canvas= 41%  GL= 2.69ms p95= 4.67ms fps=529.3  -> 保持 Canvas（未过：outliers=2）
+cjk-text-600   cmds= 600  GL/Canvas= 38%  GL= 2.05ms p95= 1.39ms fps=578.9  -> 可以上调
+cjk-uniq-300   cmds= 300  GL/Canvas= 45%  GL= 2.37ms p95= 2.08ms fps=523.2  -> 可以上调
+cjk-uniq-600   cmds= 600  GL/Canvas= 40%  GL= 2.27ms p95= 2.35ms fps=482.8  -> 可以上调
+shapes-1200    cmds=1200  GL/Canvas= 48%  GL= 7.40ms p95= 7.53ms fps=216.3  -> 保持 Canvas（未过：outliers=1）
+shapes-300     cmds= 300  GL/Canvas= 25%  GL= 2.93ms p95= 1.94ms fps=372.5  -> 可以上调
+shapes-600     cmds= 600  GL/Canvas= 32%  GL= 3.31ms p95= 2.91ms fps=325.9  -> 可以上调
+
+上调建议：若 cjk-text 在 600 档仍满足四条判据，可把文字层阈值从 300 上调到 600；
+          shapes 单独看 1200 档（顶点增长 ≈ 线性，draws=1 不随指令数增长）。

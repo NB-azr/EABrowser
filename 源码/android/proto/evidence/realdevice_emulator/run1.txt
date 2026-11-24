@@ -1,0 +1,44 @@
+epoch=1
+
+bench 1080x1776 frames=20
+
+  shapes-100    cmds= 100 img= 8 txt=  0 | Canvas avg=  6.59 p95= 10.46 max= 12.62 | sync avg=  2.62 | async avg=  1.45 submitP95= 0.78 submitMax= 0.95
+
+                 breakdown build= 0.14 atlas= 0.01 submit= 0.23 | verts=  600 draws= 1 pages=1 glyphs=   0 atlasUp=0KB
+
+  shapes-300    cmds= 300 img=25 txt=  0 | Canvas avg=  9.19 p95= 12.26 max= 23.89 | sync avg=  3.02 | async avg=  2.27 submitP95= 1.26 submitMax= 1.47
+
+                 breakdown build= 0.15 atlas= 0.01 submit= 0.75 | verts= 1800 draws= 1 pages=1 glyphs=   0 atlasUp=0KB
+
+  shapes-600    cmds= 600 img=50 txt=  0 | Canvas avg=  7.63 p95=  9.99 max= 15.56 | sync avg=  4.62 | async avg=  3.00 submitP95= 3.24 submitMax= 4.77
+
+                 breakdown build= 0.52 atlas= 0.01 submit= 1.05 | verts= 3600 draws= 1 pages=1 glyphs=   0 atlasUp=0KB | vbo=1.49 | half=1.95(x0.65)
+
+  shapes-1200   cmds=1200 img=100 txt=  0 | Canvas avg= 12.61 p95= 15.10 max= 17.80 | sync avg=  5.56 | async avg=  5.21 submitP95= 6.23 submitMax= 6.82
+
+                 breakdown build= 0.98 atlas= 0.01 submit= 2.26 | verts= 7200 draws= 1 pages=1 glyphs=   0 atlasUp=0KB | vbo=2.74 | half=4.85(x0.93)
+
+  cjk-mix-300   cmds= 300 img=25 txt= 99 | Canvas avg=  9.57 p95= 14.06 max= 15.36 | sync avg=  3.21 | async avg=  1.24 submitP95= 0.75 submitMax= 1.44
+
+                 breakdown build= 0.12 atlas= 0.01 submit= 0.25 | verts=  900 draws= 1 pages=1 glyphs=  49 atlasUp=0KB
+
+  cjk-mix-600   cmds= 600 img=50 txt=199 | Canvas avg=  3.44 p95=  5.26 max=  5.95 | sync avg=  2.21 | async avg=  1.31 submitP95= 0.93 submitMax= 1.09
+
+                 breakdown build= 0.14 atlas= 0.01 submit= 0.24 | verts=  900 draws= 1 pages=1 glyphs=  49 atlasUp=0KB | vbo=0.90
+
+  cjk-text-300  cmds= 300 img= 0 txt=299 | Canvas avg=  4.63 p95=  8.14 max= 19.62 | sync avg=  2.28 | async avg=  1.75 submitP95= 3.24 submitMax= 3.52
+
+                 breakdown build= 0.23 atlas= 0.01 submit= 0.51 | verts= 1536 draws= 1 pages=1 glyphs= 255 atlasUp=0KB
+
+  cjk-text-600  cmds= 600 img= 0 txt=599 | Canvas avg=  3.06 p95=  4.56 max=  4.72 | sync avg=  1.98 | async avg=  1.56 submitP95= 1.05 submitMax= 1.23
+
+                 breakdown build= 0.43 atlas= 0.01 submit= 0.52 | verts= 1536 draws= 1 pages=1 glyphs= 255 atlasUp=0KB | vbo=1.38
+
+  上传: 整帧 7.3MB=5.95ms  脏带 1080x400=1.27ms
+
+
+
+JSON {"width":1080,"height":1776,"frames":20,"cases":[{"case":"shapes-100","cmds":100,"images":8,"texts":0,"canvas":{"avg":6.59,"p95":10.46,"max":12.62},"gles2Sync":{"avg":2.62,"p95":3.24,"max":3.66},"gles2Async":{"avg":1.45,"fps":688.9,"submitP95":0.78,"submitMax":0.95},"outliers":0,"vbo":{"avg":0.00},"halfRes":{"avg":0.00},"breakdown":{"build":0.14,"atlas":0.01,"submit":0.23,"verts":600,"draws":1,"pages":1,"glyphs":0,"atlasBytes":0},"perFrameCanvasMs":[5.95,12.62,9.26,10.46,6.71,9.74,5.60,10.36,8.61,8.06,4.74,5.14,3.48,3.75,3.47,4.31,4.61,3.89,5.81,5.20],"perFrameAsyncMs":[0.75,0.36,0.52,0.35,0.49,0.62,0.78,0.78,0.68,0.60,0.71,0.48,0.95,0.43,0.35,0.66,0.49,0.39,0.34,0.44]},{"case":"shapes-300","cmds":300,"images":25,"texts":0,"canvas":{"avg":9.19,"p95":12.26,"max":23.89},"gles2Sync":{"avg":3.02,"p95":3.59,"max":3.67},"gles2Async":{"avg":2.27,"fps":440.7,"submitP95":1.26,"submitMax":1.47},"outliers":0,"vbo":{"avg":0.00},"halfRes":{"avg":0.00},"breakdown":{"build":0.15,"atlas":0.01,"submit":0.75,"verts":1800,"draws":1,"pages":1,"glyphs":0,"atlasBytes":0},"perFrameCanvasMs":[10.74,5.37,5.74,7.01,8.19,6.00,11.93,23.89,9.81,11.25,9.85,12.26,8.01,9.96,8.94,7.31,7.60,6.49,5.37,8.00],"perFrameAsyncMs":[0.98,0.89,1.09,1.12,1.02,0.82,0.86,1.47,1.09,0.95,1.26,0.95,0.78,0.91,1.03,0.99,1.03,1.14,1.02,0.95]},{"case":"shapes-600","cmds":600,"images":50,"texts":0,"canvas":{"avg":7.63,"p95":9.99,"max":15.56},"gles2Sync":{"avg":4.62,"p95":6.47,"max":6.48},"gles2Async":{"avg":3.00,"fps":333.1,"submitP95":3.24,"submitMax":4.77},"outliers":0,"vbo":{"avg":1.49},"halfRes":{"avg":1.95},"breakdown":{"build":0.52,"atlas":0.01,"submit":1.05,"verts":3600,"draws":1,"pages":1,"glyphs":0,"atlasBytes":0},"perFrameCanvasMs":[6.21,6.59,8.23,6.23,9.99,15.56,7.40,6.28,6.09,5.31,4.85,8.25,7.63,8.17,8.70,8.46,6.90,8.12,7.17,6.54],"perFrameAsyncMs":[1.89,1.67,1.56,1.57,1.49,1.65,1.79,1.83,2.28,4.77,2.11,1.69,1.79,2.04,1.55,3.24,1.89,1.88,1.39,1.65]},{"case":"shapes-1200","cmds":1200,"images":100,"texts":0,"canvas":{"avg":12.61,"p95":15.10,"max":17.80},"gles2Sync":{"avg":5.56,"p95":6.88,"max":9.33},"gles2Async":{"avg":5.21,"fps":192.0,"submitP95":6.23,"submitMax":6.82},"outliers":0,"vbo":{"avg":2.74},"halfRes":{"avg":4.85},"breakdown":{"build":0.98,"atlas":0.01,"submit":2.26,"verts":7200,"draws":1,"pages":1,"glyphs":0,"atlasBytes":0},"perFrameCanvasMs":[13.69,15.10,12.13,13.05,10.61,11.14,14.54,13.38,14.52,10.21,13.92,11.49,11.08,11.79,13.04,11.63,10.19,11.99,10.91,17.80],"perFrameAsyncMs":[3.58,4.18,3.75,3.38,3.31,3.72,3.74,6.82,3.51,3.71,3.27,3.32,3.61,3.30,3.25,6.23,3.38,3.59,3.40,3.36]},{"case":"cjk-mix-300","cmds":300,"images":25,"texts":99,"canvas":{"avg":9.57,"p95":14.06,"max":15.36},"gles2Sync":{"avg":3.21,"p95":5.17,"max":7.40},"gles2Async":{"avg":1.24,"fps":809.3,"submitP95":0.75,"submitMax":1.44},"outliers":0,"vbo":{"avg":0.00},"halfRes":{"avg":0.00},"breakdown":{"build":0.12,"atlas":0.01,"submit":0.25,"verts":900,"draws":1,"pages":1,"glyphs":49,"atlasBytes":0},"perFrameCanvasMs":[9.98,9.58,7.73,12.26,9.01,12.07,10.00,15.36,9.98,14.06,10.12,7.43,8.34,9.08,8.95,6.85,6.19,7.56,7.29,9.59],"perFrameAsyncMs":[1.44,0.65,0.60,0.59,0.56,0.53,0.56,0.55,0.57,0.51,0.57,0.70,0.62,0.75,0.41,0.40,0.68,0.45,0.44,0.42]},{"case":"cjk-mix-600","cmds":600,"images":50,"texts":199,"canvas":{"avg":3.44,"p95":5.26,"max":5.95},"gles2Sync":{"avg":2.21,"p95":2.98,"max":3.32},"gles2Async":{"avg":1.31,"fps":761.6,"submitP95":0.93,"submitMax":1.09},"outliers":0,"vbo":{"avg":0.90},"halfRes":{"avg":0.00},"breakdown":{"build":0.14,"atlas":0.01,"submit":0.24,"verts":900,"draws":1,"pages":1,"glyphs":49,"atlasBytes":0},"perFrameCanvasMs":[2.76,3.29,3.23,2.45,4.74,3.74,2.21,5.08,5.95,4.85,2.66,3.68,5.26,2.42,2.21,3.40,2.65,2.25,3.36,2.66],"perFrameAsyncMs":[0.71,0.65,0.75,0.93,0.48,0.75,0.73,0.75,0.56,0.47,0.49,0.49,0.75,1.09,0.46,0.42,0.43,0.45,0.55,0.44]},{"case":"cjk-text-300","cmds":300,"images":0,"texts":299,"canvas":{"avg":4.63,"p95":8.14,"max":19.62},"gles2Sync":{"avg":2.28,"p95":2.94,"max":3.06},"gles2Async":{"avg":1.75,"fps":570.3,"submitP95":3.24,"submitMax":3.52},"outliers":1,"vbo":{"avg":0.00},"halfRes":{"avg":0.00},"breakdown":{"build":0.23,"atlas":0.01,"submit":0.51,"verts":1536,"draws":1,"pages":1,"glyphs":255,"atlasBytes":0},"perFrameCanvasMs":[19.62,7.71,6.49,6.24,3.99,3.41,8.14,3.43,2.43,3.11,2.69,2.49,2.72,2.69,2.21,2.34,3.30,4.41,2.50,2.64],"perFrameAsyncMs":[3.24,1.83,3.52,0.75,1.03,0.94,0.83,1.03,0.82,1.05,0.83,0.68,0.70,0.67,0.69,0.68,0.73,0.78,0.67,0.82]},{"case":"cjk-text-600","cmds":600,"images":0,"texts":599,"canvas":{"avg":3.06,"p95":4.56,"max":4.72},"gles2Sync":{"avg":1.98,"p95":2.54,"max":2.77},"gles2Async":{"avg":1.56,"fps":643.0,"submitP95":1.05,"submitMax":1.23},"outliers":0,"vbo":{"avg":1.38},"halfRes":{"avg":0.00},"breakdown":{"build":0.43,"atlas":0.01,"submit":0.52,"verts":1536,"draws":1,"pages":1,"glyphs":255,"atlasBytes":0},"perFrameCanvasMs":[2.67,2.99,2.40,2.62,2.89,2.48,2.71,4.35,3.79,4.56,3.72,2.29,2.18,2.79,4.72,2.56,2.46,3.14,2.92,2.96],"perFrameAsyncMs":[0.74,0.68,0.72,0.67,0.70,0.69,0.67,0.99,0.98,0.71,0.70,1.23,0.98,0.69,0.73,0.72,0.97,0.92,0.90,1.05]}],"uploadFullMs":5.95,"uploadDirtyMs":1.27,"dirtyH":400}
+
+  跨进程 整帧vs脏带: {"fullAvg":12.37,"fullDraw":8.53,"fullPublish":3.84,"dirtyAvg":4.61,"dirtyDraw":1.17,"dirtyPublish":3.44,"bandH":400,"width":1080,"height":1776}
+

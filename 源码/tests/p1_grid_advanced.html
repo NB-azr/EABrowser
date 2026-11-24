@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; font-size: 12px; }
+#g1 {
+  display: grid;
+  width: 400px;
+  grid-template-columns: 80px 1fr minmax(100px, 2fr);
+  gap: 4px;
+  grid-template-areas:
+    "side main main"
+    "side foot foot";
+}
+#g1 .side { grid-area: side; background: #ffcccc; }
+#g1 .main { grid-area: main; background: #ccffcc; }
+#g1 .foot { grid-area: foot; background: #ccccff; }
+#g1 div { height: 30px; }
+#g2 { display: grid; width: 400px; grid-template-columns: repeat(auto-fill, 90px); gap: 5px; }
+#g2 div { height: 20px; background: #ffeecc; }
+#g3 { display: grid; width: 400px; grid-template-columns: repeat(3, minmax(60px, 1fr)); gap: 6px; }
+#g3 div { height: 20px; background: #e0e0ff; }
+</style></head>
+<body>
+<div id="g1">
+  <div class="side">S1</div>
+  <div class="main">M1</div>
+  <div class="foot">F1</div>
+  <div class="side">S2</div>
+</div>
+<div id="g2">
+  <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+</div>
+<div id="g3">
+  <div>a</div><div>b</div><div>c</div><div>d</div>
+</div>
+</body></html>

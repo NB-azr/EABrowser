@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>column-span</title>
+<style>
+  body { margin: 0; padding: 0; font-size: 14px; font-family: sans-serif; }
+  #cols { width: 400px; height: 120px; column-count: 2; column-gap: 20px;
+          padding: 10px; border: 1px solid #999999; }
+  #cols p { margin: 0 0 10px 0; }
+  #span { column-span: all; background: #eeeeff; height: 30px; margin-bottom: 10px; }
+  #span2 { column-span: all; background: #ffeeee; height: 20px; margin: 10px 0 10px 0; }
+</style></head>
+<body>
+<div id="cols">
+  <h2 id="span">Spanning Heading</h2>
+  <p id="p1">First paragraph in the first column group.</p>
+  <p id="p2">Second paragraph continues in the next column.</p>
+  <p id="p3">Third paragraph may fill the second column.</p>
+  <div id="span2">Second span</div>
+  <p id="p4">Content after the second span.</p>
+</div>
+</body></html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-size: 14px; }
+  #g {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+    width: 640px;
+  }
+  .cell { background: #ecf0f1; border: 1px solid #bdc3c7; padding: 6px; }
+  #a { grid-column: span 2; height: 40px; background: #3498db; }
+  #b { grid-column: 3; height: 40px; background: #e74c3c; }
+  #c { grid-row: span 2; height: 90px; background: #2ecc71; }
+  #d { height: 40px; background: #f39c12; }
+  #e { grid-column: 2 / 4; height: 30px; background: #9b59b6; }
+</style>
+</head>
+<body>
+<div id="g">
+  <div class="cell" id="a">span2</div>
+  <div class="cell" id="b">col3</div>
+  <div class="cell" id="c">row2</div>
+  <div class="cell" id="d">normal</div>
+  <div class="cell" id="e">col2-4</div>
+  <div class="cell" id="f">next</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>perf 自检</title>
+<style>body{margin:0;padding:20px;font-family:sans-serif;font-size:34px;line-height:1.7}</style></head>
+<body>
+<div id="o">…</div>
+<script>
+var t = performance && performance.timing ? performance.timing : null;
+var s = [];
+s.push("open=" + typeof window.open);
+s.push("timing=" + (t ? "yes" : "no"));
+if (t) {
+  s.push("navStart=" + String(t.navigationStart).slice(0, 8));
+  s.push("loadEnd=" + String(t.loadEventEnd).slice(0, 8));
+}
+s.push("timeOrigin=" + String(performance.timeOrigin).slice(0, 8));
+s.push("navType=" + (performance.navigation ? performance.navigation.type : "none"));
+document.getElementById("o").innerHTML = s.join("<br>");
+</script>
+</body>
+</html>

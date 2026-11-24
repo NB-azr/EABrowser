@@ -1,0 +1,22 @@
+{
+  "slug": "bilibili-home",
+  "entry": "https://www.bilibili.com/",
+  "captured_at": "2026-11-08 20:42:58",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "哔哩哔哩首页",
+  "failed": [],
+  "status": "OK",
+  "final_url": "https://www.bilibili.com/",
+  "http_charset": "utf-8",
+  "entry_bytes": 169739,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 169201,
+  "assets": 52,
+  "asset_bytes": 4716651,
+  "image_sizes": 32,
+  "elapsed_s": 4.56,
+  "items": 52
+}

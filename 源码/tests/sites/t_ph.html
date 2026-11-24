@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>placeholder 自检</title>
+<style>
+body{margin:0;padding:16px;font-family:sans-serif;font-size:18px}
+input{display:block;width:100%;box-sizing:border-box;font-size:22px;padding:10px;margin:10px 0;border:1px solid #ccc}
+#a::placeholder{color:#e60000}
+#b::-webkit-input-placeholder{color:#008800}
+</style></head>
+<body>
+<p>#a 用 ::placeholder 指定红</p>
+<input id="a" placeholder="应显示红色占位">
+<p>#b 用 -webkit- 前缀指定绿</p>
+<input id="b" placeholder="应显示绿色占位">
+<p>#c 没有任何规则，应保持默认灰 #999</p>
+<input id="c" placeholder="默认灰色占位">
+</body></html>

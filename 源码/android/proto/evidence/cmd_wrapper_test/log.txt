@@ -1,0 +1,79 @@
+﻿[INFO] 设备 emulator-5556
+[INFO] serial=emulator-5556
+[INFO] model=Android SDK built for x86
+[INFO] brand=generic_x86
+[INFO] sdk=19
+[INFO] soc=
+[INFO] egl=
+[INFO] gles=GLES: Google (Intel), Android Emulator OpenGL ES Translator (Intel(R) UHD Graphics 730), OpenGL ES 2.0 (4.5.0 - Build 32.0.101.7082)
+[INFO] resolution=1080x1920
+[INFO] time=2026-11-08 16:50:10
+[FAIL] 设备 ABI=x86（需要 arm64-v8a）
+[PASS] ro.opengles.version=131072（131072 = ES2.0）
+[FAIL] APK ABI=（需要含 arm64-v8a）
+[FAIL] APK debuggable（run-as 拉结果需要）
+[WARN] 读不到电池温度（部分 ROM 无该节点），注意手感与降频
+[INFO] 常亮/动画已关闭，屏幕已唤醒
+[INFO] 跳过安装（-SkipInstall）
+[RUN] 第 1/1 轮（frames=8）...
+[OK] 已保存 e:\浏览器\android\proto\evidence\cmd_wrapper_test\run1.txt
+
+=== 汇总（中位数，1 轮） ===
+
+case                 cmds  cAvg   gAvg  gFps   sP95   sMax outl
+----                 ----  ----   ----  ----   ----   ---- ----
+cjk-long-1200-cap256 1200 17.66  43.69  22.9  50.02  50.02    0
+cjk-long-1200-char   1200 18.99 102.57   9.7 176.72 176.72    0
+cjk-long-1200-fit    1200 10.97   2.66 376.1   1.62   1.62    0
+cjk-long-1200-full   1200 11.91  84.58  11.8  88.46  88.46    0
+cjk-long-1200-lru4   1200  17.7  37.87  26.4  42.77  42.77    0
+cjk-long-1200-pages8 1200 16.04   6.94   144   6.81   6.81    0
+cjk-long-600-cap256   600 13.26  35.21  28.4  48.78  48.78    0
+cjk-long-600-char     600 13.29  64.69  15.5  70.58  70.58    0
+cjk-long-600-fit      600 13.11    3.9 256.2   2.59   2.59    0
+cjk-long-600-full     600 18.11  87.35  11.4  136.5  136.5    0
+cjk-long-600-lru4     600  13.6  28.71  34.8  35.84  35.84    0
+cjk-long-600-pages8   600    17   5.95   168  11.26  11.26    0
+cjk-mix-300           300  8.68   2.66 376.5    4.8    4.8    0
+cjk-mix-600           600  9.09   1.63 612.6   1.21   1.21    0
+cjk-text-300          300  7.06   2.64 379.1   4.86   4.86    0
+cjk-text-600          600  4.72   2.25 443.6   2.09   2.09    0
+cjk-uniq-300          300  6.42    2.7 370.6   2.37   2.37    0
+cjk-uniq-600          600  9.26   4.39 227.6   8.91   8.91    1
+shapes-100            100 10.96   2.55   392   1.32   1.32    0
+shapes-1200          1200 13.88   8.69 115.1  21.99  21.99    1
+shapes-300            300  9.33   5.44 183.9   4.49   4.49    0
+shapes-600            600 12.21   3.37 296.5      2      2    0
+
+
+
+上传：整帧 7.40 ms / 脏带 0.91 ms（带高 400px）
+已写 e:\浏览器\android\proto\evidence\cmd_wrapper_test\summary.csv / e:\浏览器\android\proto\evidence\cmd_wrapper_test\upload.csv / e:\浏览器\android\proto\evidence\cmd_wrapper_test\frames.csv
+阈值判定：GL_avg <= Canvas_avg*0.80 且 submitP95 <= 8ms 且 fps >= 60 且 outliers=0（1 轮中位数）
+数据来源：<OutDir>\summary.csv（每档逐帧原始值见 frames.csv）
+cjk-long-1200-cap256 cmds=1200  GL/Canvas=247%  GL=43.69ms p95=50.02ms fps= 22.9  -> 保持 Canvas（未过：ratio=247%>80%; submitP95=50.02ms>8ms; fps=22.9<60）
+cjk-long-1200-char cmds=1200  GL/Canvas=540%  GL=102.57ms p95=176.72ms fps=  9.7  -> 保持 Canvas（未过：ratio=540%>80%; submitP95=176.72ms>8ms; fps=9.7<60）
+cjk-long-1200-fit cmds=1200  GL/Canvas= 24%  GL= 2.66ms p95= 1.62ms fps=376.1  -> 可以上调
+cjk-long-1200-full cmds=1200  GL/Canvas=710%  GL=84.58ms p95=88.46ms fps= 11.8  -> 保持 Canvas（未过：ratio=710%>80%; submitP95=88.46ms>8ms; fps=11.8<60）
+cjk-long-1200-lru4 cmds=1200  GL/Canvas=214%  GL=37.87ms p95=42.77ms fps= 26.4  -> 保持 Canvas（未过：ratio=214%>80%; submitP95=42.77ms>8ms; fps=26.4<60）
+cjk-long-1200-pages8 cmds=1200  GL/Canvas= 43%  GL= 6.94ms p95= 6.81ms fps=144.0  -> 可以上调
+cjk-long-600-cap256 cmds= 600  GL/Canvas=266%  GL=35.21ms p95=48.78ms fps= 28.4  -> 保持 Canvas（未过：ratio=266%>80%; submitP95=48.78ms>8ms; fps=28.4<60）
+cjk-long-600-char cmds= 600  GL/Canvas=487%  GL=64.69ms p95=70.58ms fps= 15.5  -> 保持 Canvas（未过：ratio=487%>80%; submitP95=70.58ms>8ms; fps=15.5<60）
+cjk-long-600-fit cmds= 600  GL/Canvas= 30%  GL= 3.90ms p95= 2.59ms fps=256.2  -> 可以上调
+cjk-long-600-full cmds= 600  GL/Canvas=482%  GL=87.35ms p95=136.50ms fps= 11.4  -> 保持 Canvas（未过：ratio=482%>80%; submitP95=136.50ms>8ms; fps=11.4<60）
+cjk-long-600-lru4 cmds= 600  GL/Canvas=211%  GL=28.71ms p95=35.84ms fps= 34.8  -> 保持 Canvas（未过：ratio=211%>80%; submitP95=35.84ms>8ms; fps=34.8<60）
+cjk-long-600-pages8 cmds= 600  GL/Canvas= 35%  GL= 5.95ms p95=11.26ms fps=168.0  -> 保持 Canvas（未过：submitP95=11.26ms>8ms）
+cjk-mix-300    cmds= 300  GL/Canvas= 31%  GL= 2.66ms p95= 4.80ms fps=376.5  -> 可以上调
+cjk-mix-600    cmds= 600  GL/Canvas= 18%  GL= 1.63ms p95= 1.21ms fps=612.6  -> 可以上调
+cjk-text-300   cmds= 300  GL/Canvas= 37%  GL= 2.64ms p95= 4.86ms fps=379.1  -> 可以上调
+cjk-text-600   cmds= 600  GL/Canvas= 48%  GL= 2.25ms p95= 2.09ms fps=443.6  -> 可以上调
+cjk-uniq-300   cmds= 300  GL/Canvas= 42%  GL= 2.70ms p95= 2.37ms fps=370.6  -> 可以上调
+cjk-uniq-600   cmds= 600  GL/Canvas= 47%  GL= 4.39ms p95= 8.91ms fps=227.6  -> 保持 Canvas（未过：submitP95=8.91ms>8ms; outliers=1）
+shapes-1200    cmds=1200  GL/Canvas= 63%  GL= 8.69ms p95=21.99ms fps=115.1  -> 保持 Canvas（未过：submitP95=21.99ms>8ms; outliers=1）
+shapes-300     cmds= 300  GL/Canvas= 58%  GL= 5.44ms p95= 4.49ms fps=183.9  -> 可以上调
+shapes-600     cmds= 600  GL/Canvas= 28%  GL= 3.37ms p95= 2.00ms fps=296.5  -> 可以上调
+
+上调建议：若 cjk-text 在 600 档仍满足四条判据，可把文字层阈值从 300 上调到 600；
+          shapes 单独看 1200 档（顶点增长 ≈ 线性，draws=1 不随指令数增长）。
+[INFO] 完成。把 e:\浏览器\android\proto\evidence\cmd_wrapper_test 整个目录带回分析。
+[DONE] see OutDir above

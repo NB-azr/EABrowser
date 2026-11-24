@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<div id="a"><span id="t">Hello World</span></div>
+<script>
+(function(){
+  function has(expr){ try { return eval('typeof ' + expr) !== 'undefined'; } catch(e) { return false; } }
+  function line(tag, arr){
+    var miss=[];
+    for(var i=0;i<arr.length;i++){ if(!has(arr[i])) miss.push(arr[i]); }
+    console.log('['+tag+'] missing='+(miss.length?miss.join(','):'none'));
+  }
+  line('ES', ['structuredClone','queueMicrotask','AggregateError','FinalizationRegistry','WeakRef','globalThis','Symbol.dispose','Array.prototype.at','Object.hasOwn','Promise.any','Promise.allSettled','String.prototype.replaceAll','RegExp.prototype.hasIndices']);
+  line('NET', ['fetch','Request','Response','Headers','FormData','AbortController','AbortSignal','XMLHttpRequest','WebSocket','EventSource','TextEncoder','TextDecoder','atob','btoa','URL','URLSearchParams','Blob','File','FileReader','ReadableStream','WritableStream','TransformStream','CompressionStream','navigator.sendBeacon']);
+  line('CRYPTO', ['crypto','crypto.randomUUID','crypto.getRandomValues','crypto.subtle','CryptoKey','SubtleCrypto','isSecureContext']);
+  line('DOM', ['DOMParser','XMLSerializer','NodeFilter','NodeIterator','TreeWalker','Range','Selection','getSelection','DocumentFragment','DOMRect','DOMPoint','DOMMatrix','DOMQuad','CSS','CSSStyleSheet','CustomEvent','Event','EventTarget','MutationObserver','IntersectionObserver','ResizeObserver','PerformanceObserver','requestAnimationFrame','requestIdleCallback','getComputedStyle','matchMedia','createImageBitmap','OffscreenCanvas','ImageData','ImageBitmap','Path2D','customElements','HTMLElement','HTMLCanvasElement','HTMLImageElement']);
+  line('EVENTS', ['MouseEvent','PointerEvent','KeyboardEvent','WheelEvent','InputEvent','FocusEvent','TouchEvent','DragEvent','MessageEvent','ProgressEvent','ErrorEvent','CloseEvent','StorageEvent','PopStateEvent']);
+  line('MISC', ['performance','performance.mark','performance.measure','performance.getEntriesByName','performance.clearMarks','performance.timeOrigin','Intl','localStorage','sessionStorage','history','history.pushState','history.replaceState','navigator.clipboard','navigator.geolocation','navigator.permissions','navigator.mediaDevices','navigator.connection','navigator.storage','navigator.languages','screen','screen.orientation','Worker','BroadcastChannel','MessageChannel','MessagePort','indexedDB','caches','ServiceWorkerContainer','Notification','location','location.assign','location.reload','location.origin','location.search','document.createElement','document.createTextNode','document.createDocumentFragment','document.createTreeWalker','document.createNodeIterator','document.createRange','document.adoptNode','document.importNode','document.elementFromPoint','document.caretRangeFromPoint','document.caretPositionFromPoint','document.getSelection','document.hasFocus','document.currentScript','document.readyState','document.documentElement','document.scrollingElement']);
+  try{ var sc=structuredClone({a:[1,2],b:'x'}); console.log('[FN] structuredClone='+(sc.a.length===2&&sc.b==='x')); }catch(e){ console.log('[FN] structuredClone ERR '+e); }
+  try{ console.log('[FN] atob='+atob('aGk=')+' btoa='+btoa('hi')); }catch(e){ console.log('[FN] atob ERR '+e); }
+  try{ var td=new TextDecoder('utf-8'); console.log('[FN] TextDecoder='+td.decode(new Uint8Array([228,189,160]))); }catch(e){ console.log('[FN] TextDecoder ERR '+e); }
+  try{ var u=new URL('https://a.com/x?q=1'); console.log('[FN] URL host='+u.host+' q='+u.searchParams.get('q')); }catch(e){ console.log('[FN] URL ERR '+e); }
+  try{ var fd=new FormData(); fd.append('k','v'); console.log('[FN] FormData='+fd.get('k')); }catch(e){ console.log('[FN] FormData ERR '+e); }
+  try{ var b=new Blob(['abc'],{type:'text/plain'}); var fr=new FileReader(); fr.onload=function(){ console.log('[FN] FileReader='+fr.result); }; fr.readAsText(b); }catch(e){ console.log('[FN] Blob/FileReader ERR '+e); }
+  try{ console.log('[FN] crypto='+crypto.getRandomValues(new Uint8Array(4)).length+' uuid='+(crypto.randomUUID().length===36)); }catch(e){ console.log('[FN] crypto ERR '+e); }
+  try{ var dp=new DOMParser().parseFromString('<p id="z">ok</p>','text/html'); console.log('[FN] DOMParser='+dp.getElementById('z').textContent); }catch(e){ console.log('[FN] DOMParser ERR '+e); }
+  try{ console.log('[FN] XMLSerializer='+new XMLSerializer().serializeToString(document.getElementById('t'))); }catch(e){ console.log('[FN] XMLSerializer ERR '+e); }
+  try{ var w=document.createTreeWalker(document.body,NodeFilter.SHOW_ELEMENT); console.log('[FN] TreeWalker first='+(w.nextNode()?w.currentNode.nodeName:'none')); }catch(e){ console.log('[FN] TreeWalker ERR '+e); }
+  try{ var r=document.createRange(); r.selectNodeContents(document.getElementById('t')); console.log('[FN] Range text='+r.toString()+' collapsed='+r.collapsed); }catch(e){ console.log('[FN] Range ERR '+e); }
+  try{ var sel=getSelection(); console.log('[FN] Selection isCollapsed='+sel.isCollapsed); }catch(e){ console.log('[FN] Selection ERR '+e); }
+  try{ console.log('[FN] CSS.escape='+CSS.escape('a.b#c')); }catch(e){ console.log('[FN] CSS.escape ERR '+e); }
+  try{ var cr=document.caretRangeFromPoint(20,30); console.log('[FN] caretRange='+(cr?('node='+cr.startContainer.nodeName+' off='+cr.startOffset):'null')); }catch(e){ console.log('[FN] caretRange ERR '+e); }
+  try{ var mq=matchMedia('(min-width: 100px)'); console.log('[FN] matchMedia='+mq.matches); }catch(e){ console.log('[FN] matchMedia ERR '+e); }
+  try{ var h=history.length; history.pushState({x:1},'','#p'); console.log('[FN] history len='+h+'->'+history.length+' state='+history.state.x); }catch(e){ console.log('[FN] history ERR '+e); }
+  try{ var s=new CSSStyleSheet(); s.replaceSync('.x{color:red}'); console.log('[FN] CSSStyleSheet rules='+s.cssRules.length); }catch(e){ console.log('[FN] CSSStyleSheet ERR '+e); }
+  try{ console.log('[FN] Intl.DateTimeFormat='+new Intl.DateTimeFormat('en-US').format(new Date(2020,0,1))); }catch(e){ console.log('[FN] Intl ERR '+e); }
+  try{ console.log('[FN] ImageData='+new ImageData(2,2).width); }catch(e){ console.log('[FN] ImageData ERR '+e); }
+  try{ console.log('[FN] Path2D='+(new Path2D().arc?1:0)); }catch(e){ console.log('[FN] Path2D ERR '+e); }
+  try{ console.log('[FN] performance.mark='+(typeof performance.mark)); }catch(e){ console.log('[FN] performance ERR '+e); }
+})();
+</script></body></html>

@@ -1,0 +1,1010 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='5829'>
+<defs><filter id='b'><feGaussianBlur stdDeviation='6'/></filter></defs>
+<rect width='100%' height='100%' fill='#FFFFFF'/>
+<rect x='0' y='0' width='1280' height='5811' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='0' y='0' width='1280' height='98' rx='0' fill='#F8F8F8' fill-opacity='1'/>
+<rect x='150' y='99' width='28' height='2' rx='0' fill='#3388FF' fill-opacity='1'/>
+<text x='150' y='83' font-size='14' fill='#222222' font-family='sans-serif'>综合</text>
+<rect x='157' y='96' width='14' height='1.5' rx='0.75' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='157' y='95.5' width='14' height='2' rx='0' fill='#3388FF' fill-opacity='1'/>
+<text x='205.2' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>文心</text>
+<text x='260.4' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>图片</text>
+<text x='315.6' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>资讯</text>
+<text x='370.8' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>视频</text>
+<text x='426' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>笔记</text>
+<text x='481.2' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>地图</text>
+<text x='536.4' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>贴吧</text>
+<text x='591.6' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>文库</text>
+<text x='646.8' y='83' font-size='14' fill='#9195A3' font-family='sans-serif'>更多</text>
+<text x='702' y='79' font-size='14' fill='#9195A3' font-family='sans-serif'>搜索工具</text>
+<rect x='878' y='119' width='1' height='2432.02' rx='0' fill='#E1E1E1' fill-opacity='1'/>
+<text x='878' y='135' font-size='16' fill='#2440B3' font-family='sans-serif'>浏览器</text>
+<rect x='878' y='147' width='272' height='1358' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='878' y='147' width='272' height='1358' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='878' y='147' width='272' height='1358' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='878' y='1524' font-size='13' fill='#333333' font-family='sans-serif'>纯净Chromium极速内核，去除冗余组件，启动更快</text>
+<rect x='878' y='1539.02' width='128' height='30' rx='6' fill='#F5F6F9' fill-opacity='1'/>
+<text x='916' y='1552.02' font-size='13' fill='#333333' font-family='sans-serif'>官方官网</text>
+<rect x='946' y='1539.02' width='128' height='30' rx='6' fill='#F5F6F9' fill-opacity='1'/>
+<text x='984' y='1552.02' font-size='13' fill='#333333' font-family='sans-serif'>查看更多</text>
+<text x='878' y='1609.02' font-size='13' fill='#B7B9C1' font-family='sans-serif'>广告</text>
+<text x='150' y='134' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='150' y='134.04' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='204' y='134' font-size='18' fill='#2440B3' font-family='sans-serif'>_2026</text>
+<rect x='204' y='134.04' width='50.04' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='254.04' y='134' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='254.04' y='134.04' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='308.04' y='134' font-size='18' fill='#2440B3' font-family='sans-serif'>软件排行榜</text>
+<rect x='308.04' y='134.04' width='90' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='150' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='153.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'>软件名</text>
+<text x='192.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='150' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='153.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'>下载次数</text>
+<text x='205.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='150' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='153.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'>大小</text>
+<text x='179.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='150' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='153.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'>好评率</text>
+<text x='192.614' y='155' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<rect x='150' y='167' width='608' height='1' rx='0.5' fill='#000000' fill-opacity='0.05'/>
+<text x='150' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='153.614' y='176' width='30' height='30' rx='6' fill='none' stroke='#000000' stroke-width='1'/>
+<rect x='153.614' y='176' width='30' height='30' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='150' y='221' font-size='13' fill='#2440B3' font-family='sans-serif'>GPT</text>
+<text x='176.728' y='221' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='150' y='253' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='189' font-size='13' fill='#333333' font-family='sans-serif'>601652</text>
+<text x='196.982' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='189' font-size='13' fill='#333333' font-family='sans-serif'>16M</text>
+<text x='178.899' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='189' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='189' font-size='13' fill='#333333' font-family='sans-serif'>98.00%</text>
+<rect x='197.697' y='176' width='92.303' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='197.697' y='176' width='140' height='26' rx='13' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='210.697' y='190' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='214.311' y='190' font-size='13' fill='#FFFFFF' font-family='sans-serif'>下载</text>
+<text x='240.311' y='190' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='150' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='153.614' y='284' width='30' height='30' rx='6' fill='none' stroke='#000000' stroke-width='1'/>
+<rect x='153.614' y='284' width='30' height='30' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='150' y='329' font-size='13' fill='#2440B3' font-family='sans-serif'>夸克</text>
+<text x='176' y='329' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='150' y='361' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='297' font-size='13' fill='#333333' font-family='sans-serif'>1108763</text>
+<text x='204.21' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='297' font-size='13' fill='#333333' font-family='sans-serif'>329.4MB</text>
+<text x='205.64' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='297' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='297' font-size='13' fill='#333333' font-family='sans-serif'>98.00%</text>
+<rect x='197.697' y='284' width='92.303' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='197.697' y='284' width='140' height='26' rx='13' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='210.697' y='298' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='214.311' y='298' font-size='13' fill='#FFFFFF' font-family='sans-serif'>下载</text>
+<text x='240.311' y='298' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='150' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='153.614' y='392' width='30' height='30' rx='6' fill='none' stroke='#000000' stroke-width='1'/>
+<rect x='153.614' y='392' width='30' height='30' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='150' y='437' font-size='13' fill='#2440B3' font-family='sans-serif'>搜狗</text>
+<text x='176' y='437' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='150' y='469' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='405' font-size='13' fill='#333333' font-family='sans-serif'>1878202</text>
+<text x='204.21' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='405' font-size='13' fill='#333333' font-family='sans-serif'>157MB</text>
+<text x='194.798' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='405' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='405' font-size='13' fill='#333333' font-family='sans-serif'>98.00%</text>
+<rect x='197.697' y='392' width='92.303' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='197.697' y='392' width='140' height='26' rx='13' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='210.697' y='406' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='214.311' y='406' font-size='13' fill='#FFFFFF' font-family='sans-serif'>下载</text>
+<text x='240.311' y='406' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='150' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='153.614' y='500' width='30' height='30' rx='6' fill='none' stroke='#000000' stroke-width='1'/>
+<rect x='153.614' y='500' width='30' height='30' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='150' y='545' font-size='13' fill='#2440B3' font-family='sans-serif'>zero </text>
+<text x='178.899' y='545' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='150' y='577' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='513' font-size='13' fill='#333333' font-family='sans-serif'>18556</text>
+<text x='189.754' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='513' font-size='13' fill='#333333' font-family='sans-serif'>180MB</text>
+<text x='194.798' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='513' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='513' font-size='13' fill='#333333' font-family='sans-serif'>98.00%</text>
+<rect x='197.697' y='500' width='92.303' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='197.697' y='500' width='140' height='26' rx='13' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='210.697' y='514' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='214.311' y='514' font-size='13' fill='#FFFFFF' font-family='sans-serif'>下载</text>
+<text x='240.311' y='514' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='150' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='153.614' y='608' width='30' height='30' rx='6' fill='none' stroke='#000000' stroke-width='1'/>
+<rect x='153.614' y='608' width='30' height='30' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='150' y='653' font-size='13' fill='#2440B3' font-family='sans-serif'>123加速</text>
+<text x='197.684' y='653' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='150' y='685' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='621' font-size='13' fill='#333333' font-family='sans-serif'>70021</text>
+<text x='189.754' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='621' font-size='13' fill='#333333' font-family='sans-serif'>74.8MB</text>
+<text x='198.412' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='621' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='153.614' y='621' font-size='13' fill='#333333' font-family='sans-serif'>98.00%</text>
+<rect x='197.697' y='608' width='92.303' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='197.697' y='608' width='140' height='26' rx='13' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='210.697' y='622' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='214.311' y='622' font-size='13' fill='#FFFFFF' font-family='sans-serif'>下载</text>
+<text x='240.311' y='622' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='150' y='729' font-size='13' fill='#2440B3' font-family='sans-serif'>查看更多浏览器 &gt;</text>
+<text x='150' y='752' font-size='13' fill='#9195A3' font-family='sans-serif'>softs.softsd.cn</text>
+<rect x='158' y='760' width='13' height='17' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='158' y='760' width='13' height='17' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='158' y='773' font-size='13' fill='#000000' font-family='sans-serif'></text>
+<text x='150' y='822' font-size='18' fill='#333333' font-family='sans-serif'> </text>
+<text x='150' y='844' font-size='18' fill='#2440B3' font-family='sans-serif'>              GPT</text>
+<rect x='150' y='844.04' width='107.064' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='257.064' y='844' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='257.064' y='844.04' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='311.064' y='844' font-size='18' fill='#2440B3' font-family='sans-serif'>_2026最新版          </text>
+<rect x='311.064' y='844.04' width='154.08' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='150' y='866' font-size='18' fill='#333333' font-family='sans-serif'> </text>
+<rect x='135' y='874' width='638' height='972' rx='15' fill='none' stroke='#E3E3E3' stroke-width='1'/>
+<rect x='135' y='881' width='638' height='54' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<text x='155' y='894' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='193.614' y='911' font-size='13' fill='#9195A3' font-family='sans-serif'>                  Windows              </text>
+<text x='724.614' y='894' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='190' y='938' font-size='13' fill='#9195A3' font-family='sans-serif'>                  Mac              </text>
+<text x='721' y='921' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<rect x='151' y='951' width='606' height='879' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='151' y='951' width='83.5' height='233.5' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='951' width='83.5' height='150' rx='0' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='951' width='83.5' height='150' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='151' y='951' width='83.5' height='233.5' rx='12' fill='none' stroke='#000000' stroke-width='1'/>
+<text x='250.5' y='1028.5' font-size='13' fill='#333333' font-family='sans-serif'>                              GPT Chrome                          </text>
+<text x='250.5' y='1055.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='250.5' y='1068.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='250.5' y='1081.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<rect x='254.114' y='1068.5' width='239.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='254.114' y='1068.5' width='239.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='254.114' y='1081.5' font-size='13' fill='#FF6600' font-family='sans-serif'></text>
+<text x='267.114' y='1081.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<text x='254.5' y='1094.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<rect x='258.114' y='1081.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='258.114' y='1081.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='258.114' y='1094.5' font-size='13' fill='#FF6600' font-family='sans-serif'></text>
+<text x='271.114' y='1094.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<text x='254.5' y='1107.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<rect x='258.114' y='1094.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='258.114' y='1094.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='258.114' y='1107.5' font-size='13' fill='#FF6600' font-family='sans-serif'></text>
+<text x='271.114' y='1107.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<text x='254.5' y='1120.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<rect x='258.114' y='1107.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='258.114' y='1107.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='258.114' y='1120.5' font-size='13' fill='#FF6600' font-family='sans-serif'></text>
+<text x='271.114' y='1120.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<text x='254.5' y='1133.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<rect x='258.114' y='1120.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='258.114' y='1120.5' width='235.5' height='13' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='258.114' y='1133.5' font-size='13' fill='#FF6600' font-family='sans-serif'></text>
+<text x='271.114' y='1133.5' font-size='13' fill='#FF6600' font-family='sans-serif'> </text>
+<text x='486' y='1133.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='250.5' y='1146.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='250.5' y='1159.5' font-size='13' fill='#333333' font-family='sans-serif'>                              版本：                      </text>
+<text x='250.5' y='1180.5' font-size='13' fill='#333333' font-family='sans-serif'>    </text>
+<text x='478' y='1159.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1180.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1201.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1222.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1243.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1264.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1285.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1306.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1327.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1348.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1369.5' font-size='13' fill='#333333' font-family='sans-serif'>大</text>
+<text x='478' y='1390.5' font-size='13' fill='#333333' font-family='sans-serif'>小</text>
+<text x='478' y='1411.5' font-size='13' fill='#333333' font-family='sans-serif'>：</text>
+<text x='478' y='1432.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1453.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1474.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1495.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1516.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1537.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1558.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1579.5' font-size='13' fill='#333333' font-family='sans-serif'>   </text>
+<text x='478' y='1600.5' font-size='13' fill='#333333' font-family='sans-serif'>  </text>
+<text x='151' y='1006' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='154.614' y='993' width='128' height='32' rx='6' fill='#4E6EF2' fill-opacity='1'/>
+<rect x='154.614' y='993' width='128' height='32' rx='6' fill='none' stroke='#D8D8D8' stroke-width='1'/>
+<text x='216.807' y='1007' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<rect x='180.614' y='994' width='14' height='30' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='180.614' y='994' width='14' height='30' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='181.114' y='1007' font-size='13' fill='#FFFFFF' font-family='sans-serif'></text>
+<text x='216.807' y='1007' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='215.842' y='1007' font-size='13' fill='#FFFFFF' font-family='sans-serif'>立即下载</text>
+<text x='216.807' y='1007' font-size='13' fill='#FFFFFF' font-family='sans-serif'> </text>
+<text x='282.614' y='1006' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='151' y='1124' font-size='13' fill='#9195A3' font-family='sans-serif'>                      类型：                  </text>
+<text x='745' y='1124' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1137' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1150' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1163' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1176' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1189' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1202' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1215' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1228' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1241' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1254' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1267' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1280' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1293' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1306' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1319' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1332' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1345' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1358' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1371' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1384' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1397' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1410' font-size='13' fill='#9195A3' font-family='sans-serif'>更</text>
+<text x='745' y='1423' font-size='13' fill='#9195A3' font-family='sans-serif'>新</text>
+<text x='745' y='1436' font-size='13' fill='#9195A3' font-family='sans-serif'>：</text>
+<text x='745' y='1449' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1462' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1475' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1488' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1501' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1514' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1527' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1540' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1553' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1566' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1579' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1592' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1605' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1618' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1631' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1644' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1657' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='745' y='1670' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='746' y='1124' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1137' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1150' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1163' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1176' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1189' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1202' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1215' font-size='13' fill='#9195A3' font-family='sans-serif'> </text>
+<text x='746' y='1228' font-size='13' fill='#9195A3' font-family='sans-serif'>系</text>
+<text x='746' y='1241' font-size='13' fill='#9195A3' font-family='sans-serif'>统</text>
+<text x='746' y='1254' font-size='13' fill='#9195A3' font-family='sans-serif'>：</text>
+<text x='746' y='1267' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1280' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1293' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1306' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1319' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<text x='746' y='1332' font-size='13' fill='#9195A3' font-family='sans-serif'>   </text>
+<rect x='151' y='1680' width='140' height='150' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='12' fill='#F5F5F6' fill-opacity='1'/>
+<rect x='151' y='1680' width='140' height='150' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='136' y='875' width='1276' height='1800' rx='30' fill='none' stroke='#DBDCE0' stroke-width='1' transform='translate(-319.0 -450.0) rotate(0.0) scale(0.500 0.500)'/>
+<text x='150' y='1865' font-size='13' fill='#9195A3' font-family='sans-serif'>softs.xznkjzx.cn</text>
+<rect x='158' y='1873' width='13' height='17' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='158' y='1873' width='13' height='17' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='158' y='1886' font-size='13' fill='#000000' font-family='sans-serif'></text>
+<text x='150' y='1935' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='150' y='1936.68' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='204' y='1935' font-size='18' fill='#2440B3' font-family='sans-serif'>的最新相关信息</text>
+<rect x='204' y='1936.68' width='126' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<rect x='148' y='1953' width='280' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-70.2 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='187' y='1964' font-size='14' fill='#2440B3' font-family='sans-serif'>苹果 iOS 27.3 开发者预览版 Beta 又一重要更新,Saf…</text>
+<text x='187' y='1984.5' font-size='13' fill='#333333' font-family='sans-serif'>苹果 iOS 27.3 开发者预览版 Beta 又一重要更新，Safari 浏</text>
+<rect x='217' y='2452' width='16' height='512' rx='8' fill='#F2F3F5' fill-opacity='1'/>
+<rect x='217' y='2452' width='16' height='512' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='187' y='2452' width='32' height='1800' rx='16' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-8.0 -450.0) rotate(0.0) scale(0.500 0.500)'/>
+<rect x='446.523' y='2452' width='37.584' height='17' rx='9' fill='#FFFFFF' fill-opacity='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<rect x='446.523' y='2451' width='37.584' height='18' rx='9' fill='none' stroke='#FFFFFF' stroke-width='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<text x='447.523' y='2468' font-size='16' fill='#3897F0' font-family='sans-serif'>e7…</text>
+<text x='486.107' y='2714.5' font-size='13' fill='#9195A3' font-family='sans-serif'>…</text>
+<text x='513.886' y='2714.5' font-size='13' fill='#9195A3' font-family='sans-serif'>3</text>
+<text x='513.886' y='2727.5' font-size='13' fill='#9195A3' font-family='sans-serif'>天</text>
+<text x='513.886' y='2740.5' font-size='13' fill='#9195A3' font-family='sans-serif'>前</text>
+<rect x='148' y='2480' width='280' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-70.2 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='187' y='2491' font-size='14' fill='#2440B3' font-family='sans-serif'>《纽约时报》等媒体起诉</text>
+<text x='341' y='2491' font-size='14' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='383' y='2491' font-size='14' fill='#2440B3' font-family='sans-serif'>公司 Brave,指控其未经授权抓取版权...</text>
+<text x='187' y='2511.5' font-size='13' fill='#333333' font-family='sans-serif'>《纽约时报》等媒体起诉浏览器公司 Brave，指控其未经授</text>
+<rect x='217' y='2979' width='16' height='512' rx='8' fill='#F2F3F5' fill-opacity='1'/>
+<rect x='217' y='2979' width='16' height='512' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='187' y='2979' width='32' height='1800' rx='16' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-8.0 -450.0) rotate(0.0) scale(0.500 0.500)'/>
+<rect x='446.523' y='2979' width='37.584' height='17' rx='9' fill='#FFFFFF' fill-opacity='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<rect x='446.523' y='2978' width='37.584' height='18' rx='9' fill='none' stroke='#FFFFFF' stroke-width='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<text x='447.523' y='2995' font-size='16' fill='#3897F0' font-family='sans-serif'>e7…</text>
+<text x='486.107' y='3241.5' font-size='13' fill='#9195A3' font-family='sans-serif'>…</text>
+<text x='513.886' y='3241.5' font-size='13' fill='#9195A3' font-family='sans-serif'>5</text>
+<text x='513.886' y='3254.5' font-size='13' fill='#9195A3' font-family='sans-serif'>天</text>
+<text x='513.886' y='3267.5' font-size='13' fill='#9195A3' font-family='sans-serif'>前</text>
+<rect x='148' y='3007' width='280' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-70.2 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='187' y='3018' font-size='14' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='229' y='3018' font-size='14' fill='#2440B3' font-family='sans-serif'>打开就能用?云手机网页版实测与避坑经验分享</text>
+<text x='187' y='3038.5' font-size='13' fill='#333333' font-family='sans-serif'>平时出门带个轻薄本，硬盘空间紧巴巴，想临时跑个安卓应</text>
+<rect x='217' y='3194' width='16' height='200' rx='8' fill='#F2F3F5' fill-opacity='1'/>
+<rect x='217' y='3194' width='16' height='200' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='187' y='3194' width='32' height='1800' rx='16' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-8.0 -450.0) rotate(0.0) scale(0.500 0.500)'/>
+<rect x='382.75' y='3194' width='37.584' height='17' rx='9' fill='#FFFFFF' fill-opacity='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<rect x='382.75' y='3193' width='37.584' height='18' rx='9' fill='none' stroke='#FFFFFF' stroke-width='1' transform='translate(8.3 4.0) rotate(0.0) scale(0.560 0.560)'/>
+<text x='383.75' y='3210' font-size='16' fill='#FF0000' font-family='sans-serif'>e7…</text>
+<text x='422.334' y='3300.5' font-size='13' fill='#9195A3' font-family='sans-serif'>咸宁…</text>
+<text x='481.084' y='3300.5' font-size='13' fill='#9195A3' font-family='sans-serif'>5天</text>
+<text x='481.084' y='3313.5' font-size='13' fill='#9195A3' font-family='sans-serif'>前</text>
+<text x='236.848' y='3236.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='240.462' y='3236.5' font-size='13' fill='#333333' font-family='sans-serif'>查看更多</text>
+<text x='292.462' y='3236.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='447.952' y='3236.5' font-size='13' fill='#333333' font-family='sans-serif'>e6dc</text>
+<rect x='135' y='3265' width='652' height='784' rx='15' fill='none' stroke='#4E6EF2' stroke-width='0.5'/>
+<rect x='150.5' y='3284' width='56' height='14' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='674.612' y='3293.5' width='66.584' height='26' rx='13' fill='#4E6EF2' fill-opacity='1'/>
+<text x='693.404' y='3315.5' font-size='16' fill='#333333' font-family='sans-serif'>e65e</text>
+<rect x='715.404' y='3300.5' width='7' height='14' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='137.5' y='3349.5' width='647' height='675' rx='12' fill='#FFFFFF' fill-opacity='1'/>
+<text x='150.5' y='3359.5' font-size='16' fill='#333333' font-family='sans-serif'>浏览器是安卓手机软件免费下载的热门应用，主流排行包括</text>
+<rect x='150.5' y='3371.5' width='621' height='312.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='150.5' y='3387.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='150.5' y='3399.5' width='621' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='150.5' y='3415.5' font-size='16' fill='#333333' font-family='sans-serif'>UC 浏览器</text>
+<text x='150.5' y='3444' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='150.5' y='3456' width='621' height='29' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='150.5' y='3472' font-size='16' fill='#333333' font-family='sans-serif'>、</text>
+<text x='150.5' y='3501' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='150.5' y='3513' width='621' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='150.5' y='3529' font-size='16' fill='#333333' font-family='sans-serif'>夸克</text>
+<text x='150.5' y='3557.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='150.5' y='3569.5' width='621' height='29' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='150.5' y='3585.5' font-size='16' fill='#333333' font-family='sans-serif'>、</text>
+<text x='150.5' y='3614.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='150.5' y='3626.5' width='621' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='150.5' y='3642.5' font-size='16' fill='#333333' font-family='sans-serif'>QQ 浏览器</text>
+<text x='150.5' y='3671' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='150.5' y='3700' font-size='16' fill='#333333' font-family='sans-serif'>等，用户可根据需求选择电脑版或手机版进行安装。</text>
+<text x='150.5' y='3399.5' font-size='18' fill='#333333' font-family='sans-serif'>🌐 主流浏览器推荐与官方下载</text>
+<text x='150.5' y='3446.5' font-size='16' fill='#333333' font-family='sans-serif'>根据 2026 年最新市场情况，以下几款浏览器在速度、隐私及兼容性方面表现优异，提供</text>
+<text x='150.5' y='3474.5' font-size='16' fill='#333333' font-family='sans-serif'>官方下载入口供参考：</text>
+<text x='171.5' y='3520.5' font-size='16' fill='#333333' font-family='sans-serif'>0</text>
+<text x='171.5' y='3548.5' font-size='16' fill='#333333' font-family='sans-serif'>.</text>
+<rect x='191.5' y='3504.5' width='580' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='191.5' y='3520.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3504.5' width='580' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='207.5' y='3520.5' font-size='16' fill='#333333' font-family='sans-serif'>Google Chrome</text>
+<text x='320.428' y='3520.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3551' width='5' height='5' rx='2.5' fill='none' stroke='#333333' stroke-width='1'/>
+<rect x='227.5' y='3540' width='544' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='227.5' y='3556' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='243.5' y='3540' width='544' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='243.5' y='3556' font-size='16' fill='#333333' font-family='sans-serif'>特点</text>
+<text x='275.5' y='3556' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='227.5' y='3585.5' font-size='16' fill='#333333' font-family='sans-serif'>：全球市场份额第一，简洁快速，支持多平台同步，扩展程序丰富。</text>
+<rect x='207.5' y='3620.5' width='5' height='5' rx='2.5' fill='none' stroke='#333333' stroke-width='1'/>
+<rect x='227.5' y='3609.5' width='544' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='227.5' y='3625.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='243.5' y='3609.5' width='544' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='243.5' y='3625.5' font-size='16' fill='#333333' font-family='sans-serif'>下载</text>
+<text x='275.5' y='3625.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='227.5' y='3655' font-size='16' fill='#333333' font-family='sans-serif'>：</text>
+<text x='230.5' y='3683' font-size='16' fill='#2440B3' font-family='sans-serif'>https://www.google.cn/chrome/</text>
+<rect x='230.5' y='3689.96' width='218.752' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='765.5' y='3683' font-size='16' fill='#333333' font-family='sans-serif'>（</text>
+<text x='765.5' y='3711' font-size='16' fill='#333333' font-family='sans-serif'>国</text>
+<text x='765.5' y='3739' font-size='16' fill='#333333' font-family='sans-serif'>内</text>
+<text x='765.5' y='3767' font-size='16' fill='#333333' font-family='sans-serif'>访</text>
+<text x='150.5' y='3486' font-size='18' fill='#333333' font-family='sans-serif'>📖 浏览器基础知识与工作原理</text>
+<text x='150.5' y='3533' font-size='16' fill='#333333' font-family='sans-serif'>浏览器不仅是上网工具，更是复杂的软件系统，其核心功能在于解析和展示网络资源。</text>
+<text x='171.5' y='3579' font-size='16' fill='#333333' font-family='sans-serif'>0</text>
+<text x='171.5' y='3607' font-size='16' fill='#333333' font-family='sans-serif'>.</text>
+<rect x='191.5' y='3563' width='580' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='191.5' y='3579' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3563' width='580' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='207.5' y='3579' font-size='16' fill='#333333' font-family='sans-serif'>基本定义</text>
+<text x='271.5' y='3579' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='191.5' y='3608.5' font-size='16' fill='#333333' font-family='sans-serif'>：浏览器（Web Browser）是一种用于访问、获取、展示和交互万维网信息资源的</text>
+<text x='191.5' y='3636.5' font-size='16' fill='#333333' font-family='sans-serif'>应用软件。</text>
+<text x='171.5' y='3676.5' font-size='16' fill='#333333' font-family='sans-serif'>0</text>
+<text x='171.5' y='3704.5' font-size='16' fill='#333333' font-family='sans-serif'>.</text>
+<rect x='191.5' y='3660.5' width='580' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='191.5' y='3676.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3660.5' width='580' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='207.5' y='3676.5' font-size='16' fill='#333333' font-family='sans-serif'>工作原理</text>
+<text x='271.5' y='3676.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='191.5' y='3706' font-size='16' fill='#333333' font-family='sans-serif'>：</text>
+<rect x='207.5' y='3735' width='5' height='5' rx='2.5' fill='none' stroke='#333333' stroke-width='1'/>
+<rect x='227.5' y='3724' width='544' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='227.5' y='3740' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='243.5' y='3724' width='544' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='243.5' y='3740' font-size='16' fill='#333333' font-family='sans-serif'>资源定位</text>
+<text x='307.5' y='3740' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<text x='227.5' y='3769.5' font-size='16' fill='#333333' font-family='sans-serif'>：通过 URL（统一资源定位符）找到目标网页。</text>
+<text x='150.5' y='3572.5' font-size='18' fill='#333333' font-family='sans-serif'>🔧 常见问题解决：手机浏览器打不开网页</text>
+<text x='150.5' y='3619.5' font-size='16' fill='#333333' font-family='sans-serif'>若遇到手机浏览器无法加载页面的情况，可尝试以下步骤排查：</text>
+<text x='171.5' y='3665.5' font-size='16' fill='#333333' font-family='sans-serif'>0</text>
+<text x='171.5' y='3693.5' font-size='16' fill='#333333' font-family='sans-serif'>.</text>
+<rect x='191.5' y='3649.5' width='580' height='29.5' rx='0' fill='#6F4BFA' fill-opacity='1'/>
+<text x='191.5' y='3665.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3649.5' width='580' height='28.5' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='207.5' y='3665.5' font-size='16' fill='#333333' font-family='sans-serif'>检查网络连接</text>
+<text x='303.5' y='3665.5' font-size='16' fill='#333333' font-family='sans-serif'>‌</text>
+<rect x='207.5' y='3696' width='5' height='5' rx='2.5' fill='none' stroke='#333333' stroke-width='1'/>
+<text x='232.5' y='3701' font-size='16' fill='#333333' font-family='sans-serif'>切换网络环境，如从 WiFi 切换到移动数据，或开启/关闭飞行模式重置网络</text>
+<text x='227.5' y='3729' font-size='16' fill='#333333' font-family='sans-serif'>。</text>
+<text x='232.5' y='3769' font-size='16' fill='#333333' font-family='sans-serif'>确认其他应用是否能正常上网，排除运营商网络故障。</text>
+<rect x='150.5' y='3633' width='621' height='1' rx='0' fill='#DCDDE0' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 0.500)'/>
+<text x='150.5' y='3662' font-size='16' fill='#333333' font-family='sans-serif'>浏览器类型多样，可以看看 </text>
+<text x='153.5' y='3690' font-size='16' fill='#2440B3' font-family='sans-serif'>Chrome和Edge哪个更省流量</text>
+<rect x='153.5' y='3696.96' width='206.256' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='153.5' y='3718' font-size='16' fill='#2440B3' font-family='sans-serif'>？</text>
+<rect x='153.5' y='3724.96' width='16' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='170.5' y='3714' font-size='9' fill='#2440B3' font-family='sans-serif'>e68a</text>
+<text x='765.5' y='3690' font-size='16' fill='#333333' font-family='sans-serif'> </text>
+<text x='150.5' y='3718' font-size='16' fill='#333333' font-family='sans-serif'>或者 </text>
+<rect x='150.5' y='3671' width='621' height='86.5' rx='15' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='150.5' y='3671' width='621' height='86.5' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='150.5' y='3671' width='621' height='86.5' rx='0' fill='none' stroke='#CCCCCC' stroke-width='1'/>
+<rect x='150.5' y='3671' width='621' height='86.5' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='150.5' y='3671' width='621' height='86.5' rx='0' fill='none' stroke='#CCCCCC' stroke-width='1'/>
+<rect x='160.5' y='3681' width='601' height='25' rx='2' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='160.5' y='3681' width='601' height='25' rx='2' fill='none' stroke='#999999' stroke-width='1'/>
+<text x='185.5' y='3723.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<rect x='189.114' y='3710.5' width='293.992' height='37' rx='0' fill='#286AFF' fill-opacity='1'/>
+<text x='189.114' y='3746.5' font-size='36' fill='#333333' font-family='sans-serif'>e69a</text>
+<text x='269.178' y='3723.5' font-size='13' fill='#333333' font-family='sans-serif'> </text>
+<text x='316.065' y='3757.5' font-size='13' fill='#333333' font-family='sans-serif'>                      展开剩余76%内容                 …</text>
+<text x='578.831' y='3757.5' font-size='13' fill='#333333' font-family='sans-serif'>e6…</text>
+<rect x='137.5' y='3697.5' width='647' height='60' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<text x='150.5' y='3907' font-size='13' fill='#9195A3' font-family='sans-serif'>内容</text>
+<text x='150.5' y='3928' font-size='13' fill='#9195A3' font-family='sans-serif'>由AI生</text>
+<text x='150.5' y='3949' font-size='13' fill='#9195A3' font-family='sans-serif'>成</text>
+<rect x='588.5' y='3775.5' width='27' height='27' rx='13.5' fill='#F5F6F9' fill-opacity='1'/>
+<text x='588.5' y='3794.5' font-size='16' fill='#333333' font-family='sans-serif'>e71</text>
+<text x='588.5' y='3815.5' font-size='16' fill='#333333' font-family='sans-serif'>3</text>
+<rect x='627.5' y='3775.5' width='27' height='27' rx='13.5' fill='#F5F6F9' fill-opacity='1'/>
+<text x='636.5' y='3794.5' font-size='16' fill='#333333' font-family='sans-serif'> </text>
+<text x='636.5' y='3815.5' font-size='16' fill='#333333' font-family='sans-serif'>e</text>
+<text x='636.5' y='3836.5' font-size='16' fill='#333333' font-family='sans-serif'>7</text>
+<text x='636.5' y='3857.5' font-size='16' fill='#333333' font-family='sans-serif'>2</text>
+<text x='636.5' y='3878.5' font-size='16' fill='#333333' font-family='sans-serif'>2</text>
+<text x='636.5' y='3899.5' font-size='16' fill='#333333' font-family='sans-serif'> </text>
+<rect x='666.5' y='3775.5' width='27' height='27' rx='13.5' fill='#F5F6F9' fill-opacity='1'/>
+<text x='675.5' y='3796' font-size='16' fill='#333333' font-family='sans-serif'>e</text>
+<text x='675.5' y='3812' font-size='16' fill='#333333' font-family='sans-serif'>7</text>
+<text x='675.5' y='3828' font-size='16' fill='#333333' font-family='sans-serif'>8</text>
+<text x='675.5' y='3844' font-size='16' fill='#333333' font-family='sans-serif'>5</text>
+<rect x='705.5' y='3775.5' width='27' height='27' rx='13.5' fill='#F5F6F9' fill-opacity='1'/>
+<text x='705.5' y='3794.5' font-size='16' fill='#333333' font-family='sans-serif'>e79</text>
+<text x='705.5' y='3815.5' font-size='16' fill='#333333' font-family='sans-serif'>e</text>
+<rect x='744.5' y='3775.5' width='27' height='27' rx='13.5' fill='#F5F6F9' fill-opacity='1'/>
+<text x='744.5' y='3794.5' font-size='16' fill='#333333' font-family='sans-serif'>e78</text>
+<text x='744.5' y='3815.5' font-size='16' fill='#333333' font-family='sans-serif'>e</text>
+<text x='150' y='4096' font-size='18' fill='#222222' font-family='sans-serif'>大家还在搜</text>
+<rect x='150' y='4107' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4120' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4120' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4121' font-size='14' fill='#333333' font-family='sans-serif'>浏览器打开</text>
+<rect x='150' y='4156' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4169' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4169' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4170' font-size='14' fill='#333333' font-family='sans-serif'>下载浏览器</text>
+<rect x='150' y='4205' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4218' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4218' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4219' font-size='14' fill='#333333' font-family='sans-serif'>万能浏览器</text>
+<rect x='150' y='4254' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4267' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4267' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4268' font-size='14' fill='#333333' font-family='sans-serif'>谷歌chrome官方下载</text>
+<rect x='150' y='4303' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4316' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4316' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4317' font-size='14' fill='#333333' font-family='sans-serif'>浏览器官网入口</text>
+<rect x='150' y='4352' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4365' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4365' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4366' font-size='14' fill='#333333' font-family='sans-serif'>360浏览器</text>
+<rect x='150' y='4401' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4414' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4414' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4415' font-size='14' fill='#333333' font-family='sans-serif'>夸克浏览器</text>
+<rect x='150' y='4450' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4463' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4463' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4464' font-size='14' fill='#333333' font-family='sans-serif'>百度网页入口官网网址</text>
+<rect x='150' y='4499' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4512' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4512' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4513' font-size='14' fill='#333333' font-family='sans-serif'>手机浏览器</text>
+<rect x='150' y='4548' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4561' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4561' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4562' font-size='14' fill='#333333' font-family='sans-serif'>火狐浏览器</text>
+<rect x='150' y='4597' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4610' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4610' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4611' font-size='14' fill='#333333' font-family='sans-serif'>edge浏览器</text>
+<rect x='150' y='4646' width='608' height='40' rx='9' fill='#F5F6F9' fill-opacity='1'/>
+<rect x='162' y='4659' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='162' y='4659' width='14' height='14' rx='0' fill='#000000' fill-opacity='1'/>
+<text x='182' y='4660' font-size='14' fill='#333333' font-family='sans-serif'>GoogleChrome</text>
+<rect x='135' y='4713' width='638' height='208' rx='16' fill='none' stroke='#CCCCCC' stroke-width='1'/>
+<rect x='136' y='4714' width='1276' height='1800' rx='30' fill='none' stroke='#DBDCE0' stroke-width='1' transform='translate(-319.0 -450.0) rotate(0.0) scale(0.500 0.500)'/>
+<text x='151' y='4748' font-size='18' fill='#2440B3' font-family='sans-serif'>浏览器 - 百度百…</text>
+<rect x='151' y='4755' width='22.875' height='150' rx='0' fill='#EEEEEE' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='151' y='4755' width='22.875' height='172.875' rx='0' fill='#000000' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<text x='162.438' y='4779' font-size='24' fill='#FFFFFF' font-family='sans-serif'>e</text>
+<text x='162.438' y='4803' font-size='24' fill='#FFFFFF' font-family='sans-serif'>7</text>
+<text x='162.438' y='4827' font-size='24' fill='#FFFFFF' font-family='sans-serif'>7</text>
+<text x='162.438' y='4851' font-size='24' fill='#FFFFFF' font-family='sans-serif'>c</text>
+<rect x='162.438' y='4755' width='11.4375' height='16' rx='0' fill='#000000' fill-opacity='1' transform='translate(-35.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='162.438' y='4755' width='11.4375' height='16' rx='0' fill='#000000' fill-opacity='1' transform='translate(-35.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='151' y='4755' width='45.75' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-11.7 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='189.875' y='4789' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='228.875' y='4789' font-size='13' fill='#333333' font-family='sans-serif'>，通常指网页</text>
+<text x='306.875' y='4789' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='345.875' y='4789' font-size='13' fill='#333333' font-family='sans-serif'>（Web Browser），是一种用于访问、获取、展示</text>
+<text x='189.875' y='4811' font-size='13' fill='#333333' font-family='sans-serif'>和交互万维网信息资源的应用软件。用户可以通过输入网址、点击超链接等方</text>
+<text x='185.875' y='4802' font-size='13' fill='#2440B3' font-family='sans-serif'>基本原…</text>
+<text x='245.875' y='4802' font-size='13' fill='#2440B3' font-family='sans-serif'>技术架…</text>
+<text x='305.875' y='4802' font-size='13' fill='#2440B3' font-family='sans-serif'>主要内…</text>
+<text x='365.875' y='4802' font-size='13' fill='#2440B3' font-family='sans-serif'>功能特…</text>
+<text x='189.875' y='4814' font-size='13' fill='#9195A3' font-family='sans-serif'>百度…</text>
+<text x='241.875' y='4814' font-size='13' fill='#000000' font-family='sans-serif'>e7be</text>
+<text x='150' y='4966' font-size='18' fill='#2440B3' font-family='sans-serif'>Google Chrome 网络</text>
+<rect x='150' y='4967.68' width='168.048' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='318.048' y='4966' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='318.048' y='4967.68' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<rect x='150' y='4978.5' width='23' height='133' rx='0' fill='#EEEEEE' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='150' y='4978.5' width='46' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-11.8 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='181' y='4987' font-size='13' fill='#333333' font-family='sans-serif'>打造 的</text>
+<text x='223.614' y='4987' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='262.614' y='4987' font-size='13' fill='#333333' font-family='sans-serif'> Google AI  使用Chrome,畅享 AI 超能力。  Go</text>
+<text x='189' y='4974.5' font-size='13' fill='#9195A3' font-family='sans-serif'>Goo…</text>
+<text x='232.412' y='4979' font-size='13' fill='#000000' font-family='sans-serif'>e…</text>
+<text x='150' y='5156.5' font-size='18' fill='#2440B3' font-family='sans-serif'>‎Microsoft Edge 微软出品</text>
+<rect x='150' y='5158.18' width='215.046' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='365.046' y='5156.5' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='365.046' y='5158.18' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='419.046' y='5156.5' font-size='18' fill='#2440B3' font-family='sans-serif'> App - App Store</text>
+<rect x='419.046' y='5158.18' width='133.074' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='142' y='5177.5' font-size='13' fill='#333333' font-family='sans-serif'>Microsoft Edge </text>
+<text x='232.311' y='5177.5' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='271.311' y='5177.5' font-size='13' fill='#333333' font-family='sans-serif'>是微软出品的一款快捷且安全的浏览器。热点资讯、今日头条、小说网文、影视热剧、</text>
+<text x='150' y='5203' font-size='13' fill='#9195A3' font-family='sans-serif'>Micro…</text>
+<text x='204.228' y='5207.5' font-size='13' fill='#000000' font-family='sans-serif'>e…</text>
+<text x='150' y='5252' font-size='18' fill='#2440B3' font-family='sans-serif'>百度</text>
+<rect x='150' y='5253.68' width='36' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='186' y='5252' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='186' y='5253.68' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='142' y='5273' font-size='13' fill='#333333' font-family='sans-serif'>百度</text>
+<text x='168' y='5273' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='207' y='5273' font-size='13' fill='#333333' font-family='sans-serif'> 4.36分 1.7亿次下载 93.71MB 无病毒</text>
+<text x='150' y='5298.5' font-size='13' fill='#9195A3' font-family='sans-serif'>腾…</text>
+<text x='190.5' y='5303' font-size='13' fill='#000000' font-family='sans-serif'>e…</text>
+<text x='150' y='5347.5' font-size='18' fill='#2440B3' font-family='sans-serif'>QQ</text>
+<rect x='150' y='5349.18' width='28.008' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<text x='178.008' y='5347.5' font-size='18' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<rect x='178.008' y='5349.18' width='54' height='1' rx='0' fill='#F73131' fill-opacity='1'/>
+<text x='232.008' y='5347.5' font-size='18' fill='#2440B3' font-family='sans-serif'>官网_QQ浏览器手机版_QQ浏览器Windows版_QQ浏览器MAC版</text>
+<rect x='232.008' y='5349.18' width='515.052' height='1' rx='0' fill='#2440B3' fill-opacity='1'/>
+<rect x='150' y='5360' width='23' height='75' rx='0' fill='#EEEEEE' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='150' y='5360' width='46' height='1800' rx='18' fill='none' stroke='#DCDDE0' stroke-width='1' transform='translate(-11.8 -450.2) rotate(0.0) scale(0.500 0.500)'/>
+<text x='181' y='5368.5' font-size='13' fill='#333333' font-family='sans-serif'>QQ</text>
+<text x='201.228' y='5368.5' font-size='13' fill='#F73131' font-family='sans-serif'>浏览器</text>
+<text x='240.228' y='5368.5' font-size='13' fill='#333333' font-family='sans-serif'>是腾讯公司开发的一款AI浏览器产品,现已全面接入</text>
+<text x='189' y='5356' font-size='13' fill='#9195A3' font-family='sans-serif'>QQ浏…</text>
+<text x='249.728' y='5360.5' font-size='13' fill='#000000' font-family='sans-serif'>e…</text>
+<text x='150' y='5480' font-size='18' fill='#222222' font-family='sans-serif'>相关搜索</text>
+<rect x='150' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<rect x='159.216' y='5737.51' width='0.599457' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='158.617' y='5738.51' width='1.57104' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='158.018' y='5739.51' width='1.57109' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='157.419' y='5740.51' width='1.57112' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='156.82' y='5741.51' width='1.57117' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='156.221' y='5742.51' width='1.57123' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='155.622' y='5743.5' width='1.57126' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='155.038' y='5744.5' width='1.55621' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='154.734' y='5745.5' width='1.2608' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='154.734' y='5746.5' width='1.25969' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='155.037' y='5747.5' width='1.55608' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='155.62' y='5748.5' width='1.57138' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='156.22' y='5749.5' width='1.57135' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='156.819' y='5750.49' width='1.57129' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='157.418' y='5751.49' width='1.57124' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='158.018' y='5752.49' width='1.57121' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='158.617' y='5753.49' width='1.57117' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='159.216' y='5754.49' width='0.599518' height='1.49864' rx='0' fill='#333333' fill-opacity='0.3'/>
+<rect x='189.691' y='5734' width='39.6909' height='36' rx='9' fill='#4E6EF2' fill-opacity='1'/>
+<text x='205.644' y='5748' font-size='14' fill='#FFFFFF' font-family='sans-serif'>1</text>
+<rect x='229.382' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='245.335' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>2</text>
+<rect x='269.073' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='285.026' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>3</text>
+<rect x='308.764' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='324.717' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>4</text>
+<rect x='348.455' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='364.408' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>5</text>
+<rect x='388.146' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='404.099' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>6</text>
+<rect x='427.836' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='443.79' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>7</text>
+<rect x='467.527' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='483.481' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>8</text>
+<rect x='507.218' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='523.172' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>9</text>
+<rect x='546.909' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<text x='558.971' y='5748' font-size='14' fill='#333333' font-family='sans-serif'>10</text>
+<rect x='586.6' y='5734' width='39.6909' height='36' rx='9' fill='#F5F6FA' fill-opacity='1'/>
+<rect x='591.785' y='5737.51' width='0.599426' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='591.412' y='5738.51' width='1.57104' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='592.011' y='5739.51' width='1.57111' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='592.61' y='5740.51' width='1.57111' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='593.209' y='5741.51' width='1.57117' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='593.808' y='5742.51' width='1.57123' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='594.407' y='5743.5' width='1.57129' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='595.006' y='5744.5' width='1.55621' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='595.605' y='5745.5' width='1.2608' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='595.607' y='5746.5' width='1.2597' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='595.007' y='5747.5' width='1.55609' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='594.408' y='5748.5' width='1.57141' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='593.809' y='5749.5' width='1.57135' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='593.21' y='5750.49' width='1.57129' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='592.61' y='5751.49' width='1.57129' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='592.011' y='5752.49' width='1.57117' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='591.412' y='5753.49' width='1.57117' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='591.785' y='5754.49' width='0.599487' height='1.49864' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1213' y='347' width='43' height='509' rx='9' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='1213' y='347' width='43' height='509' rx='9' fill='none' stroke='#DBDCE0' stroke-width='0.5'/>
+<rect x='1227.51' y='365.104' width='11.4756' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.51' y='366.07' width='13.4851' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.28' y='367.036' width='13.9382' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='368.002' width='13.9985' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='368.968' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='369.934' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='370.9' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='371.866' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='372.832' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='373.798' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='374.764' width='14' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.25' y='375.73' width='13.9985' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.28' y='376.696' width='13.9382' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1226.51' y='377.662' width='13.4851' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1227.51' y='378.628' width='11.4755' height='1.466' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='1225.5' y='368.364' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='367.888' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.51' y='367.468' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.52' y='367.101' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.54' y='366.778' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.58' y='366.495' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.64' y='366.244' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.72' y='366.021' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.83' y='365.819' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.1' y='365.513' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.38' y='365.207' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.76' y='364.985' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.14' y='364.763' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.39' y='364.676' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.67' y='364.611' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.98' y='364.564' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1228.33' y='364.533' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1228.73' y='364.514' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229.19' y='364.504' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229.71' y='364.501' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1230.3' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1231.18' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.06' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.94' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1233.82' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.7' y='364.5' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.29' y='364.501' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.81' y='364.504' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.27' y='364.514' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.67' y='364.533' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.02' y='364.564' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.33' y='364.611' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.61' y='364.676' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.86' y='364.763' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.24' y='364.985' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.62' y='365.207' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.9' y='365.513' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.17' y='365.819' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.28' y='366.021' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.36' y='366.244' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.42' y='366.495' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.46' y='366.778' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.48' y='367.101' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.49' y='367.468' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='367.888' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='368.364' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='369.04' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='369.716' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='370.393' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='371.069' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='371.745' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='372.421' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='373.097' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='373.774' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='374.45' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='375.126' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.5' y='375.602' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.49' y='376.022' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.48' y='376.389' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.46' y='376.712' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.42' y='376.996' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.36' y='377.246' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.28' y='377.469' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.17' y='377.671' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.9' y='377.977' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.62' y='378.283' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.24' y='378.505' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.86' y='378.727' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.61' y='378.814' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.33' y='378.879' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.02' y='378.926' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.67' y='378.957' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.27' y='378.976' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.81' y='378.986' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.29' y='378.989' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.7' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1233.82' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.94' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.06' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1231.18' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1230.3' y='378.99' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229.71' y='378.989' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229.19' y='378.986' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1228.73' y='378.976' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1228.33' y='378.957' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.98' y='378.926' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.67' y='378.879' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.39' y='378.814' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.14' y='378.727' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.76' y='378.505' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.38' y='378.283' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.1' y='377.977' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.83' y='377.671' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.72' y='377.469' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.64' y='377.246' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.58' y='376.996' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.54' y='376.712' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.52' y='376.389' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.51' y='376.022' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='375.602' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='375.126' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='374.45' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='373.774' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='373.097' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='372.421' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='371.745' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='371.069' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='370.393' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='369.716' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='369.04' width='1.5' height='1.20752' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.28' y='376.374' width='1.9447' height='1.42575' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.28' y='377.299' width='1.9447' height='1.42575' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1225.5' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1226.38' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1227.25' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1228.12' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1229.88' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1230.75' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1231.62' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1232.5' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1233.38' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.25' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.12' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.88' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.75' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.62' y='374.16' width='1.5' height='1.20749' rx='0' fill='#333333' fill-opacity='1'/>
+<text x='1213.5' y='395.6' font-size='12' fill='#333333' font-family='sans-serif'>下载</text>
+<rect x='1240.78' y='825.54' width='3.66785' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.86' y='826.534' width='7.5199' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.93' y='827.529' width='11.3717' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.29' y='828.523' width='14.639' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.64' y='829.517' width='15.9362' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='830.512' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='831.506' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='832.5' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='833.495' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='834.489' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.5' y='835.483' width='16.236' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1234.66' y='836.478' width='15.9064' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.36' y='837.472' width='14.5077' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.01' y='838.466' width='11.2146' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1238.94' y='839.461' width='7.36255' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1240.86' y='840.455' width='3.51062' height='1.49432' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1241.27' y='826.845' width='2.7052' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.43' y='827.792' width='6.37341' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.6' y='828.739' width='10.0417' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.17' y='829.686' width='12.8866' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='830.633' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='831.58' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='832.527' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='833.474' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='834.422' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1235.98' y='835.369' width='13.272' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1236.17' y='836.316' width='12.8865' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1237.6' y='837.263' width='10.0417' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.43' y='838.21' width='6.37341' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1241.27' y='839.157' width='2.7052' height='1.44707' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1241.36' y='831.818' width='2.39868' height='1.32803' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1240.8' y='832.646' width='3.53381' height='1.32803' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1240.8' y='833.474' width='3.53381' height='1.32803' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1241.36' y='834.302' width='2.39856' height='1.32803' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1240.89' y='830.493' width='3.45422' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.8' y='831.487' width='5.63611' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.4' y='832.48' width='6.44507' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.4' y='833.474' width='6.44507' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1239.8' y='834.468' width='5.63611' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='1240.89' y='835.461' width='3.45422' height='1.49372' rx='0' fill='#333333' fill-opacity='1'/>
+<text x='1222.5' y='857.6' font-size='12' fill='#333333' font-family='sans-serif'>辅助</text>
+<rect x='0' y='0' width='1280' height='70' rx='0' fill='#FFFFFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='0' y='69' width='1280' height='1' rx='0' fill='#EBEBEB' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='0' y='17' width='101' height='33' rx='0' fill='#EEEEEE' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='18' y='15' width='748' height='46' rx='0' fill='#FFFFFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='18' y='15' width='748' height='46' rx='0' fill='none' stroke='#CCCCCC' stroke-width='1.5' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='18' y='15' width='748' height='46' rx='0' fill='#FFFFFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='18' y='15' width='748' height='46' rx='0' fill='none' stroke='#CCCCCC' stroke-width='1.5' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='34.5' y='25.5' width='721' height='26' rx='2' fill='#FFFFFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='29' y='19' width='752.5' height='46' rx='12' fill='#FFFFFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<rect x='44.2871' y='35.7667' width='5.4264' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='42.2837' y='36.7471' width='9.43335' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='41.0994' y='37.7275' width='11.802' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='40.2905' y='38.7079' width='13.4198' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='39.6898' y='39.6883' width='14.6211' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='39.228' y='40.6687' width='15.5448' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='38.9236' y='41.6491' width='16.1534' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='38.7658' y='42.6295' width='16.469' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='38.667' y='43.6099' width='16.6667' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='38.7658' y='44.5903' width='16.469' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='38.9236' y='45.5707' width='16.1534' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='39.228' y='46.551' width='15.5448' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='39.6898' y='47.5314' width='14.6211' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='40.2905' y='48.5118' width='13.4197' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='41.0994' y='49.4922' width='11.8019' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='42.2837' y='50.4726' width='9.43333' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='44.2871' y='51.453' width='5.42638' height='1.48039' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='44.3567' y='40.962' width='0.896595' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='48.7472' y='40.962' width='0.896626' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='44.2643' y='41.8586' width='1.88562' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='47.8506' y='41.8586' width='1.88568' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='45.1609' y='42.7552' width='3.67886' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='46.0574' y='43.6518' width='1.88567' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='45.1609' y='44.5483' width='3.67881' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='44.2643' y='45.4449' width='1.88564' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='47.8506' y='45.4449' width='1.8857' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='44.3567' y='46.3415' width='0.896603' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='48.7472' y='46.3415' width='0.896637' height='1.39658' rx='0' fill='#9195A3' fill-opacity='0.5'/>
+<rect x='205.057' y='36.135' width='6.76591' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='202.871' y='37.1125' width='11.137' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='201.561' y='38.09' width='13.7569' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.734' y='39.0675' width='15.411' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.24' y='40.045' width='16.3988' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.011' y='41.0225' width='16.8571' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.011' y='42' width='16.8572' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.24' y='42.9775' width='16.3988' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='200.734' y='43.955' width='15.411' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='201.561' y='44.9325' width='13.7569' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='202.871' y='45.91' width='11.137' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='205.057' y='46.8875' width='6.76588' height='1.4775' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='207.64' y='47.313' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='208.496' y='47.2534' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='209.353' y='47.1938' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='210.151' y='47.023' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='210.949' y='46.8521' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='211.67' y='46.5817' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='212.392' y='46.3113' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='213.021' y='45.9533' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='213.65' y='45.5952' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='214.169' y='45.1612' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='214.688' y='44.7272' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.08' y='44.229' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.472' y='43.7309' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.72' y='43.1805' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.967' y='42.63' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='216.054' y='42.039' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='216.14' y='41.448' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='216.054' y='40.857' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.967' y='40.266' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.72' y='39.7155' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.472' y='39.1651' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='215.08' y='38.6669' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='214.688' y='38.1688' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='214.169' y='37.7348' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='213.65' y='37.3008' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='213.021' y='36.9427' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='212.392' y='36.5846' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='211.67' y='36.3143' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='210.949' y='36.0439' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='210.151' y='35.873' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='209.353' y='35.7022' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='208.496' y='35.6426' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='35.583' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='206.783' y='35.6426' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='205.927' y='35.7022' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='205.129' y='35.873' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='204.331' y='36.0439' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='203.609' y='36.3143' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='202.887' y='36.5846' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='202.258' y='36.9427' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='201.63' y='37.3008' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='201.111' y='37.7348' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='200.592' y='38.1688' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='200.2' y='38.6669' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.808' y='39.1651' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.56' y='39.7155' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.313' y='40.266' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.226' y='40.857' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.14' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.226' y='42.039' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.313' y='42.63' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.56' y='43.1805' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='199.808' y='43.7309' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='200.2' y='44.229' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='200.592' y='44.7272' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='201.111' y='45.1612' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='201.63' y='45.5952' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='202.258' y='45.9533' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='202.887' y='46.3113' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='203.609' y='46.5817' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='204.331' y='46.8521' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='205.129' y='47.023' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='205.927' y='47.1938' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='206.783' y='47.2534' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='47.313' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='38.9178' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='39.5503' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='40.1828' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='40.8153' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='41.4478' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='42.0803' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='42.7128' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='43.3452' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='203.973' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='204.89' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='205.807' y='41.448' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='206.723' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='207.64' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='208.557' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='209.473' y='41.448' width='1.60001' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='210.39' y='41.448' width='1.59999' height='1.104' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='728.5' y='19' width='53' height='38' rx='12' fill='#286AFF' fill-opacity='1' transform='translate(0.0 0.0) rotate(0.0) scale(1.000 1.000)'/>
+<text x='738.5' y='40' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='59.55' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='79.1' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='98.65' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='118.2' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='137.75' font-size='17' fill='#FFFFFF' font-family='sans-serif'>百</text>
+<text x='738.5' y='157.3' font-size='17' fill='#FFFFFF' font-family='sans-serif'>度</text>
+<text x='738.5' y='176.85' font-size='17' fill='#FFFFFF' font-family='sans-serif'>一</text>
+<text x='738.5' y='196.4' font-size='17' fill='#FFFFFF' font-family='sans-serif'>下   </text>
+<text x='738.5' y='215.95' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='235.5' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='255.05' font-size='17' fill='#FFFFFF' font-family='sans-serif'>      </text>
+<text x='738.5' y='274.6' font-size='17' fill='#FFFFFF' font-family='sans-serif'>     </text>
+<text x='1170' y='33' font-size='13' fill='#222222' font-family='sans-serif'>百度首页</text>
+<text x='1256' y='33' font-size='13' fill='#222222' font-family='sans-serif'>设置</text>
+<text x='0' y='5827' font-size='16' fill='#222222' font-family='sans-serif'></text>
+</svg>

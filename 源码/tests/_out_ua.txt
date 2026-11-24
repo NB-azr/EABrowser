@@ -1,0 +1,25 @@
+﻿[JS] #1 ok inline 389B
+[JS] scripts=1 executed=1 skipped=0 dynamic=0
+[JS] nodes 20 -> 20 dirty=0
+[CLICK] #b rc=0
+[EVAL] ["before={\"isActive\":false,\"hasBeenActive\":false}","during={\"isActive\":true,\"hasBeenActive\":true}","later={\"isActive\":true,\"hasBeenActive\":true}"]
+[LAYOUT] rc=0 viewport=400x300 contentHeight=300.0
+[DEVICE] ua=mobile layout=400x300 device=400x300 scale=1.000 dpr=1.0 touch=1 mtp=5 meta=0(0) zoom=allowed min=0.25 max=5.00
+[PERF] layout_ms=0.23 style_ms=0.16 rules=1 candidates=1
+[GAP] unsupported_decls=0 unknown_props=0 ignored_conds=0 dropped_parts=0 unresolved_imports=0
+[CMDS] count=5
+[00] RECT   x=    0.0 y=    0.0 w=  400.0 h=   32.4 color=FFEFEFEF op=1.00 r=0.0
+[01] BORDER x=    0.0 y=    0.0 w=  400.0 h=   32.4 color=FF999999 op=0.00 r=0.0 bw=1.0
+[02] TEXT   x=   11.0 y=    5.0 w=   24.0 h=   22.4 color=FF222222 op=1.00 r=0.0 size=16.0 bold=0 align=0 text="tap"
+[03] TEXT   x=   35.0 y=    0.0 w=    4.5 h=   22.4 color=FF222222 op=1.00 r=0.0 size=16.0 bold=0 align=0 text=" "
+[04] TEXT   x=   39.5 y=    0.0 w=    4.5 h=   22.4 color=FF222222 op=1.00 r=0.0 size=16.0 bold=0 align=0 text=" "
+feature_runner.exe : [EABrowser] >>> ea_js_create ENTER <<<
+所在位置 行:15 字符: 1081
++ ... M = 'dumb'; & 'X:\build_host\feature_runner.exe' 'X:\tests\probe_user ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([EABrowser] >>> ea_js_create ENTER <<<:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[EABrowser] >>> js_polyfill.inc RUNNING v3 <<<
+[EABrowser] PROXY_TEST=PROXY_YES
+[EABrowser] >>> ABOUT TO EVAL AMD POLYFILL <<<

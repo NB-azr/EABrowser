@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>@layer and @container</title>
+<style>
+  body { margin: 0; font-family: sans-serif; }
+
+  /* 层序：base 低、theme 高；未分层规则最高 */
+  @layer base, theme;
+  @layer base  { .layerbox { background-color: #0000FF; } }
+  @layer theme { .layerbox { background-color: #FF0000; } }
+
+  @layer theme { #both { background-color: #FF0000; } }
+  #both { background-color: #0000FF; }   /* 未分层覆盖分层 */
+
+  .layerbox { height: 20px; }
+  #both { height: 20px; }
+
+  /* 容器查询：c1 宽 300 命中 min-width，c2 宽 200 命中 max-width */
+  #c1 { container-type: inline-size; width: 300px; }
+  #c2 { container-type: inline-size; width: 200px; }
+  #box1, #box2 { padding: 8px; }
+
+  @container (min-width: 240px) { #box1 { background-color: #FF00FF; } }
+  @container (max-width: 239px) { #box2 { background-color: #FFFF00; } }
+</style>
+</head>
+<body>
+  <div class="layerbox" id="lay">layerbox</div>
+  <div id="both">both</div>
+  <div id="c1"><div id="box1">wide</div></div>
+  <div id="c2"><div id="box2">narrow</div></div>
+</body>
+</html>

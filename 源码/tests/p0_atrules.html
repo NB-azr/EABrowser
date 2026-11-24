@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><style>
+@import url(imp_a.css);
+@import "data:text/css,.dataImp%7Bbackground-color%3A%23ff00ff%7D";
+@import url(missing_should_not_be_found.css);
+@import url(imp_b.css) screen and (max-width: 300px);
+@media screen and (min-width: 400px) { .mq1 { width: 300px; height: 40px; background-color: #00cc00; } }
+@media (max-width: 300px) { .mq2 { width: 120px; height: 20px; background-color: #0000ff; } }
+@media print { .mq3 { width: 100px; height: 10px; background-color: #111111; } }
+@media not screen { .mq4 { width: 100px; height: 10px; background-color: #444444; } }
+@media (min-resolution: 2dppx) { .mq5 { width: 110px; height: 12px; background-color: #00aaaa; } }
+@media (orientation: landscape) and (min-width: 800px) { .mq6 { width: 130px; height: 14px; background-color: #884400; } }
+</style></head>
+<body>
+<div class="imp" id="imp">imported relative</div>
+<div class="impc" id="impc">imported nested</div>
+<div class="dataImp" id="dataImp">imported data url</div>
+<div class="impb" id="impb">import media mismatch</div>
+<div class="mq1" id="mq1">mq1</div>
+<div class="mq2" id="mq2">mq2</div>
+<div class="mq3" id="mq3">mq3</div>
+<div class="mq4" id="mq4">mq4</div>
+<div class="mq5" id="mq5">mq5</div>
+<div class="mq6" id="mq6">mq6</div>
+</body></html>

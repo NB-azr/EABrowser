@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+#a{width:clamp(100px,20vw,180px);height:20px}
+#b{width:calc(clamp(100px,20vw,180px) + 10px);height:20px}
+#c{width:max(10em,90px);height:20px}
+#d{width:calc(max(50%,200px) - 5px);height:20px}
+#e{width:min(calc(10px + 2em), 300px);height:20px}
+#f{width:calc(2 * min(30px,10vw));height:clamp(30px,10vh,60px)}
+</style></head><body>
+<div id="a"></div><div id="b"></div><div id="c"></div><div id="d"></div><div id="e"></div><div id="f"></div>
+<script>
+var ids=['a','b','c','d','e','f'];
+for(var i=0;i<ids.length;i++){
+  var el=document.getElementById(ids[i]), cs=getComputedStyle(el);
+  console.log('[M1] '+ids[i]+' width='+cs.width+' height='+cs.height+' rect='+JSON.stringify(el.getBoundingClientRect().width));
+}
+console.log('[M1] supports clamp='+CSS.supports('width','clamp(1px,2vw,3px)')+
+  ' min='+CSS.supports('width','min(1px,2%)')+
+  ' max='+CSS.supports('width','max(1px,2%)'));
+</script></body></html>

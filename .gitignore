@@ -1,0 +1,28 @@
+# Build artifacts
+build/
+dist/
+out/
+*.o
+*.obj
+*.class
+*.exe
+*.dll
+*.so
+*.dylib
+*.aab
+*.keystore
+*.pem
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.user
+*.swp
+.DS_Store
+Thumbs.db
+
+# Temp
+*.log
+*.tmp
+*.bak

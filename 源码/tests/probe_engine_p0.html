@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>engine-p0</title></head>
+<body id="p0body">
+<div id="p0p"><span id="p0c">hello</span></div>
+<script>
+function ba(h){ var a=new Uint8Array(h.length/2); for(var i=0,n=a.length;i!=n;i++){ a[i]=parseInt(h.substr(i*2,2),16); } return a; }
+function msg(e){ return String((e && e.name) || e) + ':' + String((e && e.message) || ''); }
+var R = {};
+
+/* P0-1: __ptr 伪造不再解引用（节点方法不再接受页面可写指针） */
+try {
+  R.fakePtr = String(document.body.getAttribute.call({__ptr:0x1234}, 'id'));
+  R.fakeAppend = String(document.body.appendChild.call({__ptr:0x10}, document.createElement('i')));
+}
+catch(e){ R.fakePtr = 'THROW ' + msg(e); }
+
+/* P0-2: classList 的 __node 伪造不影响真实节点 */
+var body = document.body;
+body.classList.__node = 123456;
+body.classList.add('ea-p0');
+R.classList = body.classList.contains('ea-p0') + '/' + (body.className.indexOf('ea-p0') >= 0);
+var made = document.createElement('div');
+made.classList.add('k');
+R.createdClassList = made.classList.contains('k') + '/' + made.className;
+
+/* P0-1 附加：attributes 数组不再读 __ptr */
+var attrs = body.attributes;
+attrs.__ptr = 0x1234;
+try {
+  var named = attrs.getNamedItem('id');
+  var first = attrs.item(0);
+  R.attrs = (named && named.value) + '/' + (first ? first.name : 'null');
+} catch(e){ R.attrs = 'THROW ' + msg(e); }
+
+/* style 对象不再读 __ptr */
+try {
+  body.style.__ptr = 0x1234;
+  body.style.color = 'rgb(1,2,3)';
+  body.style.removeProperty('color');
+  R.style = body.style.color === '';
+} catch(e){ R.style = 'THROW ' + msg(e); }
+
+/* P0-3: innerHTML='' 后旧包装对象失效但可安全访问 */
+var c = document.getElementById('p0c');
+var p = document.getElementById('p0p');
+p.innerHTML = '';
+R.uaf = 'text=' + JSON.stringify(c.textContent) + ' parent=' + String(c.parentNode);
+p.appendChild(document.createElement('b'));
+R.reinsert = String(p.children.length);
+
+/* P0-4: 自引用/成环被拒绝 */
+try { body.appendChild(body); R.cycleSelf = 'NO-THROW'; }
+catch(e){ R.cycleSelf = msg(e).indexOf('HierarchyRequestError') >= 0 ? 'HierarchyRequestError' : msg(e); }
+var a = document.createElement('div'), b = document.createElement('div');
+body.appendChild(a); a.appendChild(b);
+try { b.appendChild(a); R.cycleDeep = 'NO-THROW'; }
+catch(e){ R.cycleDeep = msg(e).indexOf('HierarchyRequestError') >= 0 ? 'HierarchyRequestError' : msg(e); }
+
+/* P0-9: replaceAll 空模式 */
+R.rep1 = 'abc'.replaceAll('', '-');
+R.rep2 = ''.replaceAll('', 'x');
+R.rep3 = 'ab'.replaceAll('', '');
+R.rep4 = 'ab'.replaceAll('', function(m, i){ return i; });
+
+/* P0-6/7/8: wasm 边界 */
+function tryWasm(hex){
+  try { new WebAssembly.Instance(new WebAssembly.Module(ba(hex)), {}); return 'NO-THROW'; }
+  catch(e){ return String((e && e.message) || e); }
+}
+R.wasmMem2000 = tryWasm('0061736d01000000' + '05040100d00f');
+R.wasmDataNeg = tryWasm('0061736d01000000' + '0503010001' + '0b070100427f0b0141');
+R.wasmElemNeg = tryWasm('0061736d01000000' + '040401700001' + '09070100427f0b0100');
+
+/* P0-5: Blob.text() 二进制安全（含 NUL 与 UTF-8） */
+new Blob([new Uint8Array([65,0,66,0xC3,0xA9])]).text().then(function(t){
+  R.blob = 'len=' + t.length + ' json=' + JSON.stringify(t);
+  if (!window.crypto || !crypto.subtle) { console.log('[P0] ' + JSON.stringify(R)); return; }
+  function hex(ab){ var u = new Uint8Array(ab), h = ''; for (var i=0;i<u.length;i++) h += (u[i] < 16 ? '0' : '') + u[i].toString(16); return h; }
+  var enc = new TextEncoder();
+  Promise.all([
+    crypto.subtle.digest('SHA-256', enc.encode('abc')),
+    crypto.subtle.digest('SHA-1', enc.encode('abc')),
+    crypto.subtle.digest('SHA-256', enc.encode('')),
+    crypto.subtle.digest('SHA-1', enc.encode(''))
+  ]).then(function(v){
+    R.sha256abc = hex(v[0]) === 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad';
+    R.sha1abc = hex(v[1]) === 'a9993e364706816aba3e25717850c26c9cd0d89d';
+    R.sha256empty = hex(v[2]) === 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855';
+    R.sha1empty = hex(v[3]) === 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
+    console.log('[P0] ' + JSON.stringify(R));
+  }, function(e){ R.shaErr = String(e); console.log('[P0] ' + JSON.stringify(R)); });
+});
+</script>
+</body></html>

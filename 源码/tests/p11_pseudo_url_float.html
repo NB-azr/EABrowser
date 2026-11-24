@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: sans-serif; font-size: 14px; }
+
+  /* 1. content:url() 带尺寸 */
+  #u1::before {
+    content: url(icon.png);
+    width: 20px; height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* 2. content:url() 无显式尺寸（默认 32×32 方图） */
+  #u2::before { content: url(logo.png); }
+
+  /* 3. 浮动伪元素装饰块（清除浮动写法） */
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+  }
+  #f1 { width: 400px; }
+  #f1::after {
+    content: "";
+    float: right;
+    width: 100px;
+    height: 30px;
+    background: #f80;
+  }
+  #f1 .txt { background: #def; }
+
+  /* 4. 绝对定位伪元素 */
+  #p1 { position: relative; width: 300px; height: 80px; background: #eee; }
+  #p1::before {
+    content: "";
+    position: absolute;
+    top: 10px; left: 20px;
+    width: 40px; height: 24px;
+    background: #08c;
+  }
+
+  /* 5. 行内浮动伪元素（自动收缩到内容宽） */
+  #f2 { width: 400px; }
+  #f2::before {
+    content: "浮动标签";
+    float: left;
+    background: #ffd;
+    padding: 2px 6px;
+  }
+</style>
+</head>
+<body>
+  <div id="u1">尺寸 20×20</div>
+  <div id="u2">默认尺寸</div>
+  <div id="f1"><div class="txt">文字内容，右侧应有橙色浮动块</div></div>
+  <div id="p1">绝对定位装饰块</div>
+  <div id="f2"><span>正文段落</span></div>
+</body></html>

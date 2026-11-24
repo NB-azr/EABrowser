@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font: 16px sans-serif; }
+  p { width: 300px; margin: 0 0 10px 0; background: #eeeeee; }
+  /* 首行红色加粗；首字绿色 32px */
+  #p1::first-line { color: rgb(255, 0, 0); font-weight: bold; }
+  #p1::first-letter { color: rgb(0, 128, 0); font-size: 32px; }
+  /* 仅首行变色，验证第二行不受影响 */
+  #p2::first-line { color: rgb(0, 0, 255); }
+</style></head>
+<body>
+<p id="p1">Hello world this is a first line styling test that wraps onto a second line.</p>
+<p id="p2">Plain text that is long enough to wrap so the second line keeps the default color.</p>
+</body></html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fetch ea://file 白名单验证</title>
+<style>
+  body { font: 14px/1.6 monospace; margin: 10px; color: #111; }
+  h3 { font-size: 15px; margin: 8px 0; }
+  div { margin: 8px 0; padding: 8px; border: 1px solid #bbb; background: #f7f7f7;
+        white-space: pre-wrap; word-break: break-all; }
+  .ok { background: #dfd; border-color: #2b8; }
+  .no { background: #fdd; border-color: #d22; }
+</style></head>
+<body>
+<h3>fetch('ea://file?path=...') 白名单</h3>
+<div id="a">A 白名单内 cacheDir/lf_probe.txt：等待</div>
+<div id="b">B 白名单外 shared_prefs/lf_probe.xml：等待</div>
+
+<script>
+var ID = 'com.ea.browser';
+var ALLOW = '/data/data/' + ID + '/cache/lf_probe.txt';
+var DENY  = '/data/data/' + ID + '/shared_prefs/lf_probe.xml';
+
+function put(el, txt, ok) {
+  el.className = ok ? 'ok' : 'no';
+  el.textContent = txt;
+}
+
+async function probe(path, el, label) {
+  try {
+    var r = await fetch('ea://file?path=' + encodeURIComponent(path));
+    var t = '';
+    try { t = await r.text(); } catch (e) { t = '(body read failed: ' + e + ')'; }
+    put(el, label + '\npath=' + path + '\nstatus=' + r.status + '\nbody=' + t, r.status === 200);
+  } catch (e) {
+    put(el, label + '\npath=' + path + '\nexception: ' + e, false);
+  }
+}
+
+probe(ALLOW, document.getElementById('a'), 'A 白名单内');
+probe(DENY,  document.getElementById('b'), 'B 白名单外');
+</script>
+</body></html>

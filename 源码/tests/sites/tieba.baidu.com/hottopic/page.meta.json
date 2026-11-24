@@ -1,0 +1,31 @@
+{
+  "slug": "tieba-hottopic",
+  "entry": "https://tieba.baidu.com/hottopic/browse/hottopic",
+  "captured_at": "2026-11-08 20:43:25",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "贴吧热榜；贴吧首页 tieba.baidu.com 直接 403 反爬",
+  "failed": [
+    {
+      "url": "https://tieba.baidu.com/hottopic/browse/\"<%=media[i].vpic",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "url": "https://tieba.baidu.com/hottopic/browse/\"<%=",
+      "error": "HTTP Error 400: Bad Request"
+    }
+  ],
+  "status": "OK",
+  "final_url": "https://tieba.baidu.com/hottopic/browse/hottopic",
+  "http_charset": "UTF-8",
+  "entry_bytes": 47127,
+  "entry_content_type": "text/html; charset=UTF-8",
+  "html_bytes": 42752,
+  "assets": 153,
+  "asset_bytes": 2739737,
+  "image_sizes": 139,
+  "elapsed_s": 7.71,
+  "items": 153
+}

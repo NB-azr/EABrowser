@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Block test page</title>
+<style>
+body { font-family: sans-serif; margin: 0; padding: 24px; }
+h1 { font-size: 28px; }
+.adbox { background: #FFE0E0; border: 3px solid #FF8080; padding: 16px; margin: 16px 0; }
+#cookie { background: #EFEFEF; padding: 12px; word-break: break-all; }
+button { font-size: 18px; padding: 10px 14px; margin: 8px 0; }
+</style>
+</head>
+<body>
+<h1>Ad blocking and link blocking test</h1>
+
+<p>This page loads an ad image from <b>/ads/banner.png</b>. With ad blocking on,
+that request must be blocked and the space below stays empty.</p>
+<img id="adimg" src="/ads/banner.png" alt="ad banner" width="120" height="40">
+
+<p>Download test image (long press to save):</p>
+<img id="pic" src="/pic.png" alt="picture" width="120" height="120">
+
+<div id="adbox" class="adbox">
+  <b>Fake ad slot</b>
+  <p>Long press this box and choose "Mark as ad" to hide it permanently for this site.</p>
+</div>
+
+<p>Link blocking test: <a id="blockedlink" href="/should_not_open.html">open a blocked link</a></p>
+
+<button onclick="location.href='/should_not_open.html'">location.href navigation</button>
+
+<h2>Translation sample</h2>
+<p id="para">The quick brown fox jumps over the lazy dog. This paragraph should be
+replaced with translated text when the page is translated.</p>
+
+<h2>Cookie check</h2>
+<p id="cookie">document.cookie: (loading)</p>
+
+<button onclick="bump()">Counter: <span id="count">0</span></button>
+
+<script>
+var n = 0;
+function bump() {
+  n++;
+  document.getElementById('count').textContent = String(n);
+}
+document.getElementById('cookie').textContent =
+  'document.cookie: ' + (document.cookie || '(empty)');
+</script>
+</body>
+</html>

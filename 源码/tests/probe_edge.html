@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body><div id="d">x</div><script>
+console.log('[P] Element=' + typeof Element + ' proto=' + (typeof Element!=='undefined'&&Element?typeof Element.prototype:'n/a') +
+  ' cv=' + (typeof Element!=='undefined'&&Element&&Element.prototype?typeof Element.prototype.checkVisibility:'n/a') +
+  ' bodyInst=' + (typeof Element!=='undefined'&&Element? (document.body instanceof Element) : 'n/a'));
+console.log('[P] AS.timeout=' + (typeof AbortSignal!=='undefined'?typeof AbortSignal.timeout:'noAS') +
+  ' AS.any=' + (typeof AbortSignal!=='undefined'?typeof AbortSignal.any:'noAS') +
+  ' canParse=' + typeof URL.canParse + ' reportError=' + typeof reportError +
+  ' scrollRest=' + typeof history.scrollRestoration + ' elemsFromPt=' + typeof document.elementsFromPoint);
+console.log('[P] supports has=' + CSS.supports('selector(:has(a))') + ' marker=' + CSS.supports('selector(::marker)') +
+  ' is=' + CSS.supports('selector(.a:is(.b))') + ' clamp=' + CSS.supports('width','clamp(1px,2px,3px)'));
+console.log('[P] checkVis self=' + (typeof Element.prototype.checkVisibility==='function'? document.getElementById('d').checkVisibility() : 'n/a'));
+console.log('[P] canParse ok=' + URL.canParse('https://a/b') + ' bad=' + URL.canParse('foo'));
+console.log('[P] sel has=' + document.body.matches('body:has(#d)') + ' hasNo=' + document.getElementById('d').matches('div:has(.zz)') + ' is=' + document.getElementById('d').matches('div:is(.x,#d)'));
+</script></body></html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; }
+#skew { width: 120px; height: 40px; margin: 10px; background: #ff6666; transform: skewX(20deg); }
+#skewy { width: 120px; height: 40px; margin: 10px; background: #66ff66; transform: skew(10deg, 15deg); }
+#mtx { width: 100px; height: 40px; margin: 10px; background: #6666ff; transform: matrix(1, 0.2, 0.1, 1, 30, 12); }
+#orig { width: 100px; height: 40px; margin: 10px; background: #ffcc00; transform: rotate(30deg); transform-origin: left top; }
+#origpct { width: 100px; height: 40px; margin: 10px; background: #00ccff; transform: scale(1.5, 0.8); transform-origin: 20% 80%; }
+</style></head>
+<body>
+<div id="skew"></div>
+<div id="skewy"></div>
+<div id="mtx"></div>
+<div id="orig"></div>
+<div id="origpct"></div>
+</body></html>

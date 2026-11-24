@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Intl.Segmenter</title>
+<script>
+var out=[];
+function T(n,v){ out.push(n+'='+v); }
+try{
+  var sg=new Intl.Segmenter('zh',{granularity:'grapheme'});
+  var ga=Array.from(sg.segment('A👍🏽👨‍👩‍👧'));
+  T('graphemes',ga.map(function(s){return s.segment;}).join('/'));
+  T('gcount',ga.length);
+  var sw=new Intl.Segmenter('zh',{granularity:'word'});
+  var wa=Array.from(sw.segment('你好 world 123'));
+  T('words',wa.map(function(s){return (s.isWordLike?'W':'N')+':'+s.segment;}).join('/'));
+  T('containing',sw.segment('你好 world').containing(1).segment);
+  var ss=new Intl.Segmenter('zh',{granularity:'sentence'});
+  var sa=Array.from(ss.segment('第一句。第二句！Done. Next one?'));
+  T('sentcount',sa.length);
+  T('sent1',sa[0].segment);
+  T('ro',sg.resolvedOptions().granularity);
+  T('hl',sw.segment('a b').containing(99));
+}catch(e){ T('err',e.message); }
+window.__out=out.join('|');
+</script>

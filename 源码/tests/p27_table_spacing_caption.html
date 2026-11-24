@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>table border-spacing / caption</title>
+<style>
+  body { margin: 0; padding: 0; font-size: 14px; font-family: sans-serif; }
+  table { border-collapse: separate; border: 1px solid #999999; margin-bottom: 10px; }
+  td, th { border: 1px solid #999999; padding: 2px 4px; }
+  #sp   { border-spacing: 10px 6px; }
+  #zero { border-spacing: 0; }
+  caption { color: #0000cc; font-size: 13px; }
+  #capb { caption-side: bottom; }
+  #coll { border-collapse: collapse; border-spacing: 10px; }
+</style></head>
+<body>
+
+<table id="sp"><tr><td id="a1">A</td><td id="a2">B</td></tr><tr><td id="a3">C</td><td id="a4">D</td></tr></table>
+
+<table id="zero"><tr><td id="z1">A</td><td id="z2">B</td></tr></table>
+
+<table id="def"><tr><td id="d1">A</td><td id="d2">B</td></tr></table>
+
+<table id="coll"><tr><td id="k1">A</td><td id="k2">B</td></tr></table>
+
+<table id="capt"><caption id="cap">Caption Title</caption><tr><td id="c1">x</td><td id="c2">y</td></tr></table>
+
+<table id="capb"><caption id="cb">Bottom Cap</caption><tr><td id="b1">z</td></tr></table>
+
+</body></html>

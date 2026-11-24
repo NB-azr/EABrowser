@@ -1,0 +1,9 @@
+serial=emulator-5556
+model=Android SDK built for x86
+brand=generic_x86
+sdk=19
+soc=
+egl=
+gles=GLES: Google (Intel), Android Emulator OpenGL ES Translator (Intel(R) UHD Graphics 730), OpenGL ES 2.0 (4.5.0 - Build 32.0.101.7082)
+resolution=1080x1920
+time=2026-11-08 16:18:32

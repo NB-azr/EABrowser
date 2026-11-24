@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  /* P1-3 8 位 hex：应为半透明蓝，不是 ARGB 错位色 */
+  #hex8 { color: #11223344; background-color: #55aabbcc; }
+  /* P1-4 !important 必须压过普通声明与行内普通声明 */
+  #imp { color: #ff0000 !important; }
+  #imp { color: #0000ff; }
+  /* P1-5 只画底边，不应画成整框 */
+  #bd { border-bottom: 3px solid #336699; }
+  /* P1-6 百分比 padding / em padding 基准 */
+  #pct { width: 500px; padding: 10%; }
+  #emm { font-size: 20px; padding-top: 1em; }
+  /* P1-7 line-height 百分比 */
+  #lh { font-size: 20px; line-height: 150%; }
+  /* P1-8 max-width 百分比 */
+  #mw { width: 800px; max-width: 50%; background-color: #eeeeee; }
+  /* P1-9 flex row-reverse 起点 / stretch / grow */
+  #fr { display: flex; flex-direction: row-reverse; width: 400px; height: 60px; background-color: #ddd; }
+  #fr .i { width: 60px; background-color: #999; }
+  #fst { display: flex; align-items: stretch; width: 300px; height: 80px; background-color: #eee; }
+  #fst .s { width: 80px; background-color: #bbb; }
+  #fgr { display: flex; width: 400px; background-color: #eee; }
+  #fgr .g { width: 80px; flex-grow: 1; background-color: #aaa; }
+  /* P1-11 属性名大小写 / nth an+b 空格 / :not 列表 / 逗号列表特异性 / 嵌套父列表 */
+  [DATA-X] { color: #123456; }
+  li:nth-child(2n + 1) { background-color: #f0f0f0; }
+  .nc:not(.a, .b) { color: #654321; }
+  #spec, .spec { color: #222222; }
+  .nest, .nest2 { & .child { color: #333333; } }
+</style>
+</head><body>
+<div id="hex8">hex8</div>
+<div id="imp" style="color:#00ff00">important</div>
+<div id="bd">bottom-border</div>
+<div id="pct">pct padding</div>
+<div id="emm">em padding</div>
+<div id="lh">line-height %</div>
+<div id="mw">max-width %</div>
+
+<div id="fr"><div class="i" id="fi1"></div><div class="i" id="fi2"></div><div class="i" id="fi3"></div></div>
+<div id="fst"><div class="s" id="fs1"></div><div class="s" id="fs2"></div></div>
+<div id="fgr"><div class="g" id="fg1"></div><div class="g" id="fg2"></div></div>
+
+<div data-x="1">attr-upper</div>
+<ul><li>nth1</li><li>nth2</li><li>nth3</li></ul>
+<div class="nc">not-list</div>
+<div id="spec">spec</div>
+<div class="nest"><span class="child">nest</span></div>
+<div class="nest2"><span class="child">nest2</span></div>
+
+<!-- P0-1 rowspan 无上限：必须被夹取，不能巨额分配 -->
+<table><tr><td rowspan="999999999">big</td><td>x</td></tr><tr><td>y</td></tr></table>
+
+<script>
+(function(){
+  function g(id, p){ try { var e=document.getElementById(id); var s=getComputedStyle(e, p||null); return s ? (s.color + '|' + (s.lineHeight||'') + '|' + (s.maxWidth||'')) : 'null'; } catch(e){ return 'throw:' + e.name; } }
+  function r(id){ try { var b=document.getElementById(id).getBoundingClientRect(); return b.left+','+b.top+' '+b.width+'x'+b.height; } catch(e){ return 'throw'; } }
+  try { console.log('[P1] hex8=' + g('hex8')); } catch(e){}
+  try { console.log('[P1] imp=' + g('imp') + ' lh=' + g('lh') + ' mw=' + g('mw')); } catch(e){}
+  try { console.log('[P1] fr=' + r('fr') + ' fst=' + r('fst') + ' fgr=' + r('fgr')); } catch(e){}
+  try { console.log('[P1] supports-deep=' + CSS.supports('not not not (display:block)')); } catch(e){}
+})();
+</script></body></html>

@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  .container { container-type: inline-size; width: 300px; }
+  @container (min-width: 100px) { #cont { color: rgb(31,32,33); } }
+  @layer base { #lay { color: rgb(28,29,30); } }
+  #plain { color: rgb(50,51,52); }
+</style></head><body>
+<div id="lay">lay</div>
+<div class="container"><div id="cont">cont</div></div>
+<div id="plain">plain</div>
+<script>
+function c(id){ return getComputedStyle(document.getElementById(id)).color; }
+console.log('[M] lay=' + c('lay') + ' cont=' + c('cont') + ' plain=' + c('plain'));
+</script></body></html>

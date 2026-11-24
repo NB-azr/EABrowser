@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML 语义元素</title>
+<style>
+  body { margin: 0; padding: 10px; }
+  .show { display: block; }
+  hr { margin: 8px 0; }
+  details { margin: 0; }
+  summary { color: #1f2937; }
+</style>
+</head>
+<body>
+  <hr id="hr">
+  <div style="height:30px"></div>
+  <!-- 默认折叠：只显示 summary -->
+  <details id="d1">
+    <summary id="s1">更多</summary>
+    <p id="p1" style="height:40px;margin:0;background:#fee2e2">隐藏内容</p>
+  </details>
+  <div style="height:20px"></div>
+  <!-- 带 open：内容默认可见 -->
+  <details id="d2" open>
+    <summary id="s2">已展开</summary>
+    <p id="p2" style="height:40px;margin:0;background:#dcfce7">可见内容</p>
+  </details>
+  <noscript id="ns"><p style="height:20px;margin:0">无脚本内容</p></noscript>
+  <div id="hid" hidden style="height:20px;background:#fde68a">hidden 文本</div>
+  <div id="hid2" hidden class="show" style="height:20px;background:#fde68a">hidden-css 文本</div>
+  <div id="vis" style="height:20px">可见文本</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; background: #222; font-family: sans-serif; }
+  .box {
+    position: relative;
+    margin: 10px;
+    background: #444;
+    border: 1px solid #888;
+  }
+  /* 1. 纵向 flex + wrap：主轴为高度，超过高度往右换列 */
+  #colwrap {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  #colwrap > div { width: 100px; height: 90px; margin: 0 10px 10px 0; background: #2a6; color: #fff; }
+  /* 2. 横向 flex + wrap：主轴为宽度，超过宽度往下换行（回归） */
+  #rowwrap {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  #rowwrap > div { width: 100px; height: 90px; margin: 0 10px 10px 0; background: #26a; color: #fff; }
+  /* 3. 纵向 flex 不换行：全部竖排 */
+  #colnowrap {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #colnowrap > div { width: 100px; height: 90px; margin: 0 0 10px 0; background: #a62; color: #fff; }
+</style>
+</head>
+<body>
+  <div id="colwrap" class="box">
+    <div id="c1">1</div><div id="c2">2</div><div id="c3">3</div>
+    <div id="c4">4</div><div id="c5">5</div><div id="c6">6</div>
+  </div>
+  <div id="rowwrap" class="box">
+    <div id="r1">1</div><div id="r2">2</div><div id="r3">3</div>
+    <div id="r4">4</div><div id="r5">5</div>
+  </div>
+  <div id="colnowrap" class="box">
+    <div id="n1">1</div><div id="n2">2</div><div id="n3">3</div>
+  </div>
+</body>
+</html>

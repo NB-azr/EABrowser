@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>node ownership probe</title></head>
+<body>
+<div id="host"></div>
+<script>
+/* 最小复现：大量 createElement + classList/style 视图对象，节点随 JS 临时对象回收 */
+for (var i = 0; i < 500; i++) {
+    var e = document.createElement('div');
+    e.setAttribute('data-i', String(i));
+    e.className = 'k' + (i % 3);
+    var s = document.createElement('span');
+    s.style.color = 'red';
+    e.appendChild(s);
+}
+/* 树内节点被 innerHTML 销毁后，包装对象仍在页面里（悬垂） */
+var p = document.createElement('div');
+var c = document.createElement('div');
+p.appendChild(c);
+p.innerHTML = '';
+c.textContent;
+
+/* detach 后交给 JS 独占，再重复 append/remove 一轮 */
+var d = document.createElement('div');
+document.getElementById('host').appendChild(d);
+d.remove();
+d.appendChild(document.createElement('b'));
+document.getElementById('host').appendChild(d);
+d.remove();
+
+console.log('[NODEGC] loops=500 elements=' + document.querySelectorAll('*').length);
+</script>
+</body>
+</html>

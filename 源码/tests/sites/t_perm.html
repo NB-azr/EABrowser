@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>permissions</title>
+<style>
+body{margin:0;padding:14px;font-family:sans-serif;font-size:15px;color:#222}
+h2{font-size:16px;margin:12px 0 6px}
+button{display:block;width:100%;margin:8px 0;padding:12px;font-size:15px;border-radius:10px;
+  border:1px solid #cfcfcf;background:#f7f7f7}
+#log{margin-top:10px;padding:10px;background:#fafafa;border:1px solid #ddd;border-radius:8px;
+  font-family:monospace;font-size:13px;color:#333;white-space:pre-wrap}
+</style></head><body>
+<h2>摄像头 / 麦克风权限自检</h2>
+<button id='cam'>请求摄像头 getUserMedia({video:true})</button>
+<button id='mic'>请求麦克风 getUserMedia({audio:true})</button>
+<button id='both'>同时请求 audio+video</button>
+<button id='qcam'>permissions.query(camera)</button>
+<button id='qmic'>permissions.query(microphone)</button>
+<div id='log'>ready</div>
+<script>
+function log(s){ document.getElementById('log').innerHTML += "\n" + s; }
+function gum(c, label){
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){ log(label + ' => mediaDevices 缺失'); return; }
+  navigator.mediaDevices.getUserMedia(c).then(function(st){
+    log(label + ' => OK tracks=' + (st.getTracks ? st.getTracks().length : '?'));
+  }).catch(function(e){
+    log(label + ' => ' + e.name + ': ' + e.message);
+  });
+}
+document.getElementById('cam').onclick = function(){ gum({video:true}, 'camera'); };
+document.getElementById('mic').onclick = function(){ gum({audio:true}, 'microphone'); };
+document.getElementById('both').onclick = function(){ gum({audio:true, video:true}, 'both'); };
+document.getElementById('qcam').onclick = function(){
+  navigator.permissions.query({name:'camera'}).then(function(s){ log('query camera => ' + s.state); });
+};
+document.getElementById('qmic').onclick = function(){
+  navigator.permissions.query({name:'microphone'}).then(function(s){ log('query mic => ' + s.state); });
+};
+</script></body></html>

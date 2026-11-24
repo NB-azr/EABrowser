@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>gaps</title></head>
+<body>
+<div id="host"></div>
+<div id="host2"></div>
+<script>
+(function(){
+  /* elementFromPoint：未注册宿主回调时应为 null */
+  var efp=document.elementFromPoint(10,20);
+  console.log('[GAP] elementFromPoint(no-backend)='+(efp===null?'null':efp.id));
+  /* requestIdleCallback */
+  var idleCalled=false;
+  requestIdleCallback(function(deadline){
+    idleCalled=true;
+    console.log('[GAP] idle didTimeout='+deadline.didTimeout+' timeRemaining='+deadline.timeRemaining());
+  });
+  /* Notification */
+  var n=new Notification('hello',{body:'world',tag:'t1',data:{k:1}});
+  n.close();
+  console.log('[GAP] Notification type='+typeof Notification+' perm='+Notification.permission+' max='+Notification.maxActions+' title='+n.title+' body='+n.body+' tag='+n.tag+' closed='+n.closed);
+  Notification.requestPermission().then(function(v){
+    console.log('[GAP] notify requestPermission='+v);
+  });
+  /* Shadow DOM open */
+  var host=document.getElementById('host');
+  var root=host.attachShadow({mode:'open'});
+  root.innerHTML='<span id="si">hi</span>';
+  var si=root.querySelector('#si');
+  console.log('[SHADOW] open root='+(root!==null)+' mode='+root.mode+' hostSame='+(root.host===host)+' shadowSame='+(host.shadowRoot===root)+' text='+(si?si.textContent:'none'));
+  /* Shadow DOM closed */
+  var host2=document.getElementById('host2');
+  var root2=host2.attachShadow({mode:'closed'});
+  root2.innerHTML='<b class="c2">x</b>';
+  console.log('[SHADOW] closed shadowRootNull='+(host2.shadowRoot===null)+' rootMode='+root2.mode+' q='+(root2.querySelector('.c2')!==null));
+  /* 重复 attach / 非法 mode */
+  try { host.attachShadow({mode:'open'}); console.log('[SHADOW] dup no-throw'); }
+  catch(e){ console.log('[SHADOW] dup throws name='+(e.name||'Error')); }
+  try { document.createElement('div').attachShadow({mode:'bad'}); console.log('[SHADOW] bad no-throw'); }
+  catch(e2){ console.log('[SHADOW] bad throws '+(e2 instanceof TypeError)); }
+  setTimeout(function(){ console.log('[GAP] idleCalled='+idleCalled); }, 60);
+})();
+</script>
+</body></html>

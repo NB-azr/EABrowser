@@ -1,0 +1,857 @@
+<!doctype html><html><body><script> 
+    
+    
+
+var bds = {
+    se: {},
+    su: {
+        urdata:[],
+        urSendClick:function(){}
+    },
+    util: {},
+    use: {},
+    comm: {
+        domain:"http:\/\/www.baidu.com",
+        ubsurl : "http:\\\/\\\/sclick.baidu.com",
+        tn:"baidu",
+        queryEnc:"",
+        queryId:"",
+        inter:"",
+        templateName:"",
+        sugHost : "http:\\\/\\\/suggestion.baidu.com\\\/su",
+        query : "",
+        dpquery: "",
+        qid : "0xda9cdbc60389d267",
+        cid : "",
+        sid : "63147_74779_75126_75971_76062_76316_76333_76278_76340_76379_76391_76444_76509_76407_76490_76559_76554_76463_76475_76600_76564_76574_76569_76611_76616_76619_76625_76620_76605_76608_76604_76632_76709_76730_76728_76724_76765_76773_76775_76745_76783",
+        indexSid : "63147_74779_75126_75971_76062_76316_76333_76278_76340_76379_76391_76444_76509_76407_76490_76559_76554_76463_76475_76600_76564_76574_76569_76611_76616_76619_76625_76620_76605_76608_76604_76632_76709_76730_76728_76724_76765_76773_76775_76745_76783",
+        stoken : "",
+        serverTime : "58",
+        user : "",
+        username : "",
+        userid : "",
+        loginAction : [],
+        useFavo : "",
+        pinyin : "",
+        favoOn : "false",
+        userAgent : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/157.0.0.0 Safari\/537.36 Edg\/157.0.0.0",
+        curResultNum:"0",
+        rightResultExist:false,
+        protectNum:0,
+        zxlNum:0,
+        pageNum:1,
+        pageSize:10,
+        newindex:0,
+        async:2,
+        maxPreloadThread:5,
+        maxPreloadTimes:10,
+        preloadMouseMoveDistance:5,
+        switchAddMask:false,
+        isDebug:false,
+        ishome : 1,
+        alwaysMonitor: '0',
+        flagTranslateResult:0,
+        globalLogFlag:0
+    ,encTn:'1d13rUCX6z2asKUDEh+23klGbMYHeOAEDFlwLPrWYyUBx9wCbr5QDS1MmM\/F'
+    }
+};
+
+    
+
+
+var name,navigate,al_arr=[];
+
+var selfOpen = window.open;
+eval("var open = selfOpen;");
+
+var isIE = navigator.userAgent.indexOf("MSIE") != -1 && !window.opera;
+
+var E = bds.ecom = {};
+
+bds.se.mon = {
+    loadedItems: [],
+    load: function() {},
+    srvt:-1
+};
+try { 
+    bds.se.mon.srvt = parseInt(document.cookie.match(new RegExp("(^| )BDSVRTM=([^;]*)(;|$)"))[2]);
+    document.cookie = "BDSVRTM=;expires=Sat, 01 Jan 2000 00:00:00 GMT"
+} catch (e) {}
+
+
+var
+bdUser        = bds.comm.user?bds.comm.user:null,
+bdQuery       = bds.comm.query,
+bdUseFavo     = bds.comm.useFavo,
+bdFavoOn      = bds.comm.favoOn,
+bdCid         = bds.comm.cid,
+bdSid         = bds.comm.sid,
+bdServerTime  = bds.comm.serverTime,
+bdQid         = bds.comm.queryId,
+bdstoken      = bds.comm.stoken,
+login_success = [];
+
+
+
+
+bds.comm.sampleval= [];
+bds.comm.nodeSample = []
+
+bds.comm.desktopSampleval = "";
+
+bds.comm.aiSampleval = false;
+bds.comm.hitHotBoardSample = false;
+bds.comm.hitRecommendToolSample = false
+bds.comm.hitRecommendStyleSample = false
+bds.comm.hitFontColor = false;
+bds.comm.hitDoodleExp = false;
+
+bds.comm.hotSearchNew = true;
+bds.comm.smartSearchBox = {"buttonText":{"text":"问AI","usePreImage":"1","preImageType":"wenai","usePostImage":"1","postImageType":"wenai","weight":"1"},"buttonTipsDays":["4","8"],"closeHover":"开启直达AI搜索深度模式","configText":{"askAiGuide":"点我去文心助手回答，已接入DeepSeek、文心4.5，深入思考提供更优质答案，快来试试吧","deepSearch":"点我去文心助手回答，已接入DeepSeek、文心4.5，深入思考提供更优质答案，快来试试吧"},"guideWord":"画一只可爱的猫咪，写实风格","guideWordPrefix":"试试搜日常问答、经验决策、内容创作等问题，例：","input_panel":[{"button_id":"inputPanel_search","icon":"https:\/\/psstatic.cdn.bcebos.com\/aife\/static\/wenxinlogo_1770695621000.png","text":"复杂问题就找文心助手，深入思考回答更优","type":"ai_search","url":"https:\/\/wenxin.baidu.com\/?extParams=%7B%22enter_type%22%3A%22home_operate%22%7D","interval":"0"}],"isOpen":false,"openHover":"关闭后，搜索仍进入原网页结果页","token":"bbd1252a","sampleVal":[],"bsUserInfo":"","degradeAiBox":"","homeInputSingleLine":false,"isNewSkined":false}
+bds.comm.degradeAiBox = ""
+bds.comm.hitNewHotFeed = false;
+
+bds.comm.aiSideBox = ""
+bds.comm.aiSideBoxPredict = ""
+
+
+
+    bds.comm.samNewBox = 0;
+
+
+
+
+bds.comm.newTopMenu = 1;
+bds.comm.newSearchBox = 1;
+
+bds.comm.newSearchbox = 1;
+
+
+bds.comm.sIndex = 1;
+
+
+
+
+
+
+
+
+    bds.comm.pdc = 0;
+
+
+
+    bds.comm.newNav = 0;
+
+
+
+
+    bds.comm.inputUpgrade = 0;
+
+
+
+
+    bds.comm.searchBoxNew = 1;
+
+
+
+
+    bds.comm.aiSideBoxNew = 0;
+
+
+
+    bds.comm.headTabUpgrade = 0;
+
+
+
+    bds.comm.samNewBox = 0;
+
+
+
+bds.comm.popUpAdvert = {}
+
+
+
+
+
+bds.comm.withFeedData = true;
+
+
+bds.comm.boxRecSwitch = "1";
+
+
+bds.comm.pcSugSwitch = 0;
+
+
+bds.comm.sugAiIndex = 0
+
+
+bds.comm.hotSearchBackgroundColor = false
+
+
+bds.comm.hitNewHotFeed = false
+bds.comm.hitHomeChatInputNext = false
+bds.comm.inHomeChatInputNextGroup = false
+bds.comm.hitInputUpgrade = false
+bds.comm.hitSearchModeSwitch = false
+
+
+    bds.comm.hasFeedSwitch = true
+
+
+
+
+bds.comm.hitFeedList = false
+bds.comm.hitFeedHint = false
+bds.comm.hitFeedPeek = false
+
+
+bds.comm.hitVerticalAndTTS = false
+bds.comm.hitHorizontalAndTTS = false
+
+    
+
+
+
+var s_domain = {
+    "protocol": "https",
+    "staticUrl": "https://pss.bdstatic.com/",
+    "base": "home",
+    "baseuri": "/home",
+    "passconf": "http://passport.baidu.com/ubrwsbas",
+    "logout": "https://passport.baidu.com/?logout&amp;u=",
+    "bs": "www.baidu.com",
+    "login": "http://passport.baidu.com/?login&amp;tpl=super&amp;u=",
+    "sp": "http://hi.baidu.com/",
+    "ssllist": 
+{
+    
+        
+        
+        
+        "su.bdimg.com":"dss0.bdstatic.com\/5a21bjqh_Q23odCf"
+        
+        ,
+        "1.ur.bdimg.com":"dss1.bdstatic.com\/k4oTfnSm1A5BphGlnYG"
+        
+        ,
+        "2.ur.bdimg.com":"dss2.bdstatic.com\/kvoTfnSm1A5BphGlnYG"
+        
+        ,
+        "3.ur.bdimg.com":"dss3.bdstatic.com\/kfoTfnSm1A5BphGlnYG"
+        
+        ,
+        "4.ur.bdimg.com":"dss0.bdstatic.com\/lPoTfnSm1A5BphGlnYG"
+        
+        ,
+        "5.ur.bdimg.com":"dss1.bdstatic.com\/l4oTfnSm1A5BphGlnYG"
+        
+        ,
+        "6.ur.bdimg.com":"dss2.bdstatic.com\/lvoTfnSm1A5BphGlnYG"
+        
+        ,
+        "7.ur.bdimg.com":"dss3.bdstatic.com\/lfoTfnSm1A5BphGlnYG"
+        
+        ,
+        "8.ur.bdimg.com":"dss0.bdstatic.com\/iPoTfnSm1A5BphGlnYG"
+        
+        ,
+        "dj0.baidu.com":"sp1.baidu.com\/-L-Wsjip0QIZ8tyhnq"
+        
+        ,
+        "dj1.baidu.com":"sp1.baidu.com\/-L-Xsjip0QIZ8tyhnq"
+        
+        ,
+        "dj2.baidu.com":"sp2.baidu.com\/-L-Ysjip0QIZ8tyhnq"
+        
+        ,
+        "eclick.baidu.com":"sp3.baidu.com\/-0U_dTmfKgQFm2e88IuM_a"
+        
+        ,
+        "a.hiphotos.baidu.com":"dss0.baidu.com\/94o3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "b.hiphotos.baidu.com":"dss1.baidu.com\/9vo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "c.hiphotos.baidu.com":"dss3.baidu.com\/9fo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "d.hiphotos.baidu.com":"dss0.baidu.com\/-Po3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "e.hiphotos.baidu.com":"dss1.baidu.com\/-4o3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "f.hiphotos.baidu.com":"dss2.baidu.com\/-vo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "g.hiphotos.baidu.com":"dss3.baidu.com\/-fo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "h.hiphotos.baidu.com":"dss0.baidu.com\/7Po3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "bdimg.share.baidu.com":"dss1.baidu.com\/9rA4cT8aBw9FktbgoI7O1ygwehsv"
+        
+        ,
+        "s.share.baidu.com":"sp1.baidu.com\/5foZdDe71MgCo2Kml5_Y_D3"
+        
+        ,
+        "s1.bdstatic.com":"dss1.bdstatic.com\/5eN1bjq8AAUYm2zgoY3K"
+        
+        ,
+        "p2.youxi.bdimg.com":"dss2.bdstatic.com\/5OZ1hTW64A63otebn9fN2DJv"
+        
+        ,
+        "youxi.baidu.com":"sp3.baidu.com\/y0kThD4a2gU2pMbgoY3K"
+        
+        ,
+        "fm.baidu.com":"dss3.baidu.com\/-rd1bjeh1BF3odCf"
+        
+        ,
+        "music.baidu.com":"dss2.baidu.com\/8_1ZdTna2gU2pMbgoY3K"
+        
+        ,
+        "f3.baidu.com":"sp2.baidu.com\/-uV1bjeh1BF3odCf"
+        
+        ,
+        "sclick.baidu.com":"sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a"
+        
+        ,
+        "1.su.bdimg.com":"dss0.bdstatic.com\/k4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "2.su.bdimg.com":"dss1.bdstatic.com\/kvoZeXSm1A5BphGlnYG"
+        
+        ,
+        "3.su.bdimg.com":"dss2.bdstatic.com\/kfoZeXSm1A5BphGlnYG"
+        
+        ,
+        "4.su.bdimg.com":"dss3.bdstatic.com\/lPoZeXSm1A5BphGlnYG"
+        
+        ,
+        "5.su.bdimg.com":"dss0.bdstatic.com\/l4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "6.su.bdimg.com":"dss1.bdstatic.com\/lvoZeXSm1A5BphGlnYG"
+        
+        ,
+        "7.su.bdimg.com":"dss2.bdstatic.com\/lfoZeXSm1A5BphGlnYG"
+        
+        ,
+        "8.su.bdimg.com":"dss3.bdstatic.com\/iPoZeXSm1A5BphGlnYG"
+        
+        ,
+        "nssug.baidu.com":"sp1.baidu.com\/8qUZeT8a2gU2pMbgoY3K"
+        
+        ,
+        "up.photo.baidu.com":"sp1.baidu.com\/6_R1fD_bAAd3otqbppnN2DJv"
+        
+        ,
+        "suggestion.baidu.com":"sp1.baidu.com\/5a1Fazu8AA54nxGko9WTAnF6hhy"
+        
+        ,
+        "t10.baidu.com":"t10.baidu.com"
+        
+        ,
+        "t11.baidu.com":"t11.baidu.com"
+        
+        ,
+        "t12.baidu.com":"t12.baidu.com"
+        
+        ,
+        "play.baidu.com":"dss3.baidu.com\/5LgHhXSm2Q5IlBGlnYG"
+        
+        ,
+        "olime.baidu.com":"sp1.baidu.com\/8bg4cTva2gU2pMbgoY3K"
+        
+        ,
+        "i.baidu.com":"sp1.baidu.com\/74oIbT3kAMgDnd_"
+        
+        ,
+        "c.baidu.com":"sp1.baidu.com\/9foIbT3kAMgDnd_"
+        
+        ,
+        "b1.baidu.com":"dss1.baidu.com\/9uN1bjeh1BF3odCf"
+        
+        ,
+        "nsclick.baidu.com":"sp1.baidu.com\/8qUJcD3n0sgCo2Kml5_Y_D3"
+        
+        ,
+        "b1.bdstatic.com":"dss0.bdstatic.com\/9uN1bjq8AAUYm2zgoY3K"
+        
+        ,
+        "i7.baidu.com":"dss0.baidu.com\/73F1bjeh1BF3odCf"
+        
+        ,
+        "i8.baidu.com":"dss0.baidu.com\/73x1bjeh1BF3odCf"
+        
+        ,
+        "i9.baidu.com":"dss0.baidu.com\/73t1bjeh1BF3odCf"
+        
+        ,
+        "ecma.bdimg.com":"dss1.bdstatic.com\/-0U0bXSm1A5BphGlnYG"
+        
+        ,
+        "tag.baidu.com":"sp1.baidu.com\/6LMFsjip0QIZ8tyhnq"
+        
+        ,
+        "hw.baidu.com":"sp1.baidu.com\/7KF1bjeh1BF3odCf"
+        
+        ,
+        "opendata.baidu.com":"sp1.baidu.com\/8aQDcjqpAAV3otqbppnN2DJv"
+        
+        ,
+        "open.baidu.com":"dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG"
+        
+        ,
+        "api.open.baidu.com":"sp1.baidu.com\/9_Q4sjW91Qh3otqbppnN2DJv"
+        
+        ,
+        "xiaodu.baidu.com":"sp1.baidu.com\/yLsHczq6KgQFm2e88IuM_a"
+        
+        ,
+        "s0.nuomi.bdimg.com":"dss1.bdstatic.com\/5eR1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "s1.nuomi.bdimg.com":"dss0.baidu.com\/5eN1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "s2.nuomi.bdimg.com":"dss2.bdstatic.com\/5eZ1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "vse.baidu.com":"sp3.baidu.com\/6qUDsjip0QIZ8tyhnq"
+        
+        ,
+        "himg.bdimg.com":"dss1.bdstatic.com\/7Ls0a8Sm1A5BphGlnYG"
+        
+        ,
+        "ss.bdimg.com":"dss1.bdstatic.com\/5aV1bjqh_Q23odCf"
+        
+        ,
+        "ecmb.bdimg.com":"dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG"
+        
+        ,
+        "e.su.bdimg.com":"dss0.bdstatic.com\/-4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "sensearch.baidu.com":"sp1.baidu.com\/5b11fzupBgM18t7jm9iCKT-xh_"
+        
+        ,
+        "sestat.baidu.com":"sp1.baidu.com\/5b1ZeDe5KgQFm2e88IuM_a"
+        
+        ,
+        "cdn00.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGba2gU2pMbfm9GUKT-w"
+        
+        ,
+        "cdn01.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGfa2gU2pMbfm9GUKT-w"
+        
+    
+}
+
+};
+
+    
+
+
+window.__initData__ = {
+    staticUrl: "https://pss.bdstatic.com/r/www/cache/static/protocol/https",
+    globalVal: {},
+    commContent: {
+        // TODO: 首页和结果页的实验变量不一样，异步能更新吗？待check
+        resultPage: 0,
+        sIndex: 1,
+
+        domain:"http:\/\/www.baidu.com",
+        ubsurl : "http:\\\/\\\/sclick.baidu.com",
+        tn:"baidu",
+        queryEnc:"",
+        queryId:"",
+        inter:"",
+        templateName:"",
+        sugHost : "http:\\\/\\\/suggestion.baidu.com\\\/su",
+        query : "",
+        dpquery: "",
+        qid : "0xda9cdbc60389d267",
+        cid : "",
+        sid : "63147_74779_75126_75971_76062_76316_76333_76278_76340_76379_76391_76444_76509_76407_76490_76559_76554_76463_76475_76600_76564_76574_76569_76611_76616_76619_76625_76620_76605_76608_76604_76632_76709_76730_76728_76724_76765_76773_76775_76745_76783",
+        indexSid : "63147_74779_75126_75971_76062_76316_76333_76278_76340_76379_76391_76444_76509_76407_76490_76559_76554_76463_76475_76600_76564_76574_76569_76611_76616_76619_76625_76620_76605_76608_76604_76632_76709_76730_76728_76724_76765_76773_76775_76745_76783",
+        stoken : "",
+        serverTime : "58",
+        user : "",
+        username : "",
+        userid : "",
+        loginAction : [],
+        useFavo : "",
+        pinyin : "",
+        favoOn : "false",
+        userAgent : "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/157.0.0.0 Safari\/537.36 Edg\/157.0.0.0",
+        curResultNum:"0",
+        rightResultExist:false,
+        protectNum:0,
+        zxlNum:0,
+        pageNum:1,
+        pageSize:10,
+        newindex:0,
+        async:2,
+        maxPreloadThread:5,
+        maxPreloadTimes:10,
+        preloadMouseMoveDistance:5,
+        switchAddMask:false,
+        isDebug:false,
+        ishome : 1,
+        alwaysMonitor: '0',
+        flagTranslateResult:0,
+        globalLogFlag:0,
+        encTn:'1d13rUCX6z2asKUDEh+23klGbMYHeOAEDFlwLPrWYyUBx9wCbr5QDS1MmM\/F',
+
+        // 首页标识
+
+        // 首页原有的变量，迁移自swig/lib/bds_js_vars_common.tpl。结果页新架构全量之后把旧模版下掉
+        
+        sampleval: [],
+        nodeSample: [],
+        desktopSampleval: "",
+        
+        aiSampleval: false,
+        hitHotBoardSample: false,
+        hitRecommendToolSample: false,
+        hitRecommendStyleSample: false,
+        
+        hotSearchNew: true,
+        smartSearchBox: {"buttonText":{"text":"问AI","usePreImage":"1","preImageType":"wenai","usePostImage":"1","postImageType":"wenai","weight":"1"},"buttonTipsDays":["4","8"],"closeHover":"开启直达AI搜索深度模式","configText":{"askAiGuide":"点我去文心助手回答，已接入DeepSeek、文心4.5，深入思考提供更优质答案，快来试试吧","deepSearch":"点我去文心助手回答，已接入DeepSeek、文心4.5，深入思考提供更优质答案，快来试试吧"},"guideWord":"画一只可爱的猫咪，写实风格","guideWordPrefix":"试试搜日常问答、经验决策、内容创作等问题，例：","input_panel":[{"button_id":"inputPanel_search","icon":"https:\/\/psstatic.cdn.bcebos.com\/aife\/static\/wenxinlogo_1770695621000.png","text":"复杂问题就找文心助手，深入思考回答更优","type":"ai_search","url":"https:\/\/wenxin.baidu.com\/?extParams=%7B%22enter_type%22%3A%22home_operate%22%7D","interval":"0"}],"isOpen":false,"openHover":"关闭后，搜索仍进入原网页结果页","token":"bbd1252a","sampleVal":[],"bsUserInfo":"","degradeAiBox":"","homeInputSingleLine":false,"isNewSkined":false},
+        
+        aiSideBox: "",
+        aiSideBoxPredict: "",
+
+        
+        
+        samNewBox: 0,
+        
+
+        
+
+        newTopMenu: 1,
+        newSearchBox: 1,
+        newSearchbox: 1,
+
+        
+        sIndex: 1,
+
+        
+        
+
+        
+        
+
+        
+        pdc: 0,
+        
+
+        
+        newNav: 0,
+        
+
+        
+        
+        inputUpgrade: 0,
+        
+
+        
+        
+        searchBoxNew: 1,
+        
+
+        
+        
+        aiSideBoxNew: 0,
+        
+
+        
+        headTabUpgrade: 0,
+        
+
+        
+        samNewBox: 0,
+        
+
+        
+        popUpAdvert: {},
+
+        
+        
+
+        
+        withFeedData: true,
+        hitFeedList: false,
+        hitNewHotFeed: false,
+        hitNewHotFeedLeftImage: true,
+        hitFeedHint: false,
+        hitFeedPeek: false,
+        hasFeedData: false,
+        hasFeedSwitch: true,
+        hitVerticalAndTTS: false,
+        hitHorizontalAndTTS: false,
+
+        
+        boxRecSwitch: "1",
+
+        
+        pcSugSwitch: 0,
+
+        
+        sugAiIndex: 0
+    },
+    processedHttpList: 
+{
+    
+        
+        
+        
+        "su.bdimg.com":"dss0.bdstatic.com\/5a21bjqh_Q23odCf"
+        
+        ,
+        "1.ur.bdimg.com":"dss1.bdstatic.com\/k4oTfnSm1A5BphGlnYG"
+        
+        ,
+        "2.ur.bdimg.com":"dss2.bdstatic.com\/kvoTfnSm1A5BphGlnYG"
+        
+        ,
+        "3.ur.bdimg.com":"dss3.bdstatic.com\/kfoTfnSm1A5BphGlnYG"
+        
+        ,
+        "4.ur.bdimg.com":"dss0.bdstatic.com\/lPoTfnSm1A5BphGlnYG"
+        
+        ,
+        "5.ur.bdimg.com":"dss1.bdstatic.com\/l4oTfnSm1A5BphGlnYG"
+        
+        ,
+        "6.ur.bdimg.com":"dss2.bdstatic.com\/lvoTfnSm1A5BphGlnYG"
+        
+        ,
+        "7.ur.bdimg.com":"dss3.bdstatic.com\/lfoTfnSm1A5BphGlnYG"
+        
+        ,
+        "8.ur.bdimg.com":"dss0.bdstatic.com\/iPoTfnSm1A5BphGlnYG"
+        
+        ,
+        "dj0.baidu.com":"sp1.baidu.com\/-L-Wsjip0QIZ8tyhnq"
+        
+        ,
+        "dj1.baidu.com":"sp1.baidu.com\/-L-Xsjip0QIZ8tyhnq"
+        
+        ,
+        "dj2.baidu.com":"sp2.baidu.com\/-L-Ysjip0QIZ8tyhnq"
+        
+        ,
+        "eclick.baidu.com":"sp3.baidu.com\/-0U_dTmfKgQFm2e88IuM_a"
+        
+        ,
+        "a.hiphotos.baidu.com":"dss0.baidu.com\/94o3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "b.hiphotos.baidu.com":"dss1.baidu.com\/9vo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "c.hiphotos.baidu.com":"dss3.baidu.com\/9fo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "d.hiphotos.baidu.com":"dss0.baidu.com\/-Po3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "e.hiphotos.baidu.com":"dss1.baidu.com\/-4o3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "f.hiphotos.baidu.com":"dss2.baidu.com\/-vo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "g.hiphotos.baidu.com":"dss3.baidu.com\/-fo3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "h.hiphotos.baidu.com":"dss0.baidu.com\/7Po3dSag_xI4khGko9WTAnF6hhy"
+        
+        ,
+        "bdimg.share.baidu.com":"dss1.baidu.com\/9rA4cT8aBw9FktbgoI7O1ygwehsv"
+        
+        ,
+        "s.share.baidu.com":"sp1.baidu.com\/5foZdDe71MgCo2Kml5_Y_D3"
+        
+        ,
+        "s1.bdstatic.com":"dss1.bdstatic.com\/5eN1bjq8AAUYm2zgoY3K"
+        
+        ,
+        "p2.youxi.bdimg.com":"dss2.bdstatic.com\/5OZ1hTW64A63otebn9fN2DJv"
+        
+        ,
+        "youxi.baidu.com":"sp3.baidu.com\/y0kThD4a2gU2pMbgoY3K"
+        
+        ,
+        "fm.baidu.com":"dss3.baidu.com\/-rd1bjeh1BF3odCf"
+        
+        ,
+        "music.baidu.com":"dss2.baidu.com\/8_1ZdTna2gU2pMbgoY3K"
+        
+        ,
+        "f3.baidu.com":"sp2.baidu.com\/-uV1bjeh1BF3odCf"
+        
+        ,
+        "sclick.baidu.com":"sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a"
+        
+        ,
+        "1.su.bdimg.com":"dss0.bdstatic.com\/k4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "2.su.bdimg.com":"dss1.bdstatic.com\/kvoZeXSm1A5BphGlnYG"
+        
+        ,
+        "3.su.bdimg.com":"dss2.bdstatic.com\/kfoZeXSm1A5BphGlnYG"
+        
+        ,
+        "4.su.bdimg.com":"dss3.bdstatic.com\/lPoZeXSm1A5BphGlnYG"
+        
+        ,
+        "5.su.bdimg.com":"dss0.bdstatic.com\/l4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "6.su.bdimg.com":"dss1.bdstatic.com\/lvoZeXSm1A5BphGlnYG"
+        
+        ,
+        "7.su.bdimg.com":"dss2.bdstatic.com\/lfoZeXSm1A5BphGlnYG"
+        
+        ,
+        "8.su.bdimg.com":"dss3.bdstatic.com\/iPoZeXSm1A5BphGlnYG"
+        
+        ,
+        "nssug.baidu.com":"sp1.baidu.com\/8qUZeT8a2gU2pMbgoY3K"
+        
+        ,
+        "up.photo.baidu.com":"sp1.baidu.com\/6_R1fD_bAAd3otqbppnN2DJv"
+        
+        ,
+        "suggestion.baidu.com":"sp1.baidu.com\/5a1Fazu8AA54nxGko9WTAnF6hhy"
+        
+        ,
+        "t10.baidu.com":"t10.baidu.com"
+        
+        ,
+        "t11.baidu.com":"t11.baidu.com"
+        
+        ,
+        "t12.baidu.com":"t12.baidu.com"
+        
+        ,
+        "play.baidu.com":"dss3.baidu.com\/5LgHhXSm2Q5IlBGlnYG"
+        
+        ,
+        "olime.baidu.com":"sp1.baidu.com\/8bg4cTva2gU2pMbgoY3K"
+        
+        ,
+        "i.baidu.com":"sp1.baidu.com\/74oIbT3kAMgDnd_"
+        
+        ,
+        "c.baidu.com":"sp1.baidu.com\/9foIbT3kAMgDnd_"
+        
+        ,
+        "b1.baidu.com":"dss1.baidu.com\/9uN1bjeh1BF3odCf"
+        
+        ,
+        "nsclick.baidu.com":"sp1.baidu.com\/8qUJcD3n0sgCo2Kml5_Y_D3"
+        
+        ,
+        "b1.bdstatic.com":"dss0.bdstatic.com\/9uN1bjq8AAUYm2zgoY3K"
+        
+        ,
+        "i7.baidu.com":"dss0.baidu.com\/73F1bjeh1BF3odCf"
+        
+        ,
+        "i8.baidu.com":"dss0.baidu.com\/73x1bjeh1BF3odCf"
+        
+        ,
+        "i9.baidu.com":"dss0.baidu.com\/73t1bjeh1BF3odCf"
+        
+        ,
+        "ecma.bdimg.com":"dss1.bdstatic.com\/-0U0bXSm1A5BphGlnYG"
+        
+        ,
+        "tag.baidu.com":"sp1.baidu.com\/6LMFsjip0QIZ8tyhnq"
+        
+        ,
+        "hw.baidu.com":"sp1.baidu.com\/7KF1bjeh1BF3odCf"
+        
+        ,
+        "opendata.baidu.com":"sp1.baidu.com\/8aQDcjqpAAV3otqbppnN2DJv"
+        
+        ,
+        "open.baidu.com":"dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG"
+        
+        ,
+        "api.open.baidu.com":"sp1.baidu.com\/9_Q4sjW91Qh3otqbppnN2DJv"
+        
+        ,
+        "xiaodu.baidu.com":"sp1.baidu.com\/yLsHczq6KgQFm2e88IuM_a"
+        
+        ,
+        "s0.nuomi.bdimg.com":"dss1.bdstatic.com\/5eR1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "s1.nuomi.bdimg.com":"dss0.baidu.com\/5eN1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "s2.nuomi.bdimg.com":"dss2.bdstatic.com\/5eZ1ciub_Q63otebn9fN2DJv"
+        
+        ,
+        "vse.baidu.com":"sp3.baidu.com\/6qUDsjip0QIZ8tyhnq"
+        
+        ,
+        "himg.bdimg.com":"dss1.bdstatic.com\/7Ls0a8Sm1A5BphGlnYG"
+        
+        ,
+        "ss.bdimg.com":"dss1.bdstatic.com\/5aV1bjqh_Q23odCf"
+        
+        ,
+        "ecmb.bdimg.com":"dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG"
+        
+        ,
+        "e.su.bdimg.com":"dss0.bdstatic.com\/-4oZeXSm1A5BphGlnYG"
+        
+        ,
+        "sensearch.baidu.com":"sp1.baidu.com\/5b11fzupBgM18t7jm9iCKT-xh_"
+        
+        ,
+        "sestat.baidu.com":"sp1.baidu.com\/5b1ZeDe5KgQFm2e88IuM_a"
+        
+        ,
+        "cdn00.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGba2gU2pMbfm9GUKT-w"
+        
+        ,
+        "cdn01.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGfa2gU2pMbfm9GUKT-w"
+        
+    
+}
+
+};
+
+
+    var s_session={
+        "logId":"2206847591",
+        "seqId":"0xda9cdbc60389d267",
+        "qid":"0xda9cdbc60389d267",
+        "sessionId":"",
+        "debug":false,
+        "userTips":"{}",
+        "curmod":"2",
+        "firstmod":"",
+        "logoCode":false,
+        "isFesLogo":false,
+        "sid":"63147_74779_75126_75971_76062_76316_76333_76278_76340_76379_76391_76444_76509_76407_76490_76559_76554_76463_76475_76600_76564_76574_76569_76611_76616_76619_76625_76620_76605_76608_76604_76632_76709_76730_76728_76724_76765_76773_76775_76745_76783",
+        "mSid":"",
+        "sample_value":"",
+        "isLogin":false,
+        "agingVoice": ""
+    };
+
+    
+    
+    window.__async_strategy = 2;
+
+</script><script>window.__probe=(typeof bds);</script></body></html>

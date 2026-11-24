@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>URLPattern</title>
+<script>
+var out=[];
+function T(n,v){ out.push(n+'='+v); }
+try{
+  var p=new URLPattern({pathname:'/users/:id'});
+  T('t1',p.test('https://ex.com/users/42'));
+  var r=p.exec('https://ex.com/users/42');
+  T('g1', r?JSON.stringify(r.pathname.groups):'null');
+  T('t2',p.test('/admin/42'));
+  var p2=new URLPattern('https://*.example.com/books/*');
+  T('t3',p2.test('https://shop.example.com/books/9'));
+  T('t4',p2.test('https://shop.example.com/cds/9'));
+  var p3=new URLPattern({hostname:'api.example.com',pathname:'/v1/posts',search:'page=*'});
+  T('t5',p3.test('https://api.example.com/v1/posts?page=2'));
+  var r3=p3.exec('https://api.example.com/v1/posts?page=2');
+  T('g3', r3?String(r3.search.groups[0]):'null');
+  var p4=new URLPattern({pathname:'/items/([0-9]+)'});
+  T('t7',p4.test('/items/123'));
+  T('t8',p4.test('/items/abc'));
+  T('hg',p4.hasRegExpGroups);
+  T('pname',p.pathname.input);
+  T('cg',String(p.pathname.groups.id));
+}catch(e){ T('err',e.message); }
+window.__out=out.join('|');
+</script>

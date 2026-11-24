@@ -1,0 +1,5 @@
+[FAIL] 设备 ABI=x86（需要 arm64-v8a）
+[PASS] ro.opengles.version=131072（131072 = ES2.0）
+[FAIL] APK ABI=（需要含 arm64-v8a）
+[FAIL] APK debuggable（run-as 拉结果需要）
+[WARN] 读不到电池温度（部分 ROM 无该节点），注意手感与降频

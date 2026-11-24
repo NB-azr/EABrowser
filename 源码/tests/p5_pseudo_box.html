@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-size: 16px; color: #222; }
+  /* 图标：content:"" 也要按宽高/背景/边框生成装饰盒 */
+  .icon::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #E53935;
+    border: 4px solid #1E88E5;
+    margin-right: 10px;
+  }
+  /* 圆点色块 */
+  .dot::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #43A047;
+  }
+  /* 清除浮动常见的空块占位 */
+  .block::after {
+    content: "";
+    display: block;
+    height: 12px;
+    background-color: #FDD835;
+  }
+  /* 有文本的伪元素也能带背景/内边距 */
+  .badge::before {
+    content: "NEW";
+    background-color: #FF9800;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  /* 计数序号 */
+  ol { list-style: none; margin: 0; padding: 0; }
+  .nums li { counter-increment: myitem 2; }
+  .nums li::before { content: counter(myitem) ") "; color: #C62828; font-weight: bold; }
+  .nums { counter-reset: myitem 0; }
+  dl { margin: 0; }
+  .nest { counter-reset: sec; }
+  .nest p { counter-increment: sec; }
+  .nest p::before { content: counters(sec, ".") " "; color: #1565C0; }
+  /* 多级目录序号 counters() */
+  .tree ul { counter-reset: sec; margin: 0; padding-left: 12px; }
+  .tree li { counter-increment: sec; list-style: none; }
+  .tree li::before { content: counters(sec, ".") " "; color: #6A1B9A; }
+</style>
+</head>
+<body>
+  <p class="icon">图标文字</p>
+  <p class="dot">圆点文字</p>
+  <div class="block">块后装饰</div>
+  <p class="badge">徽章文本</p>
+  <ol class="nums">
+    <li>第一项</li>
+    <li>第二项</li>
+    <li value="7">第三项</li>
+  </ol>
+  <div class="nest">
+    <p>甲</p>
+    <p>乙</p>
+  </div>
+  <div class="tree">
+    <ul>
+      <li>A
+        <ul><li>B</li><li>C</li></ul>
+      </li>
+      <li>D</li>
+    </ul>
+  </div>
+</body>
+</html>

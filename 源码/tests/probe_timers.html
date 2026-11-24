@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body><script>
+console.log('[T] typeof setTimeout=' + typeof setTimeout);
+setTimeout(function(){ console.log('[T] fired 0'); }, 0);
+setTimeout(function(){ console.log('[T] fired 10'); }, 10);
+Promise.resolve().then(function(){ console.log('[T] microtask'); });
+</script></body></html>

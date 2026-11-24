@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>many images</title>
+<style>
+body{margin:0;padding:8px;font-family:sans-serif}
+.row{display:flex;flex-wrap:wrap}
+.row img{width:90px;height:90px;margin:3px;background:#eee;object-fit:cover}
+</style>
+</head>
+<body>
+<div class="row" id="grid"></div>
+<script>
+var srcs = [];
+for (var i = 0; i < 60; i++) {
+  srcs.push("http://10.0.2.2:8098/www.baidu.com/mobile/assets/psstatic.cdn.bcebos.com/basics/2025_wiseindex/wiseindex-logo_1756889417000.png");
+}
+var g = document.getElementById('grid');
+for (var k = 0; k < srcs.length; k++) {
+  var im = document.createElement('img');
+  im.src = srcs[k];
+  g.appendChild(im);
+}
+document.title = 'many ' + g.children.length;
+</script>
+</body>
+</html>

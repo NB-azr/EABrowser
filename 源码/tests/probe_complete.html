@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>complete</title></head>
+<body>
+<script>
+(function(){
+  var a=__eaComplete('doc',200);
+  var q=__eaComplete('query',200);
+  var z=__eaComplete('zzz_none',200);
+  var all=__eaComplete('',30);
+  console.log('[COMPLETE] doc='+JSON.stringify(a)+' hasDocument='+(a.indexOf('document')>=0));
+  console.log('[COMPLETE] query='+JSON.stringify(q)+' q1='+(q.indexOf('querySelector')>=0)+' q2='+(q.indexOf('querySelectorAll')>=0));
+  console.log('[COMPLETE] none='+z.length+' allLen='+all.length+' first='+JSON.stringify(all.slice(0,5)));
+})();
+</script>
+</body></html>

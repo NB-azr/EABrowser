@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; background: #fff; font-size: 14px; }
+#hscroll { display: flex; flex-direction: row; width: 300px; height: 200px;
+           overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; }
+#hscroll > div { flex: 0 0 200px; height: 120px; background: #ddeeff; }
+#hscroll > div:nth-child(2) { background: #cce0ff; }
+#hscroll > div:nth-child(3) { background: #bbd0ff; }
+#vscroll { display: flex; flex-direction: column; width: 300px; height: 150px;
+           overflow-y: auto; scroll-snap-type: y proximity; }
+#vscroll > div { flex: 0 0 120px; background: #eee; }
+</style></head>
+<body>
+<div id="hscroll">
+  <div id="i0" style="scroll-snap-align: start">1</div>
+  <div id="i1" style="scroll-snap-align: start; scroll-snap-stop: always">2</div>
+  <div id="i2" style="scroll-snap-align: center">3</div>
+</div>
+<div id="vscroll">
+  <div id="v0" style="scroll-snap-align: start">A</div>
+  <div id="v1" style="scroll-snap-align: center">B</div>
+  <div id="v2" style="scroll-snap-align: end">C</div>
+</div>
+</body></html>

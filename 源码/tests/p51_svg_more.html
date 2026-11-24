@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; background: #fff; }
+svg { display: block; }
+</style></head>
+<body>
+<svg width="300" height="220">
+  <defs>
+    <filter id="f-blend">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feBlend in="SourceGraphic" in2="b" mode="multiply"/>
+    </filter>
+    <filter id="f-comp">
+      <feOffset in="SourceGraphic" dx="6" dy="6" result="o"/>
+      <feComposite in="SourceGraphic" in2="o" operator="out"/>
+    </filter>
+    <filter id="f-arith">
+      <feComposite in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0.2" k2="0.4" k3="0.6" k4="0.8"/>
+    </filter>
+    <filter id="f-tile">
+      <feTile in="SourceGraphic"/>
+    </filter>
+    <mask id="m1"><rect x="20" y="20" width="60" height="40" fill="#fff"/></mask>
+  </defs>
+
+  <rect x="20" y="20" width="100" height="60" fill="#3366cc" filter="url(#f-blend)"/>
+  <rect x="150" y="20" width="100" height="60" fill="#33aa66" filter="url(#f-comp)"/>
+  <rect x="20" y="110" width="100" height="60" fill="#aa3366" filter="url(#f-arith)"/>
+  <rect x="150" y="110" width="100" height="60" fill="#666633" filter="url(#f-tile)"/>
+  <rect x="20" y="190" width="100" height="20" fill="#333333" mask="url(#m1)"/>
+</svg>
+</body></html>

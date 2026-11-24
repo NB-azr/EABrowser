@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  .container { container-type: inline-size; width: 300px; }
+  @container (min-width: 0px) { #cont { color: rgb(31,32,33); } }
+</style></head><body>
+<div class="container"><div id="cont">cont</div></div>
+<script>
+console.log('[M] cont=' + getComputedStyle(document.getElementById('cont')).color);
+</script></body></html>

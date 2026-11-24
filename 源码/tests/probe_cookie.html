@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<script>
+document.cookie = 'plain=hello; Path=/';
+document.cookie = 'secret=hidden; Path=/; HttpOnly';
+console.log('C1 read=' + document.cookie);
+console.log('C2 hasPlain=' + (document.cookie.indexOf('plain=hello') >= 0) +
+            ' hasSecret=' + (document.cookie.indexOf('secret=hidden') >= 0));
+document.cookie = 'plain=; Max-Age=0; Path=/';
+console.log('C3 afterDelete=' + document.cookie);
+console.log('C4 hasPlain=' + (document.cookie.indexOf('plain=') >= 0));
+</script></body></html>

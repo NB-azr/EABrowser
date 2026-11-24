@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;padding:10px;font:14px sans-serif}
+#wrap{position:relative;width:300px;height:120px;background:#eef}
+#under{position:absolute;left:0;top:0;width:300px;height:120px;background:#cfc}
+#maskNo{position:absolute;left:0;top:0;width:300px;height:40px;background:rgba(255,0,0,.3);pointer-events:none}
+#maskAuto{position:absolute;left:0;top:80px;width:300px;height:40px;background:rgba(0,0,255,.3)}
+#btn{position:absolute;left:100px;top:90px;width:80px;height:24px;background:#ffd}
+</style></head><body>
+<div id="wrap">
+  <div id="under">under-layer</div>
+  <div id="maskNo">mask pointer-events:none</div>
+  <div id="maskAuto">mask auto</div>
+  <div id="btn">button</div>
+</div>
+</body></html>

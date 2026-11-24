@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>解析器测试 v2</title>
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body class="main page">
+  <!-- v1 回归用例 -->
+  <h1 id="title">Hello &amp; 你好 &lt;世界&gt;</h1>
+  <p>未闭合的 <b>粗体 文本</p>
+  <div class=noquote>
+    <img src="a.png" alt="图片 &quot;引号&quot;">
+    <br><hr/>
+  </div>
+  <ul>
+    <li>一</li>
+    <li>二<li>三
+  </ul>
+  <script>var s = "<div>不是标签</div>";</script>
+  <DIV CLASS="Upper">大写</DIV>
+
+  <!-- v2 DOM查询用例 -->
+  <div id="box1" class="card primary">
+    <span class="label">标签A</span>
+    <span class="label highlight">标签B</span>
+    <p class="desc">描述1</p>
+  </div>
+  <div id="box2" class="card">
+    <span class="label">标签C</span>
+    <p class="desc">描述2</p>
+    <div class="nested">
+      <p class="desc">嵌套描述</p>
+    </div>
+  </div>
+  <section id="main" class="container card">
+    <article class="post"><h2>标题1</h2></article>
+    <article class="post"><h2>标题2</h2></article>
+  </section>
+</body>
+</html>

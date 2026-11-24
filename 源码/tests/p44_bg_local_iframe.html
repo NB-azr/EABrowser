@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font: 14px Arial; }
+  .box { width: 200px; height: 100px; overflow: auto; margin-bottom: 10px;
+         background-image: url(dummy.png); background-size: 40px 40px;
+         background-repeat: repeat; background-position: 0 0; }
+  #fixbox { background-attachment: local; }
+  #f { width: 300px; height: 150px; border: 0; }
+</style></head>
+<body>
+  <div id="scrollbox" class="box">plain scroll</div>
+  <div id="fixbox" class="box">attachment local</div>
+  <iframe id="f" src="https://example.com/child.html"></iframe>
+</body></html>

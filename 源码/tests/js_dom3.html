@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Range / Selection / Fragment / location</title>
+<style>#t1{font-size:20px}</style></head>
+<body>
+<div id="t1">Hello <span id="sp">World</span>!</div>
+<div id="out"></div>
+<script>
+window.__R = "pending";
+var P = [];
+function ok(n, c) { P.push((c ? "PASS " : "FAIL ") + n); }
+function eq(n, a, b) { ok(n + "(" + a + " vs " + b + ")", String(a) === String(b)); }
+
+/* 1. location 可写 */
+try {
+    var u0 = location.href;
+    location.hash = "frag";
+    eq("hash-set", location.hash, "#frag");
+    location.search = "a=1&b=2";
+    eq("search-set", location.search, "?a=1&b=2");
+    ok("href-has-both", location.href.indexOf("?a=1&b=2#frag") >= 0);
+    location.hash = "";
+    eq("hash-clear", location.hash, "");
+    eq("search-kept", location.search, "?a=1&b=2");
+    location.href = u0;
+    eq("href-restore", location.href, u0);
+} catch (e) { P.push("FAIL location " + (e && e.message)); }
+
+/* 2. createDocumentFragment */
+try {
+    var frag = document.createDocumentFragment();
+    ok("frag-nodeType", frag.nodeType === 11 || frag.nodeType === 1);
+    var a = document.createElement("b"); a.id = "fa";
+    var b = document.createElement("b"); b.id = "fb";
+    frag.appendChild(a); frag.appendChild(b);
+    eq("frag-children", frag.children.length, 2);
+    var host = document.createElement("div"); host.id = "fhost";
+    document.body.appendChild(host);
+    host.appendChild(frag);
+    eq("frag-moved", host.children.length, 2);
+    eq("frag-empty", frag.children.length, 0);
+    eq("frag-first-id", host.firstElementChild.getAttribute("id"), "fa");
+} catch (e) { P.push("FAIL fragment " + (e && e.message)); }
+
+/* 3. Range */
+try {
+    var t1 = document.getElementById("t1");
+    var r = document.createRange();
+    ok("range-created", typeof r.toString === "function");
+    r.selectNodeContents(t1);
+    eq("range-text-all", r.toString(), "Hello World!");
+    ok("range-common", r.commonAncestorContainer.getAttribute("id") === "t1");
+    var r2 = r.cloneRange();
+    eq("clone-text", r2.toString(), "Hello World!");
+    // 跳过第一个文本子节点（"Hello "），取 span 和 "!"
+    r.setStart(t1, 1);
+    r.setEnd(t1, 3);
+    eq("range-offset", r.toString(), "World!");
+    eq("range-startOffset", r.startOffset, 1);
+    eq("range-endOffset", r.endOffset, 3);
+    r.collapse(true);
+    ok("range-collapsed", r.collapsed === true);
+    eq("range-collapsed-text", r.toString(), "");
+    var sp = document.getElementById("sp");
+    r.selectNode(sp);
+    eq("selectNode-text", r.toString(), "World");
+    ok("range-rect", typeof r.getBoundingClientRect().width === "number");
+} catch (e) { P.push("FAIL range " + (e && e.message)); }
+
+/* 4. Selection */
+try {
+    var sel = window.getSelection();
+    ok("selection-singleton", document.__selection === sel || window.getSelection() === sel);
+    sel.removeAllRanges();
+    eq("sel-empty", sel.rangeCount, 0);
+    ok("sel-collapsed", sel.isCollapsed === true);
+    var t1 = document.getElementById("t1");
+    var r3 = document.createRange();
+    r3.selectNodeContents(t1);
+    sel.addRange(r3);
+    eq("sel-count", sel.rangeCount, 1);
+    eq("sel-text", sel.toString(), "Hello World!");
+    eq("sel-getRange", sel.getRangeAt(0).toString(), "Hello World!");
+    ok("sel-not-collapsed", sel.isCollapsed === false);
+    sel.selectAllChildren(t1);
+    eq("sel-all", sel.toString(), "Hello World!");
+    sel.removeAllRanges();
+    eq("sel-cleared", sel.rangeCount, 0);
+} catch (e) { P.push("FAIL selection " + (e && e.message)); }
+
+window.__R = P.join("\n");
+var o = document.getElementById("out"); if (o) o.textContent = window.__R;
+</script>
+</body></html>

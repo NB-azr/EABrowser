@@ -1,0 +1,319 @@
+{
+  "slug": "zhihu-signin",
+  "entry": "https://www.zhihu.com/",
+  "captured_at": "2026-11-08 20:43:06",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "知乎匿名访问被 302 到登录页（非首页内容）；302→https://www.zhihu.com/signin?next=%2F",
+  "items": [
+    {
+      "url": "https://static.zhihu.com/heifetz/3964.216a26f4.c32174efee7c50f0616c.css",
+      "final_url": "https://static.zhihu.com/heifetz/3964.216a26f4.c32174efee7c50f0616c.css",
+      "local": "assets/static.zhihu.com/heifetz/3964.216a26f4.c32174efee7c50f0616c.css",
+      "bytes": 215668,
+      "content_type": "text/css",
+      "sha1": "a3cc8e436686d814"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/main.216a26f4.0c48e7971bbf94806b97.css",
+      "final_url": "https://static.zhihu.com/heifetz/main.216a26f4.0c48e7971bbf94806b97.css",
+      "local": "assets/static.zhihu.com/heifetz/main.216a26f4.0c48e7971bbf94806b97.css",
+      "bytes": 262677,
+      "content_type": "text/css",
+      "sha1": "633d449547d6df69"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/main-signin-routes.216a26f4.af8a83f168051e46e1a4.css",
+      "final_url": "https://static.zhihu.com/heifetz/main-signin-routes.216a26f4.af8a83f168051e46e1a4.css",
+      "local": "assets/static.zhihu.com/heifetz/main-signin-routes.216a26f4.af8a83f168051e46e1a4.css",
+      "bytes": 15704,
+      "content_type": "text/css",
+      "sha1": "d7d24c28b9ea1970"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/assets/wechat-share-logo.39ea9ecd.png",
+      "final_url": "https://static.zhihu.com/heifetz/assets/wechat-share-logo.39ea9ecd.png",
+      "local": "assets/static.zhihu.com/heifetz/assets/wechat-share-logo.39ea9ecd.png",
+      "bytes": 8469,
+      "content_type": "image/png",
+      "sha1": "0e007bbc62dbd8c2"
+    },
+    {
+      "url": "https://pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png",
+      "final_url": "https://pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png",
+      "local": "assets/pic2.zhimg.com/80/v2-f6b1f64a098b891b4ea1e3104b5b71f6_720w.png",
+      "bytes": 8819,
+      "content_type": "image/png",
+      "sha1": "cce65e602be0d9ab"
+    },
+    {
+      "url": "https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png",
+      "final_url": "https://pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png",
+      "local": "assets/pic3.zhimg.com/80/v2-d0289dc0a46fc5b15b3363ffa78cf6c7.png",
+      "bytes": 4034,
+      "content_type": "image/png",
+      "sha1": "2cca5b9e4a5e7896"
+    },
+    {
+      "url": "https://pica.zhimg.com/80/v2-ccdb7828c12afff31a27e51593d23260_720w.png",
+      "final_url": "https://pica.zhimg.com/80/v2-ccdb7828c12afff31a27e51593d23260_720w.png",
+      "local": "assets/pica.zhimg.com/80/v2-ccdb7828c12afff31a27e51593d23260_720w.png",
+      "bytes": 8408,
+      "content_type": "image/png",
+      "sha1": "62e04b621d8a1684"
+    },
+    {
+      "url": "https://zhstatic.zhihu.com/zhihu-components/video-card/video_placeholder.jpg",
+      "final_url": "https://zhstatic.zhihu.com/zhihu-components/video-card/video_placeholder.jpg",
+      "local": "assets/zhstatic.zhihu.com/zhihu-components/video-card/video_placeholder.jpg",
+      "bytes": 67324,
+      "content_type": "image/jpeg",
+      "sha1": "2dec7f908ed41297"
+    },
+    {
+      "url": "https://picx.zhimg.com/v2-892c65914b48a9b028f1e522b512c883.png",
+      "final_url": "https://picx.zhimg.com/v2-892c65914b48a9b028f1e522b512c883.png",
+      "local": "assets/picx.zhimg.com/v2-892c65914b48a9b028f1e522b512c883.png",
+      "bytes": 1942,
+      "content_type": "image/png",
+      "sha1": "56d35024777120f3"
+    },
+    {
+      "url": "https://picx.zhimg.com/v2-aa4fada80d2f3653ef6acbac9b87239d.png",
+      "final_url": "https://picx.zhimg.com/v2-aa4fada80d2f3653ef6acbac9b87239d.png",
+      "local": "assets/picx.zhimg.com/v2-aa4fada80d2f3653ef6acbac9b87239d.png",
+      "bytes": 1667,
+      "content_type": "image/png",
+      "sha1": "8aabfbcc417ddeeb"
+    },
+    {
+      "url": "https://picx.zhimg.com/v2-dc9a62f7fa3eccdf70d32ff122adae71.png",
+      "final_url": "https://picx.zhimg.com/v2-dc9a62f7fa3eccdf70d32ff122adae71.png",
+      "local": "assets/picx.zhimg.com/v2-dc9a62f7fa3eccdf70d32ff122adae71.png",
+      "bytes": 1895,
+      "content_type": "image/png",
+      "sha1": "018c8249368d6c3a"
+    },
+    {
+      "url": "https://picx.zhimg.com/v2-a38e7c1432edfa6e5ce40b247f75fdc1.png",
+      "final_url": "https://picx.zhimg.com/v2-a38e7c1432edfa6e5ce40b247f75fdc1.png",
+      "local": "assets/picx.zhimg.com/v2-a38e7c1432edfa6e5ce40b247f75fdc1.png",
+      "bytes": 329,
+      "content_type": "image/png",
+      "sha1": "a4514804a29ed84b"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/assets/new_creator.a4d51e6e.png",
+      "final_url": "https://static.zhihu.com/heifetz/assets/new_creator.a4d51e6e.png",
+      "local": "assets/static.zhihu.com/heifetz/assets/new_creator.a4d51e6e.png",
+      "bytes": 11715,
+      "content_type": "image/png",
+      "sha1": "b0425f6f19b0c149"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/assets/qr-code@2x.73d5b6d5.png",
+      "final_url": "https://static.zhihu.com/heifetz/assets/qr-code@2x.73d5b6d5.png",
+      "local": "assets/static.zhihu.com/heifetz/assets/qr-code@2x.73d5b6d5.png",
+      "bytes": 612,
+      "content_type": "image/png",
+      "sha1": "2a7aafe6f2f4e886"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/assets/sign_bg.47eec442.png",
+      "final_url": "https://static.zhihu.com/heifetz/assets/sign_bg.47eec442.png",
+      "local": "assets/static.zhihu.com/heifetz/assets/sign_bg.47eec442.png",
+      "bytes": 397007,
+      "content_type": "image/png",
+      "sha1": "1a86a1ba3f1b2aa7"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/vendor.92ed966b299812d66d9f.js",
+      "final_url": "https://static.zhihu.com/heifetz/vendor.92ed966b299812d66d9f.js",
+      "local": "assets/static.zhihu.com/heifetz/vendor.92ed966b299812d66d9f.js",
+      "bytes": 226554,
+      "content_type": "application/javascript",
+      "sha1": "cacf44ce960032c0"
+    },
+    {
+      "url": "https://static.zhihu.com/event/react@17.0.2/umd/react.production.min.js",
+      "final_url": "https://static.zhihu.com/event/react@17.0.2/umd/react.production.min.js",
+      "local": "assets/static.zhihu.com/event/react@17.0.2/umd/react.production.min.js",
+      "bytes": 11440,
+      "content_type": "application/javascript",
+      "sha1": "6c05189cc2d08bb2"
+    },
+    {
+      "url": "https://static.zhihu.com/event/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "final_url": "https://static.zhihu.com/event/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "local": "assets/static.zhihu.com/event/react-dom@17.0.2/umd/react-dom.production.min.js",
+      "bytes": 120585,
+      "content_type": "application/javascript",
+      "sha1": "bf08b8ad1ad73c12"
+    },
+    {
+      "url": "https://static.zhihu.com/event/react-dom@17.0.2/umd/react-dom-server.browser.production.min.js",
+      "final_url": "https://static.zhihu.com/event/react-dom@17.0.2/umd/react-dom-server.browser.production.min.js",
+      "local": "assets/static.zhihu.com/event/react-dom@17.0.2/umd/react-dom-server.browser.production.min.js",
+      "bytes": 20330,
+      "content_type": "application/javascript",
+      "sha1": "3eac7a094713fe83"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/runtime.app.1869f13b6fdd707b1390.js",
+      "final_url": "https://static.zhihu.com/heifetz/runtime.app.1869f13b6fdd707b1390.js",
+      "local": "assets/static.zhihu.com/heifetz/runtime.app.1869f13b6fdd707b1390.js",
+      "bytes": 18266,
+      "content_type": "application/javascript",
+      "sha1": "90154081ff1f56c7"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-75fc9c18.app.3db651c252e14ef6658e.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-75fc9c18.app.3db651c252e14ef6658e.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-75fc9c18.app.3db651c252e14ef6658e.js",
+      "bytes": 59072,
+      "content_type": "application/javascript",
+      "sha1": "41a243c750a2d7f6"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-29107295.app.42d07f814b7b05187671.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-29107295.app.42d07f814b7b05187671.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-29107295.app.42d07f814b7b05187671.js",
+      "bytes": 70097,
+      "content_type": "application/javascript",
+      "sha1": "4335b9624c3004d6"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-79b5cf47.app.8b6b6bf4b6d894db9b07.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-79b5cf47.app.8b6b6bf4b6d894db9b07.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-79b5cf47.app.8b6b6bf4b6d894db9b07.js",
+      "bytes": 56538,
+      "content_type": "application/javascript",
+      "sha1": "de9d9a384b771fa9"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-330004dc.app.dd0acc0107ebdb1bc7b8.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-330004dc.app.dd0acc0107ebdb1bc7b8.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-330004dc.app.dd0acc0107ebdb1bc7b8.js",
+      "bytes": 70685,
+      "content_type": "application/javascript",
+      "sha1": "eea817eea7e61bbc"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-fae4f1f9.app.2a53c780e75bf169b2e0.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-fae4f1f9.app.2a53c780e75bf169b2e0.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-fae4f1f9.app.2a53c780e75bf169b2e0.js",
+      "bytes": 35487,
+      "content_type": "application/javascript",
+      "sha1": "dffdb64508228841"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-f3572862.app.6a0660d646c34c296ccc.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-f3572862.app.6a0660d646c34c296ccc.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-f3572862.app.6a0660d646c34c296ccc.js",
+      "bytes": 52211,
+      "content_type": "application/javascript",
+      "sha1": "4a53e3b4b4aa27b5"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-0e5ce61e.app.e94cd4d937158eb6ccc8.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-0e5ce61e.app.e94cd4d937158eb6ccc8.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-0e5ce61e.app.e94cd4d937158eb6ccc8.js",
+      "bytes": 58728,
+      "content_type": "application/javascript",
+      "sha1": "0b275587c2724974"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-83b0f42f.app.4420ca5f1ac8e00bb273.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-83b0f42f.app.4420ca5f1ac8e00bb273.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-83b0f42f.app.4420ca5f1ac8e00bb273.js",
+      "bytes": 34754,
+      "content_type": "application/javascript",
+      "sha1": "c6d1add6ed8428a5"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-38cf5c11.app.390d073dac2efddf629b.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-38cf5c11.app.390d073dac2efddf629b.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-38cf5c11.app.390d073dac2efddf629b.js",
+      "bytes": 37951,
+      "content_type": "application/javascript",
+      "sha1": "cf5bf1ed247c6d9b"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-2ec050f6.app.bab17b62fce0eb964af4.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-2ec050f6.app.bab17b62fce0eb964af4.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-2ec050f6.app.bab17b62fce0eb964af4.js",
+      "bytes": 43205,
+      "content_type": "application/javascript",
+      "sha1": "0a298519aaec5ef3"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/lib-9b20c40c.app.196be891f10931dae13e.js",
+      "final_url": "https://static.zhihu.com/heifetz/lib-9b20c40c.app.196be891f10931dae13e.js",
+      "local": "assets/static.zhihu.com/heifetz/lib-9b20c40c.app.196be891f10931dae13e.js",
+      "bytes": 45229,
+      "content_type": "application/javascript",
+      "sha1": "d24f9ea1a19cec82"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/3964.app.87e6f55905f6c1c386fc.js",
+      "final_url": "https://static.zhihu.com/heifetz/3964.app.87e6f55905f6c1c386fc.js",
+      "local": "assets/static.zhihu.com/heifetz/3964.app.87e6f55905f6c1c386fc.js",
+      "bytes": 3537383,
+      "content_type": "application/javascript",
+      "sha1": "b87f25bd0db5d45b"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/main.app.e52f6c0695f891b05caa.js",
+      "final_url": "https://static.zhihu.com/heifetz/main.app.e52f6c0695f891b05caa.js",
+      "local": "assets/static.zhihu.com/heifetz/main.app.e52f6c0695f891b05caa.js",
+      "bytes": 2649774,
+      "content_type": "application/javascript",
+      "sha1": "87ad60ec221fb5c6"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/chunks/shared-1dffcf43329e08de9bcf385e1895bae6667163e6.8761cf1ec3d8a31ee5e1.js",
+      "final_url": "https://static.zhihu.com/heifetz/chunks/shared-1dffcf43329e08de9bcf385e1895bae6667163e6.8761cf1ec3d8a31ee5e1.js",
+      "local": "assets/static.zhihu.com/heifetz/chunks/shared-1dffcf43329e08de9bcf385e1895bae6667163e6.8761cf1ec3d8a31ee5e1.js",
+      "bytes": 52524,
+      "content_type": "application/javascript",
+      "sha1": "56e0e35807fadf27"
+    },
+    {
+      "url": "https://static.zhihu.com/heifetz/chunks/main-signin-routes.e0ee883225aecc82ad90.js",
+      "final_url": "https://static.zhihu.com/heifetz/chunks/main-signin-routes.e0ee883225aecc82ad90.js",
+      "local": "assets/static.zhihu.com/heifetz/chunks/main-signin-routes.e0ee883225aecc82ad90.js",
+      "bytes": 5291,
+      "content_type": "application/javascript",
+      "sha1": "39f1e283b32f5f77"
+    },
+    {
+      "url": "https://static.zhihu.com/event/wza/4633_1/aria.js?appid=a3637ace5dc3a347f6863b0bac487599",
+      "final_url": "https://static.zhihu.com/event/wza/4633_1/aria.js?appid=a3637ace5dc3a347f6863b0bac487599",
+      "local": "assets/static.zhihu.com/event/wza/4633_1/aria__95001376.js",
+      "bytes": 388356,
+      "content_type": "application/javascript",
+      "sha1": "0b7c40026ae2749b"
+    },
+    {
+      "url": "https://hm.baidu.com/hm.js?98beee57fd2ef70ccdd5ca52b9740c49",
+      "final_url": "https://hm.baidu.com/hm.js?98beee57fd2ef70ccdd5ca52b9740c49",
+      "local": "assets/hm.baidu.com/hm__8da521e7.js",
+      "bytes": 29895,
+      "content_type": "application/javascript",
+      "sha1": "19656b118c39634b"
+    }
+  ],
+  "failed": [],
+  "status": "OK",
+  "final_url": "https://www.zhihu.com/signin?next=%2F",
+  "http_charset": "utf-8",
+  "entry_bytes": 46328,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 46384,
+  "assets": 37,
+  "asset_bytes": 8630625,
+  "image_sizes": 12,
+  "elapsed_s": 18.51
+}

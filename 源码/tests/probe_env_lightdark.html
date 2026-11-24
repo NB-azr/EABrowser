@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+#a{width:env(safe-area-inset-left);height:10px}
+#b{width:env(safe-area-inset-left, 20px);height:10px}
+#c{width:calc(100px + env(safe-area-inset-top));height:10px}
+#d{width:env(unknown-name, 10px);height:10px}
+#e{width:env(unknown-name);height:10px}
+#f{color:light-dark(rgb(255,0,0), rgb(0,0,255))}
+#g{color:light-dark(#123456, #abcdef)}
+#h{background-color:light-dark(rgb(255,255,255), rgb(0,0,0))}
+</style></head><body>
+<div id="a"></div><div id="b"></div><div id="c"></div><div id="d"></div><div id="e"></div>
+<div id="f">f</div><div id="g">g</div><div id="h">h</div>
+<script>
+var ids=['a','b','c','d','e'];
+for(var i=0;i<ids.length;i++) console.log('[N1] '+ids[i]+' width='+getComputedStyle(document.getElementById(ids[i])).width);
+console.log('[N1] f color='+getComputedStyle(document.getElementById('f')).color);
+console.log('[N1] g color='+getComputedStyle(document.getElementById('g')).color);
+console.log('[N1] h bg='+getComputedStyle(document.getElementById('h')).backgroundColor);
+console.log('[N1] supports env='+CSS.supports('width','env(safe-area-inset-top)')+
+  ' light-dark='+CSS.supports('color','light-dark(red, blue)'));
+</script></body></html>

@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  .inside { color: rgb(1,2,3); }
+  #host { border: 1px solid #000; }
+</style></head><body>
+<div id="host"><span slot="s" id="light">LIGHT-DOM</span><b id="unassigned">UNASSIGNED</b></div>
+<script>
+var host = document.getElementById('host');
+var sr = host.attachShadow({ mode: 'open' });
+sr.innerHTML = '<style>:host { background-color: rgb(10,20,30); } ::slotted(span) { color: rgb(200,50,50); } .inside { color: rgb(0,128,0); }</style>'
+             + '<div class="inside" id="inside">INSIDE</div><slot name="s"></slot>';
+var inside = sr.querySelector('#inside');
+console.log('P1 shadowRoot=' + (host.shadowRoot === sr) + ' hostProp=' + (sr.host === host) + ' mode=' + sr.mode);
+var slot = sr.querySelector('slot');
+console.log('P2 slotFound=' + (slot !== null) + ' assigned=' + (document.getElementById('light').assignedSlot === slot) +
+            ' assignedNodes=' + (slot ? slot.assignedNodes().length : -1) + ' assignedElements=' + (slot ? slot.assignedElements().length : -1) +
+            ' slotName=' + (slot ? slot.name : '?') );
+console.log('P3 rootNode inside=' + (inside.getRootNode() === sr) + ' hostRoot=' + (host.getRootNode() === document) +
+            ' docQueryLeak=' + (document.getElementById('inside') !== null));
+var hostBg = getComputedStyle(host).backgroundColor;
+var insideColor = getComputedStyle(inside).color;
+var lightColor = getComputedStyle(document.getElementById('light')).color;
+console.log('P4 hostBg=' + hostBg + ' insideColor=' + insideColor + ' slottedColor=' + lightColor);
+var seen = [];
+sr.addEventListener('click', function(e){ seen.push('sr:' + (e.target.id || e.target.nodeName) + ':' + e.composedPath().length); });
+host.addEventListener('click', function(e){ seen.push('host:' + (e.target.id || e.target.nodeName) + ':' + e.composedPath().length); });
+document.addEventListener('click', function(e){ seen.push('doc:' + (e.target.id || e.target.nodeName)); });
+inside.dispatchEvent(new Event('click', { bubbles: true, composed: true }));
+console.log('P5 composedEvents=' + seen.join(','));
+var seen2 = [];
+sr.addEventListener('ping', function(e){ seen2.push('sr'); });
+host.addEventListener('ping', function(e){ seen2.push('host'); });
+inside.dispatchEvent(new Event('ping', { bubbles: true, composed: false }));
+console.log('P6 nonComposedPath=' + seen2.join(','));
+console.log('P7 slotFallback=' + (sr.querySelector('slot') ? 'ok' : 'no'));
+console.log('P8 hostTextLen=' + host.textContent.length + ' unassignedInFlat=' + (sr.querySelector('#unassigned') === null));
+var st = sr.querySelector('style');
+console.log('P9 styleTextLen=' + (st ? st.textContent.length : -1) + ' head=' + (st ? st.textContent.slice(0, 24) : 'none'));
+console.log('P10 computedColor=' + getComputedStyle(inside).getPropertyValue('color') +
+             ' hostBgProp=' + getComputedStyle(host).getPropertyValue('background-color'));
+var s2 = document.createElement('style');
+s2.textContent = ':host { background-color: rgb(10,20,30); } .inside { color: rgb(0,128,0); } ::slotted(span) { color: rgb(200,50,50); }';
+sr.appendChild(s2);
+var hostBg2 = getComputedStyle(host).backgroundColor;
+var insColor2 = getComputedStyle(inside).color;
+var lightColor2 = getComputedStyle(document.getElementById('light')).color;
+console.log('P11 appendedStyle hostBg=' + hostBg2 + ' inside=' + insColor2 + ' slotted=' + lightColor2);
+var names = [];
+for (var i = 0; i != sr.children.length; i++) names.push((sr.children[i].tagName || '?') + '#' + (sr.children[i].id || ''));
+console.log('P12 shadowChildren=' + names.join('|'));
+</script></body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>cjk</title></head><body>
+<script>
+function bytes(h){ var a=new Uint8Array(h.length/2); for(var i=0,n=a.length;i!=n;i++){ a[i]=parseInt(h.substr(i*2,2),16); } return a; }
+var R={};
+try{
+  R.gbk = new TextDecoder('gbk').decode(bytes('d6d0cec4b2e2cad4'));
+  R.gbk_expected = '\u4e2d\u6587\u6d4b\u8bd5';
+  R.gb2312_name = new TextDecoder('gb2312').encoding;
+  R.euccn_name = new TextDecoder('euc-cn').encoding;
+  R.gb2312_text = new TextDecoder('gb2312').decode(bytes('d6d0cec4'));
+  R.big5 = new TextDecoder('big5').decode(bytes('a4a4a4e5b4fab8d5'));
+  R.big5_expected = '\u4e2d\u6587\u6e2c\u8a66';
+  R.big5_name = new TextDecoder('big5-hkscs').encoding;
+  R.gb18030_2b = new TextDecoder('gb18030').decode(bytes('d6d0cec4'));
+  R.gb18030_4b = new TextDecoder('gb18030').decode(bytes('9439fc36'));
+  R.gb18030_expected = '\ud83d\ude00';
+  R.gbk_on_4b = new TextDecoder('gbk').decode(bytes('9439fc36'));
+  R.euro = new TextDecoder('gbk').decode(bytes('80'));
+  R.invalid_soft = new TextDecoder('gbk').decode(bytes('ff'));
+  R.big5_invalid_soft = new TextDecoder('big5').decode(bytes('ff'));
+  try { new TextDecoder('gbk',{fatal:true}).decode(bytes('ff')); R.fatal='NO-THROW'; }
+  catch(e){ R.fatal = e.name + ':' + e.message; }
+  R.ok_utf8 = new TextDecoder().decode(bytes('e4b8ade69687'));
+}catch(e){ R.error = String(e) + '\n' + (e.stack||''); }
+window.__R = R;
+</script>
+</body></html>

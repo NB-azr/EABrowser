@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>UA 档位 -> 布局与缩放</title>
+<style>
+  body { margin: 0; background: #0f172a; color: #e2e8f0; font: 16px/1.4 sans-serif; }
+  .pct   { width: 50%; height: 40px; background: #3b82f6; }
+  .fixed { width: 300px; height: 30px; background: #ef4444; }
+  .media { display: none; }
+  @media (min-width: 900px) {
+    .media { display: block; width: 200px; height: 30px; background: #22c55e; }
+  }
+</style>
+</head>
+<body>
+  <!-- 百分比块：手机 UA 下 200px；电脑 UA 布局宽 1280 时 640px，但宿主按 pageScale 缩小后视觉更小 -->
+  <div id="pct" class="pct"></div>
+  <!-- 固定 300px：电脑 UA 下 300 CSS px 会被缩放到约 94 设备像素，看起来明显变小 -->
+  <div id="fixed" class="fixed"></div>
+  <!-- 媒体查询只在桌面视口出现 -->
+  <div id="media" class="media"></div>
+  <p id="hint">手机 UA: 视口=设备宽，元素按手机排版；电脑 UA: 视口≈1280，整体缩小。</p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>WebAssembly MVP 测试</title></head>
+<body>
+<div id="log"></div>
+<script>
+window.__R = 'pending';
+var OUT = [], FAILS = 0, TOTAL = 0;
+function log(s) {
+    OUT.push(String(s));
+    var d = document.getElementById('log');
+    if (d) d.textContent = OUT.join('\n');
+}
+function ck(name, cond, extra) {
+    TOTAL++;
+    if (cond) {
+        OUT.push('PASS ' + name + (extra === undefined ? '' : ' (' + extra + ')'));
+    } else {
+        FAILS++;
+        OUT.push('FAIL ' + name + (extra === undefined ? '' : ' got=' + extra));
+    }
+}
+function baseDir() {
+    var h = String(location.href || '');
+    h = h.replace(/\\/g, '/');
+    return h.substring(0, h.lastIndexOf('/') + 1);
+}
+var hostCalls = [];
+var IMPORTS = { env: { log: function (x) { hostCalls.push(x); return x * 2; } } };
+
+fetch('ea://file?path=' + encodeURIComponent(baseDir() + 'fixtures/wasm_demo.wasm'))
+    .then(function (res) { return res.arrayBuffer(); })
+    .then(function (ab) {
+        window.__AB = ab;
+        ck('wasm-bytes', ab.byteLength === 421, ab.byteLength);
+        ck('validate', WebAssembly.validate(ab) === true);
+        ck('validate-bad', WebAssembly.validate(new Uint8Array(8)) === false);
+        return WebAssembly.instantiate(ab, IMPORTS);
+    })
+    .then(function (r) {
+        var ex = r.instance.exports;
+        ck('instantiate-module', !!r.module);
+        ck('export-count', WebAssembly.Module.exports(r.module).length === 13,
+           WebAssembly.Module.exports(r.module).length);
+
+        ck('add', ex.add(1, 2) === 3, ex.add(1, 2));
+        ck('add-neg', ex.add(-5, 3) === -2, ex.add(-5, 3));
+        ck('sum_to', ex.sum_to(100) === 5050, ex.sum_to(100));
+        ck('fact-rec', ex.fact(5) === 120, ex.fact(5));
+        ck('fact-10', ex.fact(10) === 3628800, ex.fact(10));
+        ck('mul64-i64', String(ex.mul64(8589934592n, 3n)) === '25769803776',
+           String(ex.mul64(8589934592n, 3n)));
+        ck('fadd-f32', Math.abs(Number(ex.fadd(1.5, 2.25)) - 3.75) < 1e-6,
+           Number(ex.fadd(1.5, 2.25)));
+        ck('dmul-f64', Math.abs(Number(ex.dmul(2.5, 4)) - 10) < 1e-9,
+           Number(ex.dmul(2.5, 4)));
+
+        var u8 = new Uint8Array(ex.memory.buffer);
+        ck('memory-size', u8.length === 65536, u8.length);
+        ck('data-seg', u8[0] === 1 && u8[4] === 2 && u8[8] === 3 && u8[12] === 4,
+           u8[0] + ',' + u8[4] + ',' + u8[8] + ',' + u8[12]);
+        ck('getmem', ex.getmem(0) === 1 && ex.getmem(3) === 4,
+           ex.getmem(0) + ',' + ex.getmem(3));
+        ck('setmem', ex.setmem(1, 7) === 7, ex.setmem(1, 7));
+        ck('memsum', ex.memsum(4) === 15, ex.memsum(4));
+
+        var oldPages = ex.memory.grow(1);
+        ck('memory-grow', oldPages === 1 && ex.memory.buffer.byteLength === 131072,
+           oldPages + '/' + ex.memory.buffer.byteLength);
+
+        ck('global-read', ex.gcount.value === 42, ex.gcount.value);
+        ex.gcount.value = 100;
+        ck('global-write', ex.get_global() === 100, ex.get_global());
+
+        ck('import-call', ex.call_host(21) === 43, ex.call_host(21));
+        ck('import-arg', hostCalls.length > 0 && hostCalls[0] === 21,
+           hostCalls.join(','));
+
+        ck('arg-coerce', ex.add('x', 2) === 2, ex.add('x', 2));
+
+        return WebAssembly.compile(window.__AB).then(function (mod) {
+            ck('module-ctor', mod instanceof WebAssembly.Module);
+            var names = WebAssembly.Module.exports(mod).map(function (o) { return o.name; });
+            ck('module-exports', names.indexOf('memory') >= 0 && names.indexOf('gcount') >= 0,
+               names.length);
+            return WebAssembly.instantiate(mod, IMPORTS).then(function (r2) {
+                ck('reuse-module', r2.instance.exports.add(40, 2) === 42,
+                   r2.instance.exports.add(40, 2));
+            });
+        });
+    })
+    .then(function () {
+        window.__R = 'PASS ' + (TOTAL - FAILS) + '/' + TOTAL + ' | ' + OUT.join(' | ');
+        log('DONE');
+    })
+    .catch(function (e) {
+        window.__R = 'ERR ' + (e && e.message ? e.message : e);
+        log(window.__R);
+    });
+</script>
+</body></html>

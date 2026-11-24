@@ -1,0 +1,231 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='900'>
+<defs><filter id='b'><feGaussianBlur stdDeviation='6'/></filter></defs>
+<rect width='100%' height='100%' fill='#FFFFFF'/>
+<rect x='0' y='0' width='1280' height='900' rx='0' fill='#F4F6F9' fill-opacity='1'/>
+<rect x='0' y='0' width='1280' height='900' rx='0' fill='#B8E5F8' fill-opacity='1'/>
+<rect x='576' y='0' width='128' height='81' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='0' y='105' width='1280' height='121' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<text x='97.295' y='219' font-size='16' fill='#373A40' font-family='sans-serif'>打开知乎App</text>
+<text x='45.527' y='248' font-size='14' fill='#373A40' font-family='sans-serif'>在「我的页」右上角打开扫一扫</text>
+<rect x='122.527' y='375' width='6' height='6' rx='3' fill='#1772F6' fill-opacity='1'/>
+<rect x='140.527' y='375' width='6' height='6' rx='3' fill='#1772F6' fill-opacity='1'/>
+<rect x='158.527' y='375' width='6' height='6' rx='3' fill='#1772F6' fill-opacity='1'/>
+<text x='80.527' y='516' font-size='14' fill='#373A40' font-family='sans-serif'>其他扫码方式：微信</text>
+<rect x='16.853' y='529.5' width='123.348' height='48' rx='24' fill='#1772F6' fill-opacity='1'/>
+<rect x='16.853' y='529.5' width='123.348' height='48' rx='24' fill='none' stroke='#EBEBEB' stroke-width='1'/>
+<text x='50.525' y='546.5' font-size='12' fill='#373A40' font-family='sans-serif'>下载知乎A</text>
+<text x='71.855' y='565.5' font-size='12' fill='#373A40' font-family='sans-serif'>pp</text>
+<rect x='148.201' y='529.5' width='122' height='29' rx='14.5' fill='#1772F6' fill-opacity='1'/>
+<rect x='148.201' y='529.5' width='122' height='29' rx='14.5' fill='none' stroke='#EBEBEB' stroke-width='1'/>
+<text x='179.201' y='546.5' font-size='12' fill='#373A40' font-family='sans-serif'>无障碍模式</text>
+<rect x='287.054' y='105' width='1' height='121' rx='0' fill='#EBECED' fill-opacity='1'/>
+<rect x='287.054' y='105' width='400' height='581.5' rx='2' fill='#FFFFFF' fill-opacity='1'/>
+<text x='311.054' y='137' font-size='16' fill='#191B1F' font-family='sans-serif'>验证码登录</text>
+<rect x='311.054' y='164' width='328' height='3' rx='0' fill='#1772F6' fill-opacity='1'/>
+<text x='311.054' y='186' font-size='16' fill='#373A40' font-family='sans-serif'>密码登录</text>
+<text x='593.054' y='135' font-size='14' fill='#09408E' font-family='sans-serif'>开通机构号</text>
+<rect x='311.054' y='312' width='352' height='1' rx='0' fill='#EBECED' fill-opacity='1'/>
+<rect x='311.054' y='289' width='352' height='44' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<text x='311.054' y='303' font-size='14' fill='#999999' font-family='sans-serif'>手机号</text>
+<rect x='311.054' y='289' width='352' height='16.1' rx='0' fill='#FFFFFF' fill-opacity='0'/>
+<rect x='311.054' y='367' width='352' height='1' rx='0' fill='#EBECED' fill-opacity='1'/>
+<rect x='311.054' y='324' width='352' height='44' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<text x='311.054' y='338' font-size='14' fill='#999999' font-family='sans-serif'>输入 6 位短信验证码</text>
+<rect x='311.054' y='324' width='352' height='16.1' rx='0' fill='#FFFFFF' fill-opacity='0'/>
+<text x='565.054' y='366' font-size='14' fill='#09408E' font-family='sans-serif'>获取短信验证码</text>
+<text x='607.054' y='394' font-size='14' fill='#373A40' font-family='sans-serif'>忘记密码</text>
+<rect x='311.054' y='462' width='376' height='38' rx='3' fill='#1772F6' fill-opacity='1'/>
+<rect x='311.054' y='462' width='386' height='38' rx='3' fill='none' stroke='#1772F6' stroke-width='1'/>
+<text x='474.108' y='477' font-size='14' fill='#FFFFFF' font-family='sans-serif'>登录/注册</text>
+<rect x='311.054' y='517.25' width='124' height='1' rx='0' fill='#CCCCCC' fill-opacity='1'/>
+<text x='451.054' y='529.375' font-size='12' fill='#9196A1' font-family='sans-serif'>其他方式登录</text>
+<rect x='539.054' y='517.25' width='124' height='1' rx='0' fill='#CCCCCC' fill-opacity='1'/>
+<rect x='287.054' y='546.5' width='36' height='36' rx='18' fill='#F8F8FA' fill-opacity='1'/>
+<rect x='318.654' y='557.834' width='5.14835' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='316.972' y='558.764' width='8.51242' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.983' y='559.694' width='10.4914' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.387' y='560.624' width='11.683' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.041' y='561.554' width='12.3761' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='314.923' y='562.484' width='12.6126' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='314.998' y='563.414' width='12.4791' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.272' y='564.345' width='11.9411' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.781' y='565.275' width='10.9172' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='316.597' y='566.205' width='9.28461' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='317.969' y='567.135' width='7.25403' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='324.465' y='568.065' width='1.0076' height='1.43008' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='311.265' y='552.013' width='5.73932' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='309.386' y='552.97' width='9.54691' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='308.245' y='553.927' width='11.8314' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='307.487' y='554.883' width='13.3408' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='306.986' y='555.84' width='14.3439' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='306.683' y='556.797' width='14.9359' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='306.567' y='557.754' width='10.987' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='306.63' y='558.711' width='9.54178' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='306.881' y='559.667' width='8.4342' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='307.324' y='560.624' width='7.43552' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='308.015' y='561.581' width='6.41724' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='309.046' y='562.538' width='5.27124' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='309.288' y='563.494' width='5.10358' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='309.031' y='564.451' width='1.0947' height='1.45679' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='318.363' y='560.576' width='1.42993' height='1.3425' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='318.363' y='561.418' width='1.42929' height='1.3425' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='322.58' y='560.576' width='1.42993' height='1.3425' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='322.58' y='561.418' width='1.42929' height='1.3425' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='310.85' y='555.304' width='1.47992' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='310.587' y='555.978' width='2.00803' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='310.85' y='556.653' width='1.47986' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.911' y='555.304' width='1.47992' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.648' y='555.978' width='2.008' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='315.911' y='556.653' width='1.47986' height='1.17434' rx='0' fill='#07C160' fill-opacity='1'/>
+<rect x='371.054' y='546.5' width='36' height='36' rx='18' fill='#F8F8FA' fill-opacity='1'/>
+<rect x='398.658' y='550.5' width='4.7984' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='396.995' y='551.5' width='8.1235' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='396.096' y='552.499' width='9.91946' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='395.526' y='553.499' width='11.0593' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='395.183' y='554.499' width='11.746' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.927' y='555.499' width='12.2581' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.839' y='556.498' width='12.4332' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.767' y='557.498' width='12.578' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.767' y='558.498' width='12.578' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.324' y='559.497' width='13.4648' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='393.907' y='560.497' width='14.2979' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='393.528' y='561.497' width='15.0575' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='393.19' y='562.497' width='15.7328' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='392.905' y='563.496' width='16.3035' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='392.693' y='564.496' width='1.90027' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.63' y='564.496' width='12.8532' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='407.521' y='564.496' width='1.90021' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='392.605' y='565.496' width='1.35605' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.748' y='565.496' width='12.6179' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='408.153' y='565.496' width='1.3562' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='392.876' y='566.496' width='0.0201416' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='395.088' y='566.496' width='11.9381' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='409.216' y='566.496' width='0.0200195' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='395.698' y='567.495' width='10.717' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='396.226' y='568.495' width='9.66116' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='394.792' y='569.495' width='12.5281' height='1.49973' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='455.054' y='546.5' width='36' height='36' rx='18' fill='#F8F8FA' fill-opacity='1'/>
+<rect x='488.246' y='551.56' width='4.20105' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='488.396' y='552.5' width='5.67441' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='492.142' y='553.44' width='2.80176' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='493.192' y='554.381' width='2.25372' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='493.77' y='555.321' width='1.98169' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='494.076' y='556.261' width='1.88785' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='494.235' y='557.201' width='1.79758' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='494.263' y='558.141' width='1.76163' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='494.292' y='559.082' width='1.52087' height='1.44021' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='488.609' y='554.727' width='2.97113' height='1.36034' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='488.889' y='555.587' width='3.49246' height='1.36034' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='491.002' y='556.448' width='1.69772' height='1.36034' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='491.287' y='557.308' width='1.49557' height='1.36034' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='491.324' y='558.168' width='1.33307' height='1.36034' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='481.136' y='553.831' width='3.23337' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.369' y='554.808' width='5.64957' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='478.118' y='555.784' width='6.93295' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='477.135' y='556.76' width='7.65823' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='485.236' y='556.76' width='4.4104' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.18' y='557.736' width='14.1837' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='475.52' y='558.713' width='14.8723' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.884' y='559.689' width='15.1029' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.51' y='560.665' width='17.635' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.208' y='561.642' width='18.5116' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.088' y='562.618' width='18.7347' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.134' y='563.594' width='18.5209' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.334' y='564.571' width='17.8529' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='474.736' y='565.547' width='16.7263' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='475.507' y='566.523' width='14.9393' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.928' y='567.499' width='12.0988' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.515' y='568.476' width='7.18234' height='1.4763' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='480.334' y='559.605' width='5.83099' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='478.385' y='560.535' width='9.27182' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='477.409' y='561.464' width='10.9291' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.854' y='562.394' width='11.839' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.586' y='563.324' width='12.2339' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.589' y='564.253' width='11.951' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='476.902' y='565.183' width='11.1029' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='477.652' y='566.113' width='9.47092' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.266' y='567.042' width='6.03326' height='1.42967' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='480.728' y='561.112' width='3.77283' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.689' y='561.99' width='5.75162' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.212' y='562.867' width='6.62405' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='478.98' y='563.745' width='6.9693' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='478.993' y='564.623' width='6.79999' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='479.355' y='565.501' width='5.98279' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='480.307' y='566.378' width='4.00363' height='1.37771' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='480.419' y='563.713' width='2.09018' height='1.49799' rx='0' fill='#FB6622' fill-opacity='1'/>
+<rect x='480.42' y='564.711' width='2.09045' height='1.49799' rx='0' fill='#FB6622' fill-opacity='1'/>
+<text x='311.054' y='630.5' font-size='12' fill='#9196A1' font-family='sans-serif'>未注册手机验证后自动登录，注册即代表同意</text>
+<text x='551.054' y='630.5' font-size='12' fill='#1A0DAB' font-family='sans-serif'>《知乎协议》</text>
+<text x='311.054' y='649.5' font-size='12' fill='#1A0DAB' font-family='sans-serif'>《隐私保护指引》</text>
+<text x='568' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>北京智者天下科技有限公司</text>
+<text x='568' y='238' font-size='12' fill='#FFFFFF' font-family='sans-serif'>北京智者天下科技有限公司</text>
+<text x='633.328' y='238' font-size='12' fill='#FFFFFF' font-family='sans-serif'> · </text>
+<text x='773.344' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>知乎专栏</text>
+<text x='773.344' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>知乎专栏</text>
+<text x='790.672' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='846.688' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>圆桌</text>
+<text x='846.688' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>圆桌</text>
+<text x='852.016' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='884.032' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>发现</text>
+<text x='884.032' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>发现</text>
+<text x='889.36' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='909.376' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>移动应用</text>
+<text x='909.376' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>移动应用</text>
+<text x='926.704' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='970.72' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>联系我们</text>
+<text x='970.72' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>联系我们</text>
+<text x='988.048' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='1026.06' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>来知乎工作</text>
+<text x='1026.06' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>来知乎工作</text>
+<text x='1049.39' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='1099.41' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>注册机构号</text>
+<text x='1099.41' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>注册机构号</text>
+<text x='1122.74' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='1154.73' y='239' font-size='12' fill='#FFFFFF' font-family='sans-serif'>Investor Relations</text>
+<text x='1154.73' y='238' font-size='12' fill='#1A0DAB' font-family='sans-serif'>Investor Relations</text>
+<text x='634.996' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>© </text>
+<text x='634.996' y='259' font-size='12' fill='#FFFFFF' font-family='sans-serif'>© </text>
+<text x='626.656' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>2026</text>
+<text x='626.656' y='259' font-size='12' fill='#FFFFFF' font-family='sans-serif'>2026</text>
+<text x='626.332' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'> 知乎</text>
+<text x='626.332' y='259' font-size='12' fill='#FFFFFF' font-family='sans-serif'> 知乎</text>
+<text x='633.328' y='259' font-size='12' fill='#FFFFFF' font-family='sans-serif'> · </text>
+<text x='669.358' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>京ICP证110745号</text>
+<text x='669.358' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'>京ICP证110745号</text>
+<text x='710.704' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='766.732' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>京ICP备13052560号-1</text>
+<text x='766.732' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'>京ICP备13052560号-1</text>
+<text x='820.084' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<rect x='320.148' y='247' width='20' height='20' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='874.108' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>京公网安备 11010802020088 号</text>
+<text x='874.108' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'>京公网安备 11010802020088 号</text>
+<text x='953.476' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='1050.88' y='260' font-size='12' fill='#FFFFFF' font-family='sans-serif'>互联网新闻信息服务许可证：11220250001</text>
+<text x='1050.88' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'>互联网新闻信息服务许可证：11220250001</text>
+<text x='1158.9' y='259' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='441.976' y='281' font-size='12' fill='#FFFFFF' font-family='sans-serif'>药品医疗器械网络信息服务备案（京）网药械信息备字（2022）第00334号</text>
+<text x='441.976' y='280' font-size='12' fill='#1A0DAB' font-family='sans-serif'>药品医疗器械网络信息服务备案（京）网药械信息备字（2022）第00334号</text>
+<text x='507.652' y='302' font-size='12' fill='#FFFFFF' font-family='sans-serif'>广播电视节目制作经营许可证:（京）字第06591号</text>
+<text x='507.652' y='301' font-size='12' fill='#1A0DAB' font-family='sans-serif'>广播电视节目制作经营许可证:（京）字第06591号</text>
+<text x='633.328' y='301' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='785.344' y='302' font-size='12' fill='#FFFFFF' font-family='sans-serif'>互联网宗教信息服务许可证：京（2022）0000078</text>
+<text x='785.344' y='301' font-size='12' fill='#1A0DAB' font-family='sans-serif'>互联网宗教信息服务许可证：京（2022）0000078</text>
+<text x='616' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>侵权举报</text>
+<text x='616' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'>侵权举报</text>
+<text x='633.328' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='641.344' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>网上有害信息举报专区</text>
+<text x='641.344' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'>网上有害信息举报专区</text>
+<text x='694.672' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='774.688' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>儿童色情信息举报专区</text>
+<text x='774.688' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'>儿童色情信息举报专区</text>
+<text x='828.016' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='902.032' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>互联网算法推荐举报专区</text>
+<text x='902.032' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'>互联网算法推荐举报专区</text>
+<text x='961.36' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'> · </text>
+<text x='1014.68' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>违法和不良信息举报：010-82716601</text>
+<text x='1014.68' y='322' font-size='12' fill='#FFFFFF' font-family='sans-serif'>违法和不良信息举报：010-82716601</text>
+<text x='1106.7' y='322' font-size='12' fill='#FFFFFF' font-family='sans-serif'> · </text>
+<text x='1246' y='323' font-size='12' fill='#FFFFFF' font-family='sans-serif'>举报邮箱：jubao@zhihu.com</text>
+<text x='1246' y='322' font-size='12' fill='#1A0DAB' font-family='sans-serif'>举报邮箱：jubao@zhihu.com</text>
+<rect x='0' y='351' width='80' height='38' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+</svg>

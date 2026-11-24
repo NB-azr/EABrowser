@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  body{margin:0}
+  .row{background:#eee}
+  #a { width: calc(50% - 10px); height: 20px; background:#c33; }
+  #b { width: min(50%, 300px);   height: 20px; background:#3c3; }
+  #d { width: min(50%, 300px);   height: 20px; background:#33c; }
+  #e { height: min(50%, 200px);  background:#cc3; }
+</style>
+</head><body>
+<div class="row" id="c1" style="width:600px">
+  <div id="a"></div>
+  <div id="b"></div>
+</div>
+<div class="row" id="c2" style="width:400px">
+  <div id="d"></div>
+</div>
+<div class="row" id="c3" style="width:600px;height:400px">
+  <div id="e"></div>
+</div>
+<script>
+(function(){
+  function r(id){ var b=document.getElementById(id).getBoundingClientRect(); return id+'='+Math.round(b.width)+'x'+Math.round(b.height); }
+  console.log('[CALC] ' + r('a') + ' ' + r('b') + ' ' + r('d') + ' ' + r('e'));
+})();
+</script>
+</body></html>

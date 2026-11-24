@@ -1,0 +1,61 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>observers</title>
+<style>html,body{margin:0}#in{height:100px;background:#ddd}#far{height:100px;margin-top:900px;background:#bbb}</style>
+<div id="in">in</div>
+<div id="far">far</div>
+<script>
+window.__log = [];
+window.__raf = [];
+window.__rafNow = [];
+window.__moLog = [];
+function rec(tag, es) {
+  window.__log.push(tag + ":" + es.map(function (e) {
+    return (e.target.id || "?") + "=" + e.isIntersecting + "/" + e.intersectionRatio.toFixed(2);
+  }).join(","));
+}
+var inEl = document.getElementById("in");
+var farEl = document.getElementById("far");
+
+var io0 = new IntersectionObserver(function (es) { rec("io0", es); });
+io0.observe(inEl);
+io0.observe(farEl);
+
+var io1 = new IntersectionObserver(function (es) { rec("io1", es); },
+  { rootMargin: "0px 0px 450px 0px", threshold: 0.5 });
+io1.observe(farEl);
+
+window.__log.push("th=" + JSON.stringify(io1.thresholds) + " rm=" + io1.rootMargin);
+window.__log.push("take=" + io0.takeRecords().length);
+
+/* MutationObserver：属性旧值 / childList / characterData */
+var mo = new MutationObserver(function (rs) {
+  window.__moLog.push(rs.map(function (r) {
+    return r.type + (r.attributeName ? ":" + r.attributeName : "") +
+      (r.oldValue !== null && r.oldValue !== undefined ? ":" + r.oldValue : "");
+  }).join("|"));
+});
+mo.observe(inEl, {
+  attributes: true, attributeOldValue: true, attributeFilter: ["data-x"],
+  childList: true, subtree: true, characterData: true, characterDataOldValue: true
+});
+inEl.setAttribute("data-x", "1");
+inEl.setAttribute("data-x", "2");
+var tn = document.createTextNode("t");
+inEl.appendChild(tn);
+inEl.firstChild.textContent = "u";
+window.__moTake = mo.takeRecords().length;
+inEl.setAttribute("data-x", "3");
+
+/* rAF：时间戳应与 performance.now() 同源 */
+var t0 = performance.now();
+requestAnimationFrame(function (ts) {
+  window.__raf.push(ts - t0);
+  window.__rafNow.push(performance.now() - ts);
+  requestAnimationFrame(function (ts2) {
+    window.__raf.push(ts2 - ts);
+    window.__rafNow.push(performance.now() - ts2);
+    window.__rafDone = 1;
+  });
+});
+</script>

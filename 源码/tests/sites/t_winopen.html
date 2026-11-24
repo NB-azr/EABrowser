@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>window.open / performance.timing 自检</title>
+<style>
+body{margin:0;padding:16px;font-family:sans-serif;font-size:20px;line-height:1.6}
+.ok{color:#0a7d32}
+.bad{color:#c62828}
+</style>
+</head>
+<body>
+<h2>兼容自检</h2>
+<div id="out">…</div>
+<script>
+var lines = [];
+lines.push("typeof window.open = " + (typeof window.open));
+lines.push("typeof performance.timing = " + (typeof performance.timing));
+if (performance && performance.timing) {
+  lines.push("navigationStart = " + performance.timing.navigationStart);
+  lines.push("timeOrigin = " + performance.timeOrigin);
+  lines.push("nav type = " + (performance.navigation ? performance.navigation.type : "none"));
+}
+var ok = true;
+try {
+  var w = window.open("http://10.0.2.2:8098/t_winopen_target.html", "_blank");
+  lines.push("open() returned " + (w ? typeof w : "null"));
+  if (w && typeof w.focus === "function") w.focus();
+  if (w && typeof w.close === "function") { /* 只测存在，不真关 */ }
+} catch (e) {
+  ok = false;
+  lines.push("open() threw: " + e);
+}
+var box = document.getElementById("out");
+box.className = ok ? "ok" : "bad";
+for (var i = 0; i < lines.length; i++) {
+  var p = document.createElement("div");
+  p.textContent = lines[i];
+  box.appendChild(p);
+}
+document.title = "selfcheck " + (ok ? "OK" : "FAIL");
+</script>
+</body>
+</html>

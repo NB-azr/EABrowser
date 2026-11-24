@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "baidu-home",
+    "dir": "www.baidu.com/home",
+    "url": "https://www.baidu.com/",
+    "vw": 1280,
+    "vh": 900,
+    "note": "百度首页"
+  },
+  {
+    "slug": "baidu-search",
+    "dir": "www.baidu.com/search",
+    "url": "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+    "vw": 1280,
+    "vh": 900,
+    "note": "百度搜索结果页（关键词 浏览器）"
+  },
+  {
+    "slug": "bilibili-home",
+    "dir": "www.bilibili.com/home",
+    "url": "https://www.bilibili.com/",
+    "vw": 1280,
+    "vh": 900,
+    "note": "哔哩哔哩首页"
+  },
+  {
+    "slug": "bilibili-video",
+    "dir": "www.bilibili.com/video",
+    "url": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+    "vw": 1280,
+    "vh": 900,
+    "note": "哔哩哔哩视频页"
+  },
+  {
+    "slug": "zhihu-signin",
+    "dir": "www.zhihu.com/signin",
+    "url": "https://www.zhihu.com/",
+    "vw": 1280,
+    "vh": 900,
+    "note": "知乎匿名访问被 302 到登录页（非首页内容）"
+  },
+  {
+    "slug": "tieba-hottopic",
+    "dir": "tieba.baidu.com/hottopic",
+    "url": "https://tieba.baidu.com/hottopic/browse/hottopic",
+    "vw": 1280,
+    "vh": 900,
+    "note": "贴吧热榜；贴吧首页 tieba.baidu.com 直接 403 反爬"
+  }
+]

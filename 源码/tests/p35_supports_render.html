@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font: 14px sans-serif; }
+  .box { width: 120px; height: 24px; margin: 4px 0; background: #eeeeee; }
+  /* 条件为真：绿色 */
+  @supports (display: grid) { #yes1 { background: rgb(0,128,0); } }
+  /* 条件为假：不应生效（保持灰） */
+  @supports (display: subgrid) { #no1 { background: rgb(255,0,0); } }
+  @supports not (display: grid) { #no2 { background: rgb(255,0,0); } }
+  @supports (unknown-prop: 1px) { #no3 { background: rgb(255,0,0); } }
+  @supports (display: grid) and (not (display: subgrid)) { #yes2 { background: rgb(0,0,255); } }
+  @supports (display: flex) or (display: subgrid) { #yes3 { background: rgb(128,0,128); } }
+  @supports selector(:has(a)) { #yes4 { background: rgb(0,128,128); } }
+</style></head>
+<body>
+<div class="box" id="yes1">yes1</div>
+<div class="box" id="no1">no1</div>
+<div class="box" id="no2">no2</div>
+<div class="box" id="no3">no3</div>
+<div class="box" id="yes2">yes2</div>
+<div class="box" id="yes3">yes3</div>
+<div class="box" id="yes4">yes4</div>
+</body></html>

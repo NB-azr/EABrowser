@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{counter-reset: sec}
+h2{counter-increment: sec}
+h2::before{content:"第" counter(sec) "章 "}
+#list{counter-reset: li}
+#list>span{counter-increment: li}
+#list>span::before{content:counter(li) ". "}
+#nest{counter-reset: a;list-style:none}
+#nest>i{counter-increment: a}
+#nest>i::before{content:"(" counter(a, lower-alpha) ") "}
+#attr>*::after{content:"[" attr(data-x) "]"}
+body::selection{background-color:rgb(255,0,0);color:rgb(255,255,255)}
+::selection{background-color:rgb(255,0,0);color:rgb(255,255,255)}
+</style></head><body>
+<h2>Alpha</h2><h2>Beta</h2>
+<div id="list"><span>x</span><span>y</span><span>z</span></div>
+<div id="nest"><i>p</i><i>q</i></div>
+<div id="attr"><b data-x="A">1</b><b data-x="B">2</b></div>
+<ul id="ul"><li class="item">one</li><li class="skip">skip</li><li class="item">two</li><li class="item">three</li></ul>
+<style>
+#ul>li.item:nth-child(2 of .item){color:rgb(0,0,255)}
+#ul>li:nth-last-child(1 of .item){background-color:rgb(0,255,0)}
+</style>
+<script>
+var h=document.getElementsByTagName('h2');
+for(var i=0;i<h.length;i++) console.log('[M3] h2['+i+'] content='+getComputedStyle(h[i],'::before').content);
+var sp=document.querySelectorAll('#list>span');
+for(var i=0;i<sp.length;i++) console.log('[M3] span['+i+'] content='+getComputedStyle(sp[i],'::before').content);
+var ii=document.querySelectorAll('#nest>i');
+for(var i=0;i<ii.length;i++) console.log('[M3] i['+i+'] content='+getComputedStyle(ii[i],'::before').content);
+var bb=document.querySelectorAll('#attr>b');
+for(var i=0;i<bb.length;i++) console.log('[M3] b['+i+'] content='+getComputedStyle(bb[i],'::after').content);
+var li=document.querySelectorAll('#ul>li');
+for(var i=0;i<li.length;i++){
+  var cs=getComputedStyle(li[i]);
+  console.log('[M4] li['+i+'] class='+li[i].className+' color='+cs.color+' bg='+cs.backgroundColor);
+}
+console.log('[M4] selector support='+CSS.supports('selector(:nth-child(2 of .item))'));
+</script></body></html>

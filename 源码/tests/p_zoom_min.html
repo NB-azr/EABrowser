@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZOOM 最小验证页</title>
+<style>
+  body { margin: 0; background: #fff; color: #111; font: 15px/1.7 sans-serif; }
+  h1 { font-size: 16px; margin: 10px 12px; }
+  .hint { font-size: 12px; color: #555; margin: 0 12px 10px; }
+  .wrap { position: relative; width: 600px; margin: 0 12px; }
+  .wrap img { display: block; width: 600px; height: 320px; border: 2px solid #111; }
+  .tag { position: absolute; font: bold 22px monospace; color: #fff; background: #000; padding: 2px 6px; }
+  #tl { left: 4px; top: 4px; } #tr { right: 4px; top: 4px; }
+  #bl { left: 4px; bottom: 4px; } #br { right: 4px; bottom: 4px; }
+  .bar { margin: 10px 12px; padding: 8px; background: #eef; border: 1px solid #99f; text-align: center; }
+  #btn { display: block; margin: 10px 12px; padding: 12px 18px; font-size: 17px;
+         text-align: center;
+         background: #2b8; color: #fff; border: 0; border-radius: 6px; }
+  #btn.hit { background: #d22; }
+  iframe { display: block; width: 300px; height: 180px; margin: 10px 12px; border: 2px solid #c60; }
+  p { margin: 8px 12px; }
+</style></head>
+<body>
+<h1>ZOOM：捏合 / 双击 / 放大后点击命中</h1>
+<p class="hint">1) 双指捏合放大 ≈2×；2) 双击回到适应宽度；3) 放大后点绿色按钮，按钮应变成红色并显示命中次数。</p>
+
+<div class="wrap">
+  <img src="assets/zoom_grid.png" alt="600x320 grid">
+  <span class="tag" id="tl">L</span><span class="tag" id="tr">R</span>
+  <span class="tag" id="bl">600</span><span class="tag" id="br">320</span>
+</div>
+
+<button id="btn" onclick="hit()">点我（绿色）</button>
+<div class="bar" id="bar">命中次数：0（未点击）</div>
+
+<iframe src="p_zoom_child.html"></iframe>
+
+<p>下面是长文本，用于验证纵向滚动与缩放的滚动单位一致；放大后滚到底部，文字不应出现半截错位。</p>
+<p>段落 01：缩放后内容的定位点是两指中点，捏合过程中页面应跟着手指走，不允许整体跳变。</p>
+<p>段落 02：命中测试使用 (screenX/scale + scrollX, screenY/scale + scrollY)，单位与布局坐标一致。</p>
+<p>段落 03：双击在“适应宽度”和“2×”之间切换，以双击点为中心；单击延迟 250ms 判定。</p>
+<p>段落 04：边缘手势与双指缩放共存——单指从屏幕左/右边缘起划走前进/返回，双指一律走缩放。</p>
+<p>段落 05：多指按下时取消长按与单击候选，避免缩放结束误触发链接。</p>
+<p>段落 06：长文本继续……</p>
+<p>段落 07：长文本继续……</p>
+<p>段落 08：长文本继续……</p>
+<p>段落 09：长文本继续……</p>
+<p>段落 10：长文本继续……</p>
+<p>段落 11：长文本继续……</p>
+<p>段落 12：长文本继续……</p>
+<p>段落 13：长文本继续……</p>
+<p>段落 14：长文本继续……</p>
+<p>段落 15：长文本继续……</p>
+<p>段落 16：长文本继续……</p>
+<p>段落 17：长文本继续……</p>
+<p>段落 18：长文本继续……</p>
+<p>段落 19：长文本继续……</p>
+<p>段落 20：长文本继续……</p>
+
+<script>
+  var hits = 0;
+  function hit() {
+    hits++;
+    var b = document.getElementById('btn');
+    var bar = document.getElementById('bar');
+    b.className = 'hit';
+    b.innerHTML = '已命中 ' + hits + ' 次';
+    bar.innerHTML = '命中次数：' + hits + '（按钮应为红色）';
+  }
+</script>
+</body></html>

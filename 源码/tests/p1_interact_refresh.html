@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+  body{margin:0}
+  #h, #a, #f { width:120px; height:40px; background:#ddd; }
+  #h:hover  { width:200px; background:#f00; }
+  #a:active { width:180px; background:#0a0; }
+  #f:focus  { width:160px; background:#00f; }
+</style>
+</head><body>
+<div id="h">hover</div>
+<div id="a">active</div>
+<div id="f" tabindex="0">focus</div>
+<script>
+(function(){
+  function r(id){ var b=document.getElementById(id).getBoundingClientRect(); return id+'='+Math.round(b.width)+'x'+Math.round(b.height); }
+  console.log('[INTERACT] ' + r('h') + ' ' + r('a') + ' ' + r('f'));
+})();
+</script>
+</body></html>

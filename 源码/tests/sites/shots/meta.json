@@ -1,0 +1,56 @@
+﻿[
+    {
+        "page":  "baidu-home",
+        "url":  "https://www.baidu.com/",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\baidu-home.png",
+        "ok":  true,
+        "bytes":  81878,
+        "exit_code":  0,
+        "reason":  ""
+    },
+    {
+        "page":  "baidu-search",
+        "url":  "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\baidu-search.png",
+        "ok":  true,
+        "bytes":  69194,
+        "exit_code":  0,
+        "reason":  ""
+    },
+    {
+        "page":  "bilibili-home",
+        "url":  "https://www.bilibili.com/",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\bilibili-home.png",
+        "ok":  true,
+        "bytes":  1019791,
+        "exit_code":  0,
+        "reason":  ""
+    },
+    {
+        "page":  "bilibili-video",
+        "url":  "https://www.bilibili.com/video/BV1GJ411x7h7/",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\bilibili-video.png",
+        "ok":  true,
+        "bytes":  81393,
+        "exit_code":  -1073741819,
+        "reason":  ""
+    },
+    {
+        "page":  "zhihu-signin",
+        "url":  "https://www.zhihu.com/",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\zhihu-signin.png",
+        "ok":  true,
+        "bytes":  719363,
+        "exit_code":  0,
+        "reason":  ""
+    },
+    {
+        "page":  "tieba-hottopic",
+        "url":  "https://tieba.baidu.com/hottopic/browse/hottopic",
+        "png":  "E:\\浏览器\\tests\\sites\\shots\\tieba-hottopic.png",
+        "ok":  false,
+        "bytes":  0,
+        "exit_code":  -1,
+        "reason":  "headless 未产出有效截图（站点反爬/登录墙/加载超时）"
+    }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>wasm</title></head><body>
+<script>
+function ba(h){ var a=new Uint8Array(h.length/2); for(var i=0,n=a.length;i!=n;i++){ a[i]=parseInt(h.substr(i*2,2),16); } return a; }
+var HEX_A='0061736d01000000010b0260027f7f0060017f017f0303020001050401010103071903066d656d6f727902000573746f72650000046c6f616400010a13020900200020013602000b070020002802000b';
+var HEX_D='0061736d01000000010b0260017f017f60027f7f00020f0103656e76066d656d6f72790200010303020001071803066d656d6f727902000467726f77000004706f6b6500010a12020600200040000b0900200020013602000b';
+var HEX_B='0061736d01000000010b0260027f7f0060017f017f020f0103656e76066d656d6f72790200010303020001071903066d656d6f727902000577726974650000047265616400010a13020900200020013602000b070020002802000b';
+var HEX_C='0061736d0100000001100360017f017f60027f7f017f6000017f03050400000102040501700102020715030372756e0002036261640003057461626c6501000908010041000b0200010a23040700200041016a0b0700200041026a0b0900200120001100000b070041001102000b';
+var R={};
+try{
+  var A=new WebAssembly.Instance(new WebAssembly.Module(ba(HEX_A)),{});
+  var B=new WebAssembly.Instance(new WebAssembly.Module(ba(HEX_B)),{env:{memory:A.exports.memory}});
+  A.exports.store(8,1234);
+  R.a_load=A.exports.load(8);
+  B.exports.write(16,77);
+  R.b_read=B.exports.read(16);
+  R.a_sees_b=A.exports.load(16);
+  R.same_memory=(A.exports.memory===B.exports.memory);
+  R.grow_old=B.exports.memory.grow(1);
+  R.pages_bytes=new Uint8Array(A.exports.memory.buffer).length;
+  R.after_grow_byte16=new Uint8Array(A.exports.memory.buffer)[16];
+  try{ new WebAssembly.Instance(new WebAssembly.Module(ba(HEX_B)),{}); R.missing_mem='NO-THROW'; }
+  catch(e){ R.missing_mem=e.message; }
+
+  var D=new WebAssembly.Instance(new WebAssembly.Module(ba(HEX_D)),{env:{memory:A.exports.memory}});
+  R.d_grow_old=D.exports.grow(1);
+  D.exports.poke(70000,99);
+  R.a_sees_d=A.exports.load(70000);
+  R.bytes_after_d=new Uint8Array(A.exports.memory.buffer).length;
+
+  var C=new WebAssembly.Instance(new WebAssembly.Module(ba(HEX_C)),{});
+  R.run0=C.exports.run(0,10);
+  R.run1=C.exports.run(1,10);
+  R.table_len=C.exports.table.length;
+  R.table_get0=C.exports.table.get(0)(5);
+  R.table_get1=C.exports.table.get(1)(5);
+  try{ C.exports.run(2,1); R.oob='NO-ERROR'; }catch(e){ R.oob=e.message; }
+  try{ C.exports.bad(); R.mismatch='NO-ERROR'; }catch(e){ R.mismatch=e.message; }
+}catch(e){ R.error=String(e)+'\n'+(e.stack||''); }
+window.__R=R;
+</script>
+</body></html>

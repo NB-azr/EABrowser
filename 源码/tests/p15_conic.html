@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: sans-serif; }
+  .c { width: 100px; height: 100px; margin: 8px; float: left; }
+  /* 1：两色无位置 */
+  #g1 { background-image: conic-gradient(#f00, #00f); }
+  /* 2：三色无位置，应均分为 0/180/360 */
+  #g2 { background-image: conic-gradient(#f00, #0f0, #00f); }
+  /* 3：from 90deg + 显式百分比位置（0/90/180/360） */
+  #g3 { background-image: conic-gradient(from 90deg, #f00 0%, #ff0 25%, #0f0 50%, #00f 100%); }
+  /* 4：显式 deg 色标，缺口型（红 0-90、绿 90-180、蓝 180-360） */
+  #g4 { background-image: conic-gradient(#f00 0deg 90deg, #0f0 90deg 180deg, #00f 180deg 360deg); }
+  /* 5：background 简写里的 conic */
+  #g5 { background: conic-gradient(from 45deg, #fff, #000); }
+</style>
+</head>
+<body>
+  <div id="g1" class="c"></div>
+  <div id="g2" class="c"></div>
+  <div id="g3" class="c"></div>
+  <div id="g4" class="c"></div>
+  <div id="g5" class="c"></div>
+</body></html>

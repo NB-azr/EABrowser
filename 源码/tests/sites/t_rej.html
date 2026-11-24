@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>unhandledrejection 自检</title>
+<style>
+body{margin:0;padding:14px;font-family:sans-serif;font-size:17px;line-height:1.6}
+.r{padding:2px 0}
+</style></head>
+<body>
+<div class="r" id="l1">prop=?</div>
+<div class="r" id="l2">listener=0</div>
+<div class="r" id="l3">onprop=0</div>
+<div class="r" id="l4">caughtNotReported=?</div>
+<div class="r" id="l5">lastReason=?</div>
+<script>
+var listenerHits = 0, propHits = 0, caughtHits = 0, lastReason = '-';
+document.getElementById('l1').textContent = 'prop="onunhandledrejection" in window: ' + ('onunhandledrejection' in window);
+window.onunhandledrejection = function (e) {
+  propHits++;
+  try { lastReason = String(e && e.reason && (e.reason.message || e.reason)); } catch (err) {}
+  dump();
+};
+document.addEventListener('unhandledrejection', function (e) {
+  listenerHits++;
+  try { lastReason = String(e && e.reason && (e.reason.message || e.reason)); } catch (err) {}
+  dump();
+});
+function dump() {
+  document.getElementById('l2').textContent = 'listener=' + listenerHits;
+  document.getElementById('l3').textContent = 'onprop=' + propHits;
+  document.getElementById('l4').textContent = 'caughtNotReported=' + caughtHits;
+  document.getElementById('l5').textContent = 'lastReason=' + lastReason;
+}
+/* 1) 一个真未处理的 rejection */
+setTimeout(function () { Promise.reject(new Error('boom-unhandled')); }, 60);
+/* 2) 一个被 catch 掉的 rejection：不该上报 */
+setTimeout(function () { Promise.reject(new Error('boom-caught')).catch(function () { caughtHits++; dump(); }); }, 120);
+dump();
+</script>
+</body></html>

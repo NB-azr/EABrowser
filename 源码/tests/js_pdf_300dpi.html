@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>PDF 300dpi / 300% 连续翻页自测</title>
+<style>body{margin:0;font:12px monospace}canvas{display:block}</style></head>
+<body>
+<div id="log"></div>
+<script src="fixtures/pdf.min.js"></script>
+<script src="fixtures/pdf.worker.min.js"></script>
+<script>
+window.__R = "pending";
+window.__LOG = [];
+function log(s) { window.__LOG.push(String(s)); var d = document.getElementById("log"); if (d) d.textContent = window.__LOG.join("\n"); }
+function now() { return (window.performance && performance.now) ? performance.now() : Date.now(); }
+function baseDir() {
+    var h = String(location.href || "").replace(/\\/g, "/");
+    return h.substring(0, h.lastIndexOf("/") + 1);
+}
+(function () {
+    try {
+        if (typeof pdfjsLib === "undefined") { window.__R = "NO_PDFJS"; return; }
+        pdfjsLib.GlobalWorkerOptions.workerSrc = baseDir() + "fixtures/pdf.worker.min.js";
+        var url = "ea://file?path=" + encodeURIComponent(baseDir() + "fixtures/sample20.pdf");
+        var DPI = 300, PT_PER_INCH = 72;          // 300dpi => scale 4.1667
+        var SCALE_300DPI = DPI / PT_PER_INCH;
+        var winW = (window.innerWidth || 1080);
+        var fitScale = (winW - 24) / 612;         // 与生产页一致的适配宽度
+        var SCALE_ZOOM300 = fitScale * 3;         // 查看器 300% 缩放
+        var rows = [], fails = 0;
+        fetch(url).then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.arrayBuffer();
+        }).then(function (ab) {
+            log("pdf bytes=" + ab.byteLength + " winW=" + winW + " fit=" + fitScale.toFixed(3));
+            return pdfjsLib.getDocument({ data: ab }).promise;
+        }).then(function (doc) {
+            log("pages=" + doc.numPages);
+            var current = null;
+            function renderOne(idx, scale) {
+                return doc.getPage(idx).then(function (page) {
+                    var vp = page.getViewport({ scale: scale });
+                    var canvas = document.createElement("canvas");
+                    canvas.width = Math.floor(vp.width);
+                    canvas.height = Math.floor(vp.height);
+                    var ctx = canvas.getContext("2d");
+                    if (!ctx) throw new Error("no 2d ctx");
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    if (current && current.parentNode) current.parentNode.removeChild(current);
+                    current = canvas;
+                    document.body.appendChild(canvas);
+                    var t0 = now();
+                    return page.render({ canvasContext: ctx, viewport: vp }).promise.then(function () {
+                        var ms = now() - t0;
+                        var px = canvas.width * canvas.height;
+                        var row = "p" + idx + " scale=" + scale.toFixed(3) + " " + canvas.width + "x" + canvas.height +
+                            " px=" + px + " mb=" + (px * 4 / 1048576).toFixed(1) + " ms=" + ms.toFixed(0);
+                        rows.push(row);
+                        log(row);
+                        page.cleanup();
+                    });
+                });
+            }
+            var chain = Promise.resolve();
+            for (var i = 1; i <= Math.min(20, doc.numPages); i++) {
+                (function (idx) {
+                    chain = chain.then(function () { return renderOne(idx, SCALE_300DPI); })
+                        .catch(function (e) { fails++; log("p" + idx + " FAIL " + (e && e.message ? e.message : e)); });
+                })(i);
+            }
+            chain = chain.then(function () {
+                log("300dpi done fails=" + fails);
+                return renderOne(1, SCALE_ZOOM300);
+            }).then(function () {
+                log("zoom300 done");
+                var ok = rows.length, sum = 0, max = 0, maxPx = 0;
+                for (var k = 0; k < rows.length; k++) {
+                    var m = /ms=(\d+)/.exec(rows[k]); var p = /px=(\d+)/.exec(rows[k]);
+                    if (m) { sum += Number(m[1]); if (Number(m[1]) > max) max = Number(m[1]); }
+                    if (p && Number(p[1]) > maxPx) maxPx = Number(p[1]);
+                }
+                var summary = "SUMMARY ok=" + ok + " fails=" + fails + " totalMs=" + sum +
+                    " avgMs=" + (ok ? (sum / ok).toFixed(0) : "-") + " maxMs=" + max.toFixed(0) +
+                    " maxCanvasPx=" + maxPx + " maxCanvasMB=" + (maxPx * 4 / 1048576).toFixed(1);
+                rows.push(summary);
+                log(summary);
+                window.__R = rows.join(" ;; ");
+            });
+            return chain;
+        }).catch(function (e) {
+            window.__R = "ERR " + (e && e.message ? e.message : e) + " @ " + (e && e.stack ? String(e.stack).substr(0, 200) : "");
+            log(window.__R);
+        });
+    } catch (e) {
+        window.__R = "SYNC_ERR " + (e && e.message ? e.message : e);
+    }
+})();
+</script>
+</body></html>

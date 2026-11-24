@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; font-size: 16px; line-height: 28px; }
+  #p { width: 400px; background: #f5f5f5; }
+  #big { font-size: 24px; }                  /* 仍继承 28px 行高 */
+  #ratio { line-height: 2; font-size: 20px; } /* 覆盖为倍数：40px */
+  #small { font-size: 12px; line-height: 18px; }
+</style>
+</head>
+<body>
+<div id="p">
+  <div id="big">big text 24px<br>second line</div>
+  <div id="ratio">ratio 2 lineheight</div>
+  <div id="small">small text 12px</div>
+</div>
+</body>
+</html>

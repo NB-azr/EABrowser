@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+#c1{color:color-mix(in srgb, red, blue)}
+#c2{color:oklch(0.628 0.2577 29.2339)}
+#c3{color:hwb(120 0% 0%)}
+#c4{background-color:color(display-p3 1 0 0)}
+#c5{color:lab(54.29 80.82 69.88)}
+#c6{color:color-mix(in srgb, rgb(255,0,0) 50%, rgba(0,0,255,0.5))}
+#c7{color:oklab(0.628 0.2249 0.1258)}
+#c8{color:lch(54.29% 106.84 40.85)}
+#c9{color:color(srgb 0 0.5 0)}
+#acc{accent-color:rgb(10,20,30)}
+</style></head><body>
+<div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div>
+<div id="c5"></div><div id="c6"></div><div id="c7"></div><div id="c8"></div><div id="c9"></div>
+<div id="acc"></div>
+<script>
+var ids=['c1','c2','c3','c4','c5','c6','c7','c8','c9'];
+for(var i=0;i<ids.length;i++){
+  var el=document.getElementById(ids[i]), cs=getComputedStyle(el);
+  console.log('[M2] '+ids[i]+' color='+cs.color+' bg='+cs.backgroundColor);
+}
+console.log('[M2] supports color-mix='+CSS.supports('color','color-mix(in srgb, red, blue)')+
+  ' oklch='+CSS.supports('color','oklch(0.5 0.1 200)')+
+  ' lab='+CSS.supports('color','lab(50% 20 30)')+
+  ' p3='+CSS.supports('color','color(display-p3 1 0 0)')+
+  ' rec2020='+CSS.supports('color','color(rec2020 1 0 0)'));
+console.log('[M2/acc] accent-color='+getComputedStyle(document.getElementById('acc')).accentColor+
+  ' supports='+CSS.supports('accent-color','rgb(1,2,3)'));
+</script></body></html>

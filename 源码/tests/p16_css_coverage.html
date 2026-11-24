@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 1px #333;
+    cursor: default;
+  }
+  .box {
+    width: 300px; height: 40px; margin: 4px;
+    -webkit-box-sizing: border-box;
+    _background-color: #def;
+    background-color: #def;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    word-break: break-all;
+    word-wrap: break-word;
+    user-select: none;
+    outline: 1px solid #f00;
+    *zoom: 1;
+  }
+  .legacy {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -webkit-animation: none;
+  }
+  .legacy > div {
+    width: 80px; height: 20px; background: #cde; margin: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="box" id="b1">覆盖属性 1</div>
+  <div class="box" id="b2">覆盖属性 2</div>
+  <div class="legacy" id="b3"><div>a</div><div>b</div></div>
+</body></html>

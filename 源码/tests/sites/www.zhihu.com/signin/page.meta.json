@@ -1,0 +1,22 @@
+{
+  "slug": "zhihu-signin",
+  "entry": "https://www.zhihu.com/",
+  "captured_at": "2026-11-08 20:43:06",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "知乎匿名访问被 302 到登录页（非首页内容）；302→https://www.zhihu.com/signin?next=%2F",
+  "failed": [],
+  "status": "OK",
+  "final_url": "https://www.zhihu.com/signin?next=%2F",
+  "http_charset": "utf-8",
+  "entry_bytes": 46328,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 46384,
+  "assets": 37,
+  "asset_bytes": 8630625,
+  "image_sizes": 12,
+  "elapsed_s": 18.51,
+  "items": 37
+}

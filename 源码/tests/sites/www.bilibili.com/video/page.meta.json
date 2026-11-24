@@ -1,0 +1,22 @@
+{
+  "slug": "bilibili-video",
+  "entry": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+  "captured_at": "2026-11-08 20:43:02",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "哔哩哔哩视频页",
+  "failed": [],
+  "status": "OK",
+  "final_url": "https://www.bilibili.com/video/BV1GJ411x7h7/",
+  "http_charset": "utf-8",
+  "entry_bytes": 172677,
+  "entry_content_type": "text/html; charset=utf-8",
+  "html_bytes": 172895,
+  "assets": 36,
+  "asset_bytes": 1814387,
+  "image_sizes": 20,
+  "elapsed_s": 4.02,
+  "items": 36
+}

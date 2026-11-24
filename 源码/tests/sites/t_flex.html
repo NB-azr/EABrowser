@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;padding:8px;font:14px/1.4 sans-serif;background:#fafafa;}
+h3{margin:14px 0 4px;font-size:14px;color:#333}
+.case{border:1px solid #bbb;background:#fff;margin-bottom:2px;overflow:visible}
+.row{display:flex}
+.a{background:#cfe8ff;border:1px solid #4a90d9;box-sizing:border-box}
+.b{background:#ffd9cf;border:1px solid #d9704a;box-sizing:border-box}
+.c{background:#d9ffd0;border:1px solid #4ad970;box-sizing:border-box}
+/* A 固定宽 120 三项 flex-shrink:0 —— 溢出容器 */
+#a1,#a2,#a3{flex:0 0 120px;height:36px;text-align:center;line-height:34px}
+/* B 等分但 min-width 100 —— 溢出 */
+#b1,#b2,#b3{flex:1 1 0;min-width:100px;height:32px}
+/* C 允许换行 */
+#c1,#c2,#c3,#c4{flex:0 0 110px;height:30px}
+/* D 子项宽 200% + 兄弟 */
+#d1{width:200%;height:30px}
+#d2{flex:0 0 80px;height:30px}
+/* E 长单词 */
+#e1{flex:1 1 auto;height:30px;word-break:normal}
+/* F space-between 固定项超宽 */
+#f1,#f2{flex:0 0 200px;height:30px}
+.note{font-size:11px;color:#888;margin:0 0 6px}
+</style></head><body>
+<div id="dbg" style="font-size:11px;color:#003;background:#ffd;border:1px solid #cc0;padding:3px;word-break:break-all">0</div>
+<h3>A 固定120×3 shrink:0</h3>
+<p class="note">期望：整体不能把第三项挤出可视区（应压缩或换行）</p>
+<div class="case"><div class="row" id="A">
+ <div class="a" id="a1">1</div><div class="b" id="a2">2</div><div class="c" id="a3">3</div>
+</div></div>
+
+<h3>B flex:1 + min-width:100</h3>
+<p class="note">期望：三项等分在容器内</p>
+<div class="case"><div class="row" id="B">
+ <div class="a" id="b1">1</div><div class="b" id="b2">2</div><div class="c" id="b3">3</div>
+</div></div>
+
+<h3>C wrap 4×110</h3>
+<p class="note">期望：换两行 3+1</p>
+<div class="case"><div class="row" id="C" style="flex-wrap:wrap">
+ <div class="a" id="c1">1</div><div class="b" id="c2">2</div><div class="c" id="c3">3</div><div class="a" id="c4">4</div>
+</div></div>
+
+<h3>D 子项 200% + 80px</h3>
+<p class="note">期望：200% 项超出部分裁掉，兄弟仍在原位</p>
+<div class="case" style="overflow:hidden"><div class="row" id="D">
+ <div class="a" id="d1">wide</div><div class="b" id="d2">2</div>
+</div></div>
+
+<h3>E 长单词</h3>
+<p class="note">期望：行内换行，不撑破容器</p>
+<div class="case"><div class="row" id="E">
+ <div class="a" id="e1">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+</div></div>
+
+<h3>F space-between 200+200</h3>
+<p class="note">期望：两项都在容器内</p>
+<div class="case"><div class="row" id="F" style="justify-content:space-between">
+ <div class="a" id="f1">1</div><div class="b" id="f2">2</div>
+</div></div>
+
+<h3>G 嵌套：父 flex 内块级 100% + padding</h3>
+<div class="case"><div class="row" id="G" style="padding:0 10px">
+ <div class="a" style="flex:1 1 0;box-sizing:border-box;padding:0 10px;height:30px">inner</div>
+ <div class="b" style="flex:0 0 60px;height:30px">btn</div>
+</div></div>
+
+<script>
+function r(id){var e=document.getElementById(id);if(!e)return id+'=missing';var b=e.getBoundingClientRect();return id+'='+Math.round(b.left)+','+Math.round(b.width)+','+Math.round(b.right);}
+var out=[];'a1 a2 a3 b1 b2 b3 c1 c2 c3 c4 d1 d2 e1 f1 f2'.split(' ').forEach(function(i){out.push(r(i));});
+out.push('vw='+document.documentElement.clientWidth);
+document.getElementById('dbg').textContent=out.join('  ');
+</script>
+</body></html>

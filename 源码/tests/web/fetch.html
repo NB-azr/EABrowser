@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>fetch-probe</title>
+<style>body{font:16px/1.6 sans-serif;margin:0;padding:12px}div{margin:6px 0;padding:6px;border:1px solid #ccc}</style>
+</head><body>
+<div id="s">start</div>
+<div id="a">xhr: pending</div>
+<div id="b">fetch: pending</div>
+<script>
+var sa = document.getElementById('a');
+var sb = document.getElementById('b');
+try {
+  var x = new XMLHttpRequest();
+  x.open('GET', 'http://10.0.2.2:8099/api.json', true);
+  x.onload = function () { sa.textContent = 'xhr status=' + x.status + ' len=' + (x.responseText || '').length + ' body=' + (x.responseText || '').slice(0, 60); };
+  x.onerror = function () { sa.textContent = 'xhr error'; };
+  x.send();
+  sa.textContent = 'xhr opened';
+} catch (e) { sa.textContent = 'xhr throw ' + e; }
+try {
+  fetch('http://10.0.2.2:8099/api.json').then(function (r) {
+    sb.textContent = 'fetch status=' + r.status;
+    return r.text();
+  }).then(function (t) {
+    sb.textContent = 'fetch ok len=' + t.length + ' body=' + t.slice(0, 60);
+  }).catch(function (e) {
+    sb.textContent = 'fetch reject ' + e;
+  });
+  sb.textContent = 'fetch called';
+} catch (e) { sb.textContent = 'fetch throw ' + e; }
+setTimeout(function () { document.getElementById('s').textContent = 'timer ok'; }, 1500);
+</script>
+</body></html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>dark media</title>
+<style>
+  .b { color: rgb(0, 0, 255); }
+  @media (prefers-color-scheme: dark) { #a { color: rgb(255, 0, 0); } }
+  @media (prefers-color-scheme: light) { #b { color: rgb(0, 128, 0); } }
+  @media (min-width: 1200px) { #c { color: rgb(255, 0, 0); } }
+  @media (max-width: 900px) { #d { color: rgb(0, 128, 0); } }
+</style>
+<div class="b" id="a">a</div>
+<div class="b" id="b">b</div>
+<div class="b" id="c">c</div>
+<div class="b" id="d">d</div>
+<script>
+window.__log = ["prefersDarkProbe"];
+</script>
+</body>

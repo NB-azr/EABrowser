@@ -1,0 +1,16 @@
+isolatedProcess 探针日志（API 19 x86 模拟器 emulator-5556，pid 3364 主进程 / 3392 isolated）
+采集时间 2026-11-08；来源 adb logcat -s EAProto
+
+I/EAProto ( 3392): isolated probe bound pid=3392 uid=99002
+I/EAProto ( 3392): isolated probe wrote 13 bytes pid=3392
+I/EAProto ( 3364): isolated probe rc=42 data=ISO19:pipe-ok info=pid=3392 uid=99002 canReadAppCache=false
+I/EAProto ( 3392): isolated probe read 12 bytes: ASH19:shared
+I/EAProto ( 3364): isolated ashmem read back=ASH19:shared
+
+解读
+- 绑定成功：isolated 进程 uid=99000+（独立于 app 的 u0_a5x），Binder 可用。
+- 匿名管道 fd 可跨 Binder 传递：ping() 写入 "ISO19:pipe-ok"，主进程读回，rc=42。
+- ashmem：主进程 MemoryFile 写 "ASH19:shared"，反射取 mFD→FileDescriptor.descriptor 得 int fd，
+  ParcelFileDescriptor.adoptFd 后传 isolated，对端读回内容一致。
+- canReadAppCache=false：isolated 进程无法访问 /data/data/com.ea.proto/，因此"私有文件 + mmap"通道对它无效。
+- 未验证：isolated 内 JNI mmap 该 ashmem fd（原理可行，需 native 代码）；ashmem_create_region 经 dlopen(libcutils.so)。

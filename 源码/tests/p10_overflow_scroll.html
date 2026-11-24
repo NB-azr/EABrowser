@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { margin: 0; font-family: sans-serif; font-size: 14px; }
+  .box { width: 300px; height: 100px; border: 1px solid #999; margin-bottom: 12px; }
+  #a { overflow-y: auto; }
+  #b { overflow: auto; }
+  #c { overflow: hidden; }
+  #d { overflow: visible; }
+  #e { overflow: scroll; width: 300px; height: 60px; border: 1px solid #999; }
+  .inner { height: 400px; background: #eef; }
+</style>
+</head>
+<body>
+  <div id="a" class="box"><div class="inner">auto-y 长内容</div></div>
+  <div id="b" class="box"><div class="inner">auto 双轴长内容</div></div>
+  <div id="c" class="box"><div class="inner">hidden 裁剪</div></div>
+  <div id="d" class="box"><div class="inner">visible 不滚</div></div>
+  <div id="e"><div class="inner" style="width:600px;height:200px">scroll 双向</div></div>
+</body></html>

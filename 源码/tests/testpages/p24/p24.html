@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="p24.css">
+<title>P24</title></head>
+<body>
+<div id="hud">hud init</div>
+<div style="height:1100px"></div>
+<input id="t" type="text" placeholder="top input">
+<div style="height:140px"></div>
+<textarea id="ta" rows="3" placeholder="textarea"></textarea>
+<div style="height:1000px"></div>
+<input id="t2" type="text" placeholder="bottom input">
+<script>
+var vpResize = 0, inputs = 0, lastInput = '';
+window.addEventListener('resize', function () { vpResize++; paint(); });
+function paint() {
+  var vv = navigator.visualViewport;
+  var ua = navigator.userActivation;
+  var hud = document.getElementById('hud');
+  hud.textContent = 'vw=' + Math.round(vv.width) + ' vh=' + Math.round(vv.height)
+    + ' top=' + Math.round(vv.offsetTop) + ' rz=' + vpResize
+    + ' ua=' + ua.isActive + '/' + ua.hasBeenActive
+    + ' val=' + lastInput + ' in=' + inputs
+    + ' sc=' + Math.round(window.scrollY || 0);
+}
+var t = document.getElementById('t');
+t.addEventListener('input', function () { inputs++; lastInput = t.value; paint(); });
+document.getElementById('t2').addEventListener('input', function () { inputs++; lastInput = this.value; paint(); });
+try { setInterval(paint, 800); } catch (e) { }
+paint();
+</script>
+</body></html>

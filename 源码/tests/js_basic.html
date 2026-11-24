@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+  body { margin: 0; font-size: 16px; }
+  #host { position: relative; width: 600px; height: 300px; background: #eeeeee; }
+  #box { position: absolute; left: 20px; top: 20px; width: 120px; height: 60px; background: #3366cc; border-radius: 8px; }
+</style>
+</head>
+<body>
+  <div id="host"></div>
+  <script>
+    var box = document.createElement('div');
+    box.id = 'box';
+    box.style.backgroundColor = '#cc2222';
+    document.getElementById('host').appendChild(box);
+
+    var label = document.createElement('p');
+    label.id = 'label';
+    label.textContent = 'JS 写入的文本';
+    label.style.color = '#116611';
+    document.body.appendChild(label);
+
+    window.__jsRan = 'yes';
+
+    setTimeout(function () {
+      box.style.width = '240px';
+      label.textContent = '延时修改后的文本';
+    }, 100);
+  </script>
+</body>
+</html>

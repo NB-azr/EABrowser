@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>host apis</title>
+<script>
+window.__log = [];
+window.__log.push("share=" + typeof navigator.share + "/" + typeof navigator.canShare);
+if (navigator.share) {
+  navigator.share({ title: "t", text: "x" }).then(function () { window.__log.push("shareOk"); },
+    function (e) { window.__log.push("shareRej=" + e.name); });
+}
+window.__log.push("vibrate=" + navigator.vibrate([100, 50, 100]));
+window.__log.push("notifType=" + typeof window.Notification);
+try { window.__log.push("perm=" + Notification.permission); } catch (e) { window.__log.push("perm=?/" + e.name); }
+if (window.Notification) {
+  Notification.requestPermission().then(function (p) {
+    window.__log.push("req=" + p);
+    try {
+      var n = new Notification("hi", { body: "b" });
+      window.__log.push("notifCreated=" + n._id);
+      n.onclick = function () { window.__log.push("notifClick"); };
+    } catch (e) { window.__log.push("notifErr=" + e.name); }
+  });
+}
+window.__log.push("lockFn=" + (typeof screen.orientation.lock));
+screen.orientation.lock("landscape").then(function () {
+  window.__log.push("lockOk/" + screen.orientation.type);
+}, function (e) { window.__log.push("lockRej=" + e.name); });
+window.__seen = true;
+</script>

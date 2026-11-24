@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+/* 未知伪类：不再丢弃整条规则，条件按真处理 */
+.a:foo-bar { width: 100px; height: 20px; background-color: #ff0000; }
+/* 交互态伪类：规则保留，但静止渲染按浏览器语义不匹配（这里不应变红） */
+.a:hover { background-color: #00ff00; }
+.b:is(.c) { width: 80px; height: 20px; background-color: #00ff00; }
+.b:where(.c) { height: 22px; }
+/* 属性选择器 i 标志：大小写不敏感匹配 */
+[data-x="Y" i] { height: 30px; background-color: #0000ff; }
+/* 伪元素分组被丢弃，但同一规则里的 .d 分组必须保留 */
+.icon::before, .d { width: 60px; height: 10px; background-color: #ffff00; }
+/* 未识别声明：计数但不影响其他属性 */
+.aspect { aspect-ratio: 1; width: 40px; height: 40px; background-color: #888888; }
+</style></head><body>
+<div id="a" class="a">A</div>
+<div id="b" class="b c">B</div>
+<div id="e" class="e" data-x="y">E</div>
+<div id="d" class="d">D</div>
+<div id="f" class="aspect">F</div>
+</body></html>

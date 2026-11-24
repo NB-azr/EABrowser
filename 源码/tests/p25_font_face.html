@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>@font-face + 真实字体度量</title>
+<style>
+  @font-face {
+    font-family: 'ArialFace';
+    src: url(arial.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'ArialFace';
+    src: url(arialbd.ttf) format('truetype');
+    font-weight: bold;
+  }
+  body { margin: 0; padding: 16px; background: #fff; }
+  p { margin: 0; font-size: 32px; }
+  .loaded   { font-family: 'ArialFace'; }
+  .fallback { font-family: sans-serif; }
+</style></head>
+<body>
+  <p id="loaded" class="loaded">Hello World</p>
+  <p id="fallback" class="fallback">Hello World</p>
+  <p id="bold" class="loaded" style="font-weight:bold">Hello World</p>
+</body></html>

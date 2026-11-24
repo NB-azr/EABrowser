@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; font-size: 15px; background: #fff; }
+details { margin: 8px; }
+</style></head>
+<body>
+<details id="d1"><summary id="s1">默认折叠的详情</summary>
+  <p>折叠内容不应占位（closed 时隐藏）。</p>
+</details>
+<details id="d2" open><summary id="s2">默认展开的详情</summary>
+  <p>展开内容参与布局。</p>
+</details>
+<details id="d3">
+  <summary>无 open 但有多个子节点</summary>
+  <div style="height:40px;background:#eee">子块 A</div>
+</details>
+</body></html>

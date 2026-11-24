@@ -1,0 +1,10 @@
+﻿<!doctype html><html><head><meta charset="utf-8"></head><body><script>
+(function(){
+  function line(tag, obj){
+    var miss=[];
+    for(var i=0;i<obj.length;i++){ var p=obj[i]; var v=eval('typeof '+p); if(v==='undefined') miss.push(p); }
+    console.log('['+tag+'] missing='+(miss.length?miss.join(','):'none'));
+  }
+  line('ES', ['structuredClone','queueMicrotask','globalThis']);
+})();
+</script></body></html>

@@ -1,0 +1,104 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body>
+<canvas id="cv2" width="16" height="16"></canvas>
+<canvas id="cv1" width="16" height="16"></canvas>
+<script>
+(function(){
+  /* ---------------- 1. WebGL2 子集 ---------------- */
+  var cv2 = document.getElementById('cv2');
+  var gl2 = cv2.getContext('webgl2');
+  var cv1 = document.getElementById('cv1');
+  var gl1 = cv1.getContext('webgl');
+  function tOf(o, n){ return (o && typeof o[n] === 'function') ? 'fn' : (o ? 'missing' : 'n/a'); }
+  console.log('[G2] ctx=' + (gl2 ? 'ok' : 'null') +
+    ' instanceofGL2=' + (gl2 ? (gl2 instanceof WebGL2RenderingContext) : false) +
+    ' ctor=' + typeof WebGL2RenderingContext +
+    ' m=' + JSON.stringify(gl2 ? {
+      createVertexArray: tOf(gl2,'createVertexArray'),
+      bindVertexArray: tOf(gl2,'bindVertexArray'),
+      texStorage2D: tOf(gl2,'texStorage2D'),
+      drawArraysInstanced: tOf(gl2,'drawArraysInstanced'),
+      vertexAttribDivisor: tOf(gl2,'vertexAttribDivisor')} : 'n/a'));
+  console.log('[G1] ctx=' + (gl1 ? 'ok' : 'null') +
+    ' instanceofGL1=' + (gl1 ? (gl1 instanceof WebGLRenderingContext) : false) +
+    ' crossGL2=' + (gl1 ? (gl1 instanceof WebGL2RenderingContext) : false));
+
+  if (gl2) {
+    console.log('[G2] version=' + gl2.getParameter(gl2.VERSION) +
+      ' slv=' + gl2.getParameter(gl2.SHADING_LANGUAGE_VERSION));
+    var vs = gl2.createShader(gl2.VERTEX_SHADER);
+    gl2.shaderSource(vs, 'attribute vec2 a_position; void main(){ gl_Position = vec4(a_position, 0.0, 1.0); }');
+    gl2.compileShader(vs);
+    var fs = gl2.createShader(gl2.FRAGMENT_SHADER);
+    gl2.shaderSource(fs, 'precision mediump float; uniform vec4 u_color; void main(){ gl_FragColor = u_color; }');
+    gl2.compileShader(fs);
+    var pr = gl2.createProgram();
+    gl2.attachShader(pr, vs); gl2.attachShader(pr, fs); gl2.linkProgram(pr);
+    gl2.useProgram(pr);
+    var buf = gl2.createBuffer();
+    gl2.bindBuffer(gl2.ARRAY_BUFFER, buf);
+    gl2.bufferData(gl2.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl2.STATIC_DRAW);
+    var loc = gl2.getAttribLocation(pr, 'a_position');
+    var vao = gl2.createVertexArray();
+    gl2.bindVertexArray(vao);
+    gl2.enableVertexAttribArray(loc);
+    gl2.vertexAttribPointer(loc, 2, gl2.FLOAT, false, 0, 0);
+    gl2.vertexAttribDivisor(loc, 0);
+    gl2.clearColor(0, 0, 0, 1);
+    gl2.clear(gl2.COLOR_BUFFER_BIT);
+    gl2.uniform4f(gl2.getUniformLocation(pr, 'u_color'), 1, 0, 0, 1);
+    gl2.drawArraysInstanced(gl2.TRIANGLES, 0, 3, 2);
+    var px = new Uint8Array(4);
+    gl2.readPixels(8, 8, 1, 1, gl2.RGBA, gl2.UNSIGNED_BYTE, px);
+    console.log('[G2] drawInstanced px=' + Array.prototype.join.call(px, ','));
+    /* texStorage2D 派生的不可变存储 */
+    var tx = gl2.createTexture();
+    gl2.bindTexture(gl2.TEXTURE_2D, tx);
+    gl2.texStorage2D(gl2.TEXTURE_2D, 1, gl2.RGBA8 || 0x8058, 8, 8);
+    console.log('[G2] texStorage2D done err=' + gl2.getError());
+    gl2.bindVertexArray(null);
+    gl2.deleteVertexArray(vao);
+    console.log('[G2] vaoDeleted bindNull ok');
+  }
+
+  /* ---------------- 2. 文件选择器：无宿主后端按规范 reject ---------------- */
+  console.log('[FS] typeof open=' + typeof showOpenFilePicker + ' save=' + typeof showSaveFilePicker);
+  var pOpen = showOpenFilePicker({ multiple: false }).then(
+    function(r){ return 'resolve:' + JSON.stringify(r); },
+    function(e){ return 'reject:' + (e && e.name); });
+  var pSave = showSaveFilePicker({ suggestedName: 'a.txt' }).then(
+    function(r){ return 'resolve:' + JSON.stringify(r); },
+    function(e){ return 'reject:' + (e && e.name); });
+  Promise.all([pOpen, pSave]).then(function(v){
+    console.log('[FS] open=' + v[0] + ' | save=' + v[1]);
+  });
+
+  /* ---------------- 3. scheduler 优先级队列 ---------------- */
+  var order = [];
+  var sm = 'postTask:' + typeof scheduler.postTask + ' yield:' + typeof scheduler.yield;
+  scheduler.postTask(function(){ order.push('background'); }, { priority: 'background' });
+  scheduler.postTask(function(){ order.push('user-blocking'); }, { priority: 'user-blocking' });
+  scheduler.postTask(function(){ order.push('user-visible'); }, { priority: 'user-visible' });
+  scheduler.postTask(function(){
+    var r = scheduler.yield();
+    r.then(function(){ console.log('[SC] yield resumed'); });
+    return r;
+  });
+  setTimeout(function(){
+    console.log('[SC] ' + sm + ' order=' + order.join('>'));
+  }, 100);
+
+  /* ---------------- 4. EyeDropper：无宿主后端 reject ---------------- */
+  var ed = new EyeDropper();
+  ed.open().then(
+    function(r){ console.log('[ED] resolve=' + JSON.stringify(r)); },
+    function(e){ console.log('[ED] reject=' + (e && e.name)); });
+
+  /* ---------------- 5. 三档缺口清单 ---------------- */
+  console.log('[ID] navigator.gpu=' + typeof navigator.gpu + ' (故意不声明)');
+  for (var t = 0; t < 3; t++) {
+    __eaIdentitySetTier(t);
+    console.log('[ID] gaps(' + t + ')=' + JSON.stringify(__eaIdentityGaps()));
+  }
+  __eaIdentitySetTier(1);
+})();
+</script></body></html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body { margin: 0; font-size: 15px; background: #fff; }
+.box { width: 220px; height: 60px; margin: 8px; background: #ddeeff; }
+#cvHidden { content-visibility: hidden; height: 60px; background: #ffdddd; }
+#cvAuto { content-visibility: auto; margin-top: 900px; height: 80px; background: #ddffdd; }
+#containPaint { contain: paint; width: 220px; height: 50px; margin: 8px; background: #eeeeff; }
+#containPaint > div { margin-left: 200px; width: 120px; height: 40px; background: #ffaa00; }
+</style></head>
+<body>
+<div id="cvHidden"><div id="hiddenChild" style="height:30px;background:#ff0000">SHOULD NOT LAYOUT</div></div>
+<div class="box" id="normal">普通块</div>
+<div id="containPaint"><div id="paintChild">溢出子块</div></div>
+<div id="cvAuto"><div id="autoChild" style="height:40px;background:#00aa00">视口外（应跳过绘制）</div></div>
+</body></html>

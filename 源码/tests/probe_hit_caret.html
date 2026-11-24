@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+#box { position:absolute; left:20px; top:30px; width:240px; height:40px; font-size:16px; }
+</style></head><body>
+<div id="box">Hello world 你好世界</div>
+<div id="below" style="position:absolute;left:20px;top:100px;width:240px;height:30px;">SECOND LINE</div>
+<script>
+var box = document.getElementById('box');
+var r = box.getBoundingClientRect();
+console.log('H1 boxRect=' + [r.x, r.y, r.width, r.height].join(','));
+var hit = document.elementFromPoint(30, 40);
+console.log('H2 hit=' + (hit ? (hit.id || hit.tagName) : 'null'));
+var hitOutside = document.elementFromPoint(400, 400);
+console.log('H3 miss=' + (hitOutside ? hitOutside.tagName : 'null'));
+var cp = document.caretPositionFromPoint(120, 45);
+console.log('H4 caretNode=' + (cp && cp.offsetNode ? cp.offsetNode.nodeName : 'null') + ' offset=' + (cp ? cp.offset : -1) +
+            ' text=' + (cp && cp.offsetNode ? cp.offsetNode.textContent.length : -1));
+var cr = document.caretRangeFromPoint(120, 45);
+console.log('H5 rangeCollapsed=' + (cr ? cr.collapsed : null) + ' container=' + (cr ? cr.startContainer.nodeName : 'null') +
+            ' start=' + (cr ? cr.startOffset : -1));
+var rr = document.createRange();
+if (cr) {
+  rr.setStart(cr.startContainer, Math.max(0, cr.startOffset - 5));
+  rr.setEnd(cr.startContainer, cr.startOffset);
+  var rrect = rr.getBoundingClientRect();
+  console.log('H6 wordSlice=' + JSON.stringify(rr.toString()) + ' rectW=' + rrect.width + ' rectX=' + rrect.x + ' clipped=' + rr.toString().length);
+  var rects = rr.getClientRects();
+  console.log('H7 clientRects=' + rects.length + ' firstW=' + (rects.length ? rects[0].width : -1));
+}
+console.log('H8 rangeText=' + (cr ? cr.toString() : '?'));
+</script></body></html>

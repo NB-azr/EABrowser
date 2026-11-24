@@ -1,0 +1,1020 @@
+{
+  "slug": "baidu-search",
+  "entry": "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+  "captured_at": "2026-11-08 20:42:48",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "百度搜索结果页（关键词 浏览器）",
+  "items": [
+    {
+      "url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "final_url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "local": "assets/pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_01c45ca.css",
+      "bytes": 26009,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "1363ca9b484c6c66"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/tokens_ad76f5a9.css",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/tokens_ad76f5a9.css",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/tokens_ad76f5a9.css",
+      "bytes": 166443,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "8bd9fa10cfbb92f5"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/index_85d90844.css",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/index_85d90844.css",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/@baidu/cosmic/index_85d90844.css",
+      "bytes": 525429,
+      "content_type": "text/css; charset=utf-8",
+      "sha1": "5a84b3dd14720e4b"
+    },
+    {
+      "url": "https://www.baidu.com/img/bd_logo1.png",
+      "final_url": "https://www.baidu.com/img/bd_logo1.png",
+      "local": "assets/www.baidu.com/img/bd_logo1.png",
+      "bytes": 7877,
+      "content_type": "image/png",
+      "sha1": "011387db777ff33f"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/result.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/result.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/result.png",
+      "bytes": 6617,
+      "content_type": "image/png",
+      "sha1": "159d18c3ae696819"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/result@2.png",
+      "bytes": 12802,
+      "content_type": "image/png",
+      "sha1": "bace9f44f9a2609b"
+    },
+    {
+      "url": "https://www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "final_url": "https://www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "local": "assets/www.baidu.com/img/flexible/logo/pc/peak-result.png",
+      "bytes": 7707,
+      "content_type": "image/png",
+      "sha1": "3260f2b87c0079a5"
+    },
+    {
+      "url": "https://zsyx-image.baidu.com/0/pic/-1799135051_1598721843_-1166832698.png",
+      "final_url": "https://zsyx-image.baidu.com/0/pic/-1799135051_1598721843_-1166832698.png",
+      "local": "assets/zsyx-image.baidu.com/0/pic/-1799135051_1598721843_-1166832698.png",
+      "bytes": 598314,
+      "content_type": "image/png",
+      "sha1": "9c25ebc385eba300"
+    },
+    {
+      "url": "https://bizaladdin-image.baidu.com/0/pic/-1986919504_-1256813108_19559083.png",
+      "final_url": "https://bizaladdin-image.baidu.com/0/pic/-1986919504_-1256813108_19559083.png",
+      "local": "assets/bizaladdin-image.baidu.com/0/pic/-1986919504_-1256813108_19559083.png",
+      "bytes": 3194,
+      "content_type": "image/png",
+      "sha1": "5a96f27d11bb3c29"
+    },
+    {
+      "url": "https://bizaladdin-image.baidu.com/0/pic/1907043220_-1117354817_-237121879.png",
+      "final_url": "https://bizaladdin-image.baidu.com/0/pic/1907043220_-1117354817_-237121879.png",
+      "local": "assets/bizaladdin-image.baidu.com/0/pic/1907043220_-1117354817_-237121879.png",
+      "bytes": 3635,
+      "content_type": "image/png",
+      "sha1": "adc479b9be4b7c56"
+    },
+    {
+      "url": "https://bizaladdin-image.baidu.com/0/pic/843330989_2026862712_-554133406.png",
+      "final_url": "https://bizaladdin-image.baidu.com/0/pic/843330989_2026862712_-554133406.png",
+      "local": "assets/bizaladdin-image.baidu.com/0/pic/843330989_2026862712_-554133406.png",
+      "bytes": 3403,
+      "content_type": "image/png",
+      "sha1": "7fa65b593b2f83a3"
+    },
+    {
+      "url": "https://bizaladdin-image.baidu.com/0/pic/589239642_-1050024667_708311061.png",
+      "final_url": "https://bizaladdin-image.baidu.com/0/pic/589239642_-1050024667_708311061.png",
+      "local": "assets/bizaladdin-image.baidu.com/0/pic/589239642_-1050024667_708311061.png",
+      "bytes": 5411,
+      "content_type": "image/png",
+      "sha1": "b014075c37a21a2e"
+    },
+    {
+      "url": "https://bizaladdin-image.baidu.com/0/pic/494264918_403554328_1737039629.png",
+      "final_url": "https://bizaladdin-image.baidu.com/0/pic/494264918_403554328_1737039629.png",
+      "local": "assets/bizaladdin-image.baidu.com/0/pic/494264918_403554328_1737039629.png",
+      "bytes": 3418,
+      "content_type": "image/png",
+      "sha1": "6e482e5004bd4f2a"
+    },
+    {
+      "url": "https://t8.baidu.com/it/u=2549701926,1650665534&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=48231F725B95624533FF00C70300E0AA",
+      "final_url": "https://t8.baidu.com/it/u=2549701926,1650665534&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=48231F725B95624533FF00C70300E0AA",
+      "local": "assets/t8.baidu.com/it/u=2549701926,1650665534&fm=3035&app=3035&size=r2,1&q__c413b4684f__d8cd66a4",
+      "bytes": 1897,
+      "content_type": "image/jpeg",
+      "sha1": "b2d4fd1ce2859663"
+    },
+    {
+      "url": "https://gimg3.baidu.com/rel/src=https%3A%2F%2Fpic.rmb.bdstatic.com%2Ff618c83dd191cbdf0acc8bdcdfa84b74.png&refer=http%3A%2F%2Fwww.baidu.com&app=2010&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=0d8c58b901c06305bae79c9ffff704ef",
+      "final_url": "https://gimg3.baidu.com/rel/src=https%3A%2F%2Fpic.rmb.bdstatic.com%2Ff618c83dd191cbdf0acc8bdcdfa84b74.png&refer=http%3A%2F%2Fwww.baidu.com&app=2010&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=0d8c58b901c06305bae79c9ffff704ef",
+      "local": "assets/gimg3.baidu.com/rel/src=https_/pic.rmb.bdstatic.com/f618c83dd191cbdf0acc8bdcdfa84b74.png&refer=http_/www.baidu__62728071.com&app=2010&size=w931&n=0&g=0n&er=404&q=7__b645a3920f",
+      "bytes": 8161,
+      "content_type": "image/png",
+      "sha1": "a3a2414500bce3ac"
+    },
+    {
+      "url": "https://t7.baidu.com/it/u=2492719005,3971545857&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=21F5632686F001941FE452BA0300F015",
+      "final_url": "https://t7.baidu.com/it/u=2492719005,3971545857&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=21F5632686F001941FE452BA0300F015",
+      "local": "assets/t7.baidu.com/it/u=2492719005,3971545857&fm=3035&app=3035&size=r2,1&q__13a383ddb2__c5fe87f4",
+      "bytes": 1842,
+      "content_type": "image/jpeg",
+      "sha1": "be6761387631f4bf"
+    },
+    {
+      "url": "https://t7.baidu.com/it/u=1367185242,1579481276&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=B100EEB30780494F1C745C7003005072",
+      "final_url": "https://t7.baidu.com/it/u=1367185242,1579481276&fm=3035&app=3035&size=r2,1&q=75&n=0&g=3n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=B100EEB30780494F1C745C7003005072",
+      "local": "assets/t7.baidu.com/it/u=1367185242,1579481276&fm=3035&app=3035&size=r2,1&q__0822fc2f21__88128170",
+      "bytes": 4204,
+      "content_type": "image/jpeg",
+      "sha1": "986dac67bd085e99"
+    },
+    {
+      "url": "https://gimg3.baidu.com/rel/src=https%3A%2F%2Fpic.rmb.bdstatic.com%2F633d631cbb907568802bf7088fbdf6cf.jpeg&refer=http%3A%2F%2Fwww.baidu.com&app=2010&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=c8b344ee73b3099231ba8b9af9a05155",
+      "final_url": "https://gimg3.baidu.com/rel/src=https%3A%2F%2Fpic.rmb.bdstatic.com%2F633d631cbb907568802bf7088fbdf6cf.jpeg&refer=http%3A%2F%2Fwww.baidu.com&app=2010&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=c8b344ee73b3099231ba8b9af9a05155",
+      "local": "assets/gimg3.baidu.com/rel/src=https_/pic.rmb.bdstatic.com/633d631cbb907568802bf7088fbdf6cf.jpeg&refer=http_/www.baidu__bbfcfb8d.com&app=2010&size=w931&n=0&g=0n&er=404&q=7__b645a3920f",
+      "bytes": 6994,
+      "content_type": "image/jpeg",
+      "sha1": "389d70e4bfeb7367"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=2660100043,3986572706&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f192_48",
+      "final_url": "https://gips0.baidu.com/it/u=2660100043,3986572706&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f192_48",
+      "local": "assets/gips0.baidu.com/it/u=2660100043,3986572706&fm=3028&app=3028&f=PNG&fmt=a__ee8422e7be",
+      "bytes": 5571,
+      "content_type": "image/png",
+      "sha1": "876c2b7637bce94b"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=2862834531,2772849958&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f192_48",
+      "final_url": "https://gips3.baidu.com/it/u=2862834531,2772849958&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f192_48",
+      "local": "assets/gips3.baidu.com/it/u=2862834531,2772849958&fm=3028&app=3028&f=PNG&fmt=a__330c6bf06c",
+      "bytes": 5273,
+      "content_type": "image/png",
+      "sha1": "9d14ed57a9670ecd"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/listen_1775261688000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/listen_1775261688000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/listen_1775261688000.svg",
+      "bytes": 3671,
+      "content_type": "image/svg+xml",
+      "sha1": "91b6765e6dc694ae"
+    },
+    {
+      "url": "https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fsmart%2F267f9e2f070828381f3021ef80cdbe014c086f065b89-bkimg-process%2Cv_1%2Crw_1%2Crh_1%2Cmaxl_800%2Cpad_1%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=c908fd0602eebfe39e0d8faf7c2dd8e7",
+      "final_url": "https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fsmart%2F267f9e2f070828381f3021ef80cdbe014c086f065b89-bkimg-process%2Cv_1%2Crw_1%2Crh_1%2Cmaxl_800%2Cpad_1%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=w931&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1794243600&t=c908fd0602eebfe39e0d8faf7c2dd8e7",
+      "local": "assets\\gimg3.baidu.com\\_long\\68cd0c435d7ea7bf.com&app=2011&size=w931&n=0&g=0n&er=404&q=7__eebbc17d52",
+      "bytes": 26845,
+      "content_type": "image/png",
+      "sha1": "a4c4ad17058a15d8"
+    },
+    {
+      "url": "https://t8.baidu.com/it/u=3183113499,2955902488&fm=217&app=126&size=re3,2&q=75&n=0&g=4n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=B8D16F929E1260C058AD54D8030050B2",
+      "final_url": "https://t8.baidu.com/it/u=3183113499,2955902488&fm=217&app=126&size=re3,2&q=75&n=0&g=4n&f=JPEG&fmt=auto&maxorilen2heic=2000000?s=B8D16F929E1260C058AD54D8030050B2",
+      "local": "assets/t8.baidu.com/it/u=3183113499,2955902488&fm=217&app=126&size=re3,2&q=__c077f4b681__af7d1960",
+      "bytes": 7442,
+      "content_type": "image/jpeg",
+      "sha1": "3d6a133c4eab4581"
+    },
+    {
+      "url": "https://t9.baidu.com/it/u=2103405009,617478824&fm=190&app=131&size=re3,2&q=75&n=0&g=4n&f=PNG&fmt=auto&maxorilen2heic=2000000?s=6B61126686C489177333E5180300109B",
+      "final_url": "https://t9.baidu.com/it/u=2103405009,617478824&fm=190&app=131&size=re3,2&q=75&n=0&g=4n&f=PNG&fmt=auto&maxorilen2heic=2000000?s=6B61126686C489177333E5180300109B",
+      "local": "assets/t9.baidu.com/it/u=2103405009,617478824&fm=190&app=131&size=re3,2&q=7__4692ec5cd4__7792c268",
+      "bytes": 4961,
+      "content_type": "image/png",
+      "sha1": "1542e76fdbf9172f"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/bdapp1_1776828463000.png",
+      "bytes": 16800,
+      "content_type": "image/png",
+      "sha1": "b24ea3adbd3193d9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_441e82f.png",
+      "bytes": 17545,
+      "content_type": "image/png",
+      "sha1": "4ecce8a8ce5dfda7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/icons_d5b04cc.gif",
+      "bytes": 22829,
+      "content_type": "image/gif",
+      "sha1": "d17323f53a6450a7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_1762fe7.png",
+      "bytes": 7101,
+      "content_type": "image/png",
+      "sha1": "5a2ec7c074d0b265"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/sugbg_90fc9cf.gif",
+      "bytes": 2133,
+      "content_type": "image/gif",
+      "sha1": "5ca3af599b3920bf"
+    },
+    {
+      "url": "https://www.baidu.com/img/sug_bd.png",
+      "final_url": "https://www.baidu.com/img/sug_bd.png",
+      "local": "assets/www.baidu.com/img/sug_bd.png",
+      "bytes": 431,
+      "content_type": "image/png",
+      "sha1": "d03b2bfad4ac8c82"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc_direct_42d6311.png",
+      "bytes": 19672,
+      "content_type": "image/png",
+      "sha1": "1ca597445e432837"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/tools-3.png",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/tools-3.png",
+      "local": "assets/www.baidu.com/aladdin/img/tools/tools-3.png",
+      "bytes": 11446,
+      "content_type": "image/png",
+      "sha1": "ea7e1243386690e5"
+    },
+    {
+      "url": "https://www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "final_url": "https://www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "local": "assets/www.baidu.com/cache/global/img/aladdinIcon-1.0.gif",
+      "bytes": 534,
+      "content_type": "image/gif",
+      "sha1": "7810590ff95e50d1"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/baiduappLogo_de45621.png",
+      "bytes": 1116,
+      "content_type": "image/png",
+      "sha1": "9807d2143a5064e9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/winlogo_e925689.png",
+      "bytes": 1113,
+      "content_type": "image/png",
+      "sha1": "2500b87b77486944"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/translate_tool_icon_57087b6.gif",
+      "bytes": 1807,
+      "content_type": "image/gif",
+      "sha1": "d4fba8def190eeb9"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/qrcode_icon_ae03227.png",
+      "bytes": 2447,
+      "content_type": "image/png",
+      "sha1": "177313ee8a716b0b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/favo_sprites_e33db52.png",
+      "bytes": 392,
+      "content_type": "image/png",
+      "sha1": "39d216d7bd313101"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png",
+      "bytes": 2430,
+      "content_type": "image/png",
+      "sha1": "5964b840eb025d95"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/nicon-2x_6258e1c.png",
+      "bytes": 5264,
+      "content_type": "image/png",
+      "sha1": "493a511972daf1cd"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/chat/AI_1721378175000.svg",
+      "bytes": 1588,
+      "content_type": "image/svg+xml",
+      "sha1": "3113e2a58294c73e"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/chat/logo_1721447231000.svg",
+      "bytes": 1434,
+      "content_type": "image/svg+xml",
+      "sha1": "8b28e83d58e68a87"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search_1756192482000.svg",
+      "bytes": 851,
+      "content_type": "image/svg+xml",
+      "sha1": "32f1c43a8458741b"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search-hover_1756192477000.svg",
+      "bytes": 833,
+      "content_type": "image/svg+xml",
+      "sha1": "5ed343f70bce8340"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/ai_1756192472000.svg",
+      "bytes": 2591,
+      "content_type": "image/svg+xml",
+      "sha1": "4b35c025e108d715"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/ai-icon-hover_1756192461000.svg",
+      "bytes": 2572,
+      "content_type": "image/svg+xml",
+      "sha1": "1222b2272504f39c"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/bao_02f5d40.svg",
+      "bytes": 6222,
+      "content_type": "image/svg+xml",
+      "sha1": "993f53d792191f4b"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f189_45",
+      "final_url": "https://gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f189_45",
+      "local": "assets/gips0.baidu.com/it/u=3785693112,2605121048&fm=3028&app=3028&f=PNG&fmt=a__b948bcc9ef",
+      "bytes": 1625,
+      "content_type": "image/png",
+      "sha1": "3f00bb1e786e503c"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/voice_e255e65.png",
+      "bytes": 1748,
+      "content_type": "image/png",
+      "sha1": "38dcd95e4678ca12"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/camera_4683ae6.png",
+      "bytes": 1669,
+      "content_type": "image/png",
+      "sha1": "cad0b77d243a272b"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/clear_48eb6e3.png",
+      "bytes": 625,
+      "content_type": "image/png",
+      "sha1": "f81da669a3edc704"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/loading.gif",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/loading.gif",
+      "local": "assets/www.baidu.com/aladdin/img/tools/loading.gif",
+      "bytes": 4504,
+      "content_type": "image/gif",
+      "sha1": "218275d5498caf04"
+    },
+    {
+      "url": "https://www.baidu.com/aladdin/img/tools/tools-5.png",
+      "final_url": "https://www.baidu.com/aladdin/img/tools/tools-5.png",
+      "local": "assets/www.baidu.com/aladdin/img/tools/tools-5.png",
+      "bytes": 10874,
+      "content_type": "image/png",
+      "sha1": "6529ecbe75482c71"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao_96f4fc0.png",
+      "bytes": 644,
+      "content_type": "image/png",
+      "sha1": "8ddadf7aea1b4273"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/soutu/img/soutu_icons_new_8abaf8a.png",
+      "bytes": 3220,
+      "content_type": "image/png",
+      "sha1": "ad4d24f732505c5d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/feedback_add_photo_69ff822.png",
+      "bytes": 158875,
+      "content_type": "image/png",
+      "sha1": "b99effe63f009045"
+    },
+    {
+      "url": "https://m.baidu.com/se/static/font/cicon.svg?t=1793762254454",
+      "final_url": "https://m.baidu.com/se/static/font/cicon.svg?t=1793762254454",
+      "local": "assets/m.baidu.com/se/static/font/cicon__5dff589f.svg",
+      "bytes": 143850,
+      "content_type": "image/svg+xml",
+      "sha1": "5def7bea606b2a37"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/iconfont_5d617bf.svg",
+      "bytes": 154511,
+      "content_type": "image/svg+xml",
+      "sha1": "9a937f01a3aac1c3"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/cosmic-icon/iconfont_dffe326.svg",
+      "bytes": 426981,
+      "content_type": "image/svg+xml",
+      "sha1": "3e65fb7d10a68043"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/font/din-pro-cond-medium/DINPro-CondMedium_7fcf171.svg",
+      "bytes": 891168,
+      "content_type": "image/svg+xml",
+      "sha1": "58f2bf5e064b6978"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aladdin/baidunumber_Medium_1660569188000.svg",
+      "bytes": 12081,
+      "content_type": "image/svg+xml",
+      "sha1": "62f1d741128244de"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "final_url": "https://gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "local": "assets/gips0.baidu.com/it/u=837208242,3555265853&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f42_42",
+      "bytes": 1121,
+      "content_type": "image/png",
+      "sha1": "c709948be15e1027"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/recommend/rs-icon_1730789535000.svg",
+      "bytes": 689,
+      "content_type": "image/svg+xml",
+      "sha1": "6eaf8f941cd1d5c1"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/arrow-bottom_a44a0c6.png",
+      "bytes": 516,
+      "content_type": "image/png",
+      "sha1": "7b392ea6624ced03"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/tipbox/img/close-btn_364ba48.png",
+      "bytes": 547,
+      "content_type": "image/png",
+      "sha1": "6f87254ce5f0c2cf"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_0c37e9b.png",
+      "bytes": 14038,
+      "content_type": "image/png",
+      "sha1": "1a097c0016e01b2d"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/home/img/icons_809ae65.gif",
+      "bytes": 3117,
+      "content_type": "image/gif",
+      "sha1": "6a3bdf00154b04a6"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f384_384",
+      "final_url": "https://gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f384_384",
+      "local": "assets/gips0.baidu.com/it/u=14154217,3818936281&fm=3028&app=3028&f=PNG&fmt=aut__2336267637",
+      "bytes": 83826,
+      "content_type": "image/png",
+      "sha1": "fb4855c5e230c4a9"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/star_new_1770104836000.png",
+      "bytes": 1734,
+      "content_type": "image/png",
+      "sha1": "caa3b0cbc069e0e0"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/multimode/ai-icon-bold_1759053952000.png",
+      "bytes": 1584,
+      "content_type": "image/png",
+      "sha1": "f47995e299081c0b"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/superman/search-hover-border_1768225457000.svg",
+      "bytes": 893,
+      "content_type": "image/svg+xml",
+      "sha1": "21787d0c4cc86cd3"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/star-hover_1765347114000.png",
+      "bytes": 11954,
+      "content_type": "image/png",
+      "sha1": "58a62f161d4dd6bb"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/normal-hover_1765347379000.png",
+      "bytes": 4106,
+      "content_type": "image/png",
+      "sha1": "0e3df64ead93d9ab"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/star_linear_1768206600000.svg",
+      "bytes": 10038,
+      "content_type": "image/svg+xml",
+      "sha1": "7ceac1f5bc143960"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/clock-circle-star_1765279751000.png",
+      "bytes": 4296,
+      "content_type": "image/png",
+      "sha1": "77e31d57f67e8144"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/aife/static/normal_1765347349000.png",
+      "bytes": 4170,
+      "content_type": "image/png",
+      "sha1": "2501a24547d34420"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/sug_default_1789189345000.png",
+      "bytes": 531,
+      "content_type": "image/png",
+      "sha1": "d252232ffbc4c45f"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "final_url": "https://psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "local": "assets/psstatic.cdn.bcebos.com/basics/aichat/sug_hover_1789189361000.png",
+      "bytes": 535,
+      "content_type": "image/png",
+      "sha1": "b93e58ff82d4ddf7"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/aladdin-san/app/jr-stock/img/loading_758d156.gif",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/aladdin-san/app/jr-stock/img/loading_758d156.gif",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/aladdin-san/app/jr-stock/img/loading_758d156.gif",
+      "bytes": 6974,
+      "content_type": "image/gif",
+      "sha1": "f5e7f0adce8be889"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_research_hover_1788316387000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_research_hover_1788316387000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_research_hover_1788316387000.svg",
+      "bytes": 664,
+      "content_type": "image/svg+xml",
+      "sha1": "690a7478c2a0ebfa"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_research_1788316392000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_research_1788316392000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_research_1788316392000.svg",
+      "bytes": 664,
+      "content_type": "image/svg+xml",
+      "sha1": "d2dd9ebdca94771f"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_hover_1788316398000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_hover_1788316398000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_hover_1788316398000.svg",
+      "bytes": 3267,
+      "content_type": "image/svg+xml",
+      "sha1": "72ccfe76a1d4474d"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_1788316403000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_1788316403000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_search_icon_1788316403000.svg",
+      "bytes": 3267,
+      "content_type": "image/svg+xml",
+      "sha1": "d632e3b26c3648a4"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_1788956405000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_1788956405000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_1788956405000.svg",
+      "bytes": 519,
+      "content_type": "image/svg+xml",
+      "sha1": "46eb8f5621d5497d"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_hover_1788956394000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_hover_1788956394000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/baikan/images/baikan_sharp_hover_1788956394000.svg",
+      "bytes": 519,
+      "content_type": "image/svg+xml",
+      "sha1": "db150d45445d4ec5"
+    },
+    {
+      "url": "https://t9.baidu.com/it/u=989233051,2337699629&fm=179&app=35&f=PNG?w=18&h=18",
+      "final_url": "https://t9.baidu.com/it/u=989233051,2337699629&fm=179&app=35&f=PNG?w=18&h=18",
+      "local": "assets/t9.baidu.com/it/u=989233051,2337699629&fm=179&app=35&f=PNG__00c655d8",
+      "bytes": 287,
+      "content_type": "image/png",
+      "sha1": "53486c31fa5e2847"
+    },
+    {
+      "url": "https://t9.baidu.com/it/u=2109628096,2261509067&fm=179&app=35&f=PNG?w=36&h=36&s=4AAA3C62C9CBC1221CD5D1DA0300C0B1",
+      "final_url": "https://t9.baidu.com/it/u=2109628096,2261509067&fm=179&app=35&f=PNG?w=36&h=36&s=4AAA3C62C9CBC1221CD5D1DA0300C0B1",
+      "local": "assets/t9.baidu.com/it/u=2109628096,2261509067&fm=179&app=35&f=PNG__fcd3f64a",
+      "bytes": 524,
+      "content_type": "image/png",
+      "sha1": "dc7a11921c5e7418"
+    },
+    {
+      "url": "https://psstatic.cdn.bcebos.com/crosswise/www/baozhang_1750317107000.svg",
+      "final_url": "https://psstatic.cdn.bcebos.com/crosswise/www/baozhang_1750317107000.svg",
+      "local": "assets/psstatic.cdn.bcebos.com/crosswise/www/baozhang_1750317107000.svg",
+      "bytes": 3287,
+      "content_type": "image/svg+xml",
+      "sha1": "7f91fc3a0385b705"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/assets/mirror-san/app/miaodong-logo_d5aa8ae.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/assets/mirror-san/app/miaodong-logo_d5aa8ae.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/assets/mirror-san/app/miaodong-logo_d5aa8ae.png",
+      "bytes": 7626,
+      "content_type": "image/png",
+      "sha1": "72d435115a4abff5"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=1052696518,2333522631&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_48",
+      "final_url": "https://gips3.baidu.com/it/u=1052696518,2333522631&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_48",
+      "local": "assets/gips3.baidu.com/it/u=1052696518,2333522631&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f48_48",
+      "bytes": 1141,
+      "content_type": "image/png",
+      "sha1": "dffcb07a0edb8599"
+    },
+    {
+      "url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top1@2x.png",
+      "final_url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top1@2x.png",
+      "local": "assets/aladdin-pc.cdn.bcebos.com/pc-soft/Top1@2x.png",
+      "bytes": 683,
+      "content_type": "image/png",
+      "sha1": "60c37d486dbcdc0d"
+    },
+    {
+      "url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top2@2x.png",
+      "final_url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top2@2x.png",
+      "local": "assets/aladdin-pc.cdn.bcebos.com/pc-soft/Top2@2x.png",
+      "bytes": 937,
+      "content_type": "image/png",
+      "sha1": "7d79d0fb5d7f8594"
+    },
+    {
+      "url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top3@2x.png",
+      "final_url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top3@2x.png",
+      "local": "assets/aladdin-pc.cdn.bcebos.com/pc-soft/Top3@2x.png",
+      "bytes": 1045,
+      "content_type": "image/png",
+      "sha1": "0deaf1bd4f468a00"
+    },
+    {
+      "url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top4@2x.png",
+      "final_url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top4@2x.png",
+      "local": "assets/aladdin-pc.cdn.bcebos.com/pc-soft/Top4@2x.png",
+      "bytes": 843,
+      "content_type": "image/png",
+      "sha1": "1e02d5a5a0efdecd"
+    },
+    {
+      "url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top5@2x.png",
+      "final_url": "https://aladdin-pc.cdn.bcebos.com/pc-soft/Top5@2x.png",
+      "local": "assets/aladdin-pc.cdn.bcebos.com/pc-soft/Top5@2x.png",
+      "bytes": 940,
+      "content_type": "image/png",
+      "sha1": "5eccc1390fbb6dba"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao-2-small_f609346.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao-2-small_f609346.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/img/pc-bao-2-small_f609346.png",
+      "bytes": 573,
+      "content_type": "image/png",
+      "sha1": "45bde76defff25cb"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=670613263,2466535185&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "final_url": "https://gips3.baidu.com/it/u=670613263,2466535185&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "local": "assets/gips3.baidu.com/it/u=670613263,2466535185&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "bytes": 424,
+      "content_type": "image/png",
+      "sha1": "351e942a6d8ce0a2"
+    },
+    {
+      "url": "https://gips1.baidu.com/it/u=1774615295,1280647586&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f63_63",
+      "final_url": "https://gips1.baidu.com/it/u=1774615295,1280647586&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f63_63",
+      "local": "assets/gips1.baidu.com/it/u=1774615295,1280647586&fm=3028&app=3028&f=PNG&fmt=a__426decdbca",
+      "bytes": 665,
+      "content_type": "image/png",
+      "sha1": "53df6258baa94ecb"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=1773267956,1517034147&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "final_url": "https://gips0.baidu.com/it/u=1773267956,1517034147&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "local": "assets/gips0.baidu.com/it/u=1773267956,1517034147&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f45_45",
+      "bytes": 473,
+      "content_type": "image/png",
+      "sha1": "9f47145822217b6d"
+    },
+    {
+      "url": "https://gips1.baidu.com/it/u=341746406,152539699&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f63_63",
+      "final_url": "https://gips1.baidu.com/it/u=341746406,152539699&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f63_63",
+      "local": "assets/gips1.baidu.com/it/u=341746406,152539699&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f63_63",
+      "bytes": 661,
+      "content_type": "image/png",
+      "sha1": "f035c2732d6d2dad"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/molecules/app/hint-float-ball-right/img/close_7bc47f9.png",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/molecules/app/hint-float-ball-right/img/close_7bc47f9.png",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/molecules/app/hint-float-ball-right/img/close_7bc47f9.png",
+      "bytes": 710,
+      "content_type": "image/png",
+      "sha1": "5bdf43b3e6411352"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "final_url": "https://pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "local": "assets/pss.bdstatic.com/r/www/static/font/cosmic/pc/cos-icon_ef78c24.svg",
+      "bytes": 569456,
+      "content_type": "image/svg+xml",
+      "sha1": "178e88a3f868fcca"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=2971504675,1785696770&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "final_url": "https://gips2.baidu.com/it/u=2971504675,1785696770&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "local": "assets/gips2.baidu.com/it/u=2971504675,1785696770&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "bytes": 646,
+      "content_type": "image/png",
+      "sha1": "ec43b65dfe4731d1"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=1816316525,3366272828&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "final_url": "https://gips2.baidu.com/it/u=1816316525,3366272828&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "local": "assets/gips2.baidu.com/it/u=1816316525,3366272828&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "bytes": 424,
+      "content_type": "image/png",
+      "sha1": "c540d145b6423f6a"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=2593497426,109457719&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "final_url": "https://gips2.baidu.com/it/u=2593497426,109457719&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "local": "assets/gips2.baidu.com/it/u=2593497426,109457719&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "bytes": 638,
+      "content_type": "image/png",
+      "sha1": "7f13188907f54f28"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=2285475573,1258224933&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "final_url": "https://gips3.baidu.com/it/u=2285475573,1258224933&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "local": "assets/gips3.baidu.com/it/u=2285475573,1258224933&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f66_66",
+      "bytes": 962,
+      "content_type": "image/png",
+      "sha1": "edd0ecccfcc3a142"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=229094252,4172490286&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f40_40",
+      "final_url": "https://gips3.baidu.com/it/u=229094252,4172490286&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f40_40",
+      "local": "assets/gips3.baidu.com/it/u=229094252,4172490286&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f40_40",
+      "bytes": 412,
+      "content_type": "image/png",
+      "sha1": "4fc0385e49423f98"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=2024772027,3088190387&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f58_82",
+      "final_url": "https://gips3.baidu.com/it/u=2024772027,3088190387&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f58_82",
+      "local": "assets/gips3.baidu.com/it/u=2024772027,3088190387&fm=3028&app=3028&f=PNG&fmt=a__c81baaaf23",
+      "bytes": 1822,
+      "content_type": "image/png",
+      "sha1": "eb520d3d2bb8fd4a"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=3512824157,3601592008&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f18_4",
+      "final_url": "https://gips2.baidu.com/it/u=3512824157,3601592008&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f18_4",
+      "local": "assets/gips2.baidu.com/it/u=3512824157,3601592008&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f18_4",
+      "bytes": 268,
+      "content_type": "image/png",
+      "sha1": "a9eb13ecc5ecf0be"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=1899156480,4158106472&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f57_57",
+      "final_url": "https://gips0.baidu.com/it/u=1899156480,4158106472&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f57_57",
+      "local": "assets/gips0.baidu.com/it/u=1899156480,4158106472&fm=3028&app=3028&f=PNG&fmt=a__ad6efd5c61",
+      "bytes": 1344,
+      "content_type": "image/png",
+      "sha1": "f7620d36669e6e62"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=4114430329,3218253131&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "final_url": "https://gips0.baidu.com/it/u=4114430329,3218253131&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "local": "assets/gips0.baidu.com/it/u=4114430329,3218253131&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "bytes": 253,
+      "content_type": "image/png",
+      "sha1": "5acd901751456d5f"
+    },
+    {
+      "url": "https://gips0.baidu.com/it/u=3425432413,170020957&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "final_url": "https://gips0.baidu.com/it/u=3425432413,170020957&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "local": "assets/gips0.baidu.com/it/u=3425432413,170020957&fm=3028&app=3028&f=PNG&fmt=auto&q=90&size=f19_3",
+      "bytes": 239,
+      "content_type": "image/png",
+      "sha1": "0b2adb9ccfd7dae2"
+    },
+    {
+      "url": "https://gips2.baidu.com/it/u=854342635,332258060&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f1026_102",
+      "final_url": "https://gips2.baidu.com/it/u=854342635,332258060&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f1026_102",
+      "local": "assets/gips2.baidu.com/it/u=854342635,332258060&fm=3028&app=3028&f=PNG&fmt=aut__2c48b9f9f1",
+      "bytes": 1561,
+      "content_type": "image/png",
+      "sha1": "77da9b16e44f3e1e"
+    },
+    {
+      "url": "https://gips3.baidu.com/it/u=2736486724,2322138198&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1026_102",
+      "final_url": "https://gips3.baidu.com/it/u=2736486724,2322138198&fm=3028&app=3028&f=PNG&fmt=auto&q=100&size=f1026_102",
+      "local": "assets/gips3.baidu.com/it/u=2736486724,2322138198&fm=3028&app=3028&f=PNG&fmt=a__5b9a926a86",
+      "bytes": 1447,
+      "content_type": "image/png",
+      "sha1": "3d31053b897ff9a9"
+    },
+    {
+      "url": "https://ms.bdstatic.com/se/static/ala_atom/assets/img/train_info_icon_0741fa3.png",
+      "final_url": "https://ms.bdstatic.com/se/static/ala_atom/assets/img/train_info_icon_0741fa3.png",
+      "local": "assets/ms.bdstatic.com/se/static/ala_atom/assets/img/train_info_icon_0741fa3.png",
+      "bytes": 1883,
+      "content_type": "image/png",
+      "sha1": "ffa746392b4cbe44"
+    },
+    {
+      "url": "https://gips1.baidu.com/it/u=2059581208,4043524228&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f544_544",
+      "final_url": "https://gips1.baidu.com/it/u=2059581208,4043524228&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f544_544",
+      "local": "assets/gips1.baidu.com/it/u=2059581208,4043524228&fm=3028&app=3028&f=PNG&fmt=a__f38bee009c",
+      "bytes": 90479,
+      "content_type": "image/png",
+      "sha1": "052863d59d6eddcc"
+    },
+    {
+      "url": "https://bmids.cdn.bcebos.com/lottie/59a9326e12f0d8d0a0b2ed7f606a597b-tuji.png",
+      "final_url": "https://bmids.cdn.bcebos.com/lottie/59a9326e12f0d8d0a0b2ed7f606a597b-tuji.png",
+      "local": "assets/bmids.cdn.bcebos.com/lottie/59a9326e12f0d8d0a0b2ed7f606a597b-tuji.png",
+      "bytes": 3356,
+      "content_type": "image/png",
+      "sha1": "ebbe7eeb21906bed"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js",
+      "bytes": 93750,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "23d1daa9435a8273"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/lib/esl_559eb51.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/lib/esl_559eb51.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/lib/esl_559eb51.js",
+      "bytes": 11186,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "72ffb9bb4827c924"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/es6-polyfill_388d059.js",
+      "bytes": 74476,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "997d0214da5c397e"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js",
+      "bytes": 41984,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "29f1c62b0b8b4dd8"
+    },
+    {
+      "url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "final_url": "https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "local": "assets/pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_a2ce963.js",
+      "bytes": 827423,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "021adb02f7867e3b"
+    },
+    {
+      "url": "https://hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "final_url": "https://hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "local": "assets/hectorstatic.baidu.com/cd37ed75a9387c5b.js",
+      "bytes": 118023,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha1": "45a468aa0eaeec4d"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://www.baidu.com/f",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "url": "https://www.baidu.com/window.location.href",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.baidu.com/e,c",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "status": "OK",
+  "final_url": "https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8",
+  "http_charset": "utf-8",
+  "entry_bytes": 1201524,
+  "entry_content_type": "text/html;charset=utf-8",
+  "html_bytes": 1200296,
+  "assets": 123,
+  "asset_bytes": 5411066,
+  "image_sizes": 108,
+  "elapsed_s": 9.83
+}

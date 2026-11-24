@@ -1,0 +1,26 @@
+阈值判定：GL_avg <= Canvas_avg*0.80 且 submitP95 <= 8ms 且 fps >= 60 且 outliers=0（1 轮中位数）
+数据来源：<OutDir>\summary.csv（每档逐帧原始值见 frames.csv）
+cjk-long-1200-cap256 cmds=1200  GL/Canvas=247%  GL=43.69ms p95=50.02ms fps= 22.9  -> 保持 Canvas（未过：ratio=247%>80%; submitP95=50.02ms>8ms; fps=22.9<60）
+cjk-long-1200-char cmds=1200  GL/Canvas=540%  GL=102.57ms p95=176.72ms fps=  9.7  -> 保持 Canvas（未过：ratio=540%>80%; submitP95=176.72ms>8ms; fps=9.7<60）
+cjk-long-1200-fit cmds=1200  GL/Canvas= 24%  GL= 2.66ms p95= 1.62ms fps=376.1  -> 可以上调
+cjk-long-1200-full cmds=1200  GL/Canvas=710%  GL=84.58ms p95=88.46ms fps= 11.8  -> 保持 Canvas（未过：ratio=710%>80%; submitP95=88.46ms>8ms; fps=11.8<60）
+cjk-long-1200-lru4 cmds=1200  GL/Canvas=214%  GL=37.87ms p95=42.77ms fps= 26.4  -> 保持 Canvas（未过：ratio=214%>80%; submitP95=42.77ms>8ms; fps=26.4<60）
+cjk-long-1200-pages8 cmds=1200  GL/Canvas= 43%  GL= 6.94ms p95= 6.81ms fps=144.0  -> 可以上调
+cjk-long-600-cap256 cmds= 600  GL/Canvas=266%  GL=35.21ms p95=48.78ms fps= 28.4  -> 保持 Canvas（未过：ratio=266%>80%; submitP95=48.78ms>8ms; fps=28.4<60）
+cjk-long-600-char cmds= 600  GL/Canvas=487%  GL=64.69ms p95=70.58ms fps= 15.5  -> 保持 Canvas（未过：ratio=487%>80%; submitP95=70.58ms>8ms; fps=15.5<60）
+cjk-long-600-fit cmds= 600  GL/Canvas= 30%  GL= 3.90ms p95= 2.59ms fps=256.2  -> 可以上调
+cjk-long-600-full cmds= 600  GL/Canvas=482%  GL=87.35ms p95=136.50ms fps= 11.4  -> 保持 Canvas（未过：ratio=482%>80%; submitP95=136.50ms>8ms; fps=11.4<60）
+cjk-long-600-lru4 cmds= 600  GL/Canvas=211%  GL=28.71ms p95=35.84ms fps= 34.8  -> 保持 Canvas（未过：ratio=211%>80%; submitP95=35.84ms>8ms; fps=34.8<60）
+cjk-long-600-pages8 cmds= 600  GL/Canvas= 35%  GL= 5.95ms p95=11.26ms fps=168.0  -> 保持 Canvas（未过：submitP95=11.26ms>8ms）
+cjk-mix-300    cmds= 300  GL/Canvas= 31%  GL= 2.66ms p95= 4.80ms fps=376.5  -> 可以上调
+cjk-mix-600    cmds= 600  GL/Canvas= 18%  GL= 1.63ms p95= 1.21ms fps=612.6  -> 可以上调
+cjk-text-300   cmds= 300  GL/Canvas= 37%  GL= 2.64ms p95= 4.86ms fps=379.1  -> 可以上调
+cjk-text-600   cmds= 600  GL/Canvas= 48%  GL= 2.25ms p95= 2.09ms fps=443.6  -> 可以上调
+cjk-uniq-300   cmds= 300  GL/Canvas= 42%  GL= 2.70ms p95= 2.37ms fps=370.6  -> 可以上调
+cjk-uniq-600   cmds= 600  GL/Canvas= 47%  GL= 4.39ms p95= 8.91ms fps=227.6  -> 保持 Canvas（未过：submitP95=8.91ms>8ms; outliers=1）
+shapes-1200    cmds=1200  GL/Canvas= 63%  GL= 8.69ms p95=21.99ms fps=115.1  -> 保持 Canvas（未过：submitP95=21.99ms>8ms; outliers=1）
+shapes-300     cmds= 300  GL/Canvas= 58%  GL= 5.44ms p95= 4.49ms fps=183.9  -> 可以上调
+shapes-600     cmds= 600  GL/Canvas= 28%  GL= 3.37ms p95= 2.00ms fps=296.5  -> 可以上调
+
+上调建议：若 cjk-text 在 600 档仍满足四条判据，可把文字层阈值从 300 上调到 600；
+          shapes 单独看 1200 档（顶点增长 ≈ 线性，draws=1 不随指令数增长）。

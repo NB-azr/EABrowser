@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>flex 位置矩阵</title>
+<style>
+  body{margin:0;font:16px/1.3 sans-serif}
+  .row{display:flex;background:#eee;height:40px;margin-bottom:20px;border:1px solid #ddd}
+  .box{background:#99ccff;border:1px solid #369;height:40px;box-sizing:border-box}
+  .fixed200{flex:0 0 200px}
+  .shrink0{flex:0 0 150px}
+  /* 2 换行 */
+  #m1{flex-wrap:wrap;height:auto}
+  #m1 .box{flex:0 0 200px}
+  /* 3 flex:1 + max-width */
+  #m3 .a{flex:1 1 0;min-width:0;max-width:120px}
+  #m3 .b{flex:1 1 0;min-width:0}
+  /* 4 百分比基准 */
+  #m4 .a{flex:0 0 50%}
+  #m4 .b{flex:0 0 50%}
+  /* 5 可断长文本：min-content 是单个单词 */
+  #m5 .long{flex:0 1 auto}
+  #m5 .right{flex:0 0 200px}
+  /* 6 inline-flex 收缩包裹 */
+  #m6{display:inline-flex}
+  /* 7 列 + 固定高 */
+  #m7{display:flex;flex-direction:column;height:120px;flex-wrap:nowrap}
+  #m7 .box{flex:0 0 60px;width:200px}
+  /* 8 gap */
+  #m8{gap:10px}
+  #m8 .box{flex:1 1 0;min-width:0}
+</style></head><body>
+<div class="row" id="m1"><div class="box" id="m1a">m1-a</div><div class="box" id="m1b">m1-b</div><div class="box" id="m1c">m1-c</div></div>
+
+<div class="row" id="m3"><div class="box a" id="m3a">A</div><div class="box b" id="m3b">B</div></div>
+
+<div class="row" id="m4"><div class="box a" id="m4a">A</div><div class="box b" id="m4b">B</div></div>
+
+<div class="row" id="m5"><div class="box long" id="m5a">hello world foo bar baz</div><div class="box right" id="m5b">R</div></div>
+
+<div class="row" id="m6" style="height:40px"><div class="box fixed200" id="m6a">a</div><div class="box fixed200" id="m6b">b</div></div>
+
+<div id="m7" class="row" style="height:120px"><div class="box" id="m7a">s1</div><div class="box" id="m7b">s2</div></div>
+
+<div class="row" id="m8"><div class="box" id="m8a">1</div><div class="box" id="m8b">2</div><div class="box" id="m8c">3</div></div>
+</body></html>

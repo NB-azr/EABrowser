@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+body{margin:0;padding:0;font-size:14px}
+.case{position:relative;margin:10px;background:#eef2ff}
+.child{position:absolute;width:50px;height:40px}
+#b1{width:300px;height:120px;clip-path:inset(20px 40px)}
+#b1 .in{left:40px;top:30px;background:#00aa00}
+#b1 .out{left:290px;top:0;background:#ff0000}
+#b2{width:200px;height:200px;clip-path:circle(40px at 100px 100px)}
+#b2 .in{left:80px;top:80px;background:#0088ff}
+#b2 .out{left:150px;top:150px;background:#ff8800}
+#b3{width:300px;height:100px;clip-path:polygon(25% 0,75% 0,75% 100%,25% 100%)}
+#b3 .in{left:100px;top:0;background:#00aaaa}
+#b3 .out{left:240px;top:0;background:#aa00aa}
+#b4{width:300px;height:100px;clip-path:ellipse(50px 30px at 100px 50px)}
+#b4 .in{left:80px;top:30px;background:#5566ff}
+#b4 .out{left:200px;top:0;background:#888800}
+#b5{width:300px;height:80px;clip-path:none;mask-image:linear-gradient(to bottom,transparent,#000)}
+#b5 .in{left:10px;top:10px;background:#00ff88}
+</style></head>
+<body>
+<div id="b1" class="case"><div class="child in" id="i1"></div><div class="child out" id="o1"></div></div>
+<div id="b2" class="case"><div class="child in" id="i2"></div><div class="child out" id="o2"></div></div>
+<div id="b3" class="case"><div class="child in" id="i3"></div><div class="child out" id="o3"></div></div>
+<div id="b4" class="case"><div class="child in" id="i4"></div><div class="child out" id="o4"></div></div>
+<div id="b5" class="case"><div class="child in" id="i5"></div></div>
+</body></html>

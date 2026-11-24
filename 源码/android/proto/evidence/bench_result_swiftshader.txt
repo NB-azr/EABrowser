@@ -1,0 +1,11 @@
+# EAProto benchmark — 环境 A：SwiftShader（软件 GLES2）
+# 设备：API19 x86 模拟器 EAProto19，1080x1776，300 dpi
+# 采集：2026-11-08
+epoch=1
+bench 1080x1776 frames=20（含 glFinish）
+  cmds= 100 img= 8  Canvas avg=  4.86 p50=  3.75 p95=  8.81 max= 18.81 fps=205.6   GLES2 avg= 12.38 p50= 12.12 p95= 15.01 max= 17.24 fps= 80.8   ratio=2.55x
+  cmds= 300 img=25  Canvas avg=  5.99 p50=  4.87 p95= 10.34 max= 17.30 fps=167.0   GLES2 avg= 28.71 p50= 26.73 p95= 35.19 max= 44.83 fps= 34.8   ratio=4.80x
+  cmds= 600 img=50  Canvas avg= 11.17 p50= 10.63 p95= 13.45 max= 16.81 fps= 89.5   GLES2 avg= 45.33 p50= 41.65 p95= 58.02 max= 63.01 fps= 22.1   ratio=4.06x
+  cmds=1200 img=100  Canvas avg=  8.78 p50=  8.25 p95= 13.84 max= 14.26 fps=113.9   GLES2 avg= 80.35 p50= 77.55 p95=100.14 max=104.95 fps= 12.4   ratio=9.15x
+  跨进程帧路径: upload=10.70ms present=6.40ms (7.3MB/帧)
+JSON {"width":1080,"height":1776,"frames":20,"cases":[{"cmds":100,"images":8,"canvas":{"avg":4.86,"p50":3.75,"p95":8.81,"max":18.81},"gles2":{"avg":12.38,"p50":12.12,"p95":15.01,"max":17.24}},{"cmds":300,"images":25,"canvas":{"avg":5.99,"p50":4.87,"p95":10.34,"max":17.30},"gles2":{"avg":28.71,"p50":26.73,"p95":35.19,"max":44.83}},{"cmds":600,"images":50,"canvas":{"avg":11.17,"p50":10.63,"p95":13.45,"max":16.81},"gles2":{"avg":45.33,"p50":41.65,"p95":58.02,"max":63.01}},{"cmds":1200,"images":100,"canvas":{"avg":8.78,"p50":8.25,"p95":13.84,"max":14.26},"gles2":{"avg":80.35,"p50":77.55,"p95":100.14,"max":104.95}}],"uploadMs":10.70,"presentMs":6.40}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>重度站点回归 · 原站 vs 引擎</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--line:#272c36;--fg:#e6e9ef;--dim:#9aa3b2;--acc:#6ea8fe}
+*{box-sizing:border-box}
+body{margin:0;padding:28px;background:var(--bg);color:var(--fg);
+     font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+h1{font-size:24px;margin:0 0 6px}
+.sub{color:var(--dim);margin:0 0 18px}
+.summary{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.summary .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--dim)}
+.summary .chip b{color:var(--fg)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 22px}
+.card header{margin-bottom:12px}
+h2{font-size:17px;margin:0 0 2px;font-family:ui-monospace,Consolas,monospace}
+.url{color:var(--acc);text-decoration:none;font-size:12px;word-break:break-all}
+.note{color:var(--dim);margin:6px 0 8px;font-size:13px}
+.fact{color:#e8c39e;margin:0 0 8px;font-size:12.5px;border-left:2px solid #6b4f33;padding-left:8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:#10131a;border:1px solid var(--line);border-radius:8px;padding:4px 9px;color:var(--dim);font-size:12px}
+.chip b{color:var(--fg);font-family:ui-monospace,Consolas,monospace}
+.unkrow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.lbl{color:var(--dim);font-size:12px}
+.unk{background:#1d2230;border:1px solid #2b3346;border-radius:6px;padding:2px 7px;font-size:12px;color:#c9d4e8}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.pane{background:#0c0f14;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.cap{display:flex;justify-content:space-between;gap:8px;padding:7px 10px;color:var(--dim);font-size:12px;border-bottom:1px solid var(--line)}
+.cap b{color:var(--fg);font-weight:600}
+.pane img{display:block;width:100%;height:auto;max-height:720px;object-fit:cover;object-position:top}
+.pane img.eng{background:#fff;object-fit:contain;object-position:top}
+.miss{padding:22px;color:var(--dim);background:repeating-linear-gradient(45deg,#12151c,#12151c 10px,#151922 10px,#151922 20px);min-height:240px}
+.miss b{color:#ffb4a8}
+.small{font-size:12px;word-break:break-all}
+footer{color:var(--dim);font-size:12px;margin-top:8px}
+footer code{color:#c9d4e8}
+</style></head><body>
+<h1>重度站点回归 · 原站 vs 引擎渲染</h1>
+<p class="sub">离线快照逐页跑 <code>feature_runner</code>，仅并排展示截图与 draw 导出，不做评分。生成于 2026-11-08 20:47:35。</p>
+<div class="summary">
+  <span class="chip">快照页 <b>6</b></span>
+  <span class="chip">抓取成功 <b>6</b></span>
+  <span class="chip">原站截图 <b>5</b></span>
+  <span class="chip">引擎布局+样式合计 <b>4273 ms</b></span>
+  <span class="chip">执行模式 <b>--no-js</b></span>
+</div>
+
+<section class="card">
+  <header>
+    <h2>baidu-home</h2>
+    <a class="url" href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a>
+    <p class="note">百度首页</p>
+    <p class="fact">引擎 SVG 导出只写 draw 指令（矩形/文本），不嵌入图片资源；本页 logo 文本为白字，与白色背景同色，因此在右图中不可见。</p>
+    <div class="chips"><span class="chip">指令数 <b>217</b></span><span class="chip">unsupported <b>19</b></span><span class="chip">unknown <b>1</b></span><span class="chip">layout <b>36.9 ms</b></span><span class="chip">style <b>35.07 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">interpolation-mode <b>19</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><a href="shots/baidu-home.png" target="_blank"><img src="shots/baidu-home.png" loading="lazy" alt="原站截图"></a></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/baidu-home.svg" target="_blank"><img class="eng" src="snapshots/baidu-home.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/baidu-home.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<section class="card">
+  <header>
+    <h2>baidu-search</h2>
+    <a class="url" href="https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8" target="_blank">https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8</a>
+    <p class="note">百度搜索结果页（关键词 浏览器）</p>
+    <p class="fact">左侧截图为 Headless Edge 实时访问时被“百度安全验证”拦截后得到的验证码页，与右侧快照（快照本体是真实结果页，title=浏览器_百度搜索）不是同一页面。</p>
+    <div class="chips"><span class="chip">指令数 <b>1256</b></span><span class="chip">unsupported <b>8</b></span><span class="chip">unknown <b>3</b></span><span class="chip">layout <b>1035.15 ms</b></span><span class="chip">style <b>1027.46 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">text-decoration-style <b>6</b></span><span class="unk">text-fill-color <b>1</b></span><span class="unk">scrollbar-width <b>1</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><a href="shots/baidu-search.png" target="_blank"><img src="shots/baidu-search.png" loading="lazy" alt="原站截图"></a></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/baidu-search.svg" target="_blank"><img class="eng" src="snapshots/baidu-search.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/baidu-search.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<section class="card">
+  <header>
+    <h2>bilibili-home</h2>
+    <a class="url" href="https://www.bilibili.com/" target="_blank">https://www.bilibili.com/</a>
+    <p class="note">哔哩哔哩首页</p>
+    
+    <div class="chips"><span class="chip">指令数 <b>599</b></span><span class="chip">unsupported <b>75</b></span><span class="chip">unknown <b>3</b></span><span class="chip">layout <b>537.2 ms</b></span><span class="chip">style <b>532.86 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">line-break <b>67</b></span><span class="unk">touch-action <b>6</b></span><span class="unk">overscroll-behavior <b>2</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><a href="shots/bilibili-home.png" target="_blank"><img src="shots/bilibili-home.png" loading="lazy" alt="原站截图"></a></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/bilibili-home.svg" target="_blank"><img class="eng" src="snapshots/bilibili-home.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/bilibili-home.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<section class="card">
+  <header>
+    <h2>bilibili-video</h2>
+    <a class="url" href="https://www.bilibili.com/video/BV1GJ411x7h7/" target="_blank">https://www.bilibili.com/video/BV1GJ411x7h7/</a>
+    <p class="note">哔哩哔哩视频页</p>
+    
+    <div class="chips"><span class="chip">指令数 <b>1218</b></span><span class="chip">unsupported <b>264</b></span><span class="chip">unknown <b>4</b></span><span class="chip">layout <b>343.3 ms</b></span><span class="chip">style <b>336.62 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">touch-action <b>93</b></span><span class="unk">text-decoration-skip <b>89</b></span><span class="unk">line-break <b>42</b></span><span class="unk">fill <b>40</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><a href="shots/bilibili-video.png" target="_blank"><img src="shots/bilibili-video.png" loading="lazy" alt="原站截图"></a></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/bilibili-video.svg" target="_blank"><img class="eng" src="snapshots/bilibili-video.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/bilibili-video.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<section class="card">
+  <header>
+    <h2>zhihu-signin</h2>
+    <a class="url" href="https://www.zhihu.com/" target="_blank">https://www.zhihu.com/</a>
+    <p class="note">知乎匿名访问被 302 到登录页（非首页内容）；302→https://www.zhihu.com/signin?next=%2F</p>
+    
+    <div class="chips"><span class="chip">指令数 <b>270</b></span><span class="chip">unsupported <b>2</b></span><span class="chip">unknown <b>2</b></span><span class="chip">layout <b>164.38 ms</b></span><span class="chip">style <b>162.8 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">text-autospace <b>1</b></span><span class="unk">-app-width-tshape <b>1</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><a href="shots/zhihu-signin.png" target="_blank"><img src="shots/zhihu-signin.png" loading="lazy" alt="原站截图"></a></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/zhihu-signin.svg" target="_blank"><img class="eng" src="snapshots/zhihu-signin.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/zhihu-signin.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<section class="card">
+  <header>
+    <h2>tieba-hottopic</h2>
+    <a class="url" href="https://tieba.baidu.com/hottopic/browse/hottopic" target="_blank">https://tieba.baidu.com/hottopic/browse/hottopic</a>
+    <p class="note">贴吧热榜；贴吧首页 tieba.baidu.com 直接 403 反爬</p>
+    <p class="fact">左侧无原站截图：Headless Edge 打开该页后加载事件迟迟不结束，超时未产出 PNG；未做任何替代或伪造，仅保留右侧引擎导出。</p>
+    <div class="chips"><span class="chip">指令数 <b>82</b></span><span class="chip">unsupported <b>1</b></span><span class="chip">unknown <b>1</b></span><span class="chip">layout <b>31.03 ms</b></span><span class="chip">style <b>30.37 ms</b></span><span class="chip">状态 <b>OK</b></span></div>
+    <div class="unkrow"><span class="lbl">unsupported 明细</span><span class="unk">justify-items <b>1</b></span></div>
+  </header>
+  <div class="cols">
+    <div class="pane"><div class="cap"><b>原站截图</b><span>1280x900 · Headless Edge</span></div><div class="miss"><b>原站截图缺失</b><p>headless 未产出有效截图（站点反爬/登录墙/加载超时）</p><p class="small">站点：https://tieba.baidu.com/hottopic/browse/hottopic</p></div></div>
+    <div class="pane"><div class="cap"><b>引擎渲染</b><span>draw 指令 → SVG</span></div><a href="snapshots/tieba-hottopic.svg" target="_blank"><img class="eng" src="snapshots/tieba-hottopic.svg" loading="lazy" alt="引擎渲染"></a><div class="cap"><a href="snapshots/tieba-hottopic.svg" target="_blank">打开完整 SVG</a></div></div>
+  </div>
+</section>
+<footer>
+  <p>口径：快照内所有外链已改写为页面相对路径；图片固有尺寸经 <code>--img</code> 回填；未执行页面 JS（<code>--no-js</code>），因此动态内容不参与对照。左图为 Headless Edge 实时截取的当前线上首屏，右图为引擎 draw 指令导出的 SVG（可滚动查看）。</p>
+  <p>抓取降级说明：贴吧首页 <code>tieba.baidu.com</code> 返回 403，改用可访问的 <code>/hottopic/browse/hottopic</code>；知乎匿名访问被 302 到登录页。抓不下来的页面均在卡片内写明原因，未做任何内容伪造。</p>
+</footer>
+</body></html>

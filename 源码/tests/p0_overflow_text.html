@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><style>
+body { font-size: 16px; }
+#a { width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: #eeeeee; }
+#b { width: 140px; -webkit-line-clamp: 2; overflow: hidden; background: #eeeeee; }
+#c { width: 140px; height: 24px; overflow: hidden; background: #eeeeee; }
+#c-inner { height: 80px; background: #ff0000; }
+#d { width: 140px; white-space: nowrap; background: #eeeeee; }
+</style></head>
+<body>
+<div id="a">这是一段很长的中文文本用来测试单行省略号截断效果</div>
+<div id="b">这是一段很长的中文文本用来测试多行夹取两行之后应该出现省略号并且不再继续换行</div>
+<div id="c"><div id="c-inner">子元素超出裁剪</div></div>
+<div id="d">这是一段很长的中文文本不会被换行也不会被截断</div>
+</body></html>

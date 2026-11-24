@@ -1,0 +1,56 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='1285'>
+<defs><filter id='b'><feGaussianBlur stdDeviation='6'/></filter></defs>
+<rect width='100%' height='100%' fill='#FFFFFF'/>
+<rect x='0' y='0' width='1280' height='1285' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='0' y='0' width='1280' height='900' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='0' y='0' width='1280' height='136' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='0' y='31' width='1280' height='1' rx='0' fill='#EBEBEB' fill-opacity='1'/>
+<text x='380' y='13' font-size='13' fill='#333333' font-family='sans-serif'>网页</text>
+<rect x='380' y='27.88' width='26' height='1' rx='0' fill='#333333' fill-opacity='1'/>
+<rect x='185.5' y='55' width='135' height='45' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='335.5' y='64' width='536' height='40' rx='2' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='335.5' y='64' width='536' height='40' rx='2' fill='none' stroke='#B8B8B8' stroke-width='1'/>
+<rect x='334.5' y='65' width='106' height='41' rx='0' fill='#3385FF' fill-opacity='1'/>
+<rect x='334.5' y='65' width='106' height='41' rx='0' fill='none' stroke='#3388FF' stroke-width='1'/>
+<text x='355.5' y='82' font-size='16' fill='#FFFFFF' font-family='sans-serif'>进入贴吧</text>
+<rect x='339.5' y='65' width='104' height='40' rx='0' fill='none' stroke='#3388FF' stroke-width='1'/>
+<text x='359.5' y='82' font-size='16' fill='#3388FF' font-family='sans-serif'>全吧搜索</text>
+<text x='871.5' y='76' font-size='12' fill='#333333' font-family='sans-serif'> </text>
+<text x='874.836' y='76' font-size='12' fill='#333333' font-family='sans-serif'> </text>
+<rect x='0' y='136' width='1280' height='881' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='0' y='136' width='1280' height='881' rx='0' fill='#000000' fill-opacity='1'/>
+<rect x='149' y='136' width='982' height='180' rx='0' fill='#EFEFEF' fill-opacity='1'/>
+<text x='149' y='148' font-size='12' fill='#333333' font-family='sans-serif'> </text>
+<rect x='149' y='158' width='980' height='180' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='149' y='316' width='982' height='98' rx='0' fill='#F1F4F8' fill-opacity='1'/>
+<text x='171' y='353' font-size='12' fill='#333333' font-family='sans-serif'>实时讨论:</text>
+<text x='176' y='375' font-size='12' fill='#F98B62' font-family='sans-serif'>0</text>
+<rect x='149' y='414' width='982' height='603' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='149' y='414' width='982' height='1' rx='0' fill='#E4E6EB' fill-opacity='1'/>
+<rect x='1130' y='414' width='1' height='603' rx='0' fill='#E4E6EB' fill-opacity='1'/>
+<text x='1010.65' y='448' font-size='14' fill='#2D64B3' font-family='sans-serif'>查看全部榜单&gt;&gt;</text>
+<rect x='149' y='540' width='982' height='363' rx='0' fill='#FAFAFA' fill-opacity='1'/>
+<rect x='149' y='580' width='263' height='181' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<text x='334.576' y='825' font-size='24' fill='#333333' font-family='sans-serif'>                                暂无相关贴,发布贴子让大家来讨论吧!</text>
+<rect x='149' y='903' width='982' height='114' rx='0' fill='#FAFAFA' fill-opacity='1'/>
+<rect x='149' y='903' width='982' height='1' rx='0' fill='#EEEEEE' fill-opacity='1'/>
+<rect x='241' y='923' width='798' height='34' rx='0' fill='#5381D7' fill-opacity='1'/>
+<text x='251' y='942' font-size='13' fill='#FFFFFF' font-family='sans-serif'>吧友热议</text>
+<rect x='149' y='414' width='740' height='126' rx='0' fill='#FFFFFF' fill-opacity='1'/>
+<rect x='169' y='434' width='4' height='16' rx='0' fill='#3171F9' fill-opacity='1'/>
+<text x='174' y='450' font-size='16' fill='#333333' font-family='sans-serif'>发表贴子</text>
+<rect x='169' y='470' width='700' height='50' rx='0' fill='none' stroke='#D6D6D6' stroke-width='1'/>
+<rect x='180' y='478' width='678' height='34' rx='5' fill='#F2F7FF' fill-opacity='1'/>
+<text x='186' y='496' font-size='12' fill='#2962B6' font-family='sans-serif'>##</text>
+<text x='638.332' y='1037' font-size='12' fill='#333333' font-family='sans-serif'> </text>
+<text x='609.646' y='1037' font-size='12' fill='#7777CC' font-family='sans-serif'>©2026 Baidu</text>
+<text x='616' y='1059' font-size='12' fill='#7777CC' font-family='sans-serif'>贴吧协议</text>
+<text x='638.44' y='1081' font-size='12' fill='#7777CC' font-family='sans-serif'>|</text>
+<text x='616' y='1103' font-size='12' fill='#7777CC' font-family='sans-serif'>隐私政策</text>
+<text x='638.44' y='1125' font-size='12' fill='#7777CC' font-family='sans-serif'>|</text>
+<text x='616' y='1147' font-size='12' fill='#7777CC' font-family='sans-serif'>吧主制度</text>
+<text x='638.44' y='1169' font-size='12' fill='#7777CC' font-family='sans-serif'>|</text>
+<text x='616' y='1191' font-size='12' fill='#7777CC' font-family='sans-serif'>意见反馈</text>
+<text x='638.44' y='1213' font-size='12' fill='#7777CC' font-family='sans-serif'>|</text>
+<text x='604' y='1235' font-size='12' fill='#7777CC' font-family='sans-serif'>网络谣言警示</text>
+</svg>

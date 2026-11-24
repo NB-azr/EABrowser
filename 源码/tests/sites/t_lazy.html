@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>lazy/srcset 自检</title>
+<style>body{margin:0;padding:12px;font-family:sans-serif}img{display:block;width:100%;height:auto;margin:8px 0;background:#eee}h3{margin:14px 0 6px}</style></head>
+<body>
+<h3>1) data-src（src 是 1x1 占位）</h3>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="bigimg/big0.jpg">
+<h3>2) srcset（320w / 1600w，应取 1600w）</h3>
+<img srcset="bigimg/big2.jpg 320w, bigimg/big1.jpg 1600w">
+<h3>3) data-original</h3>
+<img data-original="bigimg/big3.jpg">
+<h3>4) 正常 src</h3>
+<img src="bigimg/big4.jpg">
+</body></html>

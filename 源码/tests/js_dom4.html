@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>computed / blob / bitmap / fillText</title>
+<style>
+body { color: #ff0000; font-size: 20px; }
+#a { color: blue; font-size: 1.5em; display: block; }
+.cls { color: rgb(0, 128, 0) !important; }
+div span { font-weight: bold; }
+@media (min-width: 300px) { #a { background-color: #eee; } }
+</style></head>
+<body>
+<div id="a" class="cls" style="color: rgb(10, 20, 30); font-size: 30px"><span id="s">Hi</span></div>
+<canvas id="cv" width="200" height="60"></canvas>
+<div id="out"></div>
+<script>
+window.__R = "pending";
+var P = [];
+function ok(n, c) { P.push((c ? "PASS " : "FAIL ") + n); }
+function eq(n, a, b) { ok(n + "(" + a + " vs " + b + ")", String(a) === String(b)); }
+
+/* 1. getComputedStyle 级联 */
+try {
+    var a = document.getElementById("a");
+    var s = document.getElementById("s");
+    var ca = getComputedStyle(a);
+    /* 作者样式表里的 !important 优先于行内普通声明（CSS 级联规范） */
+    eq("cs-important-beats-inline", ca.color, "rgb(0, 128, 0)");
+    eq("cs-inline-size", ca.fontSize, "30px");
+    eq("cs-display", ca.display, "block");
+    eq("cs-getPropertyValue", ca.getPropertyValue("font-size"), "30px");
+    eq("cs-kebab", ca["background-color"], "rgb(238, 238, 238)");
+    ok("cs-cssText", ca.cssText.indexOf("color: rgb(0, 128, 0)") >= 0);
+    var cs = getComputedStyle(s);
+    eq("cs-inherit-color", cs.color, "rgb(0, 128, 0)");
+    eq("cs-inherit-size", cs.fontSize, "30px");
+    eq("cs-rule-weight", cs.fontWeight, "bold");
+    eq("cs-span-display", cs.display, "inline");
+    var cb = getComputedStyle(document.body);
+    eq("cs-body-color", cb.color, "rgb(255, 0, 0)");
+    eq("cs-body-size", cb.fontSize, "20px");
+} catch (e) { P.push("FAIL computed " + (e && e.message)); }
+
+/* 2. Blob 真实字节 */
+var byteTests = 0, bytePass = 0;
+try {
+    var b1 = new Blob([new Uint8Array([65, 66, 67])], { type: "text/plain" });
+    eq("blob-size", b1.size, 3);
+    /* 规范：Blob.text() 返回 Promise<string> */
+    b1.text().then(function (t) { eq("blob-text", t, "ABC"); }).catch(function (e) { P.push("FAIL blob-text " + e); });
+    eq("blob-type", b1.type, "text/plain");
+    b1.arrayBuffer().then(function (ab) {
+        byteTests++;
+        var u = new Uint8Array(ab);
+        ok("blob-bytes", u.length === 3 && u[0] === 65 && u[1] === 66 && u[2] === 67);
+        if (u.length === 3 && u[0] === 65) bytePass++;
+    });
+    var src = new Uint8Array([9, 8, 7, 6]);
+    var b2 = new Blob([src, "XY"]);
+    eq("blob-mixed-size", b2.size, 6);
+    b2.text().then(function (t) { eq("blob-mixed-text", t, "\t\b\u0007\u0006XY"); }).catch(function (e) { P.push("FAIL blob-mixed-text " + e); });
+    var url = URL.createObjectURL(b2);
+    ok("objecturl-scheme", url.indexOf("blob:ea/") === 0);
+    fetch(url).then(function (r) { return r.arrayBuffer(); }).then(function (ab) {
+        byteTests++;
+        var u = new Uint8Array(ab);
+        ok("objecturl-bytes", u.length === 6 && u[0] === 9 && u[1] === 8 && u[2] === 7 && u[3] === 6);
+        ok("objecturl-mixed", u[4] === 88 && u[5] === 89);
+        if (u.length === 6 && u[0] === 9) bytePass++;
+    }).catch(function (e) { byteTests++; P.push("FAIL objecturl-fetch " + e); });
+    URL.revokeObjectURL(url);
+} catch (e) { P.push("FAIL blob " + (e && e.message)); }
+
+/* 3. createImageBitmap：canvas -> 像素复制 -> drawImage */
+try {
+    var c1 = document.createElement("canvas"); c1.width = 4; c1.height = 4;
+    var g1 = c1.getContext("2d");
+    g1.fillStyle = "#ff0000"; g1.fillRect(0, 0, 4, 4);
+    createImageBitmap(c1).then(function (bmp) {
+        byteTests++;
+        ok("bitmap-size", bmp.width === 4 && bmp.height === 4);
+        var c2 = document.createElement("canvas"); c2.width = 4; c2.height = 4;
+        var g2 = c2.getContext("2d");
+        g2.drawImage(bmp, 0, 0);
+        var d = g2.getImageData(0, 0, 4, 4).data;
+        ok("bitmap-draw", d[0] === 255 && d[1] === 0 && d[2] === 0 && d[3] === 255);
+        if (d[0] === 255) bytePass++;
+    }).catch(function (e) { byteTests++; P.push("FAIL bitmap " + e); });
+} catch (e) { P.push("FAIL bitmap-sync " + (e && e.message)); }
+
+/* 4. fillText 真实字形 */
+try {
+    var cv = document.getElementById("cv");
+    var g = cv.getContext("2d");
+    g.fillStyle = "#ffffff"; g.fillRect(0, 0, 200, 60);
+    g.font = "20px sans-serif";
+    g.textBaseline = "alphabetic";
+    g.textAlign = "left";
+    g.fillStyle = "#ff0000";
+    g.fillText("ABC", 10, 40);
+    var mt = g.measureText("ABC");
+    ok("filltext-measure", Math.abs(mt.width - 51.428) < 0.5);
+    var d = g.getImageData(0, 0, 200, 60).data;
+    function px(x, y) { var i = (y * 200 + x) * 4; return [d[i], d[i + 1], d[i + 2], d[i + 3]]; }
+    var p1 = px(12, 29); /* 'A' 第 4 行横杠 */
+    ok("filltext-A", p1[0] === 255 && p1[1] === 0 && p1[2] === 0 && p1[3] === 255);
+    var p2 = px(12, 21); /* 'A' 顶部像素 */
+    ok("filltext-top", p2[0] === 255);
+    /* 统计红色像素数量，验证真的画出了字形而不是整块矩形 */
+    var red = 0;
+    for (var i = 0; i < d.length; i += 4) if (d[i] === 255 && d[i + 1] === 0 && d[i + 2] === 0) red++;
+    ok("filltext-glyph-density", red > 30 && red < 600);
+    /* fillText 在变换下生效 */
+    var cv2 = document.createElement("canvas"); cv2.width = 100; cv2.height = 100;
+    var g2 = cv2.getContext("2d");
+    g2.fillStyle = "#00ff00"; g2.fillRect(0, 0, 100, 100);
+    g2.translate(20, 20); g2.scale(2, 2);
+    g2.font = "20px sans-serif"; g2.fillStyle = "#0000ff";
+    g2.fillText("A", 0, 0);
+    var d2 = g2.getImageData(0, 0, 100, 100).data;
+    var blue = 0;
+    for (var i = 0; i < d2.length; i += 4) if (d2[i + 2] === 255 && d2[i] === 0) blue++;
+    ok("filltext-transform", blue > 40);
+    /* 非 ASCII 不崩溃（画方框） */
+    g.fillStyle = "#000000"; g.fillText("中", 80, 40);
+    ok("filltext-cjk", true);
+} catch (e) { P.push("FAIL fillText " + (e && e.message)); }
+
+/* 汇总（异步用例在 js-ms 窗口内补齐） */
+function done() {
+    if (byteTests < 3) { setTimeout(done, 5); return; }
+    ok("async-bytes", bytePass === 3);
+    window.__R = P.join("\n");
+    var o = document.getElementById("out"); if (o) o.textContent = window.__R;
+}
+done();
+</script>
+</body></html>

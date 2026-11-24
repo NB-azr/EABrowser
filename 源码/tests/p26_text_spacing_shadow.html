@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>letter-spacing / word-spacing / text-shadow</title>
+<style>
+  body { margin: 0; padding: 10px; background: #fff; }
+  p { margin: 0; font-size: 20px; }
+  .ls4  { letter-spacing: 4px; }
+  .lsem { letter-spacing: 0.1em; }
+  .ws10 { word-spacing: 10px; }
+  .sh1  { text-shadow: 2px 2px 0 #ff0000; }
+  .sh2  { text-shadow: 1px 1px #00ff00, 4px 4px #0000ff; }
+  .sh3  { text-shadow: 0 0 6px #888888; }
+  .inherit { letter-spacing: 3px; word-spacing: 6px; text-shadow: 1px 1px #cc0000; }
+</style></head>
+<body>
+  <p id="p0">Hello World</p>
+  <p id="p1" class="ls4">Hello World</p>
+  <p id="p2" class="lsem">Hello World</p>
+  <p id="p3" class="ws10">Hello World</p>
+  <p id="p4" class="sh1">Shadow</p>
+  <p id="p5" class="sh2">Two</p>
+  <p id="p6" class="sh3">Blur</p>
+  <div id="p7" class="inherit"><p id="p8">Inherit</p></div>
+</body></html>

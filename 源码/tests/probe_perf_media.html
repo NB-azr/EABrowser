@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>perf media</title>
+<script>
+window.__log = [];
+var mq = matchMedia("(prefers-color-scheme: dark)");
+window.__log.push("mq0=" + mq.matches);
+mq.addEventListener("change", function (e) { window.__log.push("mqChange=" + e.matches + "/" + mq.matches); });
+
+performance.mark("a", { detail: { x: 1 } });
+performance.mark("b");
+performance.measure("ab", { start: "a", end: "b", detail: "d" });
+performance.measure("ab2", "a", "b");
+
+var po = new PerformanceObserver(function (list) {
+  window.__log.push("po=" + list.map(function (e) {
+    return e.entryType + ":" + e.name + ":" + e.duration.toFixed(2);
+  }).join(","));
+});
+po.observe({ entryTypes: ["measure"], buffered: true });
+performance.measure("c", "a", "b");
+
+try { performance.measure("bad", "nope"); } catch (e) { window.__log.push("bad=" + e.name); }
+window.__log.push("entries=" + performance.getEntriesByType("mark").length + "/" + performance.getEntriesByType("measure").length);
+window.__log.push("byName=" + performance.getEntriesByName("a", "mark").length);
+window.__log.push("poTypes=" + PerformanceObserver.supportedEntryTypes.join(","));
+window.__log.push("json=" + JSON.stringify(performance.getEntriesByName("a", "mark")[0].toJSON()));
+window.__log.push("taken=" + po.takeRecords().length);
+window.__seen = true;
+</script>

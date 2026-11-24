@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;background:#f5f6fa}
+.searchboxtop{padding:10px 0 8px 0;position:relative}
+.se-form{position:relative;clear:both;margin-left:.17rem;margin-right:.17rem;background:#fff;box-sizing:content-box;margin-bottom:2px;z-index:2;border:1px solid #4e6ef2;border-radius:12px;height:42px}
+.search-wrap{width:100%;height:100%}
+.con-wrap{width:100%;height:100%;box-sizing:border-box;display:flex;align-items:center}
+.con-wrap .con-inner-left{flex:1;display:flex;align-items:center;border-top-left-radius:12px;border-bottom-left-radius:12px}
+.con-wrap .con-inner-left .callicon-wrap{position:relative;left:0}
+.se-form .se-bearicon{display:block;color:#3c76ff;background-position:center center;background-repeat:no-repeat;background-size:100% 100%;margin:0 0 0 11px;width:20px;height:20px}
+.se-input{flex:1;box-flex:1;padding:6px 5px;height:44px;line-height:30px;margin:0;font-size:18px;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:transparent;color:#333;overflow:hidden;border:0;border-radius:0;outline:0;white-space:nowrap;width:0}
+.se-form .se-input{height:42px}
+.se-input.adjust-input{margin:0 -74px 0 0}
+.cross{background:#fff;display:none}
+.voice-icon{height:44px;width:37px;text-align:left}
+.se-bn{display:block;text-align:center;box-sizing:border-box;width:96px;color:#fff;background-color:#4e6ef2;border-top-right-radius:10.5px;border-bottom-right-radius:10.5px;position:relative;height:44px;min-height:44px;top:0}
+.se-form .se-bn{height:42px;min-height:42px}
+.after{height:60px;background:#ddd}
+</style></head>
+<body>
+<div class="searchboxtop" id="top"><form class="se-form" id="f1"><div class="search-wrap" id="wrap"><div class="con-wrap" id="con"><div class="con-inner-left" id="left"><div class="se-bearicon" id="bear"></div><input id="q" class="se-input adjust-input" value="hello"><div id="cross" class="cross"></div><div class="callicon-wrap" id="cic"><div class="voice-icon" id="vi"><div class="voice-icon-wrap" id="viw"></div></div></div></div></div></div><button id="bn" class="se-bn">百度一下</button></form></div>
+<div class="after" id="after"></div>
+</body></html>

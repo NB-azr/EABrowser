@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; background: #fff; font-size: 16px; }
+  .box { width: 120px; height: 60px; margin: 10px; display: inline-block; background: #3498db; }
+  #f1 { filter: blur(3px) brightness(1.2) saturate(0.6); }
+  #f2 { filter: grayscale(80%) contrast(1.4); }
+  #f3 { filter: hue-rotate(90deg) invert(0.2); }
+  #f4 { filter: sepia(60%) opacity(70%); }
+  #f5 { filter: brightness(120%) blur(2px) drop-shadow(2px 2px 4px #000); }
+  #t1 { filter: blur(1px) brightness(1.5); }
+</style>
+</head>
+<body>
+  <div class="box" id="f1"></div>
+  <div class="box" id="f2"></div>
+  <div class="box" id="f3"></div>
+  <div class="box" id="f4"></div>
+  <div class="box" id="f5"></div>
+  <div id="t1">filtered text</div>
+</body>
+</html>

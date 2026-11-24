@@ -1,0 +1,7 @@
+﻿"page","url","viewport","js","cmds","text","rect","image","border","clip","unsupported_decls","unknown_props","ignored_conds","dropped_parts","layout_ms","style_ms","total_ms","wall_ms","exit_code","status","svg_bytes","unknown_top"
+"baidu-home","https://www.baidu.com/","1280x900","off","227","28","147","1","3","48","19","1","2","72","27.81","26.22","54.03","115","0","OK","18669","interpolation-mode=19"
+"baidu-search","https://www.baidu.com/s?wd=%E6%B5%8F%E8%A7%88%E5%99%A8","1280x900","off","1206","445","502","20","39","200","8","3","10","196","132.08","125.84","257.92","324","0","OK","102006","text-decoration-style=6; text-fill-color=1; scrollbar-width=1"
+"bilibili-home","https://www.bilibili.com/","1280x900","off","557","115","318","8","20","96","75","3","1","42","34.88","31.31","66.19","126","0","OK","47228","line-break=67; touch-action=6; overscroll-behavior=2"
+"bilibili-video","https://www.bilibili.com/video/BV1GJ411x7h7/","1280x900","off","1171","237","774","0","0","160","264","4","0","118","37.7","33.09","70.79","202","0","OK","104243","touch-action=93; text-decoration-skip=89; line-break=42; fill=40"
+"zhihu-signin","https://www.zhihu.com/","1280x900","off","241","87","134","3","3","14","2","2","6","86","62.65","61.43","124.08","128","0","OK","24070","text-autospace=1; -app-width-tshape=1"
+"tieba-hottopic","https://tieba.baidu.com/hottopic/browse/hottopic","1280x900","off","62","24","22","2","4","10","1","1","6","50","25.98","25.02","51","76","0","OK","5094","justify-items=1"

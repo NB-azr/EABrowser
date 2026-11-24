@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>表单与度量探针</title></head>
+<body>
+<div id="a" class="x y"><span id="s" class="x"></span></div>
+<div id="b" class="x"></div>
+<script>
+window.__R = "start";
+try {
+function eq(n, a, b) { window.__R = "at:" + n; if (String(a) !== String(b)) throw new Error(n + " got=" + a + " want=" + b); }
+
+/* ---------- URLSearchParams ---------- */
+var u = new URLSearchParams("a=1&b=2&a=3");
+eq("usp-get", u.get("a"), "1");
+eq("usp-getAll", u.getAll("a").join(","), "1,3");
+eq("usp-has", u.has("b"), true);
+eq("usp-size", u.size, 3);
+u.append("c", "x y");
+eq("usp-append-encode", u.toString(), "a=1&b=2&a=3&c=x+y");
+u.set("a", "9");
+eq("usp-set", u.getAll("a").join(","), "9");
+u.delete("b");
+eq("usp-delete", u.has("b"), false);
+var ek = [];
+u.forEach(function (v, k) { ek.push(k + "=" + v); });
+eq("usp-forEach", ek.join("|"), "c=x y|a=9");
+var it = [];
+for (var kv of u) it.push(kv[0] + ":" + kv[1]);
+eq("usp-iter", it.join(","), "c:x y,a:9");
+var ks = [];
+for (var kk of u.keys()) ks.push(kk);
+eq("usp-keys", ks.join(","), "c,a");
+var dup = new URLSearchParams([["k", "v1"], ["k", "v2"]]);
+eq("usp-array-ctor", dup.getAll("k").join(","), "v1,v2");
+var obj = new URLSearchParams({ m: "n", z: "q" });
+eq("usp-obj-ctor", obj.get("m") + obj.get("z"), "nq");
+var ser = u.__eaSerializeBody();
+eq("usp-ser-type", ser.contentType, "application/x-www-form-urlencoded;charset=UTF-8");
+eq("usp-ser-body", ser.text, "c=x+y&a=9");
+
+/* ---------- FormData ---------- */
+var fd = new FormData();
+fd.append("k", "v1");
+fd.append("k", "v2");
+fd.append("blob", new Blob(["BYTES"], { type: "text/plain" }), "f.txt");
+eq("fd-get", fd.get("k"), "v1");
+eq("fd-getAll", fd.getAll("k").join(","), "v1,v2");
+eq("fd-has", fd.has("blob"), true);
+fd.set("k", "v3");
+eq("fd-set", fd.getAll("k").join(","), "v3");
+var fe = [];
+fd.forEach(function (v, k) { fe.push(k); });
+eq("fd-forEach", fe.join(","), "blob,k");
+var fent = [];
+for (var e2 of fd.entries()) fent.push(e2[0] + "=" + (e2[1] && e2[1].size !== undefined ? "blob" : e2[1]));
+eq("fd-entries", fent.join(","), "blob=blob,k=v3");
+eq("fd-blob-size", fd.get("blob").size, 5);
+fd.delete("blob");
+eq("fd-delete", fd.has("blob"), false);
+var fser = fd.__eaSerializeBody();
+var bytes = new Uint8Array(fser.ab);
+if (bytes.length === 0) throw new Error("fd-serialize empty");
+var txt = fser.contentType;
+if (txt.indexOf("multipart/form-data; boundary=") !== 0) throw new Error("fd-ct " + txt);
+var head = "";
+for (var bi = 0; bi < 160 && bi < bytes.length; bi++) head += String.fromCharCode(bytes[bi]);
+if (head.indexOf("name=\"k\"") < 0) throw new Error("fd-part-name missing: " + head);
+
+/* ---------- FileReader ---------- */
+var fr = new FileReader();
+var events = [];
+fr.onloadstart = function () { events.push("start"); };
+fr.onprogress = function (e) { events.push("progress:" + e.loaded + "/" + e.total); };
+fr.onload = function () { events.push("load:" + fr.result); };
+fr.onloadend = function () { events.push("end:" + fr.readyState); };
+fr.readAsText(new Blob(["中文ABC"], { type: "text/plain;charset=utf-8" }));
+eq("fr-text", fr.result, "中文ABC");
+eq("fr-state", fr.readyState, 2);
+eq("fr-events", events.join("|"), "start|progress:9/9|load:中文ABC|end:2");
+
+var fr2 = new FileReader();
+fr2.addEventListener("load", function () { window.__AB = fr2.result; });
+fr2.readAsArrayBuffer(new Blob([new Uint8Array([1, 2, 3])]));
+var ab2 = new Uint8Array(window.__AB);
+eq("fr-ab", ab2.length + ":" + ab2[0] + ab2[1] + ab2[2], "3:123");
+
+var fr3 = new FileReader();
+fr3.readAsDataURL(new Blob(["hi"], { type: "text/plain" }));
+eq("fr-dataurl", fr3.result, "data:text/plain;base64,aGk=");
+var fr3b = new FileReader();
+fr3b.readAsDataURL(new Blob(["h"]));
+eq("fr-dataurl-pad", fr3b.result, "data:application/octet-stream;base64,aA==");
+
+var fr4 = new FileReader();
+var errName = "";
+fr4.onerror = function () { errName = fr4.error && fr4.error.name; };
+fr4.readAsText({});
+eq("fr-error", errName, "NotFoundError");
+eq("fr-error-state", fr4.readyState, 2);
+eq("fr-ctor-consts", FileReader.EMPTY + "," + FileReader.LOADING + "," + FileReader.DONE, "0,1,2");
+
+/* ---------- matches / closest / getElementsByClassName ---------- */
+var a = document.getElementById("a");
+var s = document.getElementById("s");
+eq("el-matches", a.matches(".x.y"), true);
+eq("el-matches-neg", a.matches(".z"), false);
+eq("el-closest-self", s.closest(".x.y") && s.closest(".x.y").id, "a");
+eq("el-closest-null", s.closest(".nope"), null);
+eq("el-closest-tag", s.closest("div") && s.closest("div").id, "a");
+var byc = document.getElementsByClassName("x y");
+eq("el-byclass", byc.length, 1); eq("el-byclass-id", byc[0].id, "a");
+var byc2 = a.getElementsByClassName("x");
+eq("el-byclass-single", byc2.length, 1); eq("el-byclass-single-id", byc2[0].id, "s");
+var byc3 = a.getElementsByClassName("x y");
+eq("el-byclass-desc", byc3.length, 0);
+var byc4 = document.getElementsByClassName("x");
+eq("el-byclass-multi", byc4.length, 3);
+
+/* ---------- fetch 请求体接入 ---------- */
+var fd2 = new FormData();
+fd2.append("q", "中文");
+fd2.append("up", new Blob(["ZZ"], { type: "text/plain" }), "u.txt");
+var rq1 = window.__eaBuildRequest("/upload", { method: "POST", body: fd2 });
+if (rq1.headers.indexOf("content-type: multipart/form-data; boundary=") !== 0) throw new Error("build-fd-ct " + rq1.headers);
+if (!rq1.body || rq1.body.byteLength === 0) throw new Error("build-fd-body empty");
+eq("build-fd-method", rq1.method, "POST");
+var rq2 = window.__eaBuildRequest("/s", { method: "POST", body: u });
+if (rq2.headers.indexOf("content-type: application/x-www-form-urlencoded") < 0) throw new Error("build-usp-ct " + rq2.headers);
+eq("build-usp-body", rq2.bodyText, "c=x+y&a=9");
+
+window.__R = "OK";
+} catch (e) {
+  window.__R = "ERR " + (e && e.message ? e.message : e) + " " + window.__R;
+}
+</script>
+</body></html>

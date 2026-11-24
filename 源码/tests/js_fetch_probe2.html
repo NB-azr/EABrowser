@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>fetch 探针2</title></head>
+<body><div id="o">init</div>
+<script>
+window.__R = "init";
+setTimeout(function () {
+  try {
+    fetch("ea://file?path=does_not_exist.pdf").then(function (r) {
+      window.__R = "resolved " + r.status;
+    }, function (e) {
+      window.__R = "rejected " + e;
+    });
+  } catch (e) {
+    window.__R = "sync throw " + (e && e.message);
+  }
+}, 0);
+setTimeout(function () { window.__R2 = "tick2"; }, 20);
+</script>
+</body></html>

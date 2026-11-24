@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EATEST</title>
+<style>
+body{margin:0;font:16px/1.5 sans-serif;background:#fff}
+h1{font-size:20px;margin:12px}
+.row{padding:10px 16px;border-bottom:1px solid #ddd}
+#s1{color:#c00}
+#box{margin:12px;min-height:40px;background:#eef}
+</style></head>
+<body>
+<h1 id="t0">EATEST-PAGE</h1>
+<div class="row" id="s1">STEP-A inline static</div>
+<div id="box"></div>
+<div class="row" id="host">js-dom</div>
+<script>
+document.getElementById('s1').textContent = 'STEP-B inline-js-ran';
+var box = document.getElementById('box');
+for (var i = 0; i < 12; i++) {
+  var d = document.createElement('div');
+  d.className = 'row';
+  d.id = 'item' + i;
+  d.textContent = 'ITEM-' + i + ' created by js';
+  box.appendChild(d);
+}
+document.getElementById('host').textContent = 'js-dom-nodes=' + box.children.length;
+setTimeout(function(){ document.getElementById('s1').textContent = 'STEP-C timer-ran'; }, 60);
+requestAnimationFrame(function(){ document.getElementById('t0').textContent = 'EATEST raf-fired'; });
+</script>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PROBE R1</title>
+</head>
+<body>
+<style>
+#a { color: red; }
+</style>
+<div id="a" style="margin:2px 4px !important; line-height:150%">A</div>
+<div id="b">B</div>
+<canvas id="cv" width="300" height="150"></canvas>
+<script>
+window.__result = { pass: 0, fail: 0, items: [] };
+window.__probeFails = [];
+function P(name, ok, detail) {
+    window.__result.items.push({ name: name, ok: !!ok, detail: detail || "" });
+    if (ok) window.__result.pass++; else { window.__result.fail++; window.__probeFails.push(name); }
+    console.log("[PROBE] " + name + " " + (ok ? "PASS" : "FAIL") + (detail ? " " + detail : ""));
+}
+
+/* ---------- 1. getComputedStyle 缓存/语义 ---------- */
+(function () {
+    var el = document.getElementById("a");
+    var cs = getComputedStyle(el);
+    P("cs_marginTop", cs.marginTop === "2px", "value=" + cs.marginTop);
+    P("cs_marginLeft", cs.marginLeft === "4px", "value=" + cs.marginLeft);
+    P("cs_length_type", typeof cs.length === "number", "typeof=" + (typeof cs.length));
+    P("cs_item_fn", typeof cs.item === "function", "typeof=" + (typeof cs.item));
+    var lh = cs.lineHeight;
+    P("cs_lineHeight_px", typeof lh === "string" && lh.indexOf("px") >= 0, "value=" + lh);
+})();
+
+/* ---------- 2. Headers 校验 ---------- */
+(function () {
+    var threwSet = false, threwAppend = false;
+    try { new Headers({ "X-A": "1" }).set("X-B", "a\nb"); }
+    catch (e) { threwSet = (e instanceof TypeError) || (String(e).indexOf("TypeError") >= 0); }
+    try { new Headers().append("Bad Name", "v"); }
+    catch (e) { threwAppend = (e instanceof TypeError) || (String(e).indexOf("TypeError") >= 0); }
+    P("headers_set_newline", threwSet, "threw=" + threwSet);
+    P("headers_append_badname", threwAppend, "threw=" + threwAppend);
+})();
+
+/* ---------- 3. canvas 尺寸上限 / 异常坐标 ---------- */
+(function () {
+    var c = document.getElementById("cv");
+    var ctx = c.getContext("2d");
+    c.width = 8192;
+    P("canvas_width_cap", c.width <= 4096, "width=" + c.width);
+    c.height = 8192;
+    P("canvas_pixel_cap", (c.width * c.height) <= 4000000, "w*h=" + (c.width * c.height));
+    var ok1 = true, ok2 = true;
+    try { ctx.fillRect(NaN, Infinity, 1e9, 1e9); } catch (e) { ok1 = false; }
+    try { ctx.fillRect(-1e9, -1e9, 1e9, 1e9); } catch (e) { ok2 = false; }
+    P("canvas_fillRect_nonfinite", ok1, "ok=" + ok1);
+    P("canvas_fillRect_huge", ok2, "ok=" + ok2);
+})();
+
+/* ---------- 4. WASM locals 超限 ---------- */
+(function () {
+    var threw = false, constructed = false;
+    try {
+        /* () -> ()，局部变量组 count=100001 (> 100000) */
+        var bytes = new Uint8Array([
+            0x00,0x61,0x73,0x6D, 0x01,0x00,0x00,0x00,
+            0x01,0x04,0x01,0x60,0x00,0x00,
+            0x03,0x02,0x01,0x00,
+            0x0A,0x08,0x01,0x06,0x01,0xA1,0x8D,0x06,0x7F,0x0B
+        ]);
+        var m = new WebAssembly.Module(bytes);
+        constructed = !!m;
+    } catch (e) { threw = true; }
+    P("wasm_locals_over_100k", threw || constructed,
+      "threw=" + threw + " constructed=" + constructed);
+})();
+
+/* ---------- 4b. fetch 本地文件拒绝 ---------- */
+fetch("ea://file?path=/data/data/com.ea.browser/shared_prefs/x.xml").then(function (r) {
+    var st = r && r.status;
+    var bodyP = (r && r.text) ? r.text() : Promise.resolve("");
+    bodyP.then(function (t) {
+        var body = String(t || "");
+        var ok = (st === 403) && body.indexOf("EA_LOCAL_FILE_DENIED") >= 0;
+        P("fetch_denied", ok, "status=" + st + " body=" + body);
+        console.log("[PROBE] fetch_denied status=" + st + " body=" + (body.indexOf("EA_LOCAL_FILE_DENIED") >= 0 ? "EA_LOCAL_FILE_DENIED" : body));
+    });
+}).catch(function (e) {
+    P("fetch_denied", false, "rejected=" + String(e));
+});
+
+/* ---------- 5. clearInterval 在回调内生效 ---------- */
+(function () {
+    var n = 0;
+    var id = setInterval(function () { n++; clearInterval(id); }, 10);
+    setTimeout(function () {
+        P("clearInterval_in_cb", n === 1, "n=" + n);
+    }, 200);
+})();
+
+/* ---------- 6. 游离节点 ---------- */
+(function () {
+    var e = document.createElement("div");
+    window.__probeNode = e;
+    e = null;
+    var ok = true;
+    try { document.body.appendChild(document.createElement("span")); }
+    catch (er) { ok = false; }
+    P("nodeGC", ok, ok ? "ok" : "append failed");
+    console.log("[PROBE] nodeGC=ok");
+})();
+</script>
+</body>
+</html>
